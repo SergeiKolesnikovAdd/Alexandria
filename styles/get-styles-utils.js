@@ -68,28 +68,8 @@ export const getVW = (px, baseWidth = 1600) =>
 const { count: countDesktopLG, x1: x1DesktopLG } =
   sizes[namesOfBreakpoints.desktopLG];
 
-export const getCurrentGridTemplateColumsStyle = () =>
-  getResponsiveStyle("gridTemplateColumns")([
-    `repeat(${8}, 1fr)`,
-    `repeat(${8}, 1fr)`,
-    `repeat(${8}, 1fr)`,
-    `repeat(${8}, 1fr)`,
-    `repeat(${8}, 1fr)`,
-    `repeat(${4}, 1fr)`,
-    `repeat(${4}, 1fr)`,
-    `repeat(${4}, 1fr)`,
-    `repeat(${4}, 1fr)`,
-
-  ]);
-
 export const getCurrentSizeStyle = getCurrentStyleByDictionary(sizes);
 
 export const getCurrentWidthSizeStyle = getCurrentSizeStyle("width");
 
 export const getCurrentHeightSizeStyle = getCurrentSizeStyle("height");
-
-/*Количество клеток в одной строке */
-export const getGridCount = ()=>{
-  if(window.matchMedia("(min-width: 1024px)").matches) return 8;
-  else return 4;
-}
