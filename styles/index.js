@@ -7,7 +7,6 @@ export {
   offsets,
   sizes,
   typesOfoffset,
-  zindex,
   namesOfBreakpoints,
 } from "./constants";
 
@@ -22,18 +21,15 @@ export {
   getCurrentMarginStyle,
   getCurrentFontSizeStyle,
   getCurrentColorStyles,
-  getCurrentGridTemplateColumsStyle,
   getCurrentBackgroundColorStyles,
   getCurrentSizeStyle,
   getCurrentWidthSizeStyle,
   getCurrentHeightSizeStyle,
   getCurrentStyleByDictionary,
-  getGridCount,
   getVW
 } from "./get-styles-utils";
 
 // Функции, которые возвращают значение стиля
-export { getCurrentColor } from "./get-value-utils";
 
 export {
   // Функция для адаптации стиля под разные разрешения

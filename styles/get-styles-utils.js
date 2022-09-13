@@ -6,7 +6,6 @@ import {
   subsequenceOfBreakpoints,
 } from "./constants";
 
-import { getCurrentColor } from "./get-value-utils";
 import { getResponsiveStyle } from "./media-query-utils";
 
 export const getCurrentDictionaryValue = (dictionary, breakpointName, type) =>

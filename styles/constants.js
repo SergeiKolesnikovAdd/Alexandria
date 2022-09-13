@@ -1,13 +1,10 @@
 export const colors = {
   white: "#FFFFFF",
-  black: "#333333",
-  blueGradient: "radial-gradient(100% 1103.13% at 0% 100%, #93EBFF 0%, #2079FF 100%);",
-  blue: "#2079FF",
-  yellow: "#F2B20B",
-  pink: "#F48ABD",
-  green: "#5BBD77",
-  blue: "#3C7DFF",
-  violet: "#A263F1",
+  black: "#222222",
+  red: "#D17456",
+  lightOrange: "#FCF8F3",
+  orange: "#F9D3B1",
+  darkOrange: "#F9D3B1",
 };
 
 export const fontFamilies = {
