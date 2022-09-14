@@ -56,14 +56,17 @@ export const breakpointsWidth = {
 
 export const offsets = {
   [desktopLG]: {
-    xlg: 160,
-    lg: 120,
-    lgmd: 84,
-    md: 60,
-    smmd: 40,
-    sm: 24,
-    xsm: 20,
-    xxsm: 16,
+    xxxlg: 160,
+    xxlg: 80,
+    xlg: 64,
+    lg: 40,
+    mdlg: 32,
+    md: 24,
+    mdsm: 16,
+    sm: 12,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
     none: 0,
   },
 };
@@ -91,13 +94,10 @@ export const sizes = {
 
 export const fontSizes = {
   [desktopLG]: {
-    h1: "12.125vw",
-    h2: "72px",
-    h3: "32px",
-    text: "16px",
+    h1: "104px",
+    h2: "64px",
+    h3: "24px",
+    text: "18px",
     caption: "14px",
-    vw: "1vw",
-    vw15: "1.5vw",
-    vw2: "2vw",
   },
 };
