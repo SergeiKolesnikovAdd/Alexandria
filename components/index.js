@@ -4,6 +4,8 @@ import {} from "./common";
 import { H1 } from "./ui/h1";
 import { H2 } from "./ui/h2";
 import { H3 } from "./ui/h3";
+import { Text } from "./ui/text";
+import { Caption } from "./ui/caption";
 
 /*    Импорты секций    */
 import { Header } from "./sections/header";

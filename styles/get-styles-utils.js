@@ -7,6 +7,7 @@ import {
 } from "./constants";
 
 import { getResponsiveStyle } from "./media-query-utils";
+import { getCurrentColor } from "./get-value-utils";
 
 export const getCurrentDictionaryValue = (dictionary, breakpointName, type) =>
   dictionary?.[breakpointName]?.[type];
