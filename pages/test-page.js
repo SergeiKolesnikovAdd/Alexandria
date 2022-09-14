@@ -6,10 +6,7 @@ import { H1 } from "../components/ui/h1/h1";
 
 const TestPage = () => {
   return (
-    <div>
-      text text text text text text text text text text text text text text text
-      text
-    </div>
+    <H1>text text</H1>
   );
 }
 
