@@ -8,7 +8,7 @@ export const colors = {
 };
 
 export const fontFamilies = {
-  Font: '"HelveticaNeue", Arial, sans-serif',
+  Font: '"Gilroy", Arial, sans-serif',
 };
 
 export const namesOfBreakpoints = {
