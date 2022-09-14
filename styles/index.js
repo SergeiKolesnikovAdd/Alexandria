@@ -1,4 +1,4 @@
-// константы которые используются в проекте
+  // константы которые используются в проекте
 export {
   fontSizes,
   fontFamilies,
@@ -30,6 +30,7 @@ export {
 } from "./get-styles-utils";
 
 // Функции, которые возвращают значение стиля
+export { getCurrentColor } from "./get-value-utils";
 
 export {
   // Функция для адаптации стиля под разные разрешения

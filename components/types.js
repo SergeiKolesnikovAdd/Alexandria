@@ -27,7 +27,7 @@ export const propTypesTextTag = {
 };
 
 export const propTypesColors = {
-  color: PropTypes.oneOf([...Object.keys(colors), "primary"]),
+  color: PropTypes.oneOf([...Object.keys(colors),]),
 };
 
 export const propTypesChildren = {
