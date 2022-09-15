@@ -15,6 +15,7 @@ export const AdvantageSlide = styled.div`
   ${getCurrentBackgroundColorStyles("black")};
   ${getCurrentMarginStyle("horizontal", "xxxsm")}
   ${getCurrentPaddingStyle("horizontal", "mdlg")}
+  ${getCurrentPaddingStyle("vertical", "mdlg")}
   width: 100%;
 `;
 

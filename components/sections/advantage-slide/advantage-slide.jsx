@@ -4,27 +4,79 @@ import { ContentWrapper, AdvantageWrapper, AdvantageItem } from "./about-end-tex
 export const AdvantageSlide = () => {
   return (
     <ContentWrapper>
-      <Text></Text>
-      <H2></H2>
+      <Text style="opacity:0.4;">Преимущества</Text>
+      <H2>
+        Почему выбирают
+        <br />
+        именно нас?
+      </H2>
       <AdvantageWrapper>
         <AdvantageItem>
-          <Text></Text>
-          <Caption></Caption>
+          <Text>
+            Продвижение в международные
+            <br />
+            наукометрические и предметные базы данных
+          </Text>
+          <Caption>
+            Составление подробного плана
+            <br />
+            продвижения журнала в базы данных с его
+            <br />
+            последующей реализацией.
+          </Caption>
           {/* TODO: IMG */}
         </AdvantageItem>
         <AdvantageItem>
-          <Text></Text>
-          <Caption></Caption>
+          <Text>
+            Консультации и полное
+            <br />
+            сопровождение
+          </Text>
+          <Caption>
+            Подробные инструкции, воркшопы
+            <br />
+            и консультации помогут досконально
+            <br />
+            разобраться в процессе издательской
+            <br />
+            деятельности и повысят уровень
+            <br />
+            экспертности назначенной редакционной
+            <br />
+            коллегии.
+          </Caption>
           {/* TODO: IMG */}
         </AdvantageItem>
         <AdvantageItem>
-          <Text></Text>
-          <Caption></Caption>
+          <Text>
+            Экспертное редактирование,
+            <br />
+            перевод и подготовка научных
+            <br />
+            рукописей
+          </Text>
+          <Caption>
+            Редактирование научных рукописей
+            <br />
+            экспертами международного уровня,
+            <br />
+            перевод и полная подготовка в публикации.
+          </Caption>
           {/* TODO: IMG */}
         </AdvantageItem>
         <AdvantageItem>
-          <Text></Text>
-          <Caption></Caption>
+          <Text>Различные бизнес-модели</Text>
+          <Caption>
+            Подробные инструкции, воркшопы
+            <br />
+            и консультации помогут досконально
+            <br />
+            разобраться в процессе издательской
+            <br /> 
+            деятельности и повысят уровень
+            <br /> 
+            экспертности назначенной редакционной коллегии.
+          </Caption>
           {/* TODO: IMG */}
         </AdvantageItem>
       </AdvantageWrapper>
