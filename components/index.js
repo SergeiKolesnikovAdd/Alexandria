@@ -1,5 +1,6 @@
 /*    Импорты общих компонентов    */
-import { FirstSlideBGImage } from "./common";
+// import { FirstSlideBGImage } from "./common";
+
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
 import { H2 } from "./ui/h2";
@@ -21,7 +22,6 @@ import { MainFirstSlide } from "./sections/main-first-slide";
 // import { DetailCardModal } from "./modal";
 
 export {
-  FirstSlideBGImage,
   H1,
   H2,
   H3,
