@@ -15,8 +15,21 @@ import { ButtonXSM } from "./ui/button-xsm";
 /*    Импорты секций    */
 // import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
+import { FocusSlide } from "./sections/focus-slide";
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
 
-export { H1, H2, H3, Text, Caption, ButtonXLG, ButtonLG, ButtonMD, ButtonSM, ButtonXSM };
+export {
+  H1,
+  H2,
+  H3,
+  Text,
+  Caption,
+  ButtonXLG,
+  ButtonLG,
+  ButtonMD,
+  ButtonSM,
+  ButtonXSM,
+  FocusSlide,
+};
