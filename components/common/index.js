@@ -1,0 +1,1 @@
+// export { FirstSlideBGImage } from "./first-slide-image";

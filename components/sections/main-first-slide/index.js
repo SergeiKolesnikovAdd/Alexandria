@@ -1,0 +1,1 @@
+export { MainFirstSlide } from "./main-first-slide";
