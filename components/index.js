@@ -28,6 +28,7 @@ import { FocusSlide } from "./sections/focus-slide";
 import { MainFirstSlide } from "./sections/main-first-slide";
 import { OfferSlide } from "./sections/offer-slide";
 import { AboutSlide } from "./sections/about-slide";
+import { PlatformSlide } from "./sections/platform-slide";
 
 
 /*    Импорты модальных окон    */
@@ -49,5 +50,6 @@ export {
   MainFirstSlide,
   OfferSlide,
   AboutSlide,
+  PlatformSlide,
 };
 
