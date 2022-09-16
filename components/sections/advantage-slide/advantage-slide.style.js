@@ -1,21 +1,22 @@
 import {
+  getCurrentColor,
   getCurrentBackgroundColorStyles,
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
-  getCurrentCulor,
+  colors,
 } from "styles";
 import styled from "@emotion/styled";
-import { getCurrentMarginStyle } from "styles";
+import { Text, Caption, H2, } from "components";
 
-export const AdvantageSlide = styled.div`
+export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   ${getCurrentBackgroundColorStyles("black")};
-  ${getCurrentMarginStyle("horizontal", "xxxsm")}
-  ${getCurrentPaddingStyle("horizontal", "mdlg")}
-  ${getCurrentPaddingStyle("vertical", "mdlg")}
+  ${getCurrentMarginStyle("horizontal", "xxxsm")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  ${getCurrentPaddingStyle("vertical", "mdlg")};
   width: 100%;
 `;
 
@@ -32,10 +33,25 @@ export const AdvantageItem = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border: 1px solid ${getCurrentCulor("red")};
+  border: 1px solid ${getCurrentColor("red")};
   width: 368px;
   height: 368px;
   border-radius: 48px;
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  ${getCurrentPaddingStyle("vertical", "mdlg")};
+`;
+
+export const StyledH2 = styled(H2)`
+  ${colors.white};
+`;
+
+export const StyledText = styled(Text)`
+  ${colors.white};
+`;
+
+export const StyledCaption = styled(Caption)`
+  ${colors.white};
+  opacity: 0.4;
 `;
 
 // export const imgWrapper = styled.div`

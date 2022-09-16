@@ -1,38 +1,38 @@
 import { Caption, H2, Text } from "components";
-import { ContentWrapper, AdvantageWrapper, AdvantageItem } from "./about-end-text-block.style";
+import { ContentWrapper, AdvantageWrapper, AdvantageItem, StyledCaption, StyledH2, StyledText, } from "./advantage-slide.style";
 
 export const AdvantageSlide = () => {
   return (
     <ContentWrapper>
-      <Text style="opacity:0.4;">Преимущества</Text>
-      <H2>
+      <StyledText style={{ opacity: 0.4 }}>Преимущества</StyledText>
+      <StyledH2>
         Почему выбирают
         <br />
         именно нас?
-      </H2>
+      </StyledH2>
       <AdvantageWrapper>
-        <AdvantageItem>
-          <Text>
+        <AdvantageItem mr="mdsm">
+          <StyledText>
             Продвижение в международные
             <br />
             наукометрические и предметные базы данных
-          </Text>
-          <Caption>
+          </StyledText>
+          <StyledCaption>
             Составление подробного плана
             <br />
             продвижения журнала в базы данных с его
             <br />
             последующей реализацией.
-          </Caption>
+          </StyledCaption>
           {/* TODO: IMG */}
         </AdvantageItem>
-        <AdvantageItem>
-          <Text>
+        <AdvantageItem mr="mdsm">
+          <StyledText>
             Консультации и полное
             <br />
             сопровождение
-          </Text>
-          <Caption>
+          </StyledText>
+          <StyledCaption>
             Подробные инструкции, воркшопы
             <br />
             и консультации помогут досконально
@@ -44,39 +44,38 @@ export const AdvantageSlide = () => {
             экспертности назначенной редакционной
             <br />
             коллегии.
-          </Caption>
+          </StyledCaption>
           {/* TODO: IMG */}
         </AdvantageItem>
-        <AdvantageItem>
-          <Text>
+        <AdvantageItem mr="mdsm">
+          <StyledText>
             Экспертное редактирование,
             <br />
             перевод и подготовка научных
             <br />
             рукописей
-          </Text>
-          <Caption>
+          </StyledText>
+          <StyledCaption>
             Редактирование научных рукописей
             <br />
             экспертами международного уровня,
             <br />
             перевод и полная подготовка в публикации.
-          </Caption>
+          </StyledCaption>
           {/* TODO: IMG */}
         </AdvantageItem>
         <AdvantageItem>
-          <Text>Различные бизнес-модели</Text>
-          <Caption>
+          <StyledText>Различные бизнес-модели</StyledText>
+          <StyledCaption>
             Подробные инструкции, воркшопы
             <br />
             и консультации помогут досконально
             <br />
             разобраться в процессе издательской
-            <br /> 
+            <br />
             деятельности и повысят уровень
-            <br /> 
-            экспертности назначенной редакционной коллегии.
-          </Caption>
+            <br /> экспертности назначенной редакционной коллегии.
+          </StyledCaption>
           {/* TODO: IMG */}
         </AdvantageItem>
       </AdvantageWrapper>
