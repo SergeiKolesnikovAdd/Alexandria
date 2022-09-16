@@ -18,13 +18,14 @@ import { ButtonMD } from "components";
 import { ButtonLG } from "components";
 import { ButtonXSM } from "components";
 import { FocusSlide } from "components";
+import { MainFirstSlide } from "../components/sections/main-first-slide";
 
 const Home = () => {
-  const videoContant = useRef(null);
 
   return (
     <>
       <main>
+        <MainFirstSlide />
         <FocusSlide></FocusSlide>
       </main>
     </>

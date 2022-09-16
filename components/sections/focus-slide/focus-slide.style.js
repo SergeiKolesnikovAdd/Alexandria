@@ -2,6 +2,7 @@ import {
   getCurrentBackgroundColorStyles,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
+  colors,
 } from "styles";
 import styled from "@emotion/styled";
 
@@ -10,8 +11,11 @@ export const ContentWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: ${getCurrentBackgroundColorStyles("black")};
+  background-color: ${colors.black};
+  border: 1px solid ${colors.black};
+  border-radius: 80px;
   width: 100%;
+  height: 50vw;
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("vertical", "lg")};
@@ -20,10 +24,9 @@ export const ContentWrapper = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   background-color: ${getCurrentBackgroundColorStyles("black")};
-  width: 100%;
 `;
 
 export const SliderWrapper = styled.div`

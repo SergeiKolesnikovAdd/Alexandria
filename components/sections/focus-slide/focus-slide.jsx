@@ -5,17 +5,23 @@ import {
   SliderWrapper,
 } from "./focus-slide.style";
 
+import {
+  colors,
+} from "styles";
+
 export const FocusSlide = () => {
   return (
     <ContentWrapper>
       <TextWrapper>
-        <Text style="opacity: 0.4;">Фокусность проекта</Text>
-        <H2 mt="mdsm">
+        <Text style={{ opacity: 0.4, color: colors.white }}>
+          Фокусность проекта
+        </Text>
+        <H2 mt="mdsm" style={{ color: colors.white }}>
           Для кого наша
           <br />
           платформа?
         </H2>
-        <Text style="aligin-self:flex-end;">
+        <Text style={{ color: colors.white }}>
           Мы помогаем создавать, развивать и продвигать
           <br />
           в различные базы данных научные журналы и книги

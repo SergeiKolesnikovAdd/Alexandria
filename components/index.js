@@ -1,5 +1,6 @@
 /*    Импорты общих компонентов    */
-import {} from "./common";
+// import { FirstSlideBGImage } from "./common";
+
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
 import { H2 } from "./ui/h2";
@@ -16,6 +17,8 @@ import { ButtonXSM } from "./ui/button-xsm";
 // import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
 import { FocusSlide } from "./sections/focus-slide";
+// import { MainFirstSlide } from "./sections/main-first-slide";
+
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
@@ -32,4 +35,5 @@ export {
   ButtonSM,
   ButtonXSM,
   FocusSlide,
+  // MainFirstSlide,
 };
