@@ -1,0 +1,1 @@
+export { Standart } from "./standart";
