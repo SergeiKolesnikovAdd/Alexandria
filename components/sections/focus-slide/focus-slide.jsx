@@ -3,6 +3,7 @@ import {
   ContentWrapper,
   TextWrapper,
   SliderWrapper,
+  HigherPart,
 } from "./focus-slide.style";
 
 import {
@@ -13,14 +14,16 @@ export const FocusSlide = () => {
   return (
     <ContentWrapper>
       <TextWrapper>
-        <Text style={{ opacity: 0.4, color: colors.white }}>
-          Фокусность проекта
-        </Text>
-        <H2 mt="mdsm" style={{ color: colors.white }}>
-          Для кого наша
-          <br />
-          платформа?
-        </H2>
+        <HigherPart>
+          <Text style={{ opacity: 0.4, color: colors.white }}>
+            Фокусность проекта
+          </Text>
+          <H2 mt="mdsm" style={{ color: colors.white }}>
+            Для кого наша
+            <br />
+            платформа?
+          </H2>
+        </HigherPart>
         <Text style={{ color: colors.white }}>
           Мы помогаем создавать, развивать и продвигать
           <br />

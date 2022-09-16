@@ -22,6 +22,15 @@ export const ContentWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: ${getCurrentBackgroundColorStyles("black")};
+`;
+
+export const HigherPart = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
