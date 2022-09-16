@@ -27,6 +27,7 @@ import { AdvantageSlide } from "./sections/advantage-slide";
 import { FocusSlide } from "./sections/focus-slide";
 import { MainFirstSlide } from "./sections/main-first-slide";
 import { OfferSlide } from "./sections/offer-slide";
+import { AboutSlide } from "./sections/about-slide";
 
 
 /*    Импорты модальных окон    */
@@ -47,5 +48,6 @@ export {
   AdvantageSlide,
   MainFirstSlide,
   OfferSlide,
+  AboutSlide,
 };
 
