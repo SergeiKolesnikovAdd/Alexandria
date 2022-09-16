@@ -12,9 +12,9 @@ import { ButtonLG } from "./ui/button-lg";
 import { ButtonMD } from "./ui/button-md";
 import { ButtonSM } from "./ui/button-sm";
 import { ButtonXSM } from "./ui/button-xsm";
-
+import { Logo } from "./ui/logo";
 /*    Импорты секций    */
-// import { Header } from "./sections/header";
+import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
 // import { MainFirstSlide } from "./sections/main-first-slide";
 
@@ -32,5 +32,7 @@ export {
   ButtonMD,
   ButtonSM,
   ButtonXSM,
+  Header,
+  Logo,
   // MainFirstSlide,
 };
