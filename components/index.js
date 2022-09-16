@@ -16,7 +16,9 @@ import { ButtonXSM } from "./ui/button-xsm";
 /*    Импорты секций    */
 // import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
+import { FocusSlide } from "./sections/focus-slide";
 // import { MainFirstSlide } from "./sections/main-first-slide";
+
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
@@ -32,5 +34,6 @@ export {
   ButtonMD,
   ButtonSM,
   ButtonXSM,
+  FocusSlide,
   // MainFirstSlide,
 };
