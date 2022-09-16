@@ -1,5 +1,9 @@
 /*    Импорты общих компонентов    */
-import {} from "./common";
+export { Diagram } from "./common";
+export { Pen } from "./common";
+export { Message } from "./common";
+export { Flag } from "./common";
+
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
 import { H2 } from "./ui/h2";
@@ -16,8 +20,25 @@ import { ButtonXSM } from "./ui/button-xsm";
 // import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
 import { AdvantageSlide } from "./sections/advantage-slide";
+import { FocusSlide } from "./sections/focus-slide";
+import { MainFirstSlide } from "./sections/main-first-slide";
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
 
-export { H1, H2, H3, Text, Caption, ButtonXLG, ButtonLG, ButtonMD, ButtonSM, ButtonXSM, AdvantageSlide, };
+export {
+  H1,
+  H2,
+  H3,
+  Text,
+  Caption,
+  ButtonXLG,
+  ButtonLG,
+  ButtonMD,
+  ButtonSM,
+  ButtonXSM,
+  FocusSlide,
+  AdvantageSlide,
+  MainFirstSlide,
+};
+

@@ -18,12 +18,16 @@ import { ButtonMD } from "components";
 import { ButtonLG } from "components";
 import { ButtonXSM } from "components";
 import { AdvantageSlide } from "components";
+import { FocusSlide } from "components";
+import { MainFirstSlide } from "components";
 
 const Home = () => {
 
   return (
     <>
       <main>
+        <MainFirstSlide />
+        <FocusSlide></FocusSlide>
         <AdvantageSlide></AdvantageSlide>
       </main>
     </>

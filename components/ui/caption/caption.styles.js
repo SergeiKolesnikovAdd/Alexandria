@@ -13,7 +13,6 @@ export const Text = styled.span`
   font-style: normal;
   font-weight: 700;
   display: inline-block;
-  text-transform: uppercase;
   transition: color 0.3s;
 
   ${applyMargins};

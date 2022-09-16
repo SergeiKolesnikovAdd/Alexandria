@@ -1,0 +1,20 @@
+export const Flag = (props) => {
+  return (
+    <svg
+      width="25"
+      height="28"
+      viewBox="0 0 25 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.368164 27.8544L9.31114 22.8166L18.3792 27.8544V5.43488H0.368164V27.8544Z"
+        fill="#D17456"
+      />
+      <path
+        d="M4.90181 0.145508V3.16849H21.2754V19.4161H24.2984V0.145508H4.90181Z"
+        fill="#D17456"
+      />
+    </svg>
+  );
+};

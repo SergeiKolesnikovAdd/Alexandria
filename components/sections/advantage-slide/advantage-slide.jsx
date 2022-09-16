@@ -1,82 +1,111 @@
 import { Caption, H2, Text } from "components";
-import { ContentWrapper, AdvantageWrapper, AdvantageItem, StyledCaption, StyledH2, StyledText, } from "./advantage-slide.style";
+import {
+  ContentWrapper,
+  AdvantageWrapper,
+  AdvantageItem,
+  StyledCaption,
+  StyledH2,
+  StyledText,
+  TextWrapper,
+  ImgWrapper,
+  StyledDiagram,
+  StyledFlag,
+  StyledMessage,
+  StyledPen,
+} from "./advantage-slide.style";
 
 export const AdvantageSlide = () => {
   return (
     <ContentWrapper>
       <StyledText style={{ opacity: 0.4 }}>Преимущества</StyledText>
-      <StyledH2>
+      <StyledH2 mt="mdsm">
         Почему выбирают
         <br />
         именно нас?
       </StyledH2>
       <AdvantageWrapper>
         <AdvantageItem mr="mdsm">
-          <StyledText>
-            Продвижение в международные
-            <br />
-            наукометрические и предметные базы данных
-          </StyledText>
-          <StyledCaption>
-            Составление подробного плана
-            <br />
-            продвижения журнала в базы данных с его
-            <br />
-            последующей реализацией.
-          </StyledCaption>
-          {/* TODO: IMG */}
+          <TextWrapper>
+            <StyledText>
+              Продвижение в международные
+              <br />
+              наукометрические и предметные базы данных
+            </StyledText>
+            <StyledCaption>
+              Составление подробного плана
+              <br />
+              продвижения журнала в базы данных с его
+              <br />
+              последующей реализацией.
+            </StyledCaption>
+          </TextWrapper>
+          <ImgWrapper>
+            <StyledDiagram />
+          </ImgWrapper>
         </AdvantageItem>
         <AdvantageItem mr="mdsm">
-          <StyledText>
-            Консультации и полное
-            <br />
-            сопровождение
-          </StyledText>
-          <StyledCaption>
-            Подробные инструкции, воркшопы
-            <br />
-            и консультации помогут досконально
-            <br />
-            разобраться в процессе издательской
-            <br />
-            деятельности и повысят уровень
-            <br />
-            экспертности назначенной редакционной
-            <br />
-            коллегии.
-          </StyledCaption>
-          {/* TODO: IMG */}
+          <TextWrapper>
+            <StyledText>
+              Консультации и полное
+              <br />
+              сопровождение
+            </StyledText>
+            <StyledCaption>
+              Подробные инструкции, воркшопы
+              <br />
+              и консультации помогут досконально
+              <br />
+              разобраться в процессе издательской
+              <br />
+              деятельности и повысят уровень
+              <br />
+              экспертности назначенной редакционной
+              <br />
+              коллегии.
+            </StyledCaption>
+          </TextWrapper>
+          <ImgWrapper>
+            <StyledMessage />
+          </ImgWrapper>
         </AdvantageItem>
         <AdvantageItem mr="mdsm">
-          <StyledText>
-            Экспертное редактирование,
-            <br />
-            перевод и подготовка научных
-            <br />
-            рукописей
-          </StyledText>
-          <StyledCaption>
-            Редактирование научных рукописей
-            <br />
-            экспертами международного уровня,
-            <br />
-            перевод и полная подготовка в публикации.
-          </StyledCaption>
-          {/* TODO: IMG */}
+          <TextWrapper>
+            <StyledText>
+              Экспертное редактирование,
+              <br />
+              перевод и подготовка научных
+              <br />
+              рукописей
+            </StyledText>
+            <StyledCaption>
+              Редактирование научных рукописей
+              <br />
+              экспертами международного уровня,
+              <br />
+              перевод и полная подготовка в публикации.
+            </StyledCaption>
+          </TextWrapper>
+          <ImgWrapper>
+            <StyledPen />
+          </ImgWrapper>
         </AdvantageItem>
         <AdvantageItem>
-          <StyledText>Различные бизнес-модели</StyledText>
-          <StyledCaption>
-            Подробные инструкции, воркшопы
-            <br />
-            и консультации помогут досконально
-            <br />
-            разобраться в процессе издательской
-            <br />
-            деятельности и повысят уровень
-            <br /> экспертности назначенной редакционной коллегии.
-          </StyledCaption>
-          {/* TODO: IMG */}
+          <TextWrapper>
+            <StyledText>Различные бизнес-модели</StyledText>
+            <StyledCaption>
+              Подробные инструкции, воркшопы
+              <br />
+              и консультации помогут досконально
+              <br />
+              разобраться в процессе издательской
+              <br />
+              деятельности и повысят уровень
+              <br /> экспертности назначенной редакционной коллегии.
+            </StyledCaption>
+          </TextWrapper>
+          <ImgWrapper>
+            <StyledFlag />
+          </ImgWrapper>
         </AdvantageItem>
       </AdvantageWrapper>
     </ContentWrapper>
