@@ -3,6 +3,10 @@ export { Diagram } from "./common";
 export { Pen } from "./common";
 export { Message } from "./common";
 export { Flag } from "./common";
+export { Comfort } from "./common";
+export { Mark } from "./common";
+export { Standart } from "./common";
+export { Premium } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
@@ -22,6 +26,8 @@ import { ButtonXSM } from "./ui/button-xsm";
 import { AdvantageSlide } from "./sections/advantage-slide";
 import { FocusSlide } from "./sections/focus-slide";
 import { MainFirstSlide } from "./sections/main-first-slide";
+import { OfferSlide } from "./sections/offer-slide";
+
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
@@ -40,5 +46,6 @@ export {
   FocusSlide,
   AdvantageSlide,
   MainFirstSlide,
+  OfferSlide,
 };
 
