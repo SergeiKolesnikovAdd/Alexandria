@@ -7,6 +7,7 @@ import {
   OfferSlide,
   AboutSlide,
 } from "components";
+import { PlatformSlide } from "components";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
         <MainFirstSlide />
         <AboutSlide></AboutSlide>
         <FocusSlide></FocusSlide>
+        <PlatformSlide></PlatformSlide>
         <OfferSlide></OfferSlide>
         <AdvantageSlide></AdvantageSlide>
       </main>

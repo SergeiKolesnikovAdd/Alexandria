@@ -17,8 +17,8 @@ export const Premium = (props) => {
           y2="16"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C19450" />
-          <stop offset="1" stop-color="#F0CA81" />
+          <stop stopColor="#C19450" />
+          <stop offset="1" stopColor="#F0CA81" />
         </linearGradient>
       </defs>
     </svg>
