@@ -1,18 +1,26 @@
 import { Logo } from "components";
+import { ButtonLG } from "components";
+import { Name } from "components";
+import { ButtonMD } from "components";
 import { Text } from "components";
-import { HeaderWrapper, HeaderMenu } from "./header.style";
+import { HeaderWrapper, HeaderMenu, HeaderTitle, HeaderMenuItem } from "./header.style";
 
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo />
+      <HeaderTitle>
+        <Logo />
+        <Name ml="xsm" />
+      </HeaderTitle>
+
       <HeaderMenu>
-        <Text>О платформе</Text>
-        <Text>Тарифы</Text>
-        <Text>Журналы</Text>
-        <Text>Блог</Text>
-        <Text>FAQ</Text>
+        <HeaderMenuItem>О платформе</HeaderMenuItem>
+        <HeaderMenuItem>Тарифы</HeaderMenuItem>
+        <HeaderMenuItem>Журналы</HeaderMenuItem>
+        <HeaderMenuItem>Блог</HeaderMenuItem>
+        <HeaderMenuItem>FAQ</HeaderMenuItem>
       </HeaderMenu>
+      <ButtonMD>Оставить заявку</ButtonMD>
     </HeaderWrapper>
   );
 };

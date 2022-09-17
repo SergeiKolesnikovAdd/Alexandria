@@ -20,6 +20,7 @@ import { ButtonMD } from "./ui/button-md";
 import { ButtonSM } from "./ui/button-sm";
 import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
+import { Name } from "./ui/name";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
@@ -53,4 +54,5 @@ export {
   OfferSlide,
   AboutSlide,
   PlatformSlide,
+  Name,
 };

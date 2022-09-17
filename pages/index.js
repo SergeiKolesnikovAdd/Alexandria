@@ -8,12 +8,14 @@ import {
   AboutSlide,
 } from "components";
 import { PlatformSlide } from "components";
+import { Header } from "components";
 
 const Home = () => {
 
   return (
     <>
       <main>
+        <Header/>
         <MainFirstSlide />
         <AboutSlide></AboutSlide>
         <FocusSlide></FocusSlide>

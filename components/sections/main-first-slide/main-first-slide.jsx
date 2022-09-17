@@ -1,5 +1,5 @@
 import {} from "components";
-import { Caption, H3, H1, ButtonLG, Text, Header } from "components";
+import { Caption, H3, H1, ButtonLG, Text } from "components";
 import {
   FirstSlideWrapper,
   FirstSlideBGImageWrapper,
@@ -9,7 +9,6 @@ import {
 export const MainFirstSlide = () => {
   return (
     <FirstSlideWrapper>
-      <Header />
       <H1 mx="lg">
         многофункциональная
         <br />
