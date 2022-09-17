@@ -19,9 +19,9 @@ import { ButtonLG } from "./ui/button-lg";
 import { ButtonMD } from "./ui/button-md";
 import { ButtonSM } from "./ui/button-sm";
 import { ButtonXSM } from "./ui/button-xsm";
-
+import { Logo } from "./ui/logo";
 /*    Импорты секций    */
-// import { Header } from "./sections/header";
+import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
 import { AdvantageSlide } from "./sections/advantage-slide";
 import { FocusSlide } from "./sections/focus-slide";
@@ -45,6 +45,8 @@ export {
   ButtonMD,
   ButtonSM,
   ButtonXSM,
+  Header,
+  Logo,
   FocusSlide,
   AdvantageSlide,
   MainFirstSlide,
@@ -52,4 +54,3 @@ export {
   AboutSlide,
   PlatformSlide,
 };
-
