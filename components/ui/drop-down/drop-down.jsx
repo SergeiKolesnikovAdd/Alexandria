@@ -5,7 +5,7 @@ import {
     CurrentLabel,
     DropDownItem,
     DropDownList, DropDownOverlay,
-    Error, IconPlus,
+    IconPlus,
     InputStyled,
     InputWrapper,
     Underline,
@@ -15,7 +15,6 @@ import {useEscHandler} from "../../../utils";
 
 export const DropDown = ({
                              title,
-                             error,
                              value,
                              options,
                              onChange,
@@ -67,20 +66,19 @@ export const DropDown = ({
 
     return (
         <InputWrapper isFullWidth={isFullWidth} {...props}>
-            <InputStyled isActive={isActive} isOpen={isOpen} onChange={onChange} onClick={handleOpen}
-                         isError={error} type="text" {...propsInput}>
+            <InputStyled isActive={isActive} isOpen={isOpen} onChange={onChange} onClick={handleOpen}>
                 <CurrentLabel>
                     {multiple ?
                         Boolean(selected.length) ?
                             selected.map(({label}) => label).join(', ') : title
                         : value?.label || title}
                 </CurrentLabel>
-                <IconPlus isError={error} isActive={isActive} isOpen={isOpen} viewBox="0 0 26 26" fill="none">
+                <IconPlus isActive={isActive} isOpen={isOpen} viewBox="0 0 26 26" fill="none">
                     <path d="M0 13H26M13 26L13 0" strokeWidth="2"/>
                 </IconPlus>
             </InputStyled>
             <Underline>
-                <UnderlineInner isActive={isActive} isError={error}/>
+                <UnderlineInner isActive={isActive}/>
             </Underline>
             <DropDownList isOpen={isOpen} ref={listRef}>
                 {options.map((option) => (
@@ -91,7 +89,6 @@ export const DropDown = ({
                 ))}
             </DropDownList>
             <DropDownOverlay onClick={handleOverlay} isOpen={isOpen}/>
-            {error && <Error>{error}</Error>}
         </InputWrapper>
     )
 };
@@ -111,7 +108,6 @@ DropDown.propTypes = {
     ]),
     onChange: PropTypes.func.isRequired,
     options: PropTypes.arrayOf(shapeOption).isRequired,
-    error: PropTypes.string,
     ...propTypesMargin,
     ...propTypesPadding,
 };

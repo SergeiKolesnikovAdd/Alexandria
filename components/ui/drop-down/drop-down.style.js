@@ -10,20 +10,6 @@ import {
 
 import styled from "@emotion/styled";
 
-const errorConditionBackgroundColor = ({isError}) =>
-    isError ? `background-color: ${colors.red}; transform: scaleX(1);` : "";
-
-export const UnderlineInner = styled.div`
-  width: 100%;
-  height: 100%;
-  transform: scaleX(${({isActive}) => (isActive ? 1 : 0)});
-  transform-origin: left;
-  background-color: ${colors.white};
-  transition: transform 0.5s;
-
-  ${errorConditionBackgroundColor}
-`;
-
 export const Underline = styled.div`
   width: 100%;
   height: 2px;
@@ -168,16 +154,12 @@ export const InputStyled = styled.div`
   text-align: left;
   transition: color 0.3s;
 
-  ${({isOpen, isActive, isError, theme}) => {
+  ${({isOpen, isActive, theme}) => {
     if (isOpen) {
       return {color: colors.white};
     } else if (isActive) {
       return {color: getCurrentColor("primary", theme)};
-    } else if (isError) {
-      return {color: colors.red};
-    } else {
-      return {color: hexToRGBA(colors.white, 0.2)};
-    }
+    } 
   }}
 
   &:hover {
@@ -190,21 +172,6 @@ export const InputStyled = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     align-items: flex-end;
-  }
-`;
-
-export const Error = styled.div`
-  width: 100%;
-  color: ${colors.red};
-  text-transform: uppercase;
-  position: absolute;
-  top: calc(100% + 4px);
-  font-family: ${fontFamilies.subFont};
-
-  ${getCurrentFontSizeStyle("caption")};
-  
-    @media screen and (min-width: ${breakpointsWidth.desktopLG}) {  
-      top: calc(100% + ${getVW(4)});
   }
 `;
 
