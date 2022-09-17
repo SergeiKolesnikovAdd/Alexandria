@@ -11,6 +11,8 @@ import {
   StyledCaption,
 } from "./offer-slide.style";
 
+import { propTypesMargin, propTypesPadding } from "../../types";
+
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
 import {
@@ -18,9 +20,9 @@ import {
 } from "styles";
 import Link from "next/link";
 
-export const OfferSlide = () => {
+export const OfferSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper {...props}>
       <Text mb="lg" mx="lg">
         Удобное ценообразование
       </Text>
@@ -152,4 +154,9 @@ export const OfferSlide = () => {
       </TableOffer>
     </ContentWrapper>
   );
+};
+
+OfferSlide.propTypes = {
+  propTypesMargin,
+  propTypesPadding,
 };

@@ -9,11 +9,15 @@ import {
   ButtonRow,
 } from "./about-slide.style";
 
-export const AboutSlide = () => {
+import { propTypesMargin, propTypesPadding } from "../../types";
+
+export const AboutSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper {...props}>
       <Text mx="lg">В чем наша идея</Text>
-      <H2 mx="lg" mt="mdsm">Alexandrina—это</H2>
+      <H2 mx="lg" mt="mdsm">
+        Alexandrina—это
+      </H2>
       <ButtonRow>
         <TextContainer mt="lg" mx="lg">
           <Text mr="lg">
@@ -31,13 +35,16 @@ export const AboutSlide = () => {
             <StyledText>Презентация, PDF</StyledText>
           </Link>
         </TextContainer>
-        <ButtonSM mx="lg">
-          О платформе
-        </ButtonSM>
+        <ButtonSM mx="lg">О платформе</ButtonSM>
       </ButtonRow>
       <AboutBGImageWrapper mt="xxlg">
         <AboutSlideBGImage />
       </AboutBGImageWrapper>
     </ContentWrapper>
   );
+};
+
+AboutSlide.propTypes = {
+  propTypesMargin,
+  propTypesPadding,
 };

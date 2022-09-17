@@ -1,0 +1,69 @@
+import {
+  applyMargins,
+  applyPaddings,
+  getCurrentColor,
+  breakpointsWidth,
+} from "styles";
+
+import styled from "@emotion/styled";
+import { Text } from "components";
+import { useState } from "react";
+import Link from "next/link";
+import { colors } from "styles";
+
+import {
+  AccordionWrapper,
+  AccordionButton,
+  Title,
+  IconWrapper,
+  IconPlus,
+  IconMinus,
+  InnerContent,
+  TextWrapper,
+  LinkWrapper,
+  StyledText,
+} from "./accordion.style";
+
+export const Accordion = (props) => {
+  const [isShowing, setIsShowing] = useState(false);
+
+  const toggle = () => {
+    setIsShowing(!isShowing);
+  };
+
+  return (
+    <AccordionWrapper>
+      <AccordionButton px="mdlg" onClick={toggle}>
+        <Title>
+          {props.title}
+          <br />
+          {props.title2}
+        </Title>
+        <IconWrapper my="mdlg">
+          <IconPlus />
+          <IconMinus />
+        </IconWrapper>
+      </AccordionButton>
+      <InnerContent>
+        <TextWrapper>
+          <Text mr="mdsm" style={{ width: "21vw" }}>
+            {props.desc1}
+          </Text>
+          <Text style={{ width: "23vw" }}>{props.desc2}</Text>
+        </TextWrapper>
+        <LinkWrapper px="mdlg" py="mdlg">
+          <Text>{props.descLink}</Text>
+          <Link href="/">
+            <StyledText>{props.Link1}</StyledText>
+          </Link>
+          <Link href="/">
+            <StyledText>{props.Link2}</StyledText>
+          </Link>
+          <Link href="/">
+            <StyledText>{props.Link3}</StyledText>
+          </Link>
+        </LinkWrapper>
+      </InnerContent>
+    </AccordionWrapper>
+  );
+};

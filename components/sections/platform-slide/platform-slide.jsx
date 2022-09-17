@@ -3,13 +3,15 @@ import {
   ContentWrapper,
 } from "./platform-slide.style";
 
+import { propTypesMargin, propTypesPadding } from "../../types";
+
 import {
   colors,
 } from "styles";
 
-export const PlatformSlide = () => {
+export const PlatformSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper {...props}>
       <Text>О платформе</Text>
       <H2 mt="mdsm">
         Мы помогаем создавать научные журналы и книги,
@@ -18,7 +20,7 @@ export const PlatformSlide = () => {
         <br />
         для издателей любого масштаба
       </H2>
-      <H2 style={{color:colors.orange}}>
+      <H2 style={{ color: colors.orange }}>
         &nbsp;и амбиций
         <br />
         вне зависимости от того являетесь ли вы
@@ -30,4 +32,9 @@ export const PlatformSlide = () => {
       <ButtonLG mt="lg">О платформе</ButtonLG>
     </ContentWrapper>
   );
+};
+
+PlatformSlide.propTypes = {
+  propTypesMargin,
+  propTypesPadding,
 };

@@ -7,6 +7,8 @@ export { Comfort } from "./common";
 export { Mark } from "./common";
 export { Standart } from "./common";
 export { Premium } from "./common";
+export { Plus } from "./common";
+export { Minus } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
@@ -21,6 +23,7 @@ import { ButtonSM } from "./ui/button-sm";
 import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
+import { Accordion } from "./ui/accordion";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 // import { Footer } from "./sections/footer";
@@ -30,7 +33,7 @@ import { MainFirstSlide } from "./sections/main-first-slide";
 import { OfferSlide } from "./sections/offer-slide";
 import { AboutSlide } from "./sections/about-slide";
 import { PlatformSlide } from "./sections/platform-slide";
-
+import { FaqSlide } from "./sections/faq-slide";
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
@@ -55,4 +58,6 @@ export {
   AboutSlide,
   PlatformSlide,
   Name,
+  Accordion,
+  FaqSlide,
 };

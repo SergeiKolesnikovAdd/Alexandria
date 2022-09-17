@@ -1,4 +1,3 @@
-import {} from "components";
 import { Caption, H3, H1, ButtonLG, Text } from "components";
 import {
   FirstSlideWrapper,
@@ -6,9 +5,11 @@ import {
   FirstSlideBGImage,
 } from "./main-first-slide.style";
 
-export const MainFirstSlide = () => {
+import { propTypesMargin, propTypesPadding } from "../../types";
+
+export const MainFirstSlide = ({ ...props }) => {
   return (
-    <FirstSlideWrapper>
+    <FirstSlideWrapper {...props}>
       <H1 mx="lg">
         многофункциональная
         <br />
@@ -31,4 +32,9 @@ export const MainFirstSlide = () => {
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
   );
+};
+
+MainFirstSlide.propTypes = {
+  propTypesMargin,
+  propTypesPadding,
 };

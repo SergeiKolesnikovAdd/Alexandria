@@ -6,3 +6,5 @@ export { Comfort } from "./comfort";
 export { Mark } from "./mark";
 export { Standart } from "./standart";
 export { Premium } from "./premium";
+export { Plus } from "./plus";
+export { Minus } from "./minus";

@@ -1,3 +1,11 @@
+import {
+  getCurrentPaddingStyle,
+  getCurrentMarginStyle,
+  breakpointsWidth,
+  applyPaddings,
+  applyMargins,
+  colors,
+} from "styles";
 import styled from "@emotion/styled";
 
 export const ContentWrapper = styled.div`
@@ -7,4 +15,6 @@ export const ContentWrapper = styled.div`
   align-items: flex-start;
   text-align: center;
   width: 100%;
+
+  ${applyPaddings}
 `;
