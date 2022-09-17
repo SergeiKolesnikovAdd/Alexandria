@@ -4,18 +4,19 @@ import {
   FirstSlideWrapper,
   FirstSlideBGImageWrapper,
   FirstSlideBGImage,
+  AppearanceAnimation,
 } from "./main-first-slide.style";
 
-export const MainFirstSlide = () => {
+export const MainFirstSlide = ({inView}) => {
   return (
-    <FirstSlideWrapper>
-      <H1 mx="lg">
+    <FirstSlideWrapper  >
+      <AppearanceAnimation inView={inView} mx="lg">
         многофункциональная
         <br />
         научно-издательская
         <br />
         платформа
-      </H1>
+      </AppearanceAnimation>
       <H3 mt="lg" mx="lg">
         Создайте свой научный журнал, который
         <br />

@@ -23,7 +23,7 @@ import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
-// import { Footer } from "./sections/footer";
+import { Footer } from "./sections/footer";
 import { AdvantageSlide } from "./sections/advantage-slide";
 import { FocusSlide } from "./sections/focus-slide";
 import { MainFirstSlide } from "./sections/main-first-slide";
@@ -55,4 +55,5 @@ export {
   AboutSlide,
   PlatformSlide,
   Name,
+  Footer,
 };
