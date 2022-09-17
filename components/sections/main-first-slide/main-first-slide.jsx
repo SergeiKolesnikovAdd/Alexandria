@@ -1,4 +1,5 @@
-import { Caption, H3, H1, ButtonLG, Text, } from "components";
+import {} from "components";
+import { Caption, H3, H1, ButtonLG, Text } from "components";
 import {
   FirstSlideWrapper,
   FirstSlideBGImageWrapper,

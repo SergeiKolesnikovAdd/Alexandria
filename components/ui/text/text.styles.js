@@ -9,7 +9,7 @@ import {
 import styled from "@emotion/styled";
 
 export const TextInner = styled.span`
-  font-family: ${fontFamilies.subFont};
+  font-family: ${fontFamilies.Font};
   font-style: normal;
   font-weight: 500;
   display: inline-block;

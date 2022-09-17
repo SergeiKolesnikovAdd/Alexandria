@@ -8,6 +8,7 @@ import {
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
+  width: 240px;
   height: 64px;
   background-color: ${getCurrentColor("red")};
   border: 1px solid ${getCurrentColor("red")};
@@ -29,8 +30,8 @@ export const Button = styled.button`
   }
 
   ${applyMargins}
-  ${applyPaddings} 
-  
+  ${applyPaddings}
+
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     height: 4vw;
     border-radius: 1vw;

@@ -11,7 +11,7 @@ import styled from "@emotion/styled";
 export const Text = styled.span`
   font-family: ${fontFamilies.Font};
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   display: inline-block;
   line-height: 112%;
 
