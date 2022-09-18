@@ -31,13 +31,13 @@ export const Accordion = (props) => {
           <br />
           {props.title2}
         </Title>
-        <IconWrapper my="mdlg" prev={isShowing}>
+        <IconWrapper my="mdlg" isShowing={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
         </IconWrapper>
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
-        <TextWrapper>
+        <TextWrapper style={{ marginRight: "25vw" }}>
           <Text mr="mdsm" style={{ width: "21vw", color: colors.white }}>
             {props.desc1}
           </Text>
@@ -46,14 +46,16 @@ export const Accordion = (props) => {
           </Text>
         </TextWrapper>
         <LinkWrapper>
-          <Text>{props.descLink}</Text>
-          <Link href="/">
+          <Text style={{ color: colors.white, opacity: "0.4" }}>
+            {props.descLink}
+          </Text>
+          <Link href="/" mt="md">
             <StyledText>{props.Link1}</StyledText>
           </Link>
-          <Link href="/">
+          <Link href="/" mt="sm">
             <StyledText>{props.Link2}</StyledText>
           </Link>
-          <Link href="/">
+          <Link href="/" mt="sm">
             <StyledText>{props.Link3}</StyledText>
           </Link>
         </LinkWrapper>

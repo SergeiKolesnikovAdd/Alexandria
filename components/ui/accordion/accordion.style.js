@@ -49,7 +49,7 @@ export const LinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 32px;
-
+  text-align: left;
 `;
 
 export const Title = styled(H3)`
@@ -68,8 +68,7 @@ export const IconWrapper = styled.div`
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background-color: ${({ isShowing }) =>
-    isShowing ? colors.red : colors.grey};
+  background-color: ${({ isShowing }) => (isShowing ? colors.red : colors.grey)};
 
   ${applyPaddings}
   ${applyMargins}
@@ -85,7 +84,7 @@ export const IconPlus = styled(Plus)`
 
 export const TextWrapper = styled.div`
   display: flex;
-  ${getCurrentMarginStyle("right", "24vw")}
+  text-align: left;
   margin: 0;
 `;
 
