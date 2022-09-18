@@ -1,4 +1,4 @@
-import { Caption, H2, Text } from "components";
+import { Caption, H2, Text, H3, } from "components";
 import { Diagram, Flag, Message, Pen } from "../../common";
 import {
   applyMargins,
@@ -8,6 +8,7 @@ import {
   getCurrentColor,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
+  getCurrentFontSizeStyle,
 } from "styles";
 
 import styled from "@emotion/styled";
@@ -82,3 +83,9 @@ export const StyledFlag = styled(Flag)``;
 export const StyledDiagram = styled(Diagram)``;
 
 export const StyledMessage = styled(Message)``;
+
+export const H3Styled = styled(H3)`
+  ${getCurrentFontSizeStyle("text")};
+  opacity: 0.4;
+  color: ${colors.white};
+`;

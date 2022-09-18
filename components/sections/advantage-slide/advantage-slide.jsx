@@ -12,12 +12,13 @@ import {
   StyledFlag,
   StyledMessage,
   StyledPen,
+  H3Styled,
 } from "./advantage-slide.style";
 
 export const AdvantageSlide = ({ ...props }) => {
   return (
     <ContentWrapper {...props}>
-      <StyledText style={{ opacity: 0.4 }}>Преимущества</StyledText>
+      <H3Styled style={{ opacity: 0.4 }}>Преимущества</H3Styled>
       <StyledH2 mt="mdsm">
         Почему выбирают
         <br />

@@ -4,6 +4,7 @@ import {
   TextWrapper,
   SliderWrapper,
   HigherPart,
+  H3Styled,
 } from "./focus-slide.style";
 
 import {
@@ -15,9 +16,9 @@ export const FocusSlide = ({ ...props }) => {
     <ContentWrapper {...props}>
       <TextWrapper>
         <HigherPart>
-          <Text style={{ opacity: 0.4, color: colors.white }}>
+          <H3Styled style={{ opacity: 0.4, color: colors.white }}>
             Фокусность проекта
-          </Text>
+          </H3Styled>
           <H2 mt="mdsm" style={{ color: colors.white }}>
             Для кого наша
             <br />

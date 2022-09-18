@@ -1,12 +1,9 @@
 import styled from "@emotion/styled";
-
+import { H3 } from "components";
 import {
-  getCurrentPaddingStyle,
-  getCurrentMarginStyle,
-  breakpointsWidth,
-  applyPaddings,
   applyMargins,
-  colors,
+  applyPaddings,
+  getCurrentFontSizeStyle,
 } from "styles";
 
 export const ContentWrapper = styled.div`
@@ -19,4 +16,9 @@ export const ContentWrapper = styled.div`
 
   ${applyMargins}
   ${applyPaddings}
+`;
+
+export const H3Styled = styled(H3)`
+  ${getCurrentFontSizeStyle("text")};
+  opacity: 0.4;
 `;

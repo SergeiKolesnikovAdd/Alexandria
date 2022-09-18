@@ -6,9 +6,9 @@ import {
   Link,
   StyledText,
   TextContainer,
-  H1Styled,
+  H3Styled,
 } from "./about-slide.style";
-import { ButtonSM, H2, H1, Text, } from "components";
+import { ButtonSM, H2, Text, } from "components";
 
 import {
   fontSizes
@@ -17,10 +17,10 @@ import {
 export const AboutSlide = ({ ...props }) => {
   return (
     <ContentWrapper {...props}>
-      <Text mx="lg">В чем наша идея</Text>
-      <H1Styled mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
+      <H3Styled mx="lg">В чем наша идея</H3Styled>
+      <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
         Alexandrina—это
-      </H1Styled>
+      </H2>
       <ButtonRow>
         <TextContainer mt="lg" mx="lg">
           <Text mr="lg">
