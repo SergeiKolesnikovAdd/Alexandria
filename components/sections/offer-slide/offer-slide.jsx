@@ -18,7 +18,7 @@ import Link from "next/link";
 
 export const OfferSlide = ({ ...props }) => {
   return (
-    <ContentWrapper {...props}>
+    <ContentWrapper {...props} id="offer">
       <H3Styled mb="lg" mx="lg">
         Удобное ценообразование
       </H3Styled>
@@ -71,18 +71,10 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
+          <PackageItem></PackageItem>
+          <PackageItem></PackageItem>
+          <PackageItem></PackageItem>
+          <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <StyledButton>Начать работу</StyledButton>
           </PackageItem>
@@ -107,12 +99,8 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
-          <PackageItem>
-            
-          </PackageItem>
+          <PackageItem></PackageItem>
+          <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <StyledButton>Начать работу</StyledButton>
           </PackageItem>

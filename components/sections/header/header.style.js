@@ -1,5 +1,4 @@
-import { Text } from "components";
-import { sizes, getCurrentPaddingStyle, colors} from "styles";
+import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies } from "styles";
 import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.div`
@@ -32,11 +31,14 @@ export const HeaderTitle = styled.div`
     }
 `;
 
-export const HeaderMenuItem = styled(Text)`
+export const HeaderMenuItem = styled.a`
+  color: ${colors.black};
+  font-family: ${fontFamilies.Font};
   display: flex;
-  ${getCurrentPaddingStyle("right", "lg")};
+  ${getCurrentMarginStyle("right", "lg")};
   align-items: center;
   cursor: pointer;
+  transition: color 0.3s;
 
   &:hover {
     color: ${colors.red};

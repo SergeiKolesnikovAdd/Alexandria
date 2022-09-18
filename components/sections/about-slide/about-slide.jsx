@@ -16,7 +16,7 @@ import {
 
 export const AboutSlide = ({ ...props }) => {
   return (
-    <ContentWrapper {...props}>
+    <ContentWrapper {...props} id="about">
       <H3Styled mx="lg">В чем наша идея</H3Styled>
       <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
         Alexandrina—это

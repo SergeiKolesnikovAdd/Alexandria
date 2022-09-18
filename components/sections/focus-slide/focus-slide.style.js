@@ -11,6 +11,15 @@ import styled from "@emotion/styled";
 
 import { H3 } from "components";
 
+export const SectionWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  ${applyMargins}
+  ${applyPaddings}
+`;
+
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;

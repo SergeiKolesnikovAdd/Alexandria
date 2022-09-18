@@ -5,7 +5,7 @@ import { colors } from "styles";
 
 export const PlatformSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper id="platform">
       <H3Styled>О платформе</H3Styled>
       <H2 mt="mdsm">
         Мы помогаем создавать научные журналы и книги,

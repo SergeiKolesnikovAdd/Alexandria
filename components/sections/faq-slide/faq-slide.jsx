@@ -6,7 +6,7 @@ import {
 
 export const FaqSlide = ({ ...props }) => {
   return (
-    <ContentWrapper px="mdsm" {...props}>
+    <ContentWrapper px="mdsm" {...props} id="faq">
       <H3Styled>Это может быть полезным</H3Styled>
       <H2 mt="mdsm">
         Часто задаваемые
