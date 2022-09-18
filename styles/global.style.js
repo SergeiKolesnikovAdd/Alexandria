@@ -7,7 +7,6 @@ export const initGlobalStyles = injectGlobal`
   ${resetStyles}
 
   body {
-    background: url("../assets/images/mask.png");
     background-color: ${colors.lightOrange};
     /* scroll-behavior: smooth; */
      /*Оставлено на случай ссылок внутри страницы  */

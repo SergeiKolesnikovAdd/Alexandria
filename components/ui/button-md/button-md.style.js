@@ -14,7 +14,6 @@ export const Button = styled.button`
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-
   span {
     color: ${colors.white};
     transition: color 0.3s;
