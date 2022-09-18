@@ -4,9 +4,10 @@ import {
   applyPaddings,
   applyMargins,
   colors,
+  getCurrentFontSizeStyle
 } from "styles";
 
-import { Text, H3, } from "components";
+import { Text, H3 } from "components";
 import { Plus, Minus } from "../../common";
 
 import styled from "@emotion/styled";
@@ -98,4 +99,8 @@ export const StyledText = styled(Text)`
     display: block;
     ${getCurrentMarginStyle("top", "xxxsm")};
   }
+`;
+
+export const H3Styled = styled(Text)`
+  ${getCurrentFontSizeStyle("h3")};
 `;
