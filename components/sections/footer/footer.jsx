@@ -18,25 +18,22 @@ export const Footer = () => {
       <FooterRow my="xxxlg">
         <FooterLogo>
           <Logo />
-          <Name/>
+          <Name />
         </FooterLogo>
         <FooterColumn>
-          <FooterLink href="#" mb="md">
+          <FooterLink href="#about" mb="md">
             Что мы предлагаем?
           </FooterLink>
-          <FooterLink href="#" mb="md">
+          <FooterLink href="#focus" mb="md">
             Для кого наша платформа?
           </FooterLink>
-          <FooterLink href="#" mb="md">
-            Почему Alexandrina
+          <FooterLink href="#advantages" mb="md">
+            Почему Alexandrina?
           </FooterLink>
-          <FooterLink href="#" mb="md">
+          <FooterLink href="#offer" mb="md">
             Пакеты услуг
           </FooterLink>
-          <FooterLink href="#" mb="md">
-            Последние новости
-          </FooterLink>
-          <FooterLink href="#" mb="md">
+          <FooterLink href="#faq" mb="md">
             Часто задаваемые вопросы
           </FooterLink>
         </FooterColumn>

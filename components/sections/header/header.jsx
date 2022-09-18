@@ -14,11 +14,11 @@ export const Header = () => {
       </HeaderTitle>
 
       <HeaderMenu>
-        <HeaderMenuItem>О платформе</HeaderMenuItem>
-        <HeaderMenuItem>Тарифы</HeaderMenuItem>
-        <HeaderMenuItem>Журналы</HeaderMenuItem>
-        <HeaderMenuItem>Блог</HeaderMenuItem>
-        <HeaderMenuItem>FAQ</HeaderMenuItem>
+        <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
+        <HeaderMenuItem href="#offer">Тарифы</HeaderMenuItem>
+        <HeaderMenuItem href="#advantages">Преимущества</HeaderMenuItem>
+        <HeaderMenuItem href="#focus">Клиенты</HeaderMenuItem>
+        <HeaderMenuItem href="#faq">FAQ</HeaderMenuItem>
       </HeaderMenu>
       <ButtonMD>Оставить заявку</ButtonMD>
     </HeaderWrapper>

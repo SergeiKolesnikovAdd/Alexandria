@@ -4,7 +4,6 @@ import {
   applyMargins,
   applyPaddings,
   colors,
-  getCurrentBackgroundColorStyles,
   getCurrentColor,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
@@ -13,7 +12,17 @@ import {
 
 import styled from "@emotion/styled";
 
+export const SectionWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  ${applyMargins}
+  ${applyPaddings}
+`;
+
 export const ContentWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${colors.black};
@@ -21,7 +30,7 @@ export const ContentWrapper = styled.div`
   border-radius: 80px;
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
-  ${getCurrentPaddingStyle("vertical", "mdlg")};
+  ${getCurrentPaddingStyle("vertical", "lg2")};
 
   ${applyMargins}
   ${applyPaddings}
