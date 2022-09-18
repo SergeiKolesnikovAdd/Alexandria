@@ -3,10 +3,6 @@ import {
   ContentWrapper,
 } from "./faq-slide.style";
 
-import {
-  colors,
-} from "styles";
-
 export const FaqSlide = ({ ...props }) => {
   return (
     <ContentWrapper px="mdsm" {...props}>

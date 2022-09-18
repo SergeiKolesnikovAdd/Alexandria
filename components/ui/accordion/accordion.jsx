@@ -1,11 +1,3 @@
-import {
-  applyMargins,
-  applyPaddings,
-  getCurrentColor,
-  breakpointsWidth,
-} from "styles";
-
-import styled from "@emotion/styled";
 import { Text } from "components";
 import { useState } from "react";
 import Link from "next/link";
@@ -39,13 +31,13 @@ export const Accordion = (props) => {
           <br />
           {props.title2}
         </Title>
-        <IconWrapper my="mdlg" prev={isShowing}>
+        <IconWrapper my="mdlg" isShowing={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
         </IconWrapper>
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
-        <TextWrapper>
+        <TextWrapper style={{ marginRight: "25vw" }}>
           <Text mr="mdsm" style={{ width: "21vw", color: colors.white }}>
             {props.desc1}
           </Text>
@@ -53,15 +45,17 @@ export const Accordion = (props) => {
             {props.desc2}
           </Text>
         </TextWrapper>
-        <LinkWrapper px="mdlg" py="mdlg">
-          <Text>{props.descLink}</Text>
-          <Link href="/">
+        <LinkWrapper>
+          <Text style={{ color: colors.white, opacity: "0.4" }}>
+            {props.descLink}
+          </Text>
+          <Link href="/" mt="md">
             <StyledText>{props.Link1}</StyledText>
           </Link>
-          <Link href="/">
+          <Link href="/" mt="sm">
             <StyledText>{props.Link2}</StyledText>
           </Link>
-          <Link href="/">
+          <Link href="/" mt="sm">
             <StyledText>{props.Link3}</StyledText>
           </Link>
         </LinkWrapper>
