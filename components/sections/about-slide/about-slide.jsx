@@ -1,13 +1,13 @@
-import { Caption, H3, H2, ButtonSM, Text, } from "components";
-import Link from "next/link";
 import {
   AboutBGImageWrapper,
   AboutSlideBGImage,
-  ContentWrapper,
-  TextContainer,
-  StyledText,
   ButtonRow,
+  ContentWrapper,
+  Link,
+  StyledText,
+  TextContainer,
 } from "./about-slide.style";
+import { ButtonSM, H2, Text } from "components";
 
 export const AboutSlide = ({ ...props }) => {
   return (
@@ -29,7 +29,7 @@ export const AboutSlide = ({ ...props }) => {
             <br />
             легко и просто.
           </Text>
-          <Link href="/">
+          <Link href="/presentation" target="_blank">
             <StyledText>Презентация, PDF</StyledText>
           </Link>
         </TextContainer>

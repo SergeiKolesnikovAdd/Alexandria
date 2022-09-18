@@ -1,16 +1,14 @@
 import {
-  getCurrentPaddingStyle,
-  getCurrentMarginStyle,
-  breakpointsWidth,
-  applyPaddings,
   applyMargins,
+  applyPaddings,
+  breakpointsWidth,
   colors,
+  getCurrentMarginStyle,
+  getCurrentPaddingStyle,
 } from "styles";
 
 import { Text } from "components";
-
 import img from "public/about-bg.png";
-
 import styled from "@emotion/styled";
 
 export const ContentWrapper = styled.div`
@@ -64,6 +62,13 @@ export const AboutSlideBGImage = styled.img`
   width: 100%;
   height: 100%;
   content: url(${img.src});
+`;
+
+export const Link = styled.a`
+  :hover {
+    transition: opacity 0.3s;
+    opacity: 0.4;
+  }
 `;
 
 export const StyledText = styled(Text)`

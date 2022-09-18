@@ -6,8 +6,8 @@ import {
   subsequenceOfBreakpoints,
 } from "./constants";
 
-import { getResponsiveStyle } from "./media-query-utils";
 import { getCurrentColor } from "./get-value-utils";
+import { getResponsiveStyle } from "./media-query-utils";
 
 export const getCurrentDictionaryValue = (dictionary, breakpointName, type) =>
   dictionary?.[breakpointName]?.[type];
@@ -62,11 +62,7 @@ export const getCurrentMarginStyle = (direction, type) =>
 export const getCurrentPaddingStyle = (direction, type) =>
   getCurrentStylesByDirection("padding")(direction, type);
 
-export const getVW = (px, baseWidth = 1600) =>
-    `${px / baseWidth * 100}vw`
-
-const { count: countDesktopLG, x1: x1DesktopLG } =
-  sizes[namesOfBreakpoints.desktopLG];
+export const getVW = (px, baseWidth = 1600) => `${(px / baseWidth) * 100}vw`;
 
 export const getCurrentSizeStyle = getCurrentStyleByDictionary(sizes);
 
