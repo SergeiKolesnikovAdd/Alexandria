@@ -81,7 +81,7 @@ export const PackageColumn = styled.div`
   }
 `;
 
-export const DescItem = styled.div`
+export const DescItem = styled(Caption)`
   width: 100%;
   height: 120px;
   display: flex;

@@ -13,6 +13,7 @@ import {
 export const Footer = () => {
   return (
     <FooterWrapper>
+      <FooterRow>
       <Logo />
       <FooterColumn>
         <FooterItem>Что мы предлагаем?</FooterItem>
@@ -51,6 +52,7 @@ export const Footer = () => {
           <Youtube />
         </LogoWrapper>
       </FooterColumn>
+        </FooterRow>
     </FooterWrapper>
   );
 };

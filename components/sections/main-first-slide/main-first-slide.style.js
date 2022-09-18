@@ -9,6 +9,10 @@ import {
 import { Text } from "components";
 import img from "public/first-slide-bg.png";
 import styled from "@emotion/styled";
+import { Text } from "components";
+
+const isShow = ({ inView }) =>
+  inView ? `opacity: 0.1; transition: 3s;` : `opacity: 1; transition: 3s;`;
 
 export const FirstSlideWrapper = styled.div`
   display: flex;

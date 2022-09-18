@@ -9,8 +9,7 @@ import { colors } from "styles";
 export const FooterWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column ;
   ${getCurrentPaddingStyle("horizontal", "lg")};
   height: ${sizes["desktopLG"].x3};
   ${getCurrentPaddingStyle("top", "xxxlg")};
@@ -22,6 +21,8 @@ export const FooterColumn = styled.div`
 `;
 export const FooterRow = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
 `;
 
