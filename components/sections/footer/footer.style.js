@@ -1,18 +1,13 @@
 import styled from "@emotion/styled";
-import { Caption } from "components";
 import { Text } from "components";
-import { getCurrentMarginStyle } from "styles";
-import { sizes } from "styles";
-import { getCurrentPaddingStyle } from "styles";
-import { colors } from "styles";
+import { fontFamilies, applyMargins, getCurrentMarginStyle, getCurrentPaddingStyle, colors} from "styles";
 
 export const FooterWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column ;
   ${getCurrentPaddingStyle("horizontal", "lg")};
-  height: ${sizes["desktopLG"].x3};
-  ${getCurrentPaddingStyle("top", "xxxlg")};
+;
 `;
 
 export const FooterColumn = styled.div`
@@ -22,7 +17,8 @@ export const FooterColumn = styled.div`
 export const FooterRow = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  ${applyMargins};
 `;
 
 export const FooterItem = styled(Text)`
@@ -40,4 +36,52 @@ export const LogoWrapper = styled.div`
   ${getCurrentPaddingStyle("", "md")};
   ${getCurrentMarginStyle("right", "xsm")};
   cursor: pointer;
+  transition: transform, fill, background-color 0.3s;
+  svg {
+    path {
+      transition: fill 0.3s;
+    }
+  }
+  &:hover {
+    transition: transform, fill, background-color 0.3s;
+    svg {
+      path {
+        fill: ${colors.white};
+        transition: fill 0.3s;
+      }
+    }
+    background-color: ${colors.red};
+    /* transform: scale(1.1); */
+  }
+`;
+
+export const Deviant = styled.a`
+  font-family: ${fontFamilies.Font};
+  color: ${colors.black};
+  transition: color 0.3s;
+  &:hover {
+    color: #e74141;
+  }
+`;
+export const FooterLogo = styled.a`
+  display: flex;
+  align-items: center;
+  height:100%;
+  &:hover{
+    svg{
+    &:first-child{
+      transform: scale(1.1);
+    }}
+    }`
+
+export const FooterLink = styled.a`
+  color: ${colors.black};
+  font-family: ${fontFamilies.Font};
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0.4;
+  ${applyMargins};
+  &:hover {
+    opacity: 1;
+  }
 `;

@@ -1,7 +1,5 @@
 import { Text } from "components";
-import { colors } from "styles";
-import { getCurrentPaddingStyle } from "styles";
-import { sizes } from "styles";
+import { sizes, getCurrentPaddingStyle, colors} from "styles";
 import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.div`
@@ -25,6 +23,13 @@ export const HeaderMenu = styled.div`
 export const HeaderTitle = styled.div`
   display: flex;
   align-items: center;
+  height:100%;
+  &:hover{
+    svg{
+    &:first-child{
+      transform: scale(1.1);
+    }}
+    }
 `;
 
 export const HeaderMenuItem = styled(Text)`

@@ -1,29 +1,40 @@
-import { applyMargins, applyPaddings, colors, } from "styles";
+import {
+  applyMargins,
+  applyPaddings,
+  breakpointsWidth,
+  getCurrentColor,
+} from "styles";
 
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
   width: 112px;
   height: 38px;
-  background-color: ${colors.darkOrange};
-  border: 1px solid ${colors.darkOrange};
+  background-color: ${getCurrentColor("red")};
+  border: 1px solid ${getCurrentColor("red")};
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   span {
-    color: ${colors.red};
+    color: ${getCurrentColor("white")};
     transition: color 0.3s;
   }
 
   &:hover {
-    background-color: ${colors.lightOrange};
+    background-color: ${getCurrentColor("white")};
 
     span {
-      ${colors.darkOrange};
+      color: ${getCurrentColor("red")};
     }
   }
 
   ${applyMargins}
-  ${applyPaddings} 
+  ${applyPaddings}
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    height: 2.375vw;
+    width: 15vw;
+    border-radius: 1vw;
+  }
 `;
