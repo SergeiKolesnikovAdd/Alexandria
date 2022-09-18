@@ -1,15 +1,14 @@
-import { Caption, H3, H1, ButtonLG, Text } from "components";
 import {
-  FirstSlideWrapper,
-  FirstSlideBGImageWrapper,
-  FirstSlideBGImage,
   AppearanceAnimation,
+  FirstSlideBGImage,
+  FirstSlideBGImageWrapper,
+  FirstSlideWrapper,
 } from "./main-first-slide.style";
+import { ButtonLG, H1, H3 } from "components";
 
-export const MainFirstSlide = ({inView, ...props }) => {
+export const MainFirstSlide = (props) => {
   return (
     <FirstSlideWrapper {...props}>
-      <AppearanceAnimation inView={inView} mx="lg">
       <H1 mx="lg">
         многофункциональная
         <br />
@@ -17,7 +16,6 @@ export const MainFirstSlide = ({inView, ...props }) => {
         <br />
         платформа
       </H1>
-      </AppearanceAnimation>
       <H3 mt="lg" mx="lg">
         Создайте свой научный журнал, который
         <br />

@@ -1,14 +1,15 @@
+import { ButtonMD, Caption } from "components";
 import {
+  applyMargins,
+  applyPaddings,
+  colors,
   getCurrentBackgroundColorStyles,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
-  colors,
   hexToRGBA,
-  applyMargins,
-  applyPaddings,
 } from "styles";
+
 import styled from "@emotion/styled";
-import { ButtonMD, Caption } from "components";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -64,11 +65,11 @@ export const PackageColumn = styled.div`
   grid-auto-flow: column;
   justify-items: center;
   align-items: center;
-  transition: background-color 0.35s;
+  transition: background-color 0.3s;
   border-radius: 32px;
 
   button {
-    transition: opacity 0.35s;
+    transition: opacity 0.3s;
   }
 
   &:hover {

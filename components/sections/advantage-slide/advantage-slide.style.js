@@ -1,29 +1,26 @@
+import { Caption, H2, Text } from "components";
+import { Diagram, Flag, Message, Pen } from "../../common";
 import {
-  getCurrentColor,
-  getCurrentBackgroundColorStyles,
-  getCurrentPaddingStyle,
-  getCurrentMarginStyle,
-  colors,
   applyMargins,
   applyPaddings,
+  colors,
+  getCurrentBackgroundColorStyles,
+  getCurrentColor,
+  getCurrentMarginStyle,
+  getCurrentPaddingStyle,
 } from "styles";
+
 import styled from "@emotion/styled";
-import { Text, Caption, H2, } from "components";
-import { Pen, Flag, Message, Diagram, } from "../../common";
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   background-color: ${colors.black};
   border: 1px solid ${colors.black};
   border-radius: 80px;
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
-  width: 100%;
-  height: 42.8125vw;
 
   ${applyMargins}
   ${applyPaddings}
@@ -59,7 +56,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const StyledH2 = styled(H2)`
-  color:${colors.white};
+  color: ${colors.white};
 `;
 
 export const StyledText = styled(Text)`
@@ -83,18 +80,10 @@ export const ImgWrapper = styled.div`
   background-color: ${colors.white};
 `;
 
-export const StyledPen = styled(Pen)`
-  
-`;
+export const StyledPen = styled(Pen)``;
 
-export const StyledFlag = styled(Flag)`
-  
-`;
+export const StyledFlag = styled(Flag)``;
 
-export const StyledDiagram = styled(Diagram)`
-  
-`;
+export const StyledDiagram = styled(Diagram)``;
 
-export const StyledMessage = styled(Message)`
-  
-`;
+export const StyledMessage = styled(Message)``;
