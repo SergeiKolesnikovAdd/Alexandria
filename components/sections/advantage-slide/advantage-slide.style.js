@@ -28,9 +28,7 @@ export const ContentWrapper = styled.div`
 
 export const AdvantageWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
   ${getCurrentMarginStyle("top", "xxlg")};
 `;
@@ -39,7 +37,6 @@ export const AdvantageItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
   border: 1px solid ${getCurrentColor("red")};
   width: 368px;
   height: 368px;
@@ -51,8 +48,6 @@ export const AdvantageItem = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 `;
 
 export const StyledH2 = styled(H2)`

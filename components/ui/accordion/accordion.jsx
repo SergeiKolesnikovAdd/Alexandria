@@ -24,7 +24,7 @@ export const Accordion = (props) => {
   };
 
   return (
-    <AccordionWrapper>
+    <AccordionWrapper {...props}>
       <AccordionButton px="mdlg" onClick={toggle} isShowing={isShowing}>
         <Title isShowing={isShowing}>
           {props.title}

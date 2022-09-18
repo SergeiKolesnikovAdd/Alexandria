@@ -23,7 +23,6 @@ export const FooterRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 `;
 
 export const FooterItem = styled(Text)`
