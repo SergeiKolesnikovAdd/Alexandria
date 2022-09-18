@@ -26,7 +26,7 @@ import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
-// import { Footer } from "./sections/footer";
+import { Footer } from "./sections/footer";
 import { AdvantageSlide } from "./sections/advantage-slide";
 import { FocusSlide } from "./sections/focus-slide";
 import { MainFirstSlide } from "./sections/main-first-slide";
@@ -60,4 +60,5 @@ export {
   Name,
   Accordion,
   FaqSlide,
+  Footer,
 };

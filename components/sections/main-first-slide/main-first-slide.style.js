@@ -7,6 +7,10 @@ import {
 import img from "public/first-slide-bg.png";
 
 import styled from "@emotion/styled";
+import { Text } from "components";
+
+const isShow = ({ inView }) =>
+  inView ? `opacity: 0.1; transition: 3s;` : `opacity: 1; transition: 3s;`;
 
 export const FirstSlideWrapper = styled.div`
   display: flex;
@@ -14,7 +18,7 @@ export const FirstSlideWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  ${getCurrentPaddingStyle("top", "xxlg")}
+  ${getCurrentPaddingStyle("top", "xxlg")};
 `;
 
 export const FirstSlideBGImageWrapper = styled.div`
@@ -40,4 +44,9 @@ export const FirstSlideBGImage = styled.img`
     width: 110vw;
     height: 30vw;
   }
+`;
+
+
+export const AppearanceAnimation = styled(Text)`
+  ${isShow};
 `;
