@@ -6,25 +6,28 @@ import {
   MainFirstSlide,
   OfferSlide,
   AboutSlide,
+  FaqSlide,
+  PlatformSlide,
+  Header,
+  Footer,
 } from "components";
-import { PlatformSlide } from "components";
-import { Header } from "components";
+
 import { useInView } from "react-intersection-observer";
-import { Footer } from "components";
 
 const Home = () => {
 const { ref, inView} = useInView();
 
   return (
     <>
-      <main ref={ref}>
+      <main>
         <Header />
-        <MainFirstSlide  inView={inView} />
-        <AboutSlide></AboutSlide>
-        <FocusSlide></FocusSlide>
-        <PlatformSlide></PlatformSlide>
-        <OfferSlide></OfferSlide>
-        <AdvantageSlide></AdvantageSlide>
+        <MainFirstSlide inView={inView} mt="xxlg" />
+        <AboutSlide mt="xxxlg"></AboutSlide>
+        <FocusSlide mt="xxxlg"></FocusSlide>
+        <PlatformSlide mt="xxxlg"></PlatformSlide>
+        <OfferSlide mt="xxxlg"></OfferSlide>
+        <AdvantageSlide mt="xlg"></AdvantageSlide>
+        <FaqSlide mt="xxxlg"></FaqSlide>
         <Footer/>
       </main>
     </>

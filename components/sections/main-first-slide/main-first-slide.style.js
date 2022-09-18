@@ -2,6 +2,8 @@ import {
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
   breakpointsWidth,
+  applyMargins,
+  applyPaddings,
 } from "styles";
 
 import img from "public/first-slide-bg.png";
@@ -19,6 +21,9 @@ export const FirstSlideWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
   ${getCurrentPaddingStyle("top", "xxlg")};
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const FirstSlideBGImageWrapper = styled.div`

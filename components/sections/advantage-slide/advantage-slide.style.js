@@ -4,6 +4,8 @@ import {
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
   colors,
+  applyMargins,
+  applyPaddings,
 } from "styles";
 import styled from "@emotion/styled";
 import { Text, Caption, H2, } from "components";
@@ -22,6 +24,9 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   width: 100%;
   height: 42.8125vw;
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const AdvantageWrapper = styled.div`

@@ -6,8 +6,11 @@ export { Comfort } from "./comfort";
 export { Mark } from "./mark";
 export { Standart } from "./standart";
 export { Premium } from "./premium";
+export { Plus } from "./plus";
+export { Minus } from "./minus";
 export { Instagram } from "./instagram";
 export { Telegram } from "./telegram";
 export { Twitter } from "./twitter";
 export { Vk } from "./vk";
 export { Youtube } from "./youtube";
+

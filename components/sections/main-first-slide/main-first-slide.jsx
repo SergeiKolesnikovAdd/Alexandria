@@ -1,4 +1,3 @@
-import {} from "components";
 import { Caption, H3, H1, ButtonLG, Text } from "components";
 import {
   FirstSlideWrapper,
@@ -7,15 +6,17 @@ import {
   AppearanceAnimation,
 } from "./main-first-slide.style";
 
-export const MainFirstSlide = ({inView}) => {
+export const MainFirstSlide = ({inView, ...props }) => {
   return (
-    <FirstSlideWrapper  >
+    <FirstSlideWrapper {...props}>
       <AppearanceAnimation inView={inView} mx="lg">
+      <H1 mx="lg">
         многофункциональная
         <br />
         научно-издательская
         <br />
         платформа
+      </H1>
       </AppearanceAnimation>
       <H3 mt="lg" mx="lg">
         Создайте свой научный журнал, который

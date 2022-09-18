@@ -18,9 +18,9 @@ import {
 } from "styles";
 import Link from "next/link";
 
-export const OfferSlide = () => {
+export const OfferSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper {...props}>
       <Text mb="lg" mx="lg">
         Удобное ценообразование
       </Text>

@@ -1,13 +1,9 @@
-import { H2, ButtonLG, Text, } from "components";
-import {
-  ContentWrapper,
-} from "./platform-slide.style";
+import { H2, ButtonLG, Text } from "components";
+import { ContentWrapper } from "./platform-slide.style";
 
-import {
-  colors,
-} from "styles";
+import { colors } from "styles";
 
-export const PlatformSlide = () => {
+export const PlatformSlide = ({ ...props }) => {
   return (
     <ContentWrapper>
       <Text>О платформе</Text>
@@ -18,7 +14,7 @@ export const PlatformSlide = () => {
         <br />
         для издателей любого масштаба
       </H2>
-      <H2 style={{color:colors.orange}}>
+      <H2 style={{ color: colors.orange }}>
         &nbsp;и амбиций
         <br />
         вне зависимости от того являетесь ли вы

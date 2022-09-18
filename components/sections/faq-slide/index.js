@@ -1,0 +1,1 @@
+export { FaqSlide } from "./faq-slide";

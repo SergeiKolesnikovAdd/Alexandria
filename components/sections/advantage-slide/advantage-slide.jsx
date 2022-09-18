@@ -14,9 +14,9 @@ import {
   StyledPen,
 } from "./advantage-slide.style";
 
-export const AdvantageSlide = () => {
+export const AdvantageSlide = ({ ...props }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper {...props}>
       <StyledText style={{ opacity: 0.4 }}>Преимущества</StyledText>
       <StyledH2 mt="mdsm">
         Почему выбирают

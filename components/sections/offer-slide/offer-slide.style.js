@@ -17,6 +17,9 @@ export const ContentWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
   ${getCurrentPaddingStyle("vertical", "lg")};
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const ButtonRow = styled.div`

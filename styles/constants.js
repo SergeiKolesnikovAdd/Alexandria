@@ -5,6 +5,7 @@ export const colors = {
   lightOrange: "#FCF8F3",
   orange: "#F9D3B1",
   darkOrange: "#F9D3B1",
+  grey: "#FCF8F3",
 };
 
 export const fontFamilies = {
