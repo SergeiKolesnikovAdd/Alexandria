@@ -2,11 +2,8 @@ import {
   applyMargins,
   applyPaddings,
   breakpointsWidth,
-  getCurrentMarginStyle,
-  getCurrentPaddingStyle,
 } from "styles";
 
-import { Text } from "components";
 import img from "public/first-slide-bg.png";
 import styled from "@emotion/styled";
 

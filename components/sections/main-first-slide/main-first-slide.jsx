@@ -1,5 +1,4 @@
 import {
-  AppearanceAnimation,
   FirstSlideBGImage,
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
