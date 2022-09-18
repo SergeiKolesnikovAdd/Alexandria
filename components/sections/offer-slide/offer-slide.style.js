@@ -3,7 +3,6 @@ import {
   applyMargins,
   applyPaddings,
   colors,
-  getCurrentBackgroundColorStyles,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
   hexToRGBA,
