@@ -5,8 +5,5 @@ export const LogoWrapper = styled.svg`
   width: 64px;
   height: 64px;
   cursor: pointer;
-  transition: transform 0.3s;
-  &:hover {
-    transform: scale(1.1);
-  }
+  transition: transform 0.3s; 
 `;

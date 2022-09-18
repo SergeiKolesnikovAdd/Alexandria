@@ -1,3 +1,4 @@
+import { Name } from "components";
 import { Caption, Logo, H3} from "components";
 import { colors } from "styles";
 import { Telegram, Instagram, Twitter, Vk, Youtube } from "../../common";
@@ -5,9 +6,9 @@ import {
   Deviant,
   FooterColumn,
   FooterLink,
+  FooterLogo,
   FooterRow,
   FooterWrapper,
-  InfoTitle,
   LogoWrapper,
 } from "./footer.style";
 
@@ -15,7 +16,10 @@ export const Footer = () => {
   return (
     <FooterWrapper>
       <FooterRow my="xxxlg">
-        <Logo />
+        <FooterLogo>
+          <Logo />
+          <Name/>
+        </FooterLogo>
         <FooterColumn>
           <FooterLink href="#" mb="md">
             Что мы предлагаем?

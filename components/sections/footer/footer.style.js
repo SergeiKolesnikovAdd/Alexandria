@@ -1,14 +1,6 @@
 import styled from "@emotion/styled";
-import { Caption } from "components";
 import { Text } from "components";
-import Link from "next/link";
-import { fontFamilies } from "styles";
-import { applyPaddings } from "styles";
-import { getCurrentMarginStyle } from "styles";
-import { applyMargins } from "styles";
-import { sizes } from "styles";
-import { getCurrentPaddingStyle } from "styles";
-import { colors } from "styles";
+import { fontFamilies, applyMargins, getCurrentMarginStyle, getCurrentPaddingStyle, colors} from "styles";
 
 export const FooterWrapper = styled.div`
   width: 100%;
@@ -44,9 +36,22 @@ export const LogoWrapper = styled.div`
   ${getCurrentPaddingStyle("", "md")};
   ${getCurrentMarginStyle("right", "xsm")};
   cursor: pointer;
-  transition: transform 0.3s;
-  &:hover{
-    transform:scale(1.1)
+  transition: transform, fill, background-color 0.3s;
+  svg {
+    path {
+      transition: fill 0.3s;
+    }
+  }
+  &:hover {
+    transition: transform, fill, background-color 0.3s;
+    svg {
+      path {
+        fill: ${colors.white};
+        transition: fill 0.3s;
+      }
+    }
+    background-color: ${colors.red};
+    /* transform: scale(1.1); */
   }
 `;
 
@@ -58,6 +63,16 @@ export const Deviant = styled.a`
     color: #e74141;
   }
 `;
+export const FooterLogo = styled.a`
+  display: flex;
+  align-items: center;
+  height:100%;
+  &:hover{
+    svg{
+    &:first-child{
+      transform: scale(1.1);
+    }}
+    }`
 
 export const FooterLink = styled.a`
   color: ${colors.black};
