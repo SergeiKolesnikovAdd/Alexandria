@@ -1,11 +1,12 @@
-import styled from "@emotion/styled";
 import { Text } from "components";
-import { sizes } from "styles";
-import { getCurrentPaddingStyle } from "styles";
 import { colors } from "styles";
+import { getCurrentPaddingStyle } from "styles";
+import { sizes } from "styles";
+import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
+  z-index: 1000;
   position: fixed;
   background-color: ${colors.lightOrange};
   display: flex;
@@ -16,9 +17,9 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderMenu = styled.div`
-display:flex;
-justify-content: space-between;
-align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const HeaderTitle = styled.div`
@@ -33,6 +34,6 @@ export const HeaderMenuItem = styled(Text)`
   cursor: pointer;
 
   &:hover {
-	 color: ${colors.red}
+    color: ${colors.red};
   }
 `;

@@ -1,4 +1,4 @@
-  // константы которые используются в проекте
+// константы которые используются в проекте
 export {
   fontSizes,
   fontFamilies,
@@ -26,7 +26,7 @@ export {
   getCurrentWidthSizeStyle,
   getCurrentHeightSizeStyle,
   getCurrentStyleByDictionary,
-  getVW
+  getVW,
 } from "./get-styles-utils";
 
 // Функции, которые возвращают значение стиля
@@ -54,5 +54,3 @@ export {
   getArrayOfIndex,
   stubFunction,
 } from "./utils";
-
-export { mapStyle } from "./map";
