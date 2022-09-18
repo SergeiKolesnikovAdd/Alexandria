@@ -1,7 +1,6 @@
 import {
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
-  breakpointsWidth,
   applyPaddings,
   applyMargins,
   colors,
@@ -36,30 +35,21 @@ export const AccordionButton = styled.button`
 export const InnerContent = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
-  /* height: max-content; */
   border-radius: 32px;
-  ${getCurrentMarginStyle("top", "xxxsm")};
-  display: ${({ isShowing }) => (isShowing ? "block" : "none")};
+  ${getCurrentMarginStyle("top", "xxsm")};
+  ${getCurrentPaddingStyle("verical", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  display: ${({ isShowing }) => (isShowing ? "flex" : "none")};
   background-color: ${({ isShowing }) =>
     isShowing ? colors.black : colors.white};
-
-  ${applyPaddings}
-  ${applyMargins}
 `;
 
 export const LinkWrapper = styled.div`
-  width: min-content;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   border-radius: 32px;
 
-  ${applyPaddings}
-  ${applyMargins}
 `;
 
 export const Title = styled(H3)`
@@ -78,8 +68,6 @@ export const IconWrapper = styled.div`
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  ${getCurrentPaddingStyle("verical", "mdlg")};
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   background-color: ${({ isShowing }) =>
     isShowing ? colors.red : colors.grey};
 
@@ -97,13 +85,8 @@ export const IconPlus = styled(Plus)`
 
 export const TextWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  ${getCurrentMarginStyle("right", "24vw")}
   margin: 0;
-  width: fit-content;
-
-  ${applyPaddings}
-  ${applyMargins}
 `;
 
 export const StyledText = styled(Text)`

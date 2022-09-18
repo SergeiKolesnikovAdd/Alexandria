@@ -1,11 +1,3 @@
-import {
-  applyMargins,
-  applyPaddings,
-  getCurrentColor,
-  breakpointsWidth,
-} from "styles";
-
-import styled from "@emotion/styled";
 import { Text } from "components";
 import { useState } from "react";
 import Link from "next/link";
@@ -53,7 +45,7 @@ export const Accordion = (props) => {
             {props.desc2}
           </Text>
         </TextWrapper>
-        <LinkWrapper px="mdlg" py="mdlg">
+        <LinkWrapper>
           <Text>{props.descLink}</Text>
           <Link href="/">
             <StyledText>{props.Link1}</StyledText>
