@@ -74,16 +74,16 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <StyledButton>Начать работу</StyledButton>
@@ -110,10 +110,10 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem>
-            <Mark />
+            
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <StyledButton>Начать работу</StyledButton>

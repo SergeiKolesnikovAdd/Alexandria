@@ -45,7 +45,6 @@ export const TextContainer = styled.div`
 `;
 
 export const AboutBGImageWrapper = styled.div`
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -59,8 +58,8 @@ export const AboutBGImageWrapper = styled.div`
 `;
 
 export const AboutSlideBGImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 79vw;
+  height: 52vw;
   content: url(${img.src});
 `;
 

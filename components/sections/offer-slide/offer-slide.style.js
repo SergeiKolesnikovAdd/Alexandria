@@ -111,6 +111,7 @@ export const StyledButton = styled(ButtonMD)`
 
 export const StyledCaption = styled(Caption)`
   color: ${colors.red};
+  cursor: pointer;
 
   &::after {
     content: "";
