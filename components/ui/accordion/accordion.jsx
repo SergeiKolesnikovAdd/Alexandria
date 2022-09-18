@@ -14,6 +14,7 @@ import {
   TextWrapper,
   LinkWrapper,
   StyledText,
+  H3Styled,
 } from "./accordion.style";
 
 export const Accordion = (props) => {
@@ -38,12 +39,12 @@ export const Accordion = (props) => {
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
         <TextWrapper style={{ marginRight: "25vw" }}>
-          <Text mr="mdsm" style={{ width: "23vw", color: colors.white }}>
+          <H3Styled mr="mdsm" style={{ width: "50vw", color: colors.white }}>
             {props.desc1}
-          </Text>
-          <Text style={{ width: "23vw", color: colors.white }}>
+          </H3Styled>
+          {/* <Text style={{ width: "30vw", color: colors.white }}>
             {props.desc2}
-          </Text>
+          </Text> */}
         </TextWrapper>
         {/* <LinkWrapper>
           <Text style={{ color: colors.white, opacity: "0.4" }}>
