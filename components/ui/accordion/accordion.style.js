@@ -39,8 +39,12 @@ export const InnerContent = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: max-content;
+  border-radius: 32px;
+  ${getCurrentMarginStyle("top", "xxxsm")};
   display: ${({ isShowing }) => (isShowing ? "block" : "none")};
+  background-color: ${({ isShowing }) =>
+    isShowing ? colors.black : colors.white};
 
   ${applyPaddings}
   ${applyMargins}
@@ -53,7 +57,6 @@ export const LinkWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
   border-radius: 32px;
-  background-color: ${colors.black};
 
   ${applyPaddings}
   ${applyMargins}
@@ -83,11 +86,11 @@ export const IconWrapper = styled.div`
 `;
 
 export const IconMinus = styled(Minus)`
-  
+  display: ${({ isShowing }) => (isShowing ? "block" : "none")};
 `;
 
 export const IconPlus = styled(Plus)`
-  
+  display: ${({ isShowing }) => (isShowing ? "none" : "block")};
 `;
 
 export const TextWrapper = styled.div`

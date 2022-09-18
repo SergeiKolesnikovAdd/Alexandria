@@ -1,6 +1,7 @@
 export const Plus = (props) => {
   return (
     <svg
+      {...props}
       width="16"
       height="16"
       viewBox="0 0 16 16"

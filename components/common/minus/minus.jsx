@@ -1,6 +1,7 @@
 export const Minus = (props) => {
   return (
     <svg
+      {...props}
       width="16"
       height="2"
       viewBox="0 0 16 2"

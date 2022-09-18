@@ -3,6 +3,8 @@ import {
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
   colors,
+  applyMargins,
+  applyPaddings,
 } from "styles";
 import styled from "@emotion/styled";
 
@@ -19,6 +21,9 @@ export const ContentWrapper = styled.div`
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("vertical", "lg")};
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const TextWrapper = styled.div`

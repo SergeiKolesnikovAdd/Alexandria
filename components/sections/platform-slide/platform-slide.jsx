@@ -1,17 +1,11 @@
-import { H2, ButtonLG, Text, } from "components";
-import {
-  ContentWrapper,
-} from "./platform-slide.style";
+import { H2, ButtonLG, Text } from "components";
+import { ContentWrapper } from "./platform-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
-import {
-  colors,
-} from "styles";
+import { colors } from "styles";
 
 export const PlatformSlide = ({ ...props }) => {
   return (
-    <ContentWrapper {...props}>
+    <ContentWrapper>
       <Text>О платформе</Text>
       <H2 mt="mdsm">
         Мы помогаем создавать научные журналы и книги,
@@ -32,9 +26,4 @@ export const PlatformSlide = ({ ...props }) => {
       <ButtonLG mt="lg">О платформе</ButtonLG>
     </ContentWrapper>
   );
-};
-
-PlatformSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };

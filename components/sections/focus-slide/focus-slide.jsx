@@ -6,8 +6,6 @@ import {
   HigherPart,
 } from "./focus-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
 import {
   colors,
 } from "styles";
@@ -43,9 +41,4 @@ export const FocusSlide = ({ ...props }) => {
       <SliderWrapper>{/* TODO: SLIDER */}</SliderWrapper>
     </ContentWrapper>
   );
-};
-
-FocusSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };

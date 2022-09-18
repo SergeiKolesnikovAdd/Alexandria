@@ -28,28 +28,28 @@ export const Accordion = (props) => {
   const [isShowing, setIsShowing] = useState(false);
 
   const toggle = () => {
-    setIsShowing(!isShowing);
+    setIsShowing((prev) => !prev);
   };
 
   return (
     <AccordionWrapper>
-      <AccordionButton px="mdlg" onClick={toggle}>
-        <Title>
+      <AccordionButton px="mdlg" onClick={toggle} isShowing={isShowing}>
+        <Title isShowing={isShowing}>
           {props.title}
           <br />
           {props.title2}
         </Title>
-        <IconWrapper my="mdlg">
-          <IconPlus />
-          <IconMinus />
+        <IconWrapper my="mdlg" isShowing={isShowing}>
+          <IconPlus isShowing={isShowing} />
+          <IconMinus isShowing={isShowing} />
         </IconWrapper>
       </AccordionButton>
-      <InnerContent>
+      <InnerContent isShowing={isShowing}>
         <TextWrapper>
           <Text mr="mdsm" style={{ width: "21vw" }}>
             {props.desc1}
           </Text>
-          <Text style={{ width: "23vw" }}>{props.desc2}</Text>
+          <Text style={{ width: "23vw", color: colors.white }}>{props.desc2}</Text>
         </TextWrapper>
         <LinkWrapper px="mdlg" py="mdlg">
           <Text>{props.descLink}</Text>

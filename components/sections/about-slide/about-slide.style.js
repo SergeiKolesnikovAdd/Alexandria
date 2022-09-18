@@ -19,6 +19,9 @@ export const ContentWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const ButtonRow = styled.div`

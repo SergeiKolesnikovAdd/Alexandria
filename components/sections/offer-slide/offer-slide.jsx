@@ -11,8 +11,6 @@ import {
   StyledCaption,
 } from "./offer-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
 import {
@@ -154,9 +152,4 @@ export const OfferSlide = ({ ...props }) => {
       </TableOffer>
     </ContentWrapper>
   );
-};
-
-OfferSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };

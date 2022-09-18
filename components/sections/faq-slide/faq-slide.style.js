@@ -16,5 +16,6 @@ export const ContentWrapper = styled.div`
   text-align: center;
   width: 100%;
 
+  ${applyMargins}
   ${applyPaddings}
 `;

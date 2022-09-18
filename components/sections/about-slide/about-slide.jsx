@@ -9,8 +9,6 @@ import {
   ButtonRow,
 } from "./about-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
 export const AboutSlide = ({ ...props }) => {
   return (
     <ContentWrapper {...props}>
@@ -42,9 +40,4 @@ export const AboutSlide = ({ ...props }) => {
       </AboutBGImageWrapper>
     </ContentWrapper>
   );
-};
-
-AboutSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };

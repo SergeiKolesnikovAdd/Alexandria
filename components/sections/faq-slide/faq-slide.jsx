@@ -3,8 +3,6 @@ import {
   ContentWrapper,
 } from "./faq-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
 import {
   colors,
 } from "styles";
@@ -37,9 +35,4 @@ export const FaqSlide = ({ ...props }) => {
       ></Accordion>
     </ContentWrapper>
   );
-};
-
-FaqSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };

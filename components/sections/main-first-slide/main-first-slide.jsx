@@ -6,8 +6,6 @@ import {
   AppearanceAnimation,
 } from "./main-first-slide.style";
 
-import { propTypesMargin, propTypesPadding } from "../../types";
-
 export const MainFirstSlide = ({inView, ...props }) => {
   return (
     <FirstSlideWrapper {...props}>
@@ -35,9 +33,4 @@ export const MainFirstSlide = ({inView, ...props }) => {
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
   );
-};
-
-MainFirstSlide.propTypes = {
-  propTypesMargin,
-  propTypesPadding,
 };
