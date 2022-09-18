@@ -13,12 +13,12 @@ import styled from "@emotion/styled";
 
 export const AccordionWrapper = styled.div`
   width: 100%;
-  height: 120px;
+
+  ${applyMargins}
 `;
 
 export const AccordionButton = styled.button`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -34,7 +34,6 @@ export const AccordionButton = styled.button`
 
 export const InnerContent = styled.div`
   display: flex;
-  flex-direction: row;
   width: 100%;
   border-radius: 32px;
   ${getCurrentMarginStyle("top", "xxsm")};

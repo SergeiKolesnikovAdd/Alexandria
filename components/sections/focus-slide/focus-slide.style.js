@@ -10,9 +10,7 @@ import styled from "@emotion/styled";
 
 export const ContentWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   background-color: ${colors.black};
   border: 1px solid ${colors.black};
   border-radius: 80px;
@@ -31,15 +29,12 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
   background-color: ${getCurrentBackgroundColorStyles("black")};
 `;
 
 export const HigherPart = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   background-color: ${getCurrentBackgroundColorStyles("black")};
 `;
 
