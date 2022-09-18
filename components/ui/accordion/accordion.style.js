@@ -36,10 +36,10 @@ export const AccordionButton = styled.button`
 export const InnerContent = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
-  height: max-content;
+  /* height: max-content; */
   border-radius: 32px;
   ${getCurrentMarginStyle("top", "xxxsm")};
   display: ${({ isShowing }) => (isShowing ? "block" : "none")};
@@ -51,11 +51,11 @@ export const InnerContent = styled.div`
 `;
 
 export const LinkWrapper = styled.div`
+  width: min-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
   border-radius: 32px;
 
   ${applyPaddings}
@@ -78,6 +78,8 @@ export const IconWrapper = styled.div`
   width: 56px;
   height: 56px;
   border-radius: 16px;
+  ${getCurrentPaddingStyle("verical", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   background-color: ${({ isShowing }) =>
     isShowing ? colors.red : colors.grey};
 
@@ -94,17 +96,14 @@ export const IconPlus = styled(Plus)`
 `;
 
 export const TextWrapper = styled.div`
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: 0;
+  width: fit-content;
 
   ${applyPaddings}
   ${applyMargins}
-  
-  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    width: 100%;
-  }
 `;
 
 export const StyledText = styled(Text)`

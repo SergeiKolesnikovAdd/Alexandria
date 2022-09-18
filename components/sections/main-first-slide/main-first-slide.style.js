@@ -20,7 +20,6 @@ export const FirstSlideWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  ${getCurrentPaddingStyle("top", "xxlg")};
 
   ${applyMargins}
   ${applyPaddings}

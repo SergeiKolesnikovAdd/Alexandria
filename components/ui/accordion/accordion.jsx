@@ -39,17 +39,19 @@ export const Accordion = (props) => {
           <br />
           {props.title2}
         </Title>
-        <IconWrapper my="mdlg" isShowing={isShowing}>
+        <IconWrapper my="mdlg" prev={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
         </IconWrapper>
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
         <TextWrapper>
-          <Text mr="mdsm" style={{ width: "21vw" }}>
+          <Text mr="mdsm" style={{ width: "21vw", color: colors.white }}>
             {props.desc1}
           </Text>
-          <Text style={{ width: "23vw", color: colors.white }}>{props.desc2}</Text>
+          <Text style={{ width: "23vw", color: colors.white }}>
+            {props.desc2}
+          </Text>
         </TextWrapper>
         <LinkWrapper px="mdlg" py="mdlg">
           <Text>{props.descLink}</Text>

@@ -7,7 +7,7 @@ import { colors } from "styles";
 export const HeaderWrapper = styled.div`
   width: 100%;
   position: fixed;
-  background-color: transparent;
+  background-color: ${colors.lightOrange};
   display: flex;
   justify-content: space-between;
   align-items: center;
