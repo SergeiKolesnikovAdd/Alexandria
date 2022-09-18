@@ -13,8 +13,6 @@ import styled from "@emotion/styled";
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
   ${getCurrentPaddingStyle("vertical", "lg")};
 
@@ -25,9 +23,7 @@ export const ContentWrapper = styled.div`
 export const ButtonRow = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
 
   ${applyMargins}
   ${applyPaddings}
@@ -84,8 +80,6 @@ export const DescItem = styled(Caption)`
   width: 100%;
   height: 120px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
 `;

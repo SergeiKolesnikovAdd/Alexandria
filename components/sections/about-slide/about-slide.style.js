@@ -4,18 +4,16 @@ import {
   breakpointsWidth,
   colors,
   getCurrentMarginStyle,
-  getCurrentPaddingStyle,
+  getCurrentFontSizeStyle,
 } from "styles";
 
-import { Text } from "components";
+import { Text, H1 } from "components";
 import img from "public/about-bg.png";
 import styled from "@emotion/styled";
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
 
   ${applyMargins}
@@ -24,9 +22,7 @@ export const ContentWrapper = styled.div`
 
 export const ButtonRow = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
 
   ${applyPaddings}
@@ -35,9 +31,6 @@ export const ButtonRow = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: 100%;
 
   ${applyPaddings}
@@ -47,7 +40,6 @@ export const TextContainer = styled.div`
 export const AboutBGImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
 
   ${applyPaddings}
   ${applyMargins}
@@ -81,4 +73,8 @@ export const StyledText = styled(Text)`
     display: block;
     ${getCurrentMarginStyle("top", "xxxsm")};
   }
+`;
+
+export const H1Styled = styled(H1)`
+  ${getCurrentFontSizeStyle("h2")};
 `;
