@@ -6,9 +6,8 @@ import {
   HigherPart,
 } from "./focus-slide.style";
 
-import {
-  colors,
-} from "styles";
+import { colors } from "styles";
+import { Slider } from "components";
 
 export const FocusSlide = ({ ...props }) => {
   return (
@@ -38,7 +37,9 @@ export const FocusSlide = ({ ...props }) => {
           исходя из потребностей каждого издателя.
         </Text>
       </TextWrapper>
-      <SliderWrapper>{/* TODO: SLIDER */}</SliderWrapper>
+      <SliderWrapper>
+        <Slider />  
+      </SliderWrapper>
     </ContentWrapper>
   );
 };
