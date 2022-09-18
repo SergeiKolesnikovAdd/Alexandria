@@ -4,10 +4,10 @@ import {
   breakpointsWidth,
   colors,
   getCurrentMarginStyle,
-  getCurrentFontSizeStyle,
+  getCurrentFontSizeStyle
 } from "styles";
 
-import { Text, H1 } from "components";
+import { Text, H3 } from "components";
 import img from "public/about-bg.png";
 import styled from "@emotion/styled";
 
@@ -75,6 +75,7 @@ export const StyledText = styled(Text)`
   }
 `;
 
-export const H1Styled = styled(H1)`
-  ${getCurrentFontSizeStyle("h2")};
+export const H3Styled = styled(H3)`
+  ${getCurrentFontSizeStyle("text")};
+  opacity: 0.4;
 `;

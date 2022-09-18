@@ -1,4 +1,4 @@
-import { Caption, H2, Text, ButtonXLG, } from "components";
+import { H2, Text, ButtonXLG, } from "components";
 import {
   ContentWrapper,
   DescColumn,
@@ -9,21 +9,19 @@ import {
   PackageColumn,
   StyledButton,
   StyledCaption,
+  H3Styled,
 } from "./offer-slide.style";
 
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
-import {
-  colors,
-} from "styles";
 import Link from "next/link";
 
 export const OfferSlide = ({ ...props }) => {
   return (
     <ContentWrapper {...props}>
-      <Text mb="lg" mx="lg">
+      <H3Styled mb="lg" mx="lg">
         Удобное ценообразование
-      </Text>
+      </H3Styled>
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>

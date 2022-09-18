@@ -1,12 +1,13 @@
-import { H2, ButtonXSM, Text, Accordion, } from "components";
+import { H2, ButtonXSM, Accordion, } from "components";
 import {
+  H3Styled,
   ContentWrapper,
 } from "./faq-slide.style";
 
 export const FaqSlide = ({ ...props }) => {
   return (
     <ContentWrapper px="mdsm" {...props}>
-      <Text>Это может быть полезным</Text>
+      <H3Styled>Это может быть полезным</H3Styled>
       <H2 mt="mdsm">
         Часто задаваемые
         <br />

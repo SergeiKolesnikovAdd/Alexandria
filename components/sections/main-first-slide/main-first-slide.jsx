@@ -2,20 +2,19 @@ import {
   FirstSlideBGImage,
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
-  H2Styled,
 } from "./main-first-slide.style";
-import { ButtonLG, H3 } from "components";
+import { ButtonLG, H3, H1 } from "components";
 
 export const MainFirstSlide = (props) => {
   return (
     <FirstSlideWrapper {...props}>
-      <H2Styled mx="lg">
+      <H1 mx="lg">
         многофункциональная
         <br />
         научно-издательская
         <br />
         платформа
-      </H2Styled>
+      </H1>
       <H3 mt="lg" mx="lg">
         Создайте свой научный журнал, который
         <br />

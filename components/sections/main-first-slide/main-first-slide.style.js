@@ -2,10 +2,8 @@ import {
   applyMargins,
   applyPaddings,
   breakpointsWidth,
-  getCurrentFontSizeStyle,
 } from "styles";
 
-import { H2 } from "components";
 import img from "public/first-slide-bg.png";
 import styled from "@emotion/styled";
 
@@ -43,8 +41,4 @@ export const FirstSlideBGImage = styled.img`
     width: 110vw;
     height: 30vw;
   }
-`;
-
-export const H2Styled = styled(H2)`
-  ${getCurrentFontSizeStyle("h1")};
 `;

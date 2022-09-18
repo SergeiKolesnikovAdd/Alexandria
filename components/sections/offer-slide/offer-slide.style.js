@@ -1,4 +1,4 @@
-import { ButtonMD, Caption } from "components";
+import { ButtonMD, Caption, H3, } from "components";
 import {
   applyMargins,
   applyPaddings,
@@ -6,6 +6,7 @@ import {
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
   hexToRGBA,
+  getCurrentFontSizeStyle,
 } from "styles";
 
 import styled from "@emotion/styled";
@@ -76,11 +77,12 @@ export const PackageColumn = styled.div`
   }
 `;
 
-export const DescItem = styled(Caption)`
+export const DescItem = styled.div`
   width: 100%;
   height: 120px;
   display: flex;
   align-items: center;
+  text-align: left;
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
 `;
 
@@ -115,4 +117,9 @@ export const StyledCaption = styled(Caption)`
     display: block;
     ${getCurrentMarginStyle("top", "xxxsm")};
   }
+`;
+
+export const H3Styled = styled(H3)`
+  ${getCurrentFontSizeStyle("text")};
+  opacity: 0.4;
 `;

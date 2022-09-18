@@ -5,8 +5,11 @@ import {
   colors,
   applyMargins,
   applyPaddings,
+  getCurrentFontSizeStyle,
 } from "styles";
 import styled from "@emotion/styled";
+
+import { H3 } from "components";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -41,4 +44,10 @@ export const HigherPart = styled.div`
 export const SliderWrapper = styled.div`
   height: available;
   width: 752px;
+`;
+
+export const H3Styled = styled(H3)`
+  ${getCurrentFontSizeStyle("text")};
+  opacity: 0.4;
+  color: ${colors.white};
 `;

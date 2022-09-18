@@ -1,12 +1,12 @@
 import { H2, ButtonLG, Text } from "components";
-import { ContentWrapper } from "./platform-slide.style";
+import { ContentWrapper, H3Styled } from "./platform-slide.style";
 
 import { colors } from "styles";
 
 export const PlatformSlide = ({ ...props }) => {
   return (
     <ContentWrapper>
-      <Text>О платформе</Text>
+      <H3Styled>О платформе</H3Styled>
       <H2 mt="mdsm">
         Мы помогаем создавать научные журналы и книги,
         <br />
