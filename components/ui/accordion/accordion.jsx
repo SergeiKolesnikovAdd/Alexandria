@@ -38,14 +38,14 @@ export const Accordion = (props) => {
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
         <TextWrapper style={{ marginRight: "25vw" }}>
-          <Text mr="mdsm" style={{ width: "21vw", color: colors.white }}>
+          <Text mr="mdsm" style={{ width: "23vw", color: colors.white }}>
             {props.desc1}
           </Text>
           <Text style={{ width: "23vw", color: colors.white }}>
             {props.desc2}
           </Text>
         </TextWrapper>
-        <LinkWrapper>
+        {/* <LinkWrapper>
           <Text style={{ color: colors.white, opacity: "0.4" }}>
             {props.descLink}
           </Text>
@@ -58,7 +58,7 @@ export const Accordion = (props) => {
           <Link href="/" mt="sm">
             <StyledText>{props.Link3}</StyledText>
           </Link>
-        </LinkWrapper>
+        </LinkWrapper> */}
       </InnerContent>
     </AccordionWrapper>
   );
