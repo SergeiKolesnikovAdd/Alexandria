@@ -28,6 +28,7 @@ export const AccordionButton = styled.button`
   border-radius: 32px;
   background-color: ${({ isShowing }) =>
     isShowing ? colors.black : colors.white};
+  transition: background-color 0.3s;
 
   ${applyPaddings}
   ${applyMargins}
@@ -42,7 +43,8 @@ export const InnerContent = styled.div`
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   display: ${({ isShowing }) => (isShowing ? "flex" : "none")};
   background-color: ${({ isShowing }) =>
-    isShowing ? colors.black : colors.white};
+    isShowing ? colors.black : colors.lightOrange};
+  transition: background-color 0.3s;
 `;
 
 export const LinkWrapper = styled.div`
@@ -56,6 +58,7 @@ export const Title = styled(H3)`
   color: ${colors.black};
   text-align: left;
   color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
+  transition: color 0.3s;
 
   ${applyPaddings}
   ${applyMargins}
@@ -69,6 +72,7 @@ export const IconWrapper = styled.div`
   height: 56px;
   border-radius: 16px;
   background-color: ${({ isShowing }) => (isShowing ? colors.red : colors.grey)};
+  transition: background-color 0.3s;
 
   ${applyPaddings}
   ${applyMargins}
@@ -76,16 +80,22 @@ export const IconWrapper = styled.div`
 
 export const IconMinus = styled(Minus)`
   display: ${({ isShowing }) => (isShowing ? "block" : "none")};
+  transition: display 0.3s;
 `;
 
 export const IconPlus = styled(Plus)`
   display: ${({ isShowing }) => (isShowing ? "none" : "block")};
+  transition: display 0.3s;
 `;
 
 export const TextWrapper = styled.div`
   display: flex;
   text-align: left;
   margin: 0;
+  color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
+  opacity: ${({ isShowing }) => (isShowing ? 1 : 0)};
+  transition: color 0.2s, opacity 0.2s;
+  transition-delay: 0.1s;
 `;
 
 export const StyledText = styled(Text)`

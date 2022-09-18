@@ -31,10 +31,4 @@ export const Button = styled.button`
 
   ${applyMargins}
   ${applyPaddings}
-
-  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    height: 2.375vw;
-    width: 15vw;
-    border-radius: 1vw;
-  }
 `;
