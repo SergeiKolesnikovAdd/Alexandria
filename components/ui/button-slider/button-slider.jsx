@@ -3,9 +3,9 @@ import { ButtonWrapper } from "./button-slider.style";
 
 
 
-export const ButtonSlider = () => (
+export const ButtonSlider = ({...props}) => (
 
-  <ButtonWrapper>
+  <ButtonWrapper {...props} >
   <svg fill="none" viewBox="0 0 64 64">
     <rect width="64" height="64" fill="#fff" fillOpacity=".04" rx="24" />
     <path
