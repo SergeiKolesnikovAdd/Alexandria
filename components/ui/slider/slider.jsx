@@ -83,9 +83,7 @@ export const Slider = () => {
             }}>
             <SlideImg src={img}></SlideImg>
           </Slide>
-        ))}
-      </SlideWrapper>
-      <SlideNext
+        ))}      <SlideNext
         onClick={() => {
           nextSlide();
         }}
@@ -95,6 +93,8 @@ export const Slider = () => {
           prevSlide();
         }}
       />
+      </SlideWrapper>
+
     </>
   );
 };

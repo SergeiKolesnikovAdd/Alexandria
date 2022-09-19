@@ -5,22 +5,24 @@ import styled from "@emotion/styled";
 export const ButtonWrapper = styled.button`
   width: 64px;
   height: 64px;
-  background-color: ${colors.red};
-  border: 1px solid ${colors.red};
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   span {
-    color: ${colors.white};
+    color: rgba(255, 255, 255, 0.04);
     transition: color 0.3s;
   }
 
   &:hover {
-    background-color: ${colors.lightOrange};
+    background-color: ${colors.white};
 
-    span {
-      color: ${colors.red};
+    svg {
+      path {
+        fill: ${colors.black};
+      }
     }
   }
 

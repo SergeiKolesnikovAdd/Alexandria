@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { ButtonSlider } from "../button-slider";
+import { ButtonSliderRight } from "../button-slider-right";
+import { ButtonSliderLeft } from "../button-slider-left";
 
 
 
@@ -23,15 +24,14 @@ export const SlideImg = styled.img`
   height: 100%;
   border-radius: 48px;
 `;
-  export const SlideNext = styled(ButtonSlider)`
-  position: absolute;
-  top: 50%;
-  right: 5%;
-`;
+  export const SlideNext = styled(ButtonSliderRight)`
+    position: relative;
+    top: 25%;
+    right: 90%;
+  `;
 
-export const SlidePrev = styled(ButtonSlider)`
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: rotate(180deg);
+export const SlidePrev = styled(ButtonSliderLeft)`
+  position: relative;
+  top: 25%;
+  right: 110%;
 `;

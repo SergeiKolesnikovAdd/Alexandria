@@ -25,7 +25,8 @@ import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
 import { Slider } from "./ui/slider";
-import { ButtonSlider } from "./ui/button-slider";
+import { ButtonSliderLeft } from "./ui/button-slider-left";
+import { ButtonSliderRight } from "./ui/button-slider-right";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 import { Footer } from "./sections/footer";
@@ -65,5 +66,6 @@ export {
   FaqSlide,
   Footer,
   Slider,
-  ButtonSlider,
+  ButtonSliderRight,
+  ButtonSliderLeft,
 };
