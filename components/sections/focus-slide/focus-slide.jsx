@@ -8,9 +8,8 @@ import {
   SectionWrapper,
 } from "./focus-slide.style";
 
-import {
-  colors,
-} from "styles";
+import { colors } from "styles";
+import { Slider } from "components";
 
 export const FocusSlide = ({ ...props }) => {
   return (
