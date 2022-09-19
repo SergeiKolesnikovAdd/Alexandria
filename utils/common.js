@@ -65,7 +65,8 @@ export function useNoScroll(isOpen) {
 
 export const useEscHandler = (callback) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
+
+  ect(() => {
     if (!callback) return;
     const handleEscWithCallback = handleEsc.bind(callback);
     document.addEventListener("keydown", handleEscWithCallback);

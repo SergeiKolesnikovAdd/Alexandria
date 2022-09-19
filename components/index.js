@@ -24,6 +24,9 @@ import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
+import { Slider } from "./ui/slider";
+import { ButtonSliderLeft } from "./ui/button-slider-left";
+import { ButtonSliderRight } from "./ui/button-slider-right";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 import { Footer } from "./sections/footer";
@@ -34,6 +37,7 @@ import { OfferSlide } from "./sections/offer-slide";
 import { AboutSlide } from "./sections/about-slide";
 import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
+
 
 /*    Импорты модальных окон    */
 // import { DetailCardModal } from "./modal";
@@ -61,4 +65,7 @@ export {
   Accordion,
   FaqSlide,
   Footer,
+  Slider,
+  ButtonSliderRight,
+  ButtonSliderLeft,
 };
