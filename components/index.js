@@ -41,7 +41,7 @@ import { FaqSlide } from "./sections/faq-slide";
 
 /*    Импорты модальных окон    */
 
-// import { OfferModal } from "./modal";
+import { OfferModal } from "./modal";
 
 export {
   H1,
@@ -67,5 +67,5 @@ export {
   FaqSlide,
   Footer,
   CloseButton,
-  // OfferModal,
+  OfferModal,
 };

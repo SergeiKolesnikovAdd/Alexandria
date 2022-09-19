@@ -1,6 +1,4 @@
-
-import { Caption, H2, Modal, CloseButton } from "components";
-import { Modal } from "../../common";
+import {Caption, H2, Modal, CloseButton, Text} from "components";
 
 import {
   ProductImage,
@@ -9,7 +7,6 @@ import {
   ContentWrapper,
   StyledButtonLG,
   Title,
-  IconImg,
   ContentSection,
 } from "./offer-modal.style";
 
@@ -23,7 +20,7 @@ export const OfferModal = ({ img, iconImg, text, caption, title, isOpen, setOpen
           <ContentWrapper>
             <Title>
               <H2 mr="mdsm">{title}</H2>
-              <IconImg src={iconImg} />
+              <img src={iconImg}  alt="sdf"/>
             </Title>
             <Description mt="mdsm">
               <Text style={{ width: "64vw" }}>{text}</Text>

@@ -1,4 +1,9 @@
+import { useState } from "react";
+import Link from "next/link";
 import { H2, Text, ButtonXLG, OfferModal } from "components";
+import { arrOfferInfo } from "./constant";
+import { Comfort, Mark, Premium, Standart, } from "../../common";
+
 import {
   ContentWrapper,
   DescColumn,
@@ -11,12 +16,6 @@ import {
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
-import { arrOfferInfo } from "./constant";
-import { useState } from "react";
-
-import { Comfort, Mark, Premium, Standart, } from "../../common";
-
-import Link from "next/link";
 
 
 export const OfferSlide = ({ ...props }) => {
