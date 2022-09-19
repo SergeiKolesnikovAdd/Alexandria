@@ -1,4 +1,4 @@
-import { H2, Text, ButtonXLG, } from "components";
+import { H2, Text, ButtonXLG, OfferModal } from "components";
 import {
   ContentWrapper,
   DescColumn,
@@ -11,12 +11,17 @@ import {
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
+import { arrOfferInfo } from "./constant";
 
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
 import Link from "next/link";
 
+
 export const OfferSlide = ({ ...props }) => {
+  const [isOpen, setOpen] = useState(false);
+  const [chooseItem, setChooseItem] = useState({});
+
   return (
     <ContentWrapper {...props} id="offer">
       <H3Styled mb="lg" mx="lg">
@@ -76,7 +81,14 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton>Начать работу</StyledButton>
+            <StyledButton
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[0]);
+              }}
+            >
+              Начать работу
+            </StyledButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -102,7 +114,14 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton>Начать работу</StyledButton>
+            <StyledButton
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[1]);
+              }}
+            >
+              Начать работу
+            </StyledButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -132,10 +151,22 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton>Начать работу</StyledButton>
+            <StyledButton
+              onClick={() => {
+                setOpen(true);
+                setChooseItem( arrOfferInfo[2] );
+              }}
+            >
+              Начать работу
+            </StyledButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>
+      <OfferModal
+        isOpen={isOpen}
+        setOpen={setOpen}
+        {...chooseItem}
+      ></OfferModal>
     </ContentWrapper>
   );
 };

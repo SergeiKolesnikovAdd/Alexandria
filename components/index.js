@@ -9,6 +9,9 @@ export { Standart } from "./common";
 export { Premium } from "./common";
 export { Plus } from "./common";
 export { Minus } from "./common";
+export { Modal } from "./common";
+export { Portal } from "./common";
+export { Close } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
@@ -24,6 +27,7 @@ import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
+import { CloseButton } from "./ui/close-button";
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 import { Footer } from "./sections/footer";
@@ -36,7 +40,8 @@ import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
 
 /*    Импорты модальных окон    */
-// import { DetailCardModal } from "./modal";
+
+import { OfferModal } from "./modal";
 
 export {
   H1,
@@ -61,4 +66,6 @@ export {
   Accordion,
   FaqSlide,
   Footer,
+  CloseButton,
+  OfferModal,
 };
