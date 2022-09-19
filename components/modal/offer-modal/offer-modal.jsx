@@ -1,5 +1,6 @@
 
 import { Caption, H2, Modal, CloseButton } from "components";
+import { Modal } from "../../common";
 
 import {
   ProductImage,

@@ -7,11 +7,12 @@ import {
   ButtonRow,
   TableOffer,
   PackageColumn,
-  StyledButton,
+  NewButton,
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
 import { arrOfferInfo } from "./constant";
+import { useState } from "react";
 
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
@@ -81,14 +82,14 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton
+            <NewButton
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
               }}
             >
               Начать работу
-            </StyledButton>
+            </NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -114,14 +115,14 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton
+            <NewButton
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
               }}
             >
               Начать работу
-            </StyledButton>
+            </NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -151,14 +152,14 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <StyledButton
+            <NewButton
               onClick={() => {
                 setOpen(true);
-                setChooseItem( arrOfferInfo[2] );
+                setChooseItem(arrOfferInfo[2]);
               }}
             >
               Начать работу
-            </StyledButton>
+            </NewButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>

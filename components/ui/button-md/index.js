@@ -1,1 +1,1 @@
-export { ButtonMD } from "./button-md";
+export { ButtonMD } from "./button-md.jsx";
