@@ -35,9 +35,9 @@ export const SlideImg = styled.img`
 //   right: 5%;
 // `;
 
-// export const SlidePrev = styled(ButtonSlider)`
-//   position: absolute;
-//   top: 50%;
-//   left: 5%;
-//   transform: rotate(180deg);
-// `;
+export const SlidePrev = styled(ButtonSlider)`
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: rotate(180deg);
+`;
