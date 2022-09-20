@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { H2, Text, ButtonXLG, OfferModal } from "components";
+import { H2, Text, ButtonXLG, OfferModal, Form } from "components";
 import { arrOfferInfo } from "./constant";
 import { Comfort, Mark, Premium, Standart, } from "../../common";
 
@@ -16,11 +16,13 @@ import {
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
+import { FormModal } from "components";
 
 
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
+    const [isOpenForm, setOpenForm] = useState(false);
 
   return (
     <ContentWrapper {...props} id="offer">
@@ -85,8 +87,7 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
-              }}
-            >
+              }}>
               Начать работу
             </NewButton>
           </PackageItem>
@@ -118,8 +119,7 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
-              }}
-            >
+              }}>
               Начать работу
             </NewButton>
           </PackageItem>
@@ -155,8 +155,7 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
-              }}
-            >
+              }}>
               Начать работу
             </NewButton>
           </PackageItem>
@@ -165,8 +164,11 @@ export const OfferSlide = ({ ...props }) => {
       <OfferModal
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}
-      ></OfferModal>
+        {...chooseItem}></OfferModal>
+      <FormModal
+        isOpen={isOpenForm}
+        setOpen={setOpenForm}
+        {...chooseItem}></FormModal>
     </ContentWrapper>
   );
 };

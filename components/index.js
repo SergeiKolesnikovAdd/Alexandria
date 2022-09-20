@@ -55,6 +55,7 @@ import { FaqSlide } from "./sections/faq-slide";
 
 /*    Импорты модальных окон    */
 import { OfferModal } from "./modal";
+import { FormModal } from "./modal/form-modal";
 
 export {
   H1,
@@ -92,4 +93,5 @@ export {
   Counter,
   Input,
   TextArea,
+  FormModal,
 };

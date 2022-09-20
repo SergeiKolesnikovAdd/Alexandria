@@ -35,12 +35,12 @@ export const OfferModal = ({
       <OfferModalInner>
         <ContentSection>
           <ProductImage src={img} />
-          {/* TODO: ПОДКЛЮЧИТЬ ИЗОБРАЖЕНИЕ */}
+
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
-              <Icon fill={color} alt="icon" />
+              <Icon colorgrad={color} alt="icon" />
               {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
             <Caption>{subtitle}</Caption>
@@ -52,7 +52,13 @@ export const OfferModal = ({
               <Heading>{headingMarketing}</Heading>
               <Text>{textMarketing}</Text>
             </Description>
-            <StyledButtonLG>Подать заявку</StyledButtonLG>
+            <StyledButtonLG
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[2]);
+              }}>
+              Подать заявку
+            </StyledButtonLG>
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>

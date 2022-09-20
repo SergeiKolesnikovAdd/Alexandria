@@ -10,6 +10,8 @@ import { Text } from "components";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
 import { Standart } from "../../common";
 
+const colorGradient = ({ colorgrad }) => { return colorgrad };
+
 export const OfferModalInner = styled.div`
   width: 100%;
   min-height: 100%;
@@ -43,9 +45,13 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Icon = styled(Standart)`
-  :first-child() {
-    ${({color})=>color}
-  }
+
+circle {
+    fill: ${colorGradient};}
+
+
+
+
 `;
 
 export const Heading = styled(Text)`
@@ -58,8 +64,7 @@ export const Heading = styled(Text)`
 export const Title = styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
-  color: ${colors.red};
+  color: ${colors.black};
 
   ${applyMargins};
 `;
@@ -70,7 +75,7 @@ export const Description = styled.div`
   grid-template-columns: 28% 68%;
   grid-auto-flow: row;
   gap: 40px 16px;
-  
+
   ${applyMargins};
 `;
 
@@ -91,4 +96,15 @@ export const ClsButton = styled(CloseButton)`
   position: absolute;
   right: 0;
   top: 0;
+`;
+
+export const InformationColumn = styled.div`
+  width: 50%;
+  ${getCurrentPaddingStyle("horizontal", "md")};
+  ${getCurrentPaddingStyle("bottom", "md")};
+  ${getCurrentPaddingStyle("top", "lg")};
+  `;
+
+export const FormWrapper = styled.form`
+width:100%;
 `;
