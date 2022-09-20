@@ -27,13 +27,21 @@ import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
-<<<<<<< HEAD
 import { CloseButton } from "./ui/close-button";
-=======
 import { Slider } from "./ui/slider";
 import { ButtonSliderLeft } from "./ui/button-slider-left";
 import { ButtonSliderRight } from "./ui/button-slider-right";
->>>>>>> da56d056778800b8a5fc1c27067f8e8078d0f32b
+import { DropDown } from "./ui/drop-down";
+import {
+  InputField,
+  TextAreaField,
+  DropDownField,
+  CounterField,
+} from "./ui/fields";
+import { Counter } from "./ui/counter";
+import { Input } from "./ui/input";
+import { TextArea } from "./ui/text-area";
+
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 import { Footer } from "./sections/footer";
@@ -45,9 +53,7 @@ import { AboutSlide } from "./sections/about-slide";
 import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
 
-
 /*    Импорты модальных окон    */
-
 import { OfferModal } from "./modal";
 
 export {
@@ -73,12 +79,17 @@ export {
   Accordion,
   FaqSlide,
   Footer,
-<<<<<<< HEAD
   CloseButton,
   OfferModal,
-=======
   Slider,
   ButtonSliderRight,
   ButtonSliderLeft,
->>>>>>> da56d056778800b8a5fc1c27067f8e8078d0f32b
+  DropDown,
+  InputField,
+  TextAreaField,
+  DropDownField,
+  CounterField,
+  Counter,
+  Input,
+  TextArea,
 };

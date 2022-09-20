@@ -1,10 +1,30 @@
-import { H2, ButtonXSM, Accordion, } from "components";
+import { H2, ButtonXSM, Accordion, DropDownField } from "components";
 import {
   H3Styled,
   ContentWrapper,
 } from "./faq-slide.style";
+import { formatPhoneNumber, withFormProvider } from "utils";
 
-export const FaqSlide = ({ ...props }) => {
+const ServiceOptions = [
+  { label: "color grading", value: "11" },
+  { label: "VFX-design", value: "12" },
+  { label: "Dailies", value: "13" },
+];
+const TypeOptions = [
+  { label: "color grading", value: "11" },
+  { label: "VFX-design", value: "12" },
+  { label: "Dailies", value: "13" },
+  // Заглушка
+];
+const TitleOptions = [
+  { label: "color grading", value: "11" },
+  { label: "VFX-design", value: "12" },
+  { label: "Dailies", value: "13" },
+  // Заглушка
+];
+
+export const FaqSlide = withFormProvider(({ ...props }) => {
+  
   return (
     <ContentWrapper px="mdsm" {...props} id="faq">
       <H3Styled>Это может быть полезным</H3Styled>
@@ -70,6 +90,14 @@ export const FaqSlide = ({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
+      <DropDownField
+        mb="md2"
+        name="service"
+        title="Service"
+        options={ServiceOptions}
+        isFullWidth
+        multiple
+      />
     </ContentWrapper>
   );
-};
+});
