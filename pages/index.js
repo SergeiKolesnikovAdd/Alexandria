@@ -17,11 +17,11 @@ const Home = () => {
     <>
       <Header />
       {/* <MainFirstSlide pt="xxxlg" />
-      <AboutSlide pt="xxxlg"></AboutSlide>
-      <FocusSlide></FocusSlide> */}
-      {/* <PlatformSlide mt="xxxlg"></PlatformSlide> */}
-      {/* <OfferSlide pt="xxxlg"></OfferSlide>
-      <AdvantageSlide></AdvantageSlide> */}
+      <AboutSlide pt="xxxlg"></AboutSlide> */}
+      <FocusSlide></FocusSlide>
+      <PlatformSlide mt="xxxlg"></PlatformSlide>
+      <OfferSlide pt="xxxlg"></OfferSlide>
+      <AdvantageSlide></AdvantageSlide>
       <FaqSlide pt="xxxlg"></FaqSlide>
       <Footer />
     </>

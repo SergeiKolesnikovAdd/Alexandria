@@ -1,20 +1,21 @@
 import {
-  getCurrentBackgroundColorStyles,
-  getCurrentMarginStyle,
-  getCurrentPaddingStyle,
-  colors,
   applyMargins,
   applyPaddings,
+  colors,
+  getCurrentBackgroundColorStyles,
   getCurrentFontSizeStyle,
+  getCurrentMarginStyle,
+  getCurrentPaddingStyle,
 } from "styles";
-import styled from "@emotion/styled";
 
 import { H3 } from "components";
+import styled from "@emotion/styled";
 
 export const SectionWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 
   ${applyMargins}
   ${applyPaddings}
@@ -27,7 +28,7 @@ export const ContentWrapper = styled.div`
   border: 1px solid ${colors.black};
   border-radius: 80px;
   width: 100%;
-  height: 50vw;
+
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("vertical", "lg")};
@@ -51,8 +52,7 @@ export const HigherPart = styled.div`
 `;
 
 export const SliderWrapper = styled.div`
-  height: available;
-  width: 752px;
+  /* width: 752px; */
 `;
 
 export const H3Styled = styled(H3)`

@@ -1,15 +1,16 @@
-import { Caption, H2, Text, Slider } from "components";
+import {} from "components";
+
+import { Caption, H2, Slider, Text } from "components";
 import {
   ContentWrapper,
-  TextWrapper,
-  SliderWrapper,
-  HigherPart,
   H3Styled,
+  HigherPart,
   SectionWrapper,
+  SliderWrapper,
+  TextWrapper,
 } from "./focus-slide.style";
 
 import { colors } from "styles";
-import {} from "components";
 
 export const FocusSlide = ({ ...props }) => {
   return (
