@@ -24,7 +24,6 @@ export const Input = forwardRef(
     ref
   ) => (
     <InputWrapper isFullWidth={isFullWidth} {...props}>
-      <Title isError={error}>{title}</Title>
       <InputStyled
         onChange={onChange}
         isError={error}

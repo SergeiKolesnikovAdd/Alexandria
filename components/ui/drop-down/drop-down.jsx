@@ -2,14 +2,17 @@ import {useEffect, useRef, useState} from "react";
 import {PropTypes} from "prop-types";
 import {propTypesMargin, propTypesPadding} from "../../types";
 import {
-    CurrentLabel,
-    DropDownItem,
-    DropDownList, DropDownOverlay,
-    Error, IconPlus,
-    InputStyled,
-    InputWrapper,
-    Underline,
-    UnderlineInner
+  CurrentLabel,
+  DropDownItem,
+  DropDownList,
+  DropDownOverlay,
+  Error,
+  IconPlus,
+  InputStyled,
+  InputWrapper,
+  Underline,
+  UnderlineInner,
+  IconWrapper,
 } from "./drop-down.style";
 import {useEscHandler} from "../../../utils";
 
@@ -66,34 +69,53 @@ export const DropDown = ({
     }
 
     return (
-        <InputWrapper isFullWidth={isFullWidth} {...props}>
-            <InputStyled isActive={isActive} isOpen={isOpen} onChange={onChange} onClick={handleOpen}
-                         isError={error} type="text" {...propsInput}>
-                <CurrentLabel>
-                    {multiple ?
-                        Boolean(selected.length) ?
-                            selected.map(({label}) => label).join(', ') : title
-                        : value?.label || title}
-                </CurrentLabel>
-                <IconPlus isError={error} isActive={isActive} isOpen={isOpen} viewBox="0 0 26 26" fill="none">
-                    <path d="M0 13H26M13 26L13 0" strokeWidth="2"/>
-                </IconPlus>
-            </InputStyled>
-            <Underline>
-                <UnderlineInner isActive={isActive} isError={error}/>
-            </Underline>
-            <DropDownList isOpen={isOpen} ref={listRef}>
-                {options.map((option) => (
-                    <DropDownItem key={option.value} isActive={selected.some(({value}) => value === option.value)}
-                                  onClick={() => handleOption(option)}>
-                        {option.label}
-                    </DropDownItem>
-                ))}
-            </DropDownList>
-            <DropDownOverlay onClick={handleOverlay} isOpen={isOpen}/>
-            {error && <Error>{error}</Error>}
-        </InputWrapper>
-    )
+      <InputWrapper isFullWidth={isFullWidth} {...props}>
+        <InputStyled
+          isActive={isActive}
+          isOpen={isOpen}
+          onChange={onChange}
+          onClick={handleOpen}
+          isError={error}
+          type="text"
+          {...propsInput}
+        >
+          <CurrentLabel>
+            {multiple
+              ? Boolean(selected.length)
+                ? selected.map(({ label }) => label).join(", ")
+                : title
+              : value?.label || title}
+          </CurrentLabel>
+          <IconWrapper isError={error} isActive={isActive} isOpen={isOpen}>
+            <IconPlus
+              isError={error}
+              isActive={isActive}
+              isOpen={isOpen}
+              viewBox="0 0 26 26"
+              fill="none"
+            >
+              <path d="M0 13H26M13 26L13 0" strokeWidth="2" />
+            </IconPlus>
+          </IconWrapper>
+        </InputStyled>
+        <Underline>
+          <UnderlineInner isActive={isActive} isError={error} />
+        </Underline>
+        <DropDownList isOpen={isOpen} ref={listRef}>
+          {options.map((option) => (
+            <DropDownItem
+              key={option.value}
+              isActive={selected.some(({ value }) => value === option.value)}
+              onClick={() => handleOption(option)}
+            >
+              {option.label}
+            </DropDownItem>
+          ))}
+        </DropDownList>
+        {/* <DropDownOverlay onClick={handleOverlay} isOpen={isOpen} /> */}
+        {error && <Error>{error}</Error>}
+      </InputWrapper>
+    );
 };
 
 const shapeOption = PropTypes.shape({

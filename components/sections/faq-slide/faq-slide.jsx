@@ -1,4 +1,4 @@
-import { H2, ButtonXSM, Accordion, DropDownField } from "components";
+import { H2, ButtonXSM, Accordion, DropDownField, InputField, TextAreaField, } from "components";
 import {
   H3Styled,
   ContentWrapper,
@@ -96,7 +96,19 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         title="Service"
         options={ServiceOptions}
         isFullWidth
-        multiple
+      />
+      <InputField
+        name="name"
+        isFullWidth
+        title="NAME*"
+        mb="md2"
+        propsInput={{ placeholder: "My name is" }}
+      />
+      <TextAreaField
+        name="message"
+        rules={{}}
+        isFullWidth
+        title="About your work"
       />
     </ContentWrapper>
   );

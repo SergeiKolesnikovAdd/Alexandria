@@ -3,6 +3,7 @@ import {
   applyPaddings,
   colors,
   fontFamilies,
+  fontSizes,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
   hexToRGBA,
@@ -12,17 +13,19 @@ import {
 import styled from "@emotion/styled";
 
 const errorConditionColor = ({ isError }) =>
-  isError ? `color:${colors.red};` : "";
+  isError ? `color:${colors.brightRed};` : "";
 
 const errorConditionBackgroundColor = ({ isError }) =>
-  isError ? `background-color: ${colors.red}; transform: scaleX(1);` : "";
+  isError
+    ? `background-color: ${colors.brightRed}; transform: scaleX(1);`
+    : "";
 
 export const UnderlineInner = styled.div`
   width: 100%;
   height: 100%;
   transform: scaleX(${({ isActive }) => (isActive ? 1 : 0)});
   transform-origin: left;
-  background-color: ${colors.white};
+  background-color: ${colors.red};
   transition: transform 0.5s;
 
   ${errorConditionBackgroundColor}
@@ -31,17 +34,16 @@ export const UnderlineInner = styled.div`
 export const Underline = styled.div`
   width: 100%;
   height: 2px;
-  background-color: ${hexToRGBA(colors.white, 0.2)};
+  background-color: ${hexToRGBA(colors.black, 0.2)};
 `;
 
 export const InputStyled = styled.input`
   width: 100%;
-  color: ${({ theme }) => theme.primary};
-  padding-left: 50%;
+  color: ${hexToRGBA(colors.black, 0.2)};
   text-transform: uppercase;
-  font-family: ${fontFamilies.mainFont};
-  padding-top: 4px;
-  padding-bottom: 5px;
+  font-family: ${fontFamilies.Font};
+  color: ${colors.black};
+  font-size: ${fontSizes.h3};
 
   &:hover {
     & + ${Underline} ${UnderlineInner} {
@@ -50,30 +52,12 @@ export const InputStyled = styled.input`
   }
 
   &::placeholder {
-    font-family: ${fontFamilies.mainFont};
-    color: ${hexToRGBA(colors.white, 0.2)};
-    @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    }
+    font-family: ${fontFamilies.Font};
+    color: ${hexToRGBA(colors.black, 0.2)};
   }
 
   ${errorConditionColor}
   ${getCurrentFontSizeStyle("h3")};
-
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    height: 40px;
-    padding-left: 0px;
-  }
-
-  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    height: 3vw;
-    padding-top: 0.25vw;
-    padding-bottom: 0.3125vw;
-  }
-
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
-    padding-top: 7px;
-    padding-bottom: 1px;
-  }
 `;
 
 export const Error = styled.div`
@@ -82,36 +66,9 @@ export const Error = styled.div`
   text-transform: uppercase;
   position: absolute;
   top: calc(100% + 4px);
-  font-family: ${fontFamilies.subFont};
+  font-family: ${fontFamilies.Font};
 
   ${getCurrentFontSizeStyle("caption")};
-`;
-
-export const Title = styled.div`
-  position: absolute;
-  color: ${colors.white};
-  text-transform: uppercase;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-family: ${fontFamilies.mainFont};
-  pointer-events: none;
-
-  ${errorConditionColor}
-  ${getCurrentFontSizeStyle("h3")};
-
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    color: ${hexToRGBA(colors.white, 0.2)};
-    transform: translateY(-60%);
-  }
-
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
-    transform: translateY(-70%);
-  }
-
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    display: none;
-  }
 `;
 
 export const InputWrapper = styled.div`

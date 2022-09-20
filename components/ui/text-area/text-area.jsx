@@ -13,8 +13,8 @@ export const TextArea = ({
   value = "",
   onChange,
   defaultValue,
-  rows = 4,
-  maxLength = 420,
+  rows = 1,
+  maxLength = 152,
   propsInput,
   isFullWidth = false,
   isResizable = true,
@@ -35,7 +35,6 @@ export const TextArea = ({
 
   return (
     <InputWrapper isFullWidth={isFullWidth} {...props}>
-      {title && <Title>{title}</Title>}
       <TextAreaWrapper isActive={!!value} maxRows={rows}>
         <TextAreaInput
           placeholder="About your work"
