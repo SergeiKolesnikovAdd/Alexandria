@@ -1,4 +1,4 @@
-import { Caption, H2, Text } from "components";
+import { Caption, H2, Text, Slider } from "components";
 import {
   ContentWrapper,
   TextWrapper,
@@ -8,9 +8,8 @@ import {
   SectionWrapper,
 } from "./focus-slide.style";
 
-import {
-  colors,
-} from "styles";
+import { colors } from "styles";
+import {} from "components";
 
 export const FocusSlide = ({ ...props }) => {
   return (
@@ -41,7 +40,9 @@ export const FocusSlide = ({ ...props }) => {
             исходя из потребностей каждого издателя.
           </Text>
         </TextWrapper>
-        <SliderWrapper>{/* TODO: SLIDER */}</SliderWrapper>
+        <SliderWrapper>
+          <Slider />
+        </SliderWrapper>
       </ContentWrapper>
     </SectionWrapper>
   );
