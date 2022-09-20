@@ -1,4 +1,5 @@
-import {Caption, H2, Modal, CloseButton, Text} from "components";
+import {Caption, H3, Modal,Text} from "components";
+import { Standart } from "../../common";
 
 import {
   ProductImage,
@@ -8,28 +9,51 @@ import {
   StyledButtonLG,
   Title,
   ContentSection,
+  Heading,
+  Icon,
+  ClsButton,
 } from "./offer-modal.style";
 
-export const OfferModal = ({ img, iconImg, text, caption, title, isOpen, setOpen, ...props }) => {
+export const OfferModal = ({
+  img,
+  color,
+  headingMaintance,
+  textMaintance,
+  headingService,
+  textService,
+  headingMarketing,
+  textMarketing,
+  caption,
+  title,
+  subtitle,
+  isOpen,
+  setOpen,
+  ...props
+}) => {
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner>
         <ContentSection>
           <ProductImage src={img} />
-          <CloseButton mt="md" ml="md" onClick={() => setOpen(false)} />
+          {/* TODO: ПОДКЛЮЧИТЬ ИЗОБРАЖЕНИЕ */}
+          <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
-            <Title>
-              <H2 mr="mdsm">{title}</H2>
-              <img src={iconImg}  alt="sdf"/>
+            <Title mb="xsm">
+              <H3 mr="mdsm">{title}</H3>
+              <Icon fill={color} alt="icon" />
+              {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
-            <Description mt="mdsm">
-              <Text style={{ width: "64vw" }}>{text}</Text>
-              <Caption style={{ width: "25vw", opacity: "0.4" }}>
-                {caption}
-              </Caption>
+            <Caption>{subtitle}</Caption>
+            <Description mt="lg">
+              <Heading>{headingMaintance}</Heading>
+              <Text>{textMaintance}</Text>
+              <Heading>{headingService}</Heading>
+              <Text>{textService}</Text>
+              <Heading>{headingMarketing}</Heading>
+              <Text>{textMarketing}</Text>
             </Description>
+            <StyledButtonLG>Подать заявку</StyledButtonLG>
           </ContentWrapper>
-          <StyledButtonLG>Начать работу</StyledButtonLG>
         </ContentSection>
       </OfferModalInner>
     </Modal>

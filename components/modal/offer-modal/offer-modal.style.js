@@ -2,9 +2,13 @@ import {
   colors,
   getCurrentPaddingStyle,
   getCurrentMarginStyle, applyMargins,
+  colros,
 } from "styles";
 import styled from "@emotion/styled";
 import {ButtonLG} from "../../ui/button-lg";
+import { Text } from "components";
+import { CloseButton } from "../../ui/close-button/close-button.jsx";
+import { Standart } from "../../common";
 
 export const OfferModalInner = styled.div`
   width: 100%;
@@ -35,25 +39,45 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
+  border-radius: 48px;
+`;
+
+export const Icon = styled(Standart)`
+  :first-child() {
+    ${({color})=>color}
+  }
+`;
+
+export const Heading = styled(Text)`
+  display: flex;
+  opacity: 0.4;
+
+  ${applyMargins};
 `;
 
 export const Title = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
+  color: ${colors.red};
 
   ${applyMargins};
 `;
 
 export const Description = styled.div`
   width: 100%;
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 28% 68%;
+  grid-auto-flow: row;
+  gap: 40px 16px;
+  
   ${applyMargins};
 `;
 
 export const StyledButtonLG = styled(ButtonLG)`
-  width: 32px;
+  width: 320px;
   height: 64px;
+  ${getCurrentMarginStyle("top", "lg")};
 `;
 
 export const ProductImage = styled.img`
@@ -61,4 +85,10 @@ export const ProductImage = styled.img`
   width: 100%;
   object-position: center;
   object-fit: cover;
+`;
+
+export const ClsButton = styled(CloseButton)`
+  position: absolute;
+  right: 0;
+  top: 0;
 `;
