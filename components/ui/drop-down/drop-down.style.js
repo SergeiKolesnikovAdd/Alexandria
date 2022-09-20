@@ -4,6 +4,7 @@ import {
   fontFamilies, fontSizes, getCurrentColor,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
+  getCurrentMarginStyle,
   hexToRGBA,
   breakpointsWidth,
 } from "styles";
@@ -16,9 +17,9 @@ const errorConditionBackgroundColor = ({isError}) =>
 export const UnderlineInner = styled.div`
   width: 100%;
   height: 100%;
-  transform: scaleX(${({isActive}) => (isActive ? 1 : 0)});
+  transform: scaleX(${({ isActive }) => (isActive ? 1 : 0)});
   transform-origin: left;
-  background-color: ${colors.white};
+  background-color: ${colors.red};
   transition: transform 0.5s;
 
   ${errorConditionBackgroundColor}
@@ -27,32 +28,7 @@ export const UnderlineInner = styled.div`
 export const Underline = styled.div`
   width: 100%;
   height: 2px;
-  background-color: ${hexToRGBA(colors.white, 0.2)};
-`;
-
-export const DropDownOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 1;
-  transition: background-color 0.3s;
-
-  ${({isOpen}) => (isOpen && {
-    visibility: "visible",
-    pointerEvents: "auto"
-  })};
-
-  @media (max-width: ${breakpointsWidth.tabletSM}) {
-    ${({isOpen}) => (isOpen && {
-      backgroundColor: hexToRGBA(colors.black, 0.9)
-    })};
-  }
+  background-color: ${hexToRGBA(colors.black, 0.2)};
 `;
 
 export const DropDownList = styled.ul`
@@ -60,7 +36,8 @@ export const DropDownList = styled.ul`
   left: 0;
   top: calc(100% - 2px);
   width: 100%;
-  background-color: ${colors.white};
+  background-color: ${colors.lightOrange};
+  border-radius: 32px;
   visibility: hidden;
   max-height: 0;
   transform-origin: top;
@@ -72,23 +49,43 @@ export const DropDownList = styled.ul`
     visibility: "visible",
     maxHeight: "var(--height-drop-down, 40vh)",
   })};
+`;
 
+export const IconWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  transition: stroke 0.3s;
+  ${({ isOpen, isActive, isError }) => {
+    if (isOpen) {
+      return { backgroundColor: colors.red };
+    } else if (isActive) {
+      return { backgroundColor: colors.red };
+    } else if (isError) {
+      return { backgroundColor: colors.brightRed };
+    } else {
+      return { backgroundColor: colors.darkOrange };
+    }
+  }};
 `;
 
 export const IconPlus = styled.svg`
   display: inline-block;
-  width: 26px;
-  height: 26px;
+  width: 12px;
+  height: 12px;
   transition: stroke .3s;
-  ${({isOpen, isActive, isError, theme}) => {
+  ${({isOpen, isActive, isError, }) => {
     if (isOpen) {
       return { stroke: colors.white };
     } else if (isActive) {
-      return {stroke: getCurrentColor("primary", theme)}
-    } else if (isError) {
-      return { stroke: colors.red };
-    } else {
       return { stroke: colors.white };
+    } else if (isError) {
+      return { stroke: colors.white };
+    } else {
+      return { stroke: colors.red };
     }
   }};
 
@@ -98,27 +95,29 @@ export const DropDownItem = styled.li`
   width: 100%;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: ${fontFamilies.mainFont};
+  font-family: ${fontFamilies.Font};
   ${getCurrentFontSizeStyle("h3")};
-  height: 50px;
-  padding: 10px 6px 6px;
+  padding: 12px 16px 12px 16px;
   transition: background-color 0.3s;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.01em;
+  font-size: ${fontSizes.h3};
 
   &:hover {
-    background-color: ${({ theme }) => getCurrentColor("primary", theme)};
+    color: ${colors.red};
+    background-color: ${colors.orange};
   }
 
   ${({ isActive, theme }) =>
     isActive &&
     `
-    background-color: ${getCurrentColor("primary", theme)};
+    background-color: ${colors.darkOrange};
     `};
 `;
 
 export const CurrentLabel = styled.span`
-`
+  color: ${hexToRGBA(colors.black, 0.2)};
+`;
 
 export const InputStyled = styled.div`
   display: flex;
@@ -126,23 +125,25 @@ export const InputStyled = styled.div`
   justify-content: space-between;
   cursor: pointer;
   width: 100%;
-  color: ${({theme}) => theme.primary};
+  height: 32px;
+  color: ${colors.black};
   text-transform: uppercase;
-  font-family: ${fontFamilies.mainFont};
-  ${getCurrentPaddingStyle("vertical", "xxsm")};
-  font-family: ${fontFamilies.mainFont};
+  font-family: ${fontFamilies.Font};
+  ${getCurrentPaddingStyle("horizontal", "mdsm")};
   text-align: left;
   transition: color 0.3s;
+  background-color: ${colors.white};
+  font-size: ${fontSizes.h3};
 
-  ${({isOpen, isActive, isError, theme}) => {
+  ${({ isOpen, isActive, isError, theme }) => {
     if (isOpen) {
-      return {color: colors.white};
+      return { color: colors.white };
     } else if (isActive) {
-      return {color: getCurrentColor("primary", theme)};
+      return { color: getCurrentColor("primary", theme) };
     } else if (isError) {
-      return {color: colors.red};
+      return { color: colors.red };
     } else {
-      return {color: hexToRGBA(colors.white, 0.2)};
+      return { color: hexToRGBA(colors.white, 0.2) };
     }
   }}
 
@@ -161,7 +162,7 @@ export const Error = styled.div`
   text-transform: uppercase;
   position: absolute;
   top: calc(100% + 4px);
-  font-family: ${fontFamilies.subFont};
+  font-family: ${fontFamilies.Font};
 
   ${getCurrentFontSizeStyle("caption")};
 `;
