@@ -13,4 +13,8 @@ export { Telegram } from "./telegram";
 export { Twitter } from "./twitter";
 export { Vk } from "./vk";
 export { Youtube } from "./youtube";
+export { Modal } from "./modal";
+export { Portal } from "./portal";
+export { Close } from "./close";
+
 

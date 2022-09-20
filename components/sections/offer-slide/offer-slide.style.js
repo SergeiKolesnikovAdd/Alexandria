@@ -1,4 +1,7 @@
-import { ButtonMD, Caption, H3, } from "components";
+import { Caption, H3, } from "components";
+
+import { ButtonMD } from "../../ui/button-md";
+
 import {
   applyMargins,
   applyPaddings,
@@ -100,7 +103,7 @@ export const PackageItem = styled.div`
   ${applyPaddings}
 `;
 
-export const StyledButton = styled(ButtonMD)`
+export const NewButton = styled(ButtonMD)`
   width: 100%;
   opacity: 0;
 `;

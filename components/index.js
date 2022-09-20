@@ -9,6 +9,9 @@ export { Standart } from "./common";
 export { Premium } from "./common";
 export { Plus } from "./common";
 export { Minus } from "./common";
+export { Modal } from "./common";
+export { Portal } from "./common";
+export { Close } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
@@ -24,9 +27,13 @@ import { ButtonXSM } from "./ui/button-xsm";
 import { Logo } from "./ui/logo";
 import { Name } from "./ui/name";
 import { Accordion } from "./ui/accordion";
+<<<<<<< HEAD
+import { CloseButton } from "./ui/close-button";
+=======
 import { Slider } from "./ui/slider";
 import { ButtonSliderLeft } from "./ui/button-slider-left";
 import { ButtonSliderRight } from "./ui/button-slider-right";
+>>>>>>> da56d056778800b8a5fc1c27067f8e8078d0f32b
 /*    Импорты секций    */
 import { Header } from "./sections/header";
 import { Footer } from "./sections/footer";
@@ -40,7 +47,8 @@ import { FaqSlide } from "./sections/faq-slide";
 
 
 /*    Импорты модальных окон    */
-// import { DetailCardModal } from "./modal";
+
+import { OfferModal } from "./modal";
 
 export {
   H1,
@@ -65,7 +73,12 @@ export {
   Accordion,
   FaqSlide,
   Footer,
+<<<<<<< HEAD
+  CloseButton,
+  OfferModal,
+=======
   Slider,
   ButtonSliderRight,
   ButtonSliderLeft,
+>>>>>>> da56d056778800b8a5fc1c27067f8e8078d0f32b
 };

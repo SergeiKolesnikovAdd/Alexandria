@@ -33,7 +33,7 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${getCurrentPaddingStyle("", "md")};
+  
   ${getCurrentMarginStyle("right", "xsm")};
   cursor: pointer;
   transition: transform, fill, background-color 0.3s;

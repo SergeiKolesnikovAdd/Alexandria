@@ -12,8 +12,10 @@ import {
 } from "./common";
 
 import { renderStatic } from "./renderer";
+import { useVH } from "./useVH";
 
 export {
+  useVH,
   renderStatic,
   debounce,
   clamp,
@@ -24,5 +26,5 @@ export {
   withFormProvider,
   useNoScroll,
   withLink,
-  MainComponent
+  MainComponent,
 };

@@ -1,5 +1,4 @@
 import {
-  propTypesColors,
   propTypesMargin,
   propTypesPadding,
 } from "../../types";
