@@ -105,6 +105,4 @@ export const InformationColumn = styled.div`
   ${getCurrentPaddingStyle("top", "lg")};
   `;
 
-export const FormWrapper = styled.form`
-width:100%;
-`;
+

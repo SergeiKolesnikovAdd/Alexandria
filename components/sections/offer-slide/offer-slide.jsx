@@ -1,9 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import { H2, Text, ButtonXLG, OfferModal, Form } from "components";
+import { H2, Text, ButtonXLG, OfferModal, FormModal, } from "components";
 import { arrOfferInfo } from "./constant";
 import { Comfort, Mark, Premium, Standart, } from "../../common";
-
 import {
   ContentWrapper,
   DescColumn,
@@ -16,7 +15,6 @@ import {
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
-import { FormModal } from "components";
 
 
 export const OfferSlide = ({ ...props }) => {
@@ -42,7 +40,13 @@ export const OfferSlide = ({ ...props }) => {
           <br />
           потребностей издателя
         </Text>
-        <ButtonXLG>Получить индивидуальное предложение</ButtonXLG>
+        <ButtonXLG
+          onClick={() => {
+            setOpenForm(true);
+            setChooseItem(arrOfferInfo[0]);
+          }}
+          >Получить индивидуальное предложение
+        </ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
         <DescColumn>

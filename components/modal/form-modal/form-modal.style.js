@@ -2,17 +2,13 @@ import {
   colors,
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
-  applyMargins,
-  colros,
+  applyMargins,getCurrentFontSizeStyle, fontFamilies, hexToRGBA,
 } from "styles";
 import styled from "@emotion/styled";
-import { ButtonLG } from "../../ui/button-lg";
-import { Text } from "components";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
-import { Standart } from "../../common";
 
-const colorGradient = ({ colorgrad }) => {
-  return colorgrad;
+const activeErrorField = ({ isError }) => {
+  isError ? `display: inline-block, color: red` : `display: none`;
 };
 
 export const FormModalInner = styled.div`
@@ -20,8 +16,7 @@ export const FormModalInner = styled.div`
   min-height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: ${colors.black};
-  opacity: 0.9;
+  background-color: ${hexToRGBA(colors.black, 0.9)};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
@@ -60,4 +55,29 @@ export const Title = styled.div`
   color: ${colors.red};
 
   ${applyMargins};
+`;
+
+export const FormWrapper = styled.form`
+
+`;
+
+export const FormLabel = styled.label`
+  font-family: ${fontFamilies.Font};
+  color: ${colors.red};
+  ${getCurrentFontSizeStyle("caption")}
+  ${getCurrentPaddingStyle("bottom", "xxsm")};
+`;
+
+export const FormLabelGray = styled(FormLabel)`
+  opacity:0.4;
+  color: ${colors.black};
+  ${getCurrentPaddingStyle("left", "xxsm")};
+`;
+
+export const ErrorField = styled.div`
+${activeErrorField};
+height:40px;
+`;
+export const ErrorMessage = styled.p`
+  height: 40px;
 `;

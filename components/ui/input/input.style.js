@@ -40,7 +40,6 @@ export const Underline = styled.div`
 export const InputStyled = styled.input`
   width: 100%;
   color: ${hexToRGBA(colors.black, 0.2)};
-  text-transform: uppercase;
   font-family: ${fontFamilies.Font};
   color: ${colors.black};
   font-size: ${fontSizes.h3};

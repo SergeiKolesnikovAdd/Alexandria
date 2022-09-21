@@ -1,6 +1,7 @@
 import { FormModalInner, ContentSection, ClsButton, ContentWrapper, Title } from "./form-modal.style";
-import { H1, Modal } from "components";
-import { Form } from "./form-modal";
+import { H2, Modal } from "components";
+import { Form } from "./form"
+import { colors } from "styles";
 
 export const FormModal = ({
   img,
@@ -25,9 +26,11 @@ export const FormModal = ({
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
             <Title mb="xsm">
-              <H1 mr="mdsm">{title}</H1>
+              <H2 style={{color: colors.black}} mb="mdlg" mt="xlg" mr="mdsm">
+                Начать пользоваться
+              </H2>
             </Title>
-						<Form/>
+            <Form />
           </ContentWrapper>
         </ContentSection>
       </FormModalInner>

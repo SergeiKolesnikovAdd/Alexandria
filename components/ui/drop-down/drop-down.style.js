@@ -44,7 +44,7 @@ export const DropDownList = styled.ul`
   transition: max-height 0.35s, visibility 0.35s;
   overflow: hidden;
   z-index: 5;
-  
+
   ${({isOpen}) => (isOpen && {
     visibility: "visible",
     maxHeight: "var(--height-drop-down, 40vh)",
@@ -59,6 +59,7 @@ export const IconWrapper = styled.div`
   height: 32px;
   border-radius: 8px;
   transition: stroke 0.3s;
+  margin-bottom:5px;
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
       return { backgroundColor: colors.red };
@@ -94,7 +95,6 @@ export const IconPlus = styled.svg`
 export const DropDownItem = styled.li`
   width: 100%;
   cursor: pointer;
-  text-transform: uppercase;
   font-family: ${fontFamilies.Font};
   ${getCurrentFontSizeStyle("h3")};
   padding: 12px 16px 12px 16px;
@@ -102,7 +102,7 @@ export const DropDownItem = styled.li`
   font-weight: 500;
   letter-spacing: 0.01em;
   font-size: ${fontSizes.h3};
-
+  line-height:150%;
   &:hover {
     color: ${colors.red};
     background-color: ${colors.orange};
@@ -127,9 +127,7 @@ export const InputStyled = styled.div`
   width: 100%;
   height: 32px;
   color: ${colors.black};
-  text-transform: uppercase;
   font-family: ${fontFamilies.Font};
-  ${getCurrentPaddingStyle("horizontal", "mdsm")};
   text-align: left;
   transition: color 0.3s;
   background-color: ${colors.white};

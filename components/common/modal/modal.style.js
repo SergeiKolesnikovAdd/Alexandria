@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { breakpointsWidth, sizes } from 'styles';
 export const ModalWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -11,12 +10,6 @@ export const ModalWrapper = styled.div`
   height: 0;
   overflow: scroll;
   visibility: hidden;
-  padding-top: ${sizes["desktopLG"].half};
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}){
-    padding-top: ${sizes["tabletLG"].thirdX2};
-  }
-  @media screen and (max-width: ${breakpointsWidth.phone}){
-    padding-top: ${sizes["tabletLG"].x1};
-  }
+  z-index:20;
   ${({ isOpen }) => isOpen && "height: calc(100vh);height: calc(var(--fsvh, 1vh) * 100);visibility:visible;"}
 `;
