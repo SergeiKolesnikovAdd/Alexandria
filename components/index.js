@@ -41,6 +41,7 @@ import {
 import { Counter } from "./ui/counter";
 import { Input } from "./ui/input";
 import { TextArea } from "./ui/text-area";
+import { Checkbox } from "./ui/checkbox";
 
 /*    Импорты секций    */
 import { Header } from "./sections/header";
@@ -92,4 +93,5 @@ export {
   Counter,
   Input,
   TextArea,
+  Checkbox,
 };
