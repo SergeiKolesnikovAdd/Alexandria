@@ -108,7 +108,7 @@ export const DropDownItem = styled.li`
     background-color: ${colors.orange};
   }
 
-  ${({ isActive, theme }) =>
+  ${({ isActive }) =>
     isActive &&
     `
     background-color: ${colors.darkOrange};
