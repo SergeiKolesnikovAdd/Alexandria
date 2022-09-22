@@ -7,12 +7,16 @@ import {
   StyledText,
   TextContainer,
   H3Styled,
+  StyledDescription,
+  MediaContainer,
+  AccordionContainer,
 } from "./about-slide.style";
-import { ButtonSM, H2, Text, } from "components";
+import { ButtonSM, H2, Text, AccordionSmall } from "components";
 
 import {
   fontSizes
 } from "styles";
+import { Accordion } from "components";
 
 export const AboutSlide = ({ ...props }) => {
   return (
@@ -21,28 +25,42 @@ export const AboutSlide = ({ ...props }) => {
       <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
         Alexandrina—это
       </H2>
+      <ButtonSM ml="lg" mt="md">
+        О нас
+      </ButtonSM>
       <ButtonRow>
         <TextContainer mt="lg" mx="lg">
-          <Text mr="lg">
-            Комплексное решение для развития научных
-            <br />
-            рецензируемых журналов и книг открытого доступа.
-            <br />
-            Наше модульное программное обеспечение позволяет
-            <br />
-            вам вести издательскую деятельность
-            <br />
-            легко и просто.
-          </Text>
+          <StyledDescription>
+            Комплексное решение для развития научных рецензируемых журналов и
+            книг открытого доступа. Наше модульное программное обеспечение
+            позволяет вам вести издательскую деятельность легко и просто.
+          </StyledDescription>
           <Link href="/presentation" target="_blank">
-            <StyledText>Презентация, PDF</StyledText>
+            <StyledText>Презентация,&nbsp;PDF</StyledText>
           </Link>
         </TextContainer>
-        <ButtonSM mx="lg">О платформе</ButtonSM>
       </ButtonRow>
-      <AboutBGImageWrapper mt="xxlg">
-        <AboutSlideBGImage />
-      </AboutBGImageWrapper>
+      <MediaContainer mt="xxlg">
+        <AccordionContainer>
+          <AccordionSmall
+            title="Встроенный редактор Wax"
+            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
+          ></AccordionSmall>
+          <AccordionSmall
+            title="Рецензирование"
+            mt="xsm"
+            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
+          ></AccordionSmall>
+          <AccordionSmall
+            title="Экспорт статьи в HTML, PDF, XML"
+            mt="xsm"
+            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
+          ></AccordionSmall>
+        </AccordionContainer>
+        <AboutBGImageWrapper>
+          <AboutSlideBGImage />
+        </AboutBGImageWrapper>
+      </MediaContainer>
     </ContentWrapper>
   );
 };

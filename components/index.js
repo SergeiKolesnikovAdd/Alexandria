@@ -42,6 +42,7 @@ import { Counter } from "./ui/counter";
 import { Input } from "./ui/input";
 import { TextArea } from "./ui/text-area";
 import { Checkbox } from "./ui/checkbox";
+import { AccordionSmall } from "./ui/accordion-small";
 
 /*    Импорты секций    */
 import { Header } from "./sections/header";
@@ -94,4 +95,5 @@ export {
   Input,
   TextArea,
   Checkbox,
+  AccordionSmall,
 };

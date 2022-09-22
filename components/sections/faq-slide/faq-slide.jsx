@@ -90,27 +90,6 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
-      {/* <DropDownField
-        mb="md2"
-        name="service"
-        title="Service"
-        options={ServiceOptions}
-        isFullWidth
-      />
-      <InputField
-        name="name"
-        isFullWidth
-        title="NAME*"
-        mb="md2"
-        propsInput={{ placeholder: "My name is" }}
-      />
-      <TextAreaField
-        name="message"
-        rules={{}}
-        isFullWidth
-        title="About your work"
-      /> */}
-      <Checkbox></Checkbox>
     </ContentWrapper>
   );
 });
