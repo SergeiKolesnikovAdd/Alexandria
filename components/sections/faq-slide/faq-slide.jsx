@@ -1,4 +1,4 @@
-import { H2, ButtonXSM, Accordion, DropDownField, InputField, TextAreaField, } from "components";
+import { H2, ButtonXSM, Accordion, DropDownField, InputField, TextAreaField, Checkbox, } from "components";
 import {
   H3Styled,
   ContentWrapper,
@@ -90,7 +90,7 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
-      <DropDownField
+      {/* <DropDownField
         mb="md2"
         name="service"
         title="Service"
@@ -109,7 +109,8 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         rules={{}}
         isFullWidth
         title="About your work"
-      />
+      /> */}
+      <Checkbox></Checkbox>
     </ContentWrapper>
   );
 });

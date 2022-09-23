@@ -37,7 +37,6 @@ const getCurrentIndex = (index, currentSlide) => {
   const totalCount = 5;
   const currentIndex = (index + Math.abs(currentSlide)) % totalCount;
 
-  console.log(index, currentIndex);
   return currentIndex;
 };
 
@@ -46,7 +45,6 @@ export const Slider = () => {
   const [isNextDirection, setDirection] = useState(false);
 
   useEffect(() => {
-    console.log(currentSlide);
   }, [currentSlide]);
 
   return (

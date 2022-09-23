@@ -108,7 +108,7 @@ export const DropDownItem = styled.li`
     background-color: ${colors.orange};
   }
 
-  ${({ isActive, theme }) =>
+  ${({ isActive }) =>
     isActive &&
     `
     background-color: ${colors.darkOrange};
@@ -133,7 +133,7 @@ export const InputStyled = styled.div`
   background-color: ${colors.white};
   font-size: ${fontSizes.h3};
 
-  ${({ isOpen, isActive, isError, theme }) => {
+  ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
       return { color: colors.white };
     } else if (isActive) {
