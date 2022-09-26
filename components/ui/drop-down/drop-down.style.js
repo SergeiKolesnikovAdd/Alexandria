@@ -137,7 +137,7 @@ export const InputStyled = styled.div`
     if (isOpen) {
       return { color: colors.white };
     } else if (isActive) {
-      return { color: getCurrentColor("primary", theme) };
+      return { color: getCurrentColor("lightOrange") };
     } else if (isError) {
       return { color: colors.red };
     } else {

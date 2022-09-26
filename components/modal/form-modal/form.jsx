@@ -1,12 +1,10 @@
 import { selectServicesOptions } from "./constants";
-import { Input, DropDown, ButtonMD, TextArea } from "components";
-import { useForm, useFormContext } from "react-hook-form";
+import {ButtonMD, DropDownField, TextAreaField, InputField} from "components";
+import { useFormContext } from "react-hook-form";
 import { FormLabelGray, FormLabel, FormWrapper, ErrorField } from "./form-modal.style";
-import { InputField } from "components";
-import { DropDownField } from "components";
-import { TextAreaField } from "components";
+import { withFormProvider } from "utils";
 
-export const Form = ({ cost, discription, title }) => {
+export const Form =  withFormProvider(({ cost, discription, title }) => {
 
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {console.log(data);};
@@ -16,37 +14,21 @@ export const Form = ({ cost, discription, title }) => {
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
       <FormLabel>Как вас зовут?</FormLabel>
       <InputField
-        isError={errors? true : false}
+      name="name"
         mb="md"
         propsInput={{ placeholder: "Ваше имя" }}
-        { ...register("name", {
-          required: true,
-        })}
+        title="Name *"
       />
-      <ErrorField isError={errors? true : false}>
-        {errors?.name && <p>Некоректно заполнен E-mail</p>}
-      </ErrorField>
       <FormLabel>Электронная почта*</FormLabel>
       <InputField
-        isError={errors.email ? true : false}
+      name="email"
         mb="md"
         propsInput={{ placeholder: "E-mail" }}
-        {...register("email", {
-          required: true,
-          pattern: {
-            value:
-              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            message: "Поле заполнено неверно",
-          },
-        })}
       />
-      <ErrorField>
-        {errors.email && <p>{errors.email.message || "Ошибка"}</p>}
-      </ErrorField>
       <FormLabel>
         Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
       </FormLabel>
-      <InputField mb="md" />
+      <InputField mb="md" name="magazine" />
       <FormLabel>Что вас интересует</FormLabel>
       <DropDownField
         mb="md"
@@ -58,8 +40,9 @@ export const Form = ({ cost, discription, title }) => {
         Дополнительная информация
         <FormLabelGray>(Не обязательно)</FormLabelGray>
       </FormLabel>
-      <TextAreaField />
-      <ButtonMD onClick>Оставить заявку</ButtonMD>
+      <TextAreaField name="about"/>
+      <ButtonMD >Оставить заявку</ButtonMD>
     </FormWrapper>
   );
-};
+});
+  
