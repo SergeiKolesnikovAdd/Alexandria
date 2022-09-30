@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <>
       <Header />
-      {/* <MainFirstSlide pt="xxxlg" />
-      <AboutSlide pt="xxxlg"></AboutSlide> */}
+      <MainFirstSlide pt="xxxlg" />
+      <AboutSlide pt="xxxlg"></AboutSlide>
       <FocusSlide></FocusSlide>
       <PlatformSlide mt="xxxlg"></PlatformSlide>
       <OfferSlide pt="xxxlg"></OfferSlide>
