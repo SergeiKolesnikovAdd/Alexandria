@@ -1,8 +1,7 @@
 import {
   applyMargins,
   applyPaddings,
-  breakpointsWidth,
-  getCurrentColor,
+  colors,
 } from "styles";
 
 import styled from "@emotion/styled";
@@ -10,23 +9,19 @@ import styled from "@emotion/styled";
 export const Button = styled.button`
   width: 112px;
   height: 38px;
-  background-color: ${getCurrentColor("red")};
-  border: 1px solid ${getCurrentColor("red")};
+  background-color: ${colors.orange};
+  border: 1px solid ${colors.orange};
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   span {
-    color: ${getCurrentColor("white")};
+    color: ${colors.red};
     transition: color 0.3s;
   }
 
   &:hover {
-    background-color: ${getCurrentColor("white")};
-
-    span {
-      color: ${getCurrentColor("red")};
-    }
+    background-color: ${colors.white};
   }
 
   ${applyMargins}

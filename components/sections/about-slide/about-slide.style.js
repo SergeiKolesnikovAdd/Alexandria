@@ -53,7 +53,6 @@ export const AboutBGImageWrapper = styled.div`
 
 export const AboutSlideBGImage = styled.img`
   width: 63vw;
-  height: 35.8vw;
   content: url(${img.src});
 `;
 
@@ -101,4 +100,8 @@ export const AccordionContainer = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
+`;
+
+export const SliderWrapper = styled.div`
+  /* width: 752px; */
 `;

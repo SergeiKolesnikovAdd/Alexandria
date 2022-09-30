@@ -1,6 +1,6 @@
 import {} from "components";
 
-import { Caption, H2, Slider, Text } from "components";
+import { H2, Slider, Text } from "components";
 import {
   ContentWrapper,
   H3Styled,

@@ -27,7 +27,7 @@ export const AccordionSmall = (props) => {
   return (
     <AccordionWrapper {...props}>
       <AccordionButton px="mdlg" onClick={toggle} isShowing={isShowing}>
-        <Title isShowing={isShowing}>
+        <Title mr="md">
           {props.title}
         </Title>
         <IconWrapper my="mdlg" isShowing={isShowing}>

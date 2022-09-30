@@ -10,8 +10,9 @@ import {
   StyledDescription,
   MediaContainer,
   AccordionContainer,
+  SliderWrapper,
 } from "./about-slide.style";
-import { ButtonSM, H2, Text, AccordionSmall } from "components";
+import { ButtonXSM, H2, AccordionSmall, Slider, } from "components";
 
 import {
   fontSizes
@@ -25,9 +26,9 @@ export const AboutSlide = ({ ...props }) => {
       <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
         Alexandrina—это
       </H2>
-      <ButtonSM ml="lg" mt="md">
+      <ButtonXSM ml="lg" mt="md">
         О нас
-      </ButtonSM>
+      </ButtonXSM>
       <ButtonRow>
         <TextContainer mt="lg" mx="lg">
           <StyledDescription>
@@ -40,7 +41,7 @@ export const AboutSlide = ({ ...props }) => {
           </Link>
         </TextContainer>
       </ButtonRow>
-      <MediaContainer mt="xxlg">
+      <MediaContainer mt="xxlg" px="mdlg">
         <AccordionContainer>
           <AccordionSmall
             title="Встроенный редактор Wax"
@@ -60,6 +61,9 @@ export const AboutSlide = ({ ...props }) => {
         <AboutBGImageWrapper>
           <AboutSlideBGImage />
         </AboutBGImageWrapper>
+        {/* <SliderWrapper>
+          <Slider />
+        </SliderWrapper> */}
       </MediaContainer>
     </ContentWrapper>
   );
