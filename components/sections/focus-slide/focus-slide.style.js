@@ -60,3 +60,10 @@ export const H3Styled = styled(H3)`
   opacity: 0.4;
   color: ${colors.white};
 `;
+
+export const ControlButtons = styled.div`
+  display: flex;
+
+  ${applyMargins}
+  ${applyPaddings}
+`;

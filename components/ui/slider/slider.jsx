@@ -33,19 +33,7 @@ const data = [
   },
 ];
 
-const getCurrentIndex = (index, currentSlide) => {
-  const totalCount = 5;
-  const currentIndex = (index + Math.abs(currentSlide)) % totalCount;
-
-  return currentIndex;
-};
-
-export const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(10000);
-  const [isNextDirection, setDirection] = useState(false);
-
-  useEffect(() => {
-  }, [currentSlide]);
+export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...props) => {
 
   return (
     <>
@@ -64,22 +52,6 @@ export const Slider = () => {
           </Slide>
         ))}
       </SlideWrapper>
-      <button
-        onClick={() => {
-          setDirection(true);
-          setCurrentSlide((prev) => prev + 1);
-        }}
-      >
-        +
-      </button>
-      <button
-        onClick={() => {
-          setDirection(false);
-          setCurrentSlide((prev) => prev - 1);
-        }}
-      >
-        -
-      </button>
     </>
   );
 };
