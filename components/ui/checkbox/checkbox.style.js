@@ -1,10 +1,14 @@
 import styled from "@emotion/styled";
 import { Caption } from "components";
+import { applyMargins } from "styles";
+import { getCurrentFontSizeStyle } from "styles";
+import { fontFamilies } from "styles";
 
 import { colors, getCurrentMarginStyle, hexToRGBA } from "styles";
   
 export const CheckboxWrapper = styled.div`
   display: flex;
+  ${applyMargins}
 `;
 
 export const CheckboxBorder = styled.div`
@@ -49,4 +53,16 @@ export const TextWrapper = styled.div`
 export const StyledCaption = styled(Caption)`
   opacity: 0.4;
   cursor: pointer;
+
+
+`;
+
+export const Error = styled.div`
+  width: 100%;
+  color: ${colors.red};
+  position: absolute;
+  top: calc(100% + 4px);
+  font-family: ${fontFamilies.Font};
+
+  ${getCurrentFontSizeStyle("caption")};
 `;

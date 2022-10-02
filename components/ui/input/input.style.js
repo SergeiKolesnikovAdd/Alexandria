@@ -62,7 +62,6 @@ export const InputStyled = styled.input`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.red};
-  text-transform: uppercase;
   position: absolute;
   top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};

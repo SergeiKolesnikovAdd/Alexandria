@@ -9,10 +9,10 @@ import {
   StyledCaption,
 } from "./checkbox.style";
 
-export const Checkbox = ({ error }) => {
+export const Checkbox = ({ error, ...props} ) => {
   const [isActive, setActiveState] = useState(false);
   return (
-    <CheckboxWrapper onClick={() => setActiveState((prev) => !prev)}>
+    <CheckboxWrapper {...props} onClick={() => setActiveState((prev) => !prev)}>
       <CheckboxBorder isActive={isActive} isError={error}>
         <CheckboxInner isActive={isActive} isError={error} />
       </CheckboxBorder>

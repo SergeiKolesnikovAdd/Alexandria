@@ -20,7 +20,7 @@ import {
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
-    const [isOpenForm, setOpenForm] = useState(false);
+  const [isOpenForm, setOpenForm] = useState(false);
 
   return (
     <ContentWrapper {...props} id="offer">
@@ -45,7 +45,7 @@ export const OfferSlide = ({ ...props }) => {
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
           }}
-          >Получить индивидуальное предложение
+        >Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">

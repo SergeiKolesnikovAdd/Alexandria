@@ -55,11 +55,9 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
   border-radius: 8px;
-  transition: stroke 0.3s;
-  margin-bottom:5px;
+  transition: stroke 0.3s;  
+  padding:10px;
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
       return { backgroundColor: colors.red };
@@ -117,6 +115,7 @@ export const DropDownItem = styled.li`
 
 export const CurrentLabel = styled.span`
   color: ${hexToRGBA(colors.black, 0.2)};
+  ${({ isActive }) => isActive && colors.black};
 `;
 
 export const InputStyled = styled.div`
@@ -125,13 +124,14 @@ export const InputStyled = styled.div`
   justify-content: space-between;
   cursor: pointer;
   width: 100%;
-  height: 32px;
+  height: 100%;
   color: ${colors.black};
   font-family: ${fontFamilies.Font};
   text-align: left;
   transition: color 0.3s;
   background-color: ${colors.white};
   font-size: ${fontSizes.h3};
+  ${getCurrentMarginStyle("vertical", "xsm")};
 
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
@@ -157,7 +157,6 @@ export const InputStyled = styled.div`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.red};
-  text-transform: uppercase;
   position: absolute;
   top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};

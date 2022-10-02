@@ -5,6 +5,7 @@ import {
 } from "./faq-slide.style";
 import { formatPhoneNumber, withFormProvider } from "utils";
 import { ButtonLG } from "components";
+import { useState } from "react";
 
 const ServiceOptions = [
   { label: "color grading", value: "11" },
@@ -26,6 +27,9 @@ const TitleOptions = [
 
 export const FaqSlide = withFormProvider(({ ...props }) => {
   
+  const [isOpenForm, setOpenForm] = useState(false);
+
+
   return (
     <ContentWrapper px="mdsm" {...props} id="faq">
       <H3Styled>Это может быть полезным</H3Styled>
@@ -91,7 +95,11 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
-      <ButtonLG mt="mdlg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
+      <ButtonLG onClick={() => {
+            setOpenForm(true);
+            setChooseItem(arrOfferInfo[0]);
+          }} mt="mdlg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
     </ContentWrapper>
+
   );
 });
