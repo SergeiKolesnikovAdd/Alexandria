@@ -10,6 +10,7 @@ import {
 import { Text, H3 } from "components";
 import img from "public/about-bg.png";
 import styled from "@emotion/styled";
+import { Accordion } from "../../ui/accordion";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -32,6 +33,7 @@ export const ButtonRow = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   width: 100%;
+  justify-content: space-between;
 
   ${applyPaddings}
   ${applyMargins}
@@ -50,8 +52,7 @@ export const AboutBGImageWrapper = styled.div`
 `;
 
 export const AboutSlideBGImage = styled.img`
-  width: 79vw;
-  height: 52vw;
+  width: 63vw;
   content: url(${img.src});
 `;
 
@@ -78,4 +79,29 @@ export const StyledText = styled(Text)`
 export const H3Styled = styled(H3)`
   ${getCurrentFontSizeStyle("text")};
   opacity: 0.4;
+`;
+
+export const StyledDescription = styled(Text)`
+  width:55%;
+`;
+
+export const MediaContainer = styled.div`
+  display: flex;
+  width: 100%;
+
+  ${applyPaddings}
+  ${applyMargins}
+`;
+
+export const AccordionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  ${applyPaddings}
+  ${applyMargins}
+`;
+
+export const SliderWrapper = styled.div`
+  /* width: 752px; */
 `;

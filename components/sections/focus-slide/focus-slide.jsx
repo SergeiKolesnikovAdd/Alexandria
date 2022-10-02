@@ -1,6 +1,11 @@
-import {} from "components";
-
-import { Caption, H2, Slider, Text } from "components";
+import { useEffect, useState } from "react";
+import {
+  H2,
+  Slider,
+  Text,
+  ButtonSliderLeft,
+  ButtonSliderRight,
+} from "components";
 import {
   ContentWrapper,
   H3Styled,
@@ -8,11 +13,33 @@ import {
   SectionWrapper,
   SliderWrapper,
   TextWrapper,
+  ControlButtons,
 } from "./focus-slide.style";
 
 import { colors } from "styles";
 
+const getCurrentIndex = (index, currentSlide) => {
+  const totalCount = 5;
+  const currentIndex = (index + Math.abs(currentSlide)) % totalCount;
+
+  return currentIndex;
+};
+
 export const FocusSlide = ({ ...props }) => {
+  const [currentSlide, setCurrentSlide] = useState(10000);
+  const [isNextDirection, setDirection] = useState(false);
+
+  useEffect(() => {}, [currentSlide]);
+
+  const onNextClick = () => {
+    setDirection(true);
+    setCurrentSlide((prev) => prev + 1);
+  };
+
+  const onPrevClick = () => {
+    setDirection(false);
+    setCurrentSlide((prev) => prev - 1);
+  };
   return (
     <SectionWrapper id="focus">
       <ContentWrapper {...props} mt="xxxlg">
@@ -26,6 +53,15 @@ export const FocusSlide = ({ ...props }) => {
               <br />
               платформа?
             </H2>
+            <ControlButtons mt="md">
+              <ButtonSliderLeft
+                onClick={ onNextClick }
+                mr="xsm"
+              ></ButtonSliderLeft>
+              <ButtonSliderRight 
+              onClick={ onPrevClick }
+              ></ButtonSliderRight>
+            </ControlButtons>
           </HigherPart>
           <Text style={{ color: colors.white }}>
             Мы помогаем создавать, развивать и продвигать
@@ -42,7 +78,9 @@ export const FocusSlide = ({ ...props }) => {
           </Text>
         </TextWrapper>
         <SliderWrapper>
-          <Slider />
+          <Slider currentSlide={currentSlide}
+                  isNextDirection={isNextDirection}
+                  getCurrentIndex={getCurrentIndex}/>
         </SliderWrapper>
       </ContentWrapper>
     </SectionWrapper>
