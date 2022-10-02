@@ -4,6 +4,10 @@ import {
   applyMargins,
   applyPaddings,
   getCurrentFontSizeStyle,
+  colors,
+  fontFamilies,
+  applyColor,
+  fontSizes,
 } from "styles";
 
 export const ContentWrapper = styled.div`
@@ -21,4 +25,10 @@ export const ContentWrapper = styled.div`
 export const H3Styled = styled(H3)`
   ${getCurrentFontSizeStyle("text")};
   opacity: 0.4;
+`;
+
+export const TextWrapper = styled.div`
+  h2 {
+    display: inline;
+  }
 `;
