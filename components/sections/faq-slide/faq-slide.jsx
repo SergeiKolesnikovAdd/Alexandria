@@ -4,6 +4,7 @@ import {
   ContentWrapper,
 } from "./faq-slide.style";
 import { formatPhoneNumber, withFormProvider } from "utils";
+import { ButtonLG } from "components";
 
 const ServiceOptions = [
   { label: "color grading", value: "11" },
@@ -90,6 +91,7 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
+      <ButtonLG mt="mdlg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
     </ContentWrapper>
   );
 });
