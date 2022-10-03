@@ -1,4 +1,4 @@
-import { FormModalInner, ContentSection, ClsButton, ContentWrapper, Title } from "./form-modal.style";
+import { FormModalInner, ContentSection, ClsButton, ContentWrapper, Title } from "./questions-modal.style";
 import { H2, Modal } from "components";
 import { Form } from "./questions-modal-form"
 import { colors } from "styles";

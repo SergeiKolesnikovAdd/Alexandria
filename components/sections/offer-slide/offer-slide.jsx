@@ -166,6 +166,7 @@ export const OfferSlide = ({ ...props }) => {
         </PackageColumn>
       </TableOffer>
       <OfferModal
+        title
         isOpen={isOpen}
         setOpen={setOpen}
         {...chooseItem}></OfferModal>

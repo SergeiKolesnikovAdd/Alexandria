@@ -62,6 +62,6 @@ export const OfferModal = ({
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
-    </Modal>
+    </Modal>  
   );
 };

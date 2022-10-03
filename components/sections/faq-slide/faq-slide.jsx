@@ -6,6 +6,7 @@ import {
 import { formatPhoneNumber, withFormProvider } from "utils";
 import { ButtonLG } from "components";
 import { useState } from "react";
+import { QuestionsFormModal } from "components";
 
 const ServiceOptions = [
   { label: "color grading", value: "11" },
@@ -97,8 +98,8 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
       ></Accordion>
       <ButtonLG onClick={() => {
             setOpenForm(true);
-            setChooseItem(arrOfferInfo[0]);
           }} mt="mdlg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
+          <QuestionsFormModal isOpen={isOpenForm} setOpen={setOpenForm}/>
     </ContentWrapper>
 
   );
