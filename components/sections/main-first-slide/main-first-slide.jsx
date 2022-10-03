@@ -1,11 +1,13 @@
 import {
-  FirstSlideBGImage,
+  LeftHand,
+  RightHand,
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
+  RightHand,
 } from "./main-first-slide.style";
 import { ButtonLG, H3, H1 } from "components";
 
-export const MainFirstSlide = (props) => {
+export const MainFirstSlide = ( move, props) => {
   return (
     <FirstSlideWrapper {...props}>
       <H1 mx="lg">
@@ -26,7 +28,8 @@ export const MainFirstSlide = (props) => {
         Начать работу
       </ButtonLG>
       <FirstSlideBGImageWrapper>
-        <FirstSlideBGImage />
+        <LeftHand/>
+        <RightHand/>
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
   );

@@ -4,7 +4,8 @@ import {
   breakpointsWidth,
 } from "styles";
 
-import img from "public/first-slide-bg.png";
+import imgLeft from "public/left-hand.png";
+import imgRight from "public/right-hand.png";
 import styled from "@emotion/styled";
 
 export const FirstSlideWrapper = styled.div`
@@ -30,15 +31,32 @@ export const FirstSlideBGImageWrapper = styled.div`
   }
 `;
 
-export const FirstSlideBGImage = styled.img`
+const moveRight = ({}) => (
+  addEventListener(scrolly, rightDirection)
+)
+
+export const LeftHand = styled.img`
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 480px;
-  content: url(${img.src});
+  content: url(${imgLeft.src});
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    width: 110vw;
+    width: 50vw;
+    height: 30vw;
+  }
+`;
+
+export const RightHand = styled.img`
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 480px;
+  content: url(${imgRight.src});
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 50vw;
     height: 30vw;
   }
 `;
