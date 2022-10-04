@@ -1,9 +1,9 @@
-import { applyMargins, applyPaddings, colors } from "styles";
+import { applyMargins, applyPaddings, colors, breakpointsWidth, } from "styles";
 
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
-  width: 240px;
+  width: 220px;
   height: 64px;
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
@@ -25,5 +25,10 @@ export const Button = styled.button`
   }
 
   ${applyMargins}
-  ${applyPaddings} 
+  ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    width: 188px;
+    height: 52px;
+  }
 `;
