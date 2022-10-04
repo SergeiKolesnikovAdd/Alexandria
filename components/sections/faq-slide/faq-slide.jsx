@@ -91,7 +91,7 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link2="Преимущества Alexandrina"
         Link3="Вход и регистрация"
       ></Accordion>
-      <ButtonLG mt="mdlg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
+      <ButtonLG mt="lg" style={{alignSelf : "center"}}>Задать вопрос</ButtonLG>
     </ContentWrapper>
   );
 });
