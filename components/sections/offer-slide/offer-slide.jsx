@@ -15,6 +15,7 @@ import {
   NewButton,
   StyledCaption,
   H3Styled,
+  StyledText,
 } from "./offer-slide.style";
 
 
@@ -30,8 +31,8 @@ export const OfferSlide = ({ ...props }) => {
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
-      <ButtonRow mt="lg" px="lg">
-        <Text>
+      <ButtonRow px="lg">
+        <Text mt="lg">
           Мы предлагаем оптимальные пакеты комплексных
           <br />
           услуг, а также возможность разработать персональное
@@ -40,7 +41,7 @@ export const OfferSlide = ({ ...props }) => {
           <br />
           потребностей издателя
         </Text>
-        <ButtonXLG>Получить индивидуальное предложение</ButtonXLG>
+        <ButtonXLG mt="lg">Получить индивидуальное предложение</ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
         <DescColumn>
@@ -65,7 +66,7 @@ export const OfferSlide = ({ ...props }) => {
         <PackageColumn>
           <PackageItem pt="md" pb="mdsm">
             <Standart />
-            <Text mt="sm">Пакет Стандарт</Text>
+            <StyledText mt="sm">Пакет Стандарт</StyledText>
             <Link href="/" mt="xxsm">
               <StyledCaption>Подробнее</StyledCaption>
             </Link>
@@ -94,7 +95,7 @@ export const OfferSlide = ({ ...props }) => {
         <PackageColumn>
           <PackageItem>
             <Comfort />
-            <Text mt="sm">Пакет Комфорт</Text>
+            <StyledText mt="sm">Пакет Комфорт</StyledText>
             <Link href="/" mt="xxsm">
               <StyledCaption>Подробнее</StyledCaption>
             </Link>
@@ -127,7 +128,7 @@ export const OfferSlide = ({ ...props }) => {
         <PackageColumn>
           <PackageItem>
             <Premium />
-            <Text mt="sm">Пакет Премиум</Text>
+            <StyledText mt="sm">Пакет Премиум</StyledText>
             <Link href="/" mt="xxsm">
               <StyledCaption>Подробнее</StyledCaption>
             </Link>

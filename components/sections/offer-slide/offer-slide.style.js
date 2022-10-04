@@ -1,4 +1,4 @@
-import { Caption, H3, } from "components";
+import { Caption, H3, Text, } from "components";
 
 import { ButtonMD } from "../../ui/button-md";
 
@@ -10,9 +10,11 @@ import {
   getCurrentPaddingStyle,
   hexToRGBA,
   getCurrentFontSizeStyle,
+  breakpointsWidth,
 } from "styles";
 
 import styled from "@emotion/styled";
+import { sizes } from "styles";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -31,6 +33,10 @@ export const ButtonRow = styled.div`
 
   ${applyMargins}
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    flex-direction: column;
+  }
 `;
 
 export const TableOffer = styled.div`
@@ -54,6 +60,10 @@ export const DescColumn = styled.div`
   align-items: center;
 
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    grid-template-columns: repeat(1, 324px);
+  }
 `;
 
 export const PackageColumn = styled.div`
@@ -77,6 +87,10 @@ export const PackageColumn = styled.div`
     button {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    grid-template-columns: repeat(1, 120px);
   }
 `;
 
@@ -125,4 +139,10 @@ export const StyledCaption = styled(Caption)`
 export const H3Styled = styled(H3)`
   ${getCurrentFontSizeStyle("text")};
   opacity: 0.4;
+`;
+
+export const StyledText = styled(Text)`
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    font-size: 12px;
+  }
 `;
