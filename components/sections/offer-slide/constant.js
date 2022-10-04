@@ -1,9 +1,13 @@
+import img1 from "public/product-img-comfort.png";
+import img2 from "public/product-img-comfort.png";
+import img3 from "public/product-img-comfort.png";
+
 export const arrOfferInfo = [
   {
     title: "Alexandrina «Стандарт»",
     subtitle:
       "Создание сайта журнала, доступ ко всем инструментам в самостоятельное пользование",
-    img: "publicproduct-img-comfort.png",
+    img: img1.src,
     id: 1,
     color: "rgba(34, 34, 34, 0.08)",
     headingMaintance: "Техническое обеспечение",
@@ -19,7 +23,7 @@ export const arrOfferInfo = [
   {
     title: "Alexandrina «Комфорт»",
     subtitle: "Издание журнала с полным спектром услуг",
-    img: "publicproduct-img-comfort.png",
+    img: img2.src,
     id: 2,
     color: "rgba(209, 116, 86, 1)",
     headingMaintance: "Сопровождение рукописи вплоть до публикации",
@@ -35,7 +39,7 @@ export const arrOfferInfo = [
   {
     title: "Alexandrina «Премиум»",
     subtitle: "Многолетнее развитие журналов",
-    img: "publicproduct-img-comfort.png",
+    img: img3.src,
     id: 3,
     color: "linear-gradient(135deg, #C19450 0%, #F0CA81 100%)",
     headingMaintance: "Индивидуальный дизайн журнала.",

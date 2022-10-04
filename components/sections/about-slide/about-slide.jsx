@@ -12,14 +12,14 @@ import {
   AccordionContainer,
   SliderWrapper,
 } from "./about-slide.style";
-import { ButtonXSM, H2, AccordionSmall, Slider, } from "components";
+import { ButtonXSM, H2, AccordionSmall, Slider } from "components";
 
-import {
-  fontSizes
-} from "styles";
+import { fontSizes } from "styles";
 import { Accordion } from "components";
+import React, { useState } from "react";
 
 export const AboutSlide = ({ ...props }) => {
+  const [currentAccordion, setCurrentAccordion] = useState(-1);
   return (
     <ContentWrapper {...props} id="about">
       <H3Styled mx="lg">В чем наша идея</H3Styled>
@@ -44,15 +44,24 @@ export const AboutSlide = ({ ...props }) => {
       <MediaContainer mt="xxlg" px="mdlg">
         <AccordionContainer>
           <AccordionSmall
+            id="accordion-1"
+            currentAccordion={currentAccordion}
+            setCurrentAccordion={setCurrentAccordion}
             title="Встроенный редактор Wax"
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
           <AccordionSmall
+            id="accordion-2"
+            setCurrentAccordion={setCurrentAccordion}
+            currentAccordion={currentAccordion}
             title="Рецензирование"
             mt="xsm"
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
           <AccordionSmall
+            id="accordion-3"
+            setCurrentAccordion={setCurrentAccordion}
+            currentAccordion={currentAccordion}
             title="Экспорт статьи в HTML, PDF, XML"
             mt="xsm"
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."

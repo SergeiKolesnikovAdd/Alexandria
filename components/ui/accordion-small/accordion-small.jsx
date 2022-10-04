@@ -17,19 +17,23 @@ import {
   H3Styled,
 } from "./accordion-small.style";
 
-export const AccordionSmall = (props) => {
-  const [isShowing, setIsShowing] = useState(false);
-
-  const toggle = () => {
-    setIsShowing((prev) => !prev);
-  };
-
+export const AccordionSmall = ({
+  id,
+  setCurrentAccordion,
+  currentAccordion,
+  ...props
+}) => {
+  const isShowing = currentAccordion === id;
   return (
     <AccordionWrapper {...props}>
-      <AccordionButton px="mdlg" onClick={toggle} isShowing={isShowing}>
-        <Title mr="md">
-          {props.title}
-        </Title>
+      <AccordionButton
+        px="mdlg"
+        onClick={() => {
+          setCurrentAccordion?.(id);
+        }}
+        isShowing={isShowing}
+      >
+        <Title mr="md">{props.title}</Title>
         <IconWrapper my="mdlg" isShowing={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
