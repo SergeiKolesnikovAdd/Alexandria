@@ -1,4 +1,4 @@
-import { H2, ButtonLG, Text } from "components";
+import { H2, ButtonMD, } from "components";
 import { ContentWrapper, H3Styled, TextWrapper } from "./platform-slide.style";
 
 import { colors } from "styles";
@@ -25,7 +25,7 @@ export const PlatformSlide = ({ ...props }) => {
           конференций или научно-исследовательским институтом
         </H2>
       </TextWrapper>
-      <ButtonLG mt="lg">О платформе</ButtonLG>
+      <ButtonMD mt="lg">О платформе</ButtonMD>
     </ContentWrapper>
   );
 };

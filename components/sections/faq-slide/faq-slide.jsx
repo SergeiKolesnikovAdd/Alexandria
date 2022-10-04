@@ -27,7 +27,7 @@ const TitleOptions = [
 ];
 
 export const FaqSlide = withFormProvider(({ ...props }) => {
-  
+
   const [isOpenForm, setOpenForm] = useState(false);
 
 
