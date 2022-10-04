@@ -12,10 +12,10 @@ export const CheckboxField = ({ name, rules = null, normalizer, ...props }) => {
         <Controller
             control={control}
             name={name}
-            rules={rules || { validate: (val) => !!val || 'Необходимо согласие на обработку данных' }}
+            rules={rules || 'Необходимо согласие на обработку данных' }
             render={({field}) => (
                 <Checkbox {...props}  {...field}  error={errors?.[name]?.message}/>
-                
+
             )}
         />
     );

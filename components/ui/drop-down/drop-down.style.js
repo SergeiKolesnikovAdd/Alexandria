@@ -56,7 +56,7 @@ export const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  transition: stroke 0.3s;  
+  transition: stroke 0.3s;
   padding:10px;
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
@@ -114,8 +114,8 @@ export const DropDownItem = styled.li`
 `;
 
 export const CurrentLabel = styled.span`
-  color: ${hexToRGBA(colors.black, 0.2)};
-  ${({ isActive }) => isActive && colors.black};
+  /* color: ${hexToRGBA(colors.black, 0.2)};
+  ${({ isActive }) => isActive && colors.black}; */
 `;
 
 export const InputStyled = styled.div`
@@ -137,7 +137,7 @@ export const InputStyled = styled.div`
     if (isOpen) {
       return { color: colors.white };
     } else if (isActive) {
-      return { color: getCurrentColor("lightOrange") };
+      return { color: getCurrentColor("black") };
     } else if (isError) {
       return { color: colors.red };
     } else {
@@ -149,6 +149,10 @@ export const InputStyled = styled.div`
     & + ${Underline} ${UnderlineInner} {
       transform: scaleX(1);
     }
+  }
+
+  &::placeholder {
+    color: ${colors.black}
   }
 
   ${getCurrentFontSizeStyle("h3")};
