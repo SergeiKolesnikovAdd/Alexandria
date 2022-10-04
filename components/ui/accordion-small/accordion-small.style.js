@@ -4,7 +4,8 @@ import {
   applyPaddings,
   applyMargins,
   colors,
-  getCurrentFontSizeStyle
+  getCurrentFontSizeStyle,
+  breakpointsWidth,
 } from "styles";
 
 import { Text, H3 } from "components";
@@ -22,24 +23,34 @@ export const AccordionButton = styled.button`
   justify-content: flex-start;
   align-items: center;
   background-color: ${colors.white};
-  border-radius: 32px;
+  border-radius: 24px;
   transition: background-color 0.3s;
+  ${getCurrentPaddingStyle("right", "none")}
+  ${getCurrentPaddingStyle("left", "md")}
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    border-radius: 18px;
+  }
 `;
 
 export const InnerContent = styled.div`
   display: flex;
   width: 100%;
-  border-radius: 32px;
-  ${getCurrentMarginStyle("top", "xxsm")};
+  border-radius: 24px;
+  /* ${getCurrentMarginStyle("top", "xxsm")};
   ${getCurrentPaddingStyle("verical", "mdlg")};
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")}; */
   display: ${({ isShowing }) => (isShowing ? "flex" : "none")};
   background-color: ${({ isShowing }) =>
     isShowing ? colors.red : colors.white};
   transition: background-color 0.3s;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    border-radius: 18px;
+  }
 `;
 
 export const LinkWrapper = styled.div`
@@ -62,14 +73,22 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 16px;
   background-color: ${colors.grey};
   transition: background-color 0.3s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    width: 48px;
+    height: 48px;
+  }
 `;
 
 export const IconMinus = styled(Minus)`
