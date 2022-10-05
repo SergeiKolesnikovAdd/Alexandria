@@ -1,5 +1,3 @@
-import { colors } from "styles";
-
 import {
   AccordionWrapper,
   AccordionButton,
@@ -12,23 +10,10 @@ import {
   H3Styled,
 } from "./accordion-small.style";
 
-export const AccordionSmall = ({
-  id,
-  img,
-  setCurrentAccordion,
-  currentAccordion,
-  ...props
-}) => {
-  const isShowing = currentAccordion === id;
+export const AccordionSmall = ({ id, img, isShowing, ...props }) => {
   return (
     <AccordionWrapper {...props}>
-      <AccordionButton
-        px="mdlg"
-        onClick={() => {
-          setCurrentAccordion?.(id);
-        }}
-        isShowing={isShowing}
-      >
+      <AccordionButton px="mdlg" isShowing={isShowing}>
         <Title isShowing={isShowing} mr="md">
           {props.title}
         </Title>
@@ -42,7 +27,7 @@ export const AccordionSmall = ({
           <H3Styled
             isShowing={isShowing}
             mr="mdsm"
-            style={{ maxWidth: "28vw",}}
+            style={{ maxWidth: "28vw" }}
           >
             {props.desc1}
           </H3Styled>

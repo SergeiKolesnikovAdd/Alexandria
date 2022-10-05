@@ -4,7 +4,7 @@ import {
   breakpointsWidth,
   colors,
   getCurrentMarginStyle,
-  getCurrentFontSizeStyle
+  getCurrentFontSizeStyle,
 } from "styles";
 
 import { Text, H3 } from "components";
@@ -64,7 +64,7 @@ export const H3Styled = styled(H3)`
 `;
 
 export const StyledDescription = styled(Text)`
-  width:55%;
+  width: 55%;
 `;
 
 export const MediaContainer = styled.div`
@@ -89,6 +89,7 @@ export const SliderWrapper = styled.div`
 `;
 
 export const ImgSlide = styled.img`
+  ${({ isOpen }) => !isOpen && "display: none;"}
 `;
 
 export const ImgContainer = styled.div`
