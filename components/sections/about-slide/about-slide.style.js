@@ -4,13 +4,12 @@ import {
   breakpointsWidth,
   colors,
   getCurrentMarginStyle,
-  getCurrentFontSizeStyle
+  getCurrentFontSizeStyle,
 } from "styles";
 
 import { Text, H3 } from "components";
 import img from "public/about-bg.png";
 import styled from "@emotion/styled";
-import { Accordion } from "../../ui/accordion";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -39,23 +38,6 @@ export const TextContainer = styled.div`
   ${applyMargins}
 `;
 
-export const AboutBGImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
-  ${applyPaddings}
-  ${applyMargins}
-  
-  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    width: 100%;
-  }
-`;
-
-export const AboutSlideBGImage = styled.img`
-  width: 63vw;
-  content: url(${img.src});
-`;
-
 export const Link = styled.a`
   :hover {
     transition: opacity 0.3s;
@@ -82,7 +64,7 @@ export const H3Styled = styled(H3)`
 `;
 
 export const StyledDescription = styled(Text)`
-  width:55%;
+  width: 55%;
 `;
 
 export const MediaContainer = styled.div`
@@ -104,4 +86,14 @@ export const AccordionContainer = styled.div`
 
 export const SliderWrapper = styled.div`
   /* width: 752px; */
+`;
+
+export const ImgSlide = styled.img`
+  ${({ isOpen }) => !isOpen && "display: none;"}
+`;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 63vw;
 `;

@@ -1,6 +1,4 @@
 import {
-  AboutBGImageWrapper,
-  AboutSlideBGImage,
   ButtonRow,
   ContentWrapper,
   Link,
@@ -10,16 +8,19 @@ import {
   StyledDescription,
   MediaContainer,
   AccordionContainer,
-  SliderWrapper,
+  ImgSlide,
+  ImgContainer,
 } from "./about-slide.style";
-import { ButtonXSM, H2, AccordionSmall, Slider, } from "components";
+import { ButtonXSM, H2, AccordionSmall, Slider } from "components";
 
-import {
-  fontSizes
-} from "styles";
-import { Accordion } from "components";
+import { fontSizes } from "styles";
+import React, { useState } from "react";
+
+import { contentAccordion } from "./constant";
 
 export const AboutSlide = ({ ...props }) => {
+  const [chooseItem, setChooseItem] = useState(contentAccordion[0]);
+
   return (
     <ContentWrapper {...props} id="about">
       <H3Styled mx="lg">В чем наша идея</H3Styled>
@@ -43,27 +44,42 @@ export const AboutSlide = ({ ...props }) => {
       </ButtonRow>
       <MediaContainer mt="xxlg" px="mdlg">
         <AccordionContainer>
-          <AccordionSmall
-            title="Встроенный редактор Wax"
-            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
-          ></AccordionSmall>
-          <AccordionSmall
-            title="Рецензирование"
-            mt="xsm"
-            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
-          ></AccordionSmall>
-          <AccordionSmall
-            title="Экспорт статьи в HTML, PDF, XML"
-            mt="xsm"
-            desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
-          ></AccordionSmall>
+          {contentAccordion.map(({ title, id, desc }, index) => (
+            <AccordionSmall
+              title={title}
+              key={id}
+              id={id}
+              desc1={desc}
+              isShowing={chooseItem.id === id}
+              onClick={() => {
+                setChooseItem(contentAccordion[index]);
+              }}
+            />
+          ))}
         </AccordionContainer>
-        {/* <AboutBGImageWrapper>
-          <AboutSlideBGImage />
-        </AboutBGImageWrapper> */}
-        {/* <SliderWrapper>
-          <Slider />
-        </SliderWrapper> */}
+        {contentAccordion.map(({id, img }) => (
+          <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
+        ))}
+
+        {/* <ImgSlide
+            currentAccordion={currentAccordion}
+            onClick={() => {
+              setCurrentImg?.(id);
+            }}
+            // isShowing={isShowing}
+            id="2"
+            src={img2.src}
+          />
+          <ImgSlide
+            currentAccordion={currentAccordion}
+            onClick={() => {
+              setCurrentImg?.(id);
+            }}
+            // isShowing={isShowing}
+            id="3"
+            src={img3.src}
+          /> */}
+        {/* </ImgContainer> */}
       </MediaContainer>
     </ContentWrapper>
   );
