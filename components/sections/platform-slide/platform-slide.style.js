@@ -39,3 +39,10 @@ export const StyledDesktopBR = styled.br`
     display: none;
   }
 `;
+
+export const StyledTabletSMBR = styled.br`
+  display: none;
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    display: block;
+  }
+`;

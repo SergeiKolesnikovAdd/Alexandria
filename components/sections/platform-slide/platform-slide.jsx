@@ -1,5 +1,5 @@
 import { H2, ButtonMD, } from "components";
-import { ContentWrapper, H3Styled, TextWrapper, StyledDesktopBR } from "./platform-slide.style";
+import { ContentWrapper, H3Styled, TextWrapper, StyledDesktopBR, StyledTabletSMBR } from "./platform-slide.style";
 
 import { colors } from "styles";
 
@@ -9,8 +9,11 @@ export const PlatformSlide = ({ ...props }) => {
       <H3Styled>О платформе</H3Styled>
       <TextWrapper>
         <H2 mt="mdsm">
-          Мы помогаем создавать научные журналы и книги,
-          <br />
+          Мы помогаем создавать
+          <StyledTabletSMBR />
+          научные журналы и книги,
+          <StyledDesktopBR />
+          <StyledTabletSMBR />
           соответствующие международным стандартам
           <br />
           для издателей любого масштаба&nbsp;
@@ -18,11 +21,17 @@ export const PlatformSlide = ({ ...props }) => {
         <H2 style={{ color: colors.orange, display: "inline" }}>
           и амбиций&nbsp;
           <StyledDesktopBR />
-          вне зависимости от того являетесь ли вы
+          вне зависимости
+          <StyledTabletSMBR />
+          от того являетесь ли вы
           <br />
-          университетской прессой, организатором
-          <br />
-          конференций или научно-исследовательским институтом
+          университетской прессой,
+          <StyledTabletSMBR />
+          организатором
+          <StyledDesktopBR />
+          конференций
+          <StyledTabletSMBR />
+          или научно-исследовательским институтом
         </H2>
       </TextWrapper>
       <ButtonMD mt="lg">О платформе</ButtonMD>

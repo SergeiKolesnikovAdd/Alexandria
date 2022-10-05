@@ -31,7 +31,7 @@ export const OfferSlide = ({ ...props }) => {
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
-      <ButtonRow px="lg">
+      <ButtonRow mb="lg" px="lg">
         <Text mt="lg">
           Мы предлагаем оптимальные пакеты комплексных
           <br />
