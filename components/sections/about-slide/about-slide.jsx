@@ -1,6 +1,4 @@
 import {
-  AboutBGImageWrapper,
-  AboutSlideBGImage,
   ButtonRow,
   ContentWrapper,
   Link,
@@ -10,16 +8,21 @@ import {
   StyledDescription,
   MediaContainer,
   AccordionContainer,
-  SliderWrapper,
+  ImgSlide,
+  ImgContainer,
 } from "./about-slide.style";
 import { ButtonXSM, H2, AccordionSmall, Slider } from "components";
 
 import { fontSizes } from "styles";
-import { Accordion } from "components";
 import React, { useState } from "react";
+import img1 from "public/first-slide.png";
+import img2 from "public/second-slide.png";
+import img3 from "public/third-slide.png";
 
 export const AboutSlide = ({ ...props }) => {
   const [currentAccordion, setCurrentAccordion] = useState(-1);
+  // const [currentImg, setCurrentImg] = useState(-1);
+  // const isShowing = currentImg === id;
   return (
     <ContentWrapper {...props} id="about">
       <H3Styled mx="lg">В чем наша идея</H3Styled>
@@ -44,14 +47,14 @@ export const AboutSlide = ({ ...props }) => {
       <MediaContainer mt="xxlg" px="mdlg">
         <AccordionContainer>
           <AccordionSmall
-            id="accordion-1"
+            id="1"
             currentAccordion={currentAccordion}
             setCurrentAccordion={setCurrentAccordion}
             title="Встроенный редактор Wax"
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
           <AccordionSmall
-            id="accordion-2"
+            id="2"
             setCurrentAccordion={setCurrentAccordion}
             currentAccordion={currentAccordion}
             title="Рецензирование"
@@ -59,7 +62,7 @@ export const AboutSlide = ({ ...props }) => {
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
           <AccordionSmall
-            id="accordion-3"
+            id="3"
             setCurrentAccordion={setCurrentAccordion}
             currentAccordion={currentAccordion}
             title="Экспорт статьи в HTML, PDF, XML"
@@ -67,12 +70,35 @@ export const AboutSlide = ({ ...props }) => {
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
         </AccordionContainer>
-        <AboutBGImageWrapper>
-          <AboutSlideBGImage />
-        </AboutBGImageWrapper>
-        {/* <SliderWrapper>
-          <Slider />
-        </SliderWrapper> */}
+        <ImgContainer>
+          <ImgSlide
+            currentAccordion={currentAccordion}
+            onClick={() => {
+              setCurrentImg?.(id);
+            }}
+            // isShowing={isShowing}
+            id="1"
+            src={img1.src}
+          />
+          <ImgSlide
+            currentAccordion={currentAccordion}
+            onClick={() => {
+              setCurrentImg?.(id);
+            }}
+            // isShowing={isShowing}
+            id="2"
+            src={img2.src}
+          />
+          <ImgSlide
+            currentAccordion={currentAccordion}
+            onClick={() => {
+              setCurrentImg?.(id);
+            }}
+            // isShowing={isShowing}
+            id="3"
+            src={img3.src}
+          />
+        </ImgContainer>
       </MediaContainer>
     </ContentWrapper>
   );

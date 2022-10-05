@@ -2,6 +2,7 @@ import {
   applyMargins,
   applyPaddings,
   colors,
+  breakpointsWidth,
 } from "styles";
 
 import styled from "@emotion/styled";
@@ -30,4 +31,8 @@ export const Button = styled.button`
 
   ${applyMargins}
   ${applyPaddings} 
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+   
+  }
 `;

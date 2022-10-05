@@ -4,10 +4,7 @@ import {
   applyMargins,
   applyPaddings,
   getCurrentFontSizeStyle,
-  colors,
-  fontFamilies,
-  applyColor,
-  fontSizes,
+  breakpointsWidth,
 } from "styles";
 
 export const ContentWrapper = styled.div`
@@ -30,5 +27,22 @@ export const H3Styled = styled(H3)`
 export const TextWrapper = styled.div`
   h2 {
     display: inline;
+    @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+      display: block;
+    }
+  }
+`;
+
+export const StyledDesktopBR = styled.br`
+  display: block;
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    display: none;
+  }
+`;
+
+export const StyledTabletSMBR = styled.br`
+  display: none;
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    display: block;
   }
 `;

@@ -10,7 +10,6 @@ import {
 import { Text, H3 } from "components";
 import img from "public/about-bg.png";
 import styled from "@emotion/styled";
-import { Accordion } from "../../ui/accordion";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -37,23 +36,6 @@ export const TextContainer = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
-`;
-
-export const AboutBGImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-
-  ${applyPaddings}
-  ${applyMargins}
-  
-  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    width: 100%;
-  }
-`;
-
-export const AboutSlideBGImage = styled.img`
-  width: 63vw;
-  content: url(${img.src});
 `;
 
 export const Link = styled.a`
@@ -104,4 +86,13 @@ export const AccordionContainer = styled.div`
 
 export const SliderWrapper = styled.div`
   /* width: 752px; */
+`;
+
+export const ImgSlide = styled.img`
+`;
+
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 63vw;
 `;

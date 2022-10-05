@@ -15,6 +15,7 @@ import {
   NewButton,
   StyledCaption,
   H3Styled,
+  StyledText,
 } from "./offer-slide.style";
 
 
@@ -30,8 +31,8 @@ export const OfferSlide = ({ ...props }) => {
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
-      <ButtonRow mt="lg" px="lg">
-        <Text>
+      <ButtonRow mb="lg" px="lg">
+        <Text mt="lg">
           Мы предлагаем оптимальные пакеты комплексных
           <br />
           услуг, а также возможность разработать персональное
@@ -40,7 +41,7 @@ export const OfferSlide = ({ ...props }) => {
           <br />
           потребностей издателя
         </Text>
-        <ButtonXLG>Получить индивидуальное предложение</ButtonXLG>
+        <ButtonXLG mt="lg">Получить индивидуальное предложение</ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
         <DescColumn>
