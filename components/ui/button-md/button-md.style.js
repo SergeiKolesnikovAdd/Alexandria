@@ -1,5 +1,4 @@
-import { applyMargins, applyPaddings, colors } from "styles";
-
+import { applyMargins, applyPaddings, colors, breakpointsWidth } from "styles";
 import styled from "@emotion/styled";
 
 export const Button = styled.button`

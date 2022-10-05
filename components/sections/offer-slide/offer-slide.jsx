@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import { H2, Text, ButtonXLG, OfferModal, FormModal, } from "components";
+import { H2, Text, ButtonXLG, OfferModal, FormModal } from "components";
 import { arrOfferInfo } from "./constant";
-import { Comfort, Mark, Premium, Standart, } from "../../common";
+import { Comfort, Mark, Premium, Standart } from "../../common";
 import {
   ContentWrapper,
   DescColumn,
@@ -15,7 +15,6 @@ import {
   StyledCaption,
   H3Styled,
 } from "./offer-slide.style";
-
 
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
@@ -45,7 +44,8 @@ export const OfferSlide = ({ ...props }) => {
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
           }}
-        >Получить индивидуальное предложение
+        >
+          Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
@@ -91,7 +91,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
           </PackageItem>
@@ -123,7 +124,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
           </PackageItem>
@@ -159,7 +161,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={() => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
           </PackageItem>
@@ -169,11 +172,13 @@ export const OfferSlide = ({ ...props }) => {
         title
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}></OfferModal>
+        {...chooseItem}
+      ></OfferModal>
       <FormModal
         isOpen={isOpenForm}
         setOpen={setOpenForm}
-        {...chooseItem}></FormModal>
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };

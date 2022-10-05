@@ -4,7 +4,6 @@ import { useFormContext } from "react-hook-form";
 import { FormLabelGray, FormLabel, FormWrapper, ErrorField } from "./form-modal.style";
 import { withFormProvider } from "utils";
 import { Checkbox } from "components";
-import { CheckboxField } from "components";
 import { useState } from "react";
 import { postContact } from "utils";
 

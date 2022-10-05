@@ -1,13 +1,20 @@
-import { ButtonMD, CheckboxField, TextAreaField, InputField } from "components";
+import { ButtonMD, TextAreaField, InputField } from "components";
 import { useFormContext } from "react-hook-form";
 import { FormLabel, FormWrapper } from "./questions-modal.style";
 import { withFormProvider } from "utils";
+import { Checkbox } from "components";
+import { useState } from "react";
 
 export const Form = withFormProvider(({ cost, discription, title }) => {
+  const [isChecked, setIsChecked] = useState(false)
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const handleCheck = () => {
+    setIsChecked((prev) => !prev);
+  }
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
@@ -21,9 +28,14 @@ export const Form = withFormProvider(({ cost, discription, title }) => {
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
       <FormLabel>Дополнительная информация</FormLabel>
-      <TextAreaField name="about" />
-      <CheckboxField name="checkbox" />
-      <ButtonMD>Оставить заявку</ButtonMD>
+      <TextAreaField name="about" rules={{}} />
+      <Checkbox
+        isActive={isChecked}
+        setActive={handleCheck}
+        name="checkbox"
+        mb="lg"
+      />
+      <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
     </FormWrapper>
   );
 });

@@ -37,7 +37,6 @@ import {
   TextAreaField,
   DropDownField,
   CounterField,
-  CheckboxField,
 } from "./ui/fields";
 import { Counter } from "./ui/counter";
 import { Input } from "./ui/input";
@@ -94,7 +93,6 @@ export {
   TextAreaField,
   DropDownField,
   CounterField,
-  CheckboxField,
   Counter,
   Input,
   TextArea,
