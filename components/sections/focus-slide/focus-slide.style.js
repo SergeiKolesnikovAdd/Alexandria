@@ -6,6 +6,7 @@ import {
   getCurrentFontSizeStyle,
   getCurrentMarginStyle,
   getCurrentPaddingStyle,
+  breakpointsWidth,
 } from "styles";
 
 import { H3 } from "components";
@@ -35,6 +36,10 @@ export const ContentWrapper = styled.div`
 
   ${applyMargins}
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    flex-direction: column;
+  }
 `;
 
 export const TextWrapper = styled.div`

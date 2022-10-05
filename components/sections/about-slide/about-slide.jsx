@@ -58,9 +58,9 @@ export const AboutSlide = ({ ...props }) => {
             desc1="Преобразование статьи в самые востребованные форматы HTML, PDF, XML. Это означает, что после написания статьи через наш редактор, Вы можете скачать ее в любом из этих форматов."
           ></AccordionSmall>
         </AccordionContainer>
-        <AboutBGImageWrapper>
+        {/* <AboutBGImageWrapper>
           <AboutSlideBGImage />
-        </AboutBGImageWrapper>
+        </AboutBGImageWrapper> */}
         {/* <SliderWrapper>
           <Slider />
         </SliderWrapper> */}
