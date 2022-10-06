@@ -13,12 +13,12 @@ import {
   ContentSection,
   Heading,
   Icon,
-  ClsButton,  
+  ClsButton,
 } from "./offer-modal.style";
 
 export const OfferModal = ({
   img,
-  color,
+  icon,
   headingMaintance,
   textMaintance,
   headingService,
@@ -42,7 +42,7 @@ export const OfferModal = ({
           <ContentWrapper>
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
-              <Standart colorgrad={color} opacity={"1"} stopColor={"yellow"} />
+              <Icon src={icon} />
               {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
             <Caption>{subtitle}</Caption>
@@ -57,9 +57,8 @@ export const OfferModal = ({
             <StyledButtonLG
               onClick={() => {
                 setOpenForm(true);
-              }}
-            >
-              Подать заявку
+              }}>
+              Начать работу
             </StyledButtonLG>
           </ContentWrapper>
         </ContentSection>

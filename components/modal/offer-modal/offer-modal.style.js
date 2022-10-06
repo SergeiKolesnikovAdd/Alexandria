@@ -23,18 +23,20 @@ export const OfferModalInner = styled.div`
   background-color: ${hexToRGBA(colors.black, 0.9)};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
-  ${getCurrentPaddingStyle("top", "xxlg")};
-  ${activeForm};
+  overflow: hidden;
+  z-index: 500;
 `;
 
 export const ContentSection = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  ${getCurrentMarginStyle("top", "mdsm")};
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
+  overflow: hidden;
+  height : 764px;
+  opacity: 1;
 `;
 
 export const ContentWrapper = styled.div`
@@ -45,6 +47,11 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
+  overflow: scroll;
+`;
+
+export const Icon = styled.img`
+
 `;
 
 export const Heading = styled(Text)`
@@ -73,8 +80,8 @@ gap: 40px 16px;
 `;
 
 export const StyledButtonLG = styled(ButtonLG)`
-width: 320px;
-height: 64px;
+  width: 320px;
+  ${getCurrentPaddingStyle("vertical", "md2")};
   ${getCurrentMarginStyle("top", "lg")};
 `;
 
@@ -98,5 +105,3 @@ width: 50 %;
   ${getCurrentPaddingStyle("bottom", "md")};
   ${getCurrentPaddingStyle("top", "lg")};
 `;
-
-

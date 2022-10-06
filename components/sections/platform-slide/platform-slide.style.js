@@ -27,6 +27,9 @@ export const H3Styled = styled(H3)`
 export const TextWrapper = styled.div`
   h2 {
     display: inline;
+    span {
+      display: inline;
+    }
     @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
       display: block;
     }
