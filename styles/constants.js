@@ -57,6 +57,22 @@ export const breakpointsWidth = {
 };
 
 export const offsets = {
+  [desktopXLG]: {
+    xxxlg: "10vw",
+    xxlg: "5vw",
+    xlg: "4vw",
+    lg: "2.5vw",
+    lg2: "2.375vw",
+    mdlg: "2vw",
+    md: "1.5vw",
+    mdsm: "1vw",
+    sm: "0.75vw",
+    xsm: "0.5vw",
+    xxsm: "0.25vw",
+    xxxsm: "0.125vw",
+    none: 0,
+  },
+
   [desktopLG]: {
     xxxlg: 160,
     xxlg: 80,
@@ -65,8 +81,77 @@ export const offsets = {
     lg2: 38,
     mdlg: 32,
     md: 24,
+    md2: 20,
     mdsm: 16,
     sm: 12,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
+    none: 0,
+  },
+
+  [desktopMD]: {
+    xxxlg: 150,
+    xxlg: 74,
+    xlg: 64,
+    lg: 36,
+    lg2: 34,
+    mdlg: 32,
+    md: 24,
+    md2: 20,
+    mdsm: 16,
+    sm: 12,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
+    none: 0,
+  },
+
+  [desktopSM]: {
+    xxxlg: 140,
+    xxlg: 68,
+    xlg: 64,
+    lg: 32,
+    lg2: 30,
+    mdlg: 32,
+    md: 24,
+    md2: 20,
+    mdsm: 16,
+    sm: 12,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
+    none: 0,
+  },
+
+  [tabletLG]: {
+    xxxlg: 130,
+    xxlg: 64,
+    xlg: 64,
+    lg: 28,
+    lg2: 26,
+    mdlg: 32,
+    md: 24,
+    md2: 20,
+    mdsm: 16,
+    sm: 12,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
+    none: 0,
+  },
+
+  [tabletSM]: {
+    xxxlg: 120,
+    xxlg: 60,
+    xlg: 64,
+    lg: 24,
+    lg2: 22,
+    mdlg: 32,
+    // TODO:MDLG поправить, если найдёшь
+    md: 20,
+    mdsm: 12,
+    sm: 8,
     xsm: 8,
     xxsm: 4,
     xxxsm: 2,
@@ -96,12 +181,52 @@ export const sizes = {
 };
 
 export const fontSizes = {
+  [desktopXLG]: {
+    h1: "6.5vw",
+    h2: "4vw",
+    h3: "1.5vw",
+    text: "1.125vw",
+    caption: "0.875vw",
+  },
+
   [desktopLG]: {
     h1: "104px",
     h2: "64px",
     h3: "24px",
     text: "18px",
     caption: "14px",
+  },
+
+  [desktopMD]: {
+    h1: "94px",
+    h2: "60px",
+    h3: "24px",
+    text: "18px",
+    caption: "14px",
+  },
+
+  [desktopSM]: {
+    h1: "84px",
+    h2: "56px",
+    h3: "24px",
+    text: "18px",
+    caption: "14px",
+  },
+
+  [tabletLG]: {
+    h1: "78px",
+    h2: "52px",
+    h3: "20px",
+    text: "16px",
+    caption: "12px",
+  },
+
+  [tabletSM]: {
+    h1: "72px",
+    h2: "48px",
+    h3: "20px",
+    text: "16px",
+    caption: "12px",
   },
 };
 

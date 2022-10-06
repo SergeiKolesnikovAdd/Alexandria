@@ -1,6 +1,4 @@
-import { Logo } from "components";
-import { Name } from "components";
-import { ButtonMD } from "components";
+import { Logo, ButtonSM, Name } from "components";
 import { HeaderWrapper, HeaderMenu, HeaderTitle, HeaderMenuItem } from "./header.style";
 
 export const Header = () => {
@@ -18,7 +16,7 @@ export const Header = () => {
         <HeaderMenuItem href="#focus">Клиенты</HeaderMenuItem>
         <HeaderMenuItem href="#faq">FAQ</HeaderMenuItem>
       </HeaderMenu>
-      <ButtonMD>Оставить заявку</ButtonMD>
+      <ButtonSM>Оставить заявку</ButtonSM>
     </HeaderWrapper>
   );
 };

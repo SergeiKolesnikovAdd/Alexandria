@@ -15,7 +15,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <MainFirstSlide pt="xxxlg" />
       <AboutSlide pt="xxxlg"></AboutSlide>
       <FocusSlide></FocusSlide>
@@ -23,7 +23,7 @@ const Home = () => {
       <OfferSlide pt="xxxlg"></OfferSlide>
       <AdvantageSlide></AdvantageSlide>
       <FaqSlide pt="xxxlg"></FaqSlide>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

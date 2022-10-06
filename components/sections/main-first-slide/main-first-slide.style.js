@@ -21,7 +21,7 @@ export const FirstSlideWrapper = styled.div`
 
 export const FirstSlideBGImageWrapper = styled.div`
   width: 100%;
-  height: 480px;
+  height: 30vw;
   position: relative;
   overflow: hidden;
 

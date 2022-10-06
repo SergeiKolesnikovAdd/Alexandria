@@ -15,6 +15,8 @@ import {
   NewButton,
   StyledCaption,
   H3Styled,
+  StyledText,
+  DescText,
 } from "./offer-slide.style";
 
 
@@ -30,8 +32,8 @@ export const OfferSlide = ({ ...props }) => {
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
-      <ButtonRow mt="lg" px="lg">
-        <Text>
+      <ButtonRow mb="lg" px="lg">
+        <Text mt="lg">
           Мы предлагаем оптимальные пакеты комплексных
           <br />
           услуг, а также возможность разработать персональное
@@ -40,25 +42,38 @@ export const OfferSlide = ({ ...props }) => {
           <br />
           потребностей издателя
         </Text>
-        <ButtonXLG>Получить индивидуальное предложение</ButtonXLG>
+        <ButtonXLG mt="lg">Получить индивидуальное предложение</ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
         <DescColumn>
           <DescItem></DescItem>
           <DescItem>
-            Сайт журнала с системой рецензирования и редакционного управления
-            соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ, DOAB)
+            <DescText>
+              Сайт журнала с системой рецензирования и редакционного управления
+              соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ,
+              DOAB)
+            </DescText>
           </DescItem>
-          <DescItem>Техническая поддержка</DescItem>
           <DescItem>
-            Услуги рецензирования, редактирования, вёрстки и корректуры до
-            финального PDF
+            <DescText>Техническая поддержка</DescText>
           </DescItem>
-          <DescItem>Маркетинговая и рекламная поддержка</DescItem>
-          <DescItem>Уникальный дизайн журнала</DescItem>
           <DescItem>
-            Консультации и поддержка в индексации архивировании журналов в более
-            чем 30 международных базах данных
+            <DescText>
+              Услуги рецензирования, редактирования, вёрстки и корректуры до
+              финального PDF
+            </DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Маркетинговая и рекламная поддержка</DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Уникальный дизайн журнала</DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>
+              Консультации и поддержка в индексации архивировании журналов в
+              более чем 30 международных базах данных
+            </DescText>
           </DescItem>
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
@@ -66,9 +81,15 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem pt="md" pb="mdsm">
             <Standart />
             <Text mt="sm">Пакет Стандарт</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[0]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -81,23 +102,22 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[0]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Comfort />
             <Text mt="sm">Пакет Комфорт</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[1]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -114,23 +134,22 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[1]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Premium />
             <Text mt="sm">Пакет Премиум</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[2]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -151,14 +170,7 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[2]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>

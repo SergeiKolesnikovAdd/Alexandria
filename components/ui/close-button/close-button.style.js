@@ -9,6 +9,10 @@ export const ButtonWrapper = styled.button`
   background-color: ${colors.grey};
   border-radius: 24px;
   z-index: 1000;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ${applyMargins};
   ${applyPaddings}
