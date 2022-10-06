@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <>
       {/* <Header /> */}
-      <MainFirstSlide pt="xxxlg" />
-      {/* <AboutSlide pt="xxxlg"></AboutSlide>
-      <FocusSlide></FocusSlide>
+      {/* <MainFirstSlide pt="xxxlg" /> */}
+      <AboutSlide pt="xxxlg"/>
+      {/* <FocusSlide></FocusSlide>
       <PlatformSlide mt="xxxlg"></PlatformSlide>
       <OfferSlide pt="xxxlg"></OfferSlide>
       <AdvantageSlide></AdvantageSlide>

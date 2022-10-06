@@ -10,8 +10,9 @@ import {
   AccordionContainer,
   ImgSlide,
   ImgContainer,
+  StyledCaption,
 } from "./about-slide.style";
-import { ButtonXSM, H2, AccordionSmall, Slider } from "components";
+import { ButtonXSM, H2, AccordionSmall,} from "components";
 
 import { fontSizes } from "styles";
 import React, { useState } from "react";
@@ -57,9 +58,16 @@ export const AboutSlide = ({ ...props }) => {
             />
           ))}
         </AccordionContainer>
-        {contentAccordion.map(({id, img }) => (
-          <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
-        ))}
+        <ImgContainer>
+          {contentAccordion.map(({ id, img }) => (
+            <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
+          ))}
+          {contentAccordion.map(({ id, span }) => (
+            <StyledCaption mt="md" key={id} isOpen={chooseItem.id === id} span={span}>
+              {span}
+            </StyledCaption>
+          ))}
+        </ImgContainer>
       </MediaContainer>
     </ContentWrapper>
   );

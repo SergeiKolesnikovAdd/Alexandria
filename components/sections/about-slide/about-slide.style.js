@@ -8,8 +8,8 @@ import {
 } from "styles";
 
 import { Text, H3 } from "components";
-import img from "public/about-bg.png";
 import styled from "@emotion/styled";
+import { Caption } from "components";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -73,6 +73,10 @@ export const MediaContainer = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    flex-direction: column;
+  }
 `;
 
 export const AccordionContainer = styled.div`
@@ -91,11 +95,27 @@ export const SliderWrapper = styled.div`
 export const ImgSlide = styled.img`
   ${({ isOpen }) => !isOpen && "display: none;"}
   object-fit: contain;
-  width: 100%;
+  width: 63vw;
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    width: 100vw;
+    align-self: center;
+  }
 `;
 
 export const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 63vw;
+  align-items: flex-end;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    margin-top: 24px;
+  }
+`;
+
+export const StyledCaption = styled(Caption)`
+  opacity: 0.4;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    align-self: right;
+  }
 `;

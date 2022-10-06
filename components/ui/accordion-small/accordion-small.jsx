@@ -10,14 +10,14 @@ import {
   H3Styled,
 } from "./accordion-small.style";
 
-export const AccordionSmall = ({ id, img, isShowing, ...props }) => {
+export const AccordionSmall = ({ id, img, span, isShowing, ...props }) => {
   return (
     <AccordionWrapper {...props}>
-      <AccordionButton px="mdlg" isShowing={isShowing}>
+      <AccordionButton isShowing={isShowing}>
         <Title isShowing={isShowing} mr="md">
           {props.title}
         </Title>
-        <IconWrapper my="mdlg" isShowing={isShowing}>
+        <IconWrapper isShowing={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
         </IconWrapper>
@@ -27,7 +27,7 @@ export const AccordionSmall = ({ id, img, isShowing, ...props }) => {
           <H3Styled
             isShowing={isShowing}
             mr="mdsm"
-            style={{ maxWidth: "28vw" }}
+            
           >
             {props.desc1}
           </H3Styled>
