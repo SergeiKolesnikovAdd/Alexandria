@@ -8,6 +8,9 @@ import {
   FooterLink,
   FooterLogo,
   FooterRow,
+  FooterRowBottom,
+  FooterRowflex,
+  FooterRowGrid,
   FooterWrapper,
   LogoWrapper,
 } from "./footer.style";
@@ -49,7 +52,7 @@ export const Footer = () => {
             624372, Россия, Тюмень, <br /> ул. Ленина, 17
           </H3>
         </FooterColumn>
-        <FooterColumn style={{ flexDirection: "row" }}>
+        <FooterColumn style={{ gridAutoFlow: "column" }}>
           <LogoWrapper>
             <Telegram />
           </LogoWrapper>
@@ -67,9 +70,9 @@ export const Footer = () => {
           </LogoWrapper>
         </FooterColumn>
       </FooterRow>
-      <FooterRow mb="lg">
+      <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
-        <FooterRow>
+        <FooterRowBottom>
           <FooterLink mr={"lg"} href="#">
             Privacy Policy
           </FooterLink>
@@ -79,8 +82,8 @@ export const Footer = () => {
           <Deviant mb={"sm"} href="https://www.deviant-studio.com">
             Сделано в Deviant
           </Deviant>
-        </FooterRow>
-      </FooterRow>
+        </FooterRowBottom>
+      </FooterRowBottom>
     </FooterWrapper>
   );
 };

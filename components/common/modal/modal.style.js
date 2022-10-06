@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { getCurrentMarginStyle } from "styles";
 export const ModalWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -11,5 +12,6 @@ export const ModalWrapper = styled.div`
   overflow: auto;
   visibility: hidden;
   z-index:20;
+  ${getCurrentMarginStyle("top","header")}
   ${({ isOpen }) => isOpen && "height: calc(100vh);height: calc(var(--fsvh, 1vh) * 100);visibility:visible;"}
 `;

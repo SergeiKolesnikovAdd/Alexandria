@@ -23,6 +23,7 @@ export const OfferModalInner = styled.div`
   background-color: ${hexToRGBA(colors.black, 0.9)};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
+  ${getCurrentPaddingStyle("top", "xlg")};
   overflow: hidden;
   z-index: 500;
 `;
@@ -47,7 +48,7 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
-  overflow: scroll;
+  overflow: auto;
 `;
 
 export const Icon = styled.img`
@@ -62,7 +63,7 @@ opacity: 0.4;
 `;
 
 export const Title = styled.div`
-width: 100 %;
+width: 100%;
 display: flex;
 color: ${colors.black};
 
@@ -70,10 +71,10 @@ color: ${colors.black};
 `;
 
 export const Description = styled.div`
-width: 100 %;
+width: 100%;
 display: grid;
-grid - template - columns: 28 % 68 %;
-grid - auto - flow: row;
+grid-template-columns: 28% 68%;
+grid-auto-flow: row;
 gap: 40px 16px;
 
   ${applyMargins};
@@ -97,11 +98,4 @@ export const ClsButton = styled(CloseButton)`
 position: absolute;
 right: 0;
 top: 0;
-`;
-
-export const InformationColumn = styled.div`
-width: 50 %;
-  ${getCurrentPaddingStyle("horizontal", "md")};
-  ${getCurrentPaddingStyle("bottom", "md")};
-  ${getCurrentPaddingStyle("top", "lg")};
 `;
