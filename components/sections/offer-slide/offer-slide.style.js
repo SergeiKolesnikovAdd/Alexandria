@@ -101,6 +101,12 @@ export const DescItem = styled.div`
   align-items: center;
   text-align: left;
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
+  span {
+    font-size: 14px;
+  }
+`;
+
+export const DescText = styled(Text)`
 `;
 
 export const PackageItem = styled.div`

@@ -5,11 +5,14 @@ import styled from "@emotion/styled";
 export const ButtonWrapper = styled.button`
   width: 64px;
   height: 64px;
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: ${colors.black};
+  border: 1px solid ${colors.red};
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   span {
     color: rgba(255, 255, 255, 0.04);
@@ -17,11 +20,11 @@ export const ButtonWrapper = styled.button`
   }
 
   &:hover {
-    background-color: ${colors.white};
+    background-color: ${colors.red};
 
     svg {
       path {
-        fill: ${colors.black};
+        fill: ${colors.white};
       }
     }
   }

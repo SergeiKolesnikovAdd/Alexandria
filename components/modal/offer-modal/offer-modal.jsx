@@ -16,7 +16,7 @@ import {
 
 export const OfferModal = ({
   img,
-  color,
+  icon,
   headingMaintance,
   textMaintance,
   headingService,
@@ -39,7 +39,7 @@ export const OfferModal = ({
           <ContentWrapper>
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
-              <Icon fill={color} alt="icon" />
+              <Icon src={icon} />
               {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
             <Caption>{subtitle}</Caption>
@@ -51,7 +51,7 @@ export const OfferModal = ({
               <Heading>{headingMarketing}</Heading>
               <Text>{textMarketing}</Text>
             </Description>
-            <StyledButtonLG>Подать заявку</StyledButtonLG>
+            <StyledButtonLG>Начать работу</StyledButtonLG>
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
