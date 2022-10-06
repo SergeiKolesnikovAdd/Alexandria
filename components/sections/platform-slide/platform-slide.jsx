@@ -18,7 +18,7 @@ export const PlatformSlide = ({ ...props }) => {
           <br />
           для издателей любого масштаба&nbsp;
         </H2>
-        <H2 style={{ color: colors.orange, display: "inline" }}>
+        <H2 style={{ color: colors.orange,}}>
           и амбиций&nbsp;
           <StyledDesktopBR />
           вне зависимости

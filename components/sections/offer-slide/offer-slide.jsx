@@ -16,6 +16,7 @@ import {
   StyledCaption,
   H3Styled,
   StyledText,
+  DescText,
 } from "./offer-slide.style";
 
 
@@ -47,19 +48,32 @@ export const OfferSlide = ({ ...props }) => {
         <DescColumn>
           <DescItem></DescItem>
           <DescItem>
-            Сайт журнала с системой рецензирования и редакционного управления
-            соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ, DOAB)
+            <DescText>
+              Сайт журнала с системой рецензирования и редакционного управления
+              соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ,
+              DOAB)
+            </DescText>
           </DescItem>
-          <DescItem>Техническая поддержка</DescItem>
           <DescItem>
-            Услуги рецензирования, редактирования, вёрстки и корректуры до
-            финального PDF
+            <DescText>Техническая поддержка</DescText>
           </DescItem>
-          <DescItem>Маркетинговая и рекламная поддержка</DescItem>
-          <DescItem>Уникальный дизайн журнала</DescItem>
           <DescItem>
-            Консультации и поддержка в индексации архивировании журналов в более
-            чем 30 международных базах данных
+            <DescText>
+              Услуги рецензирования, редактирования, вёрстки и корректуры до
+              финального PDF
+            </DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Маркетинговая и рекламная поддержка</DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Уникальный дизайн журнала</DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>
+              Консультации и поддержка в индексации архивировании журналов в
+              более чем 30 международных базах данных
+            </DescText>
           </DescItem>
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
@@ -127,15 +141,15 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem>
             <Premium />
             <Text mt="sm">Пакет Премиум</Text>
-              <StyledCaption
-                onClick={() => {
-                  setOpen(true);
-                  setChooseItem(arrOfferInfo[2]);
-                }}
-                mt="xxsm"
-              >
-                Подробнее
-              </StyledCaption>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[2]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />

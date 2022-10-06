@@ -2,6 +2,10 @@ import img1 from "public/product-img-comfort.png";
 import img2 from "public/product-img-comfort.png";
 import img3 from "public/product-img-comfort.png";
 
+import icon1 from "assets/images/standart.svg";
+import icon2 from "assets/images/comfort.svg";
+import icon3 from "assets/images/premium.svg";
+
 export const arrOfferInfo = [
   {
     title: "Alexandrina «Стандарт»",
@@ -9,7 +13,7 @@ export const arrOfferInfo = [
       "Создание сайта журнала, доступ ко всем инструментам в самостоятельное пользование",
     img: img1.src,
     id: 1,
-    color: "rgba(34, 34, 34, 0.08)",
+    icon: icon1.src,
     headingMaintance: "Техническое обеспечение",
     textMaintance:
       "Платформа дает возможность легко обрабатывать и контролировать весь процесс: получение, рецензирование, редактирование, публикация в формате PDF, а также обратная связь и чат не только с редакционной коллегией и рецензентами, но и с самим автором статьи.",
@@ -25,7 +29,7 @@ export const arrOfferInfo = [
     subtitle: "Издание журнала с полным спектром услуг",
     img: img2.src,
     id: 2,
-    color: "rgba(209, 116, 86, 1)",
+    icon: icon2.src,
     headingMaintance: "Сопровождение рукописи вплоть до публикации",
     textMaintance:
       "Платформа дает возможность легко обрабатывать и контролировать весь процесс: получение, рецензирование, редактирование, публикация в формате PDF, а также обратная связь и чат не только с редакционной коллегией и рецензентами, но и с самим автором статьи.",
@@ -41,7 +45,7 @@ export const arrOfferInfo = [
     subtitle: "Многолетнее развитие журналов",
     img: img3.src,
     id: 3,
-    color: "linear-gradient(135deg, #C19450 0%, #F0CA81 100%)",
+    icon: icon3.src,
     headingMaintance: "Индивидуальный дизайн журнала.",
     textMaintance:
       "Уникальная разработка макета и логотипа, а также наполнение сайта по персональным пожеланиям издателя.",
