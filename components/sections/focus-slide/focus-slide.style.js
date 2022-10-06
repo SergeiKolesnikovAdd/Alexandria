@@ -37,7 +37,7 @@ export const ContentWrapper = styled.div`
   ${applyMargins}
   ${applyPaddings}
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     flex-direction: column;
   }
 `;
@@ -48,6 +48,12 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color: ${getCurrentBackgroundColorStyles("black")};
+
+  /* @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    span {
+      width: 100%;
+    }
+  } */
 `;
 
 export const HigherPart = styled.div`
@@ -71,4 +77,11 @@ export const ControlButtons = styled.div`
 
   ${applyMargins}
   ${applyPaddings}
+`;
+
+export const StyledDesktopBR = styled.br`
+  display: block;
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    display: none;
+  }
 `;

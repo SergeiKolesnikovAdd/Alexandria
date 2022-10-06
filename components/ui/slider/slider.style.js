@@ -94,3 +94,9 @@ export const SlidePrev = styled(ButtonSliderLeft)`
   top: 25%;
   right: 110%;
 `;
+
+export const TextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+`;
