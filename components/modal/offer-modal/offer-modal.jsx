@@ -35,7 +35,6 @@ export const OfferModal = ({
       <OfferModalInner>
         <ContentSection>
           <ProductImage src={img} />
-
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
             <Title mb="xsm">

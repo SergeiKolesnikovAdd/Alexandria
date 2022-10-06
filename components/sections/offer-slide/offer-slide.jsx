@@ -14,6 +14,7 @@ import {
   NewButton,
   StyledCaption,
   H3Styled,
+  StyledText,
 } from "./offer-slide.style";
 
 export const OfferSlide = ({ ...props }) => {
@@ -29,8 +30,8 @@ export const OfferSlide = ({ ...props }) => {
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
-      <ButtonRow mt="lg" px="lg">
-        <Text>
+      <ButtonRow mb="lg" px="lg">
+        <Text mt="lg">
           Мы предлагаем оптимальные пакеты комплексных
           <br />
           услуг, а также возможность разработать персональное
@@ -72,9 +73,15 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem pt="md" pb="mdsm">
             <Standart />
             <Text mt="sm">Пакет Стандарт</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[0]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -87,23 +94,22 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[0]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Comfort />
             <Text mt="sm">Пакет Комфорт</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+            <StyledCaption
+              onClick={() => {
+                setOpen(true);
+                setChooseItem(arrOfferInfo[1]);
+              }}
+              mt="xxsm"
+            >
+              Подробнее
+            </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -120,23 +126,22 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[1]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Premium />
             <Text mt="sm">Пакет Премиум</Text>
-            <Link href="/" mt="xxsm">
-              <StyledCaption>Подробнее</StyledCaption>
-            </Link>
+              <StyledCaption
+                onClick={() => {
+                  setOpen(true);
+                  setChooseItem(arrOfferInfo[2]);
+                }}
+                mt="xxsm"
+              >
+                Подробнее
+              </StyledCaption>
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -157,14 +162,7 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton
-              onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[2]);
-              }}
-            >
-              Начать работу
-            </NewButton>
+            <NewButton>Начать работу</NewButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>
