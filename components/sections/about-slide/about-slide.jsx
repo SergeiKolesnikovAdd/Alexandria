@@ -60,26 +60,6 @@ export const AboutSlide = ({ ...props }) => {
         {contentAccordion.map(({id, img }) => (
           <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
         ))}
-
-        {/* <ImgSlide
-            currentAccordion={currentAccordion}
-            onClick={() => {
-              setCurrentImg?.(id);
-            }}
-            // isShowing={isShowing}
-            id="2"
-            src={img2.src}
-          />
-          <ImgSlide
-            currentAccordion={currentAccordion}
-            onClick={() => {
-              setCurrentImg?.(id);
-            }}
-            // isShowing={isShowing}
-            id="3"
-            src={img3.src}
-          /> */}
-        {/* </ImgContainer> */}
       </MediaContainer>
     </ContentWrapper>
   );

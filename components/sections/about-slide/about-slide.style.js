@@ -90,6 +90,8 @@ export const SliderWrapper = styled.div`
 
 export const ImgSlide = styled.img`
   ${({ isOpen }) => !isOpen && "display: none;"}
+  object-fit: contain;
+  width: 100%;
 `;
 
 export const ImgContainer = styled.div`

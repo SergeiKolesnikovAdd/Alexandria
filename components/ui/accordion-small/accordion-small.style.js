@@ -30,6 +30,7 @@ export const AccordionButton = styled.button`
   background-color: ${({ isShowing }) =>
     isShowing ? colors.red : colors.white};
   transition: background-color 0.3s;
+  ${getCurrentMarginStyle("top", "xsm")}
 
   ${applyPaddings}
   ${applyMargins}
@@ -51,6 +52,7 @@ export const InnerContent = styled.div`
   ${getCurrentPaddingStyle("top", "mdsm")}
   ${getCurrentPaddingStyle("right", "md2")}
   ${getCurrentPaddingStyle("bottom", "md2")}
+  ${getCurrentMarginStyle("top", "xsm")}
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 18px;

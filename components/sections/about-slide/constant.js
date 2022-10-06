@@ -10,14 +10,13 @@ export const contentAccordion = [
     img: img1.src,
   },
   {
-    title: "СHarmes Color Department",
+    title: "Рецензирование",
     id: 2,
     desc: "he real wall is a highly secured area and it was difficult for the production crew to get arated around ‘the wall’, the US/Mexico border, one of the main locations in the series. However, t ",
     img: img2.src,
   },
   {
-    title: "The Graham Greene Film Reader Applause Books",
-    cost: "1,76",
+    title: "Экспорт статьи в HTML, PDF, XML",
     id: 3,
     desc: "The bulk of the work w. However,as concentrated around ‘the wall’, the US/Mexico border, one of the main locations in the series the real wall is a highly secured area and it was difficult for the production crew to get access to it. ",
     img: img3.src,
