@@ -41,7 +41,7 @@ export const arrOfferInfo = [
     subtitle: "Многолетнее развитие журналов",
     img: img3.src,
     id: 3,
-    color: "linear-gradient(135deg, #C19450 0%, #F0CA81 100%)",
+    color: "#C19450",
     headingMaintance: "Индивидуальный дизайн журнала.",
     textMaintance:
       "Уникальная разработка макета и логотипа, а также наполнение сайта по персональным пожеланиям издателя.",

@@ -1,4 +1,6 @@
-import {Caption, H3, Modal,Text} from "components";
+import { FormModal } from "components";
+import { Caption, H3, Modal, Text } from "components";
+import { useState } from "react";
 import { Standart } from "../../common";
 
 import {
@@ -11,7 +13,7 @@ import {
   ContentSection,
   Heading,
   Icon,
-  ClsButton,
+  ClsButton,  
 } from "./offer-modal.style";
 
 export const OfferModal = ({
@@ -30,16 +32,17 @@ export const OfferModal = ({
   setOpen,
   ...props
 }) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
-      <OfferModalInner>
+      <OfferModalInner isOpenForm={isOpenForm}>
         <ContentSection>
           <ProductImage src={img} />
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
-              <Icon colorgrad={color} alt="icon" />
+              <Standart colorgrad={color} opacity={"1"} stopColor={"yellow"} />
               {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
             <Caption>{subtitle}</Caption>
@@ -53,14 +56,15 @@ export const OfferModal = ({
             </Description>
             <StyledButtonLG
               onClick={() => {
-                setOpen(true);
-                setChooseItem(arrOfferInfo[2]);
-              }}>
+                setOpenForm(true);
+              }}
+            >
               Подать заявку
             </StyledButtonLG>
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
-    </Modal>  
+      <FormModal setOpen={setOpenForm} isOpen={isOpenForm} />
+    </Modal>
   );
 };

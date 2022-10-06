@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { Text } from "components";
+import { getVW } from "styles";
+import { breakpointsWidth } from "styles";
 import { fontFamilies, applyMargins, getCurrentMarginStyle, getCurrentPaddingStyle, colors} from "styles";
 
 export const FooterWrapper = styled.div`
@@ -26,9 +28,9 @@ export const FooterItem = styled(Text)`
 `;
 
 export const LogoWrapper = styled.div`
-  width: 64px;
-  height: 64px;
-  border-radius: 24px;
+  width: ${getVW(64)};
+  height: ${getVW(64)};
+  border-radius: ${getVW(24)};
   background-color: ${colors.white};
   display: flex;
   justify-content: center;
@@ -53,6 +55,8 @@ export const LogoWrapper = styled.div`
     background-color: ${colors.red};
     /* transform: scale(1.1); */
   }
+
+
 `;
 
 export const Deviant = styled.a`
@@ -72,7 +76,9 @@ export const FooterLogo = styled.a`
     &:first-child{
       transform: scale(1.1);
     }}
-    }`
+    }
+    `;
+    
 
 export const FooterLink = styled.a`
   color: ${colors.black};

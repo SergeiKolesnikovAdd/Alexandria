@@ -22,7 +22,7 @@ export const Button = styled.button`
     }
   }
   &:disabled {
-    opacity: 0.8;
+    opacity: 0.2;
     &:hover {
       background-color: ${colors.red};
       border: 1px solid ${colors.red};
