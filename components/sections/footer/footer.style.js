@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Text } from "components";
 import { getVW } from "styles";
 import { breakpointsWidth } from "styles";
-import { fontFamilies, applyMargins, getCurrentMarginStyle, getCurrentPaddingStyle, colors} from "styles";
+import { fontFamilies, applyMargins, getCurrentMarginStyle, getCurrentPaddingStyle, colors } from "styles";
 
 export const FooterWrapper = styled.div`
   width: 100%;
@@ -36,13 +36,17 @@ export const FooterColumn = styled.div`
 export const FooterRow = styled.div`
   display: grid;
   grid-auto-flow: column;
-
+  grid-template-columns: repeat(4, auto);
+  align-items: flex-start;
+  justify-content: space-between;
   ${applyMargins};
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {  grid-template-columns: repeat(2, 50%);
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {  
+    grid-template-columns: repeat(2, 50%);
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     justify-items:start;
+    row-gap: 64px;
   }
 `;
 
@@ -50,6 +54,7 @@ export const FooterRowBottom = styled.div`
   display: grid;
   justify-content: space-between;
   grid-auto-flow: column;
+
   ${applyMargins};
 `;
 
@@ -99,9 +104,12 @@ export const Deviant = styled.a`
   }
 `;
 export const FooterLogo = styled.a`
-  display: grid;
-  grid-auto-flow: column;
-  height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+
   &:hover {
     svg {
       &:first-child {

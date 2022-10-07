@@ -3,7 +3,6 @@ import {
   RightHand,
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
-  RightHand,
 } from "./main-first-slide.style";
 import { ButtonMD, H3, H1 } from "components";
 
