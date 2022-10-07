@@ -1,6 +1,6 @@
 import { ButtonSliderLeft } from "../button-slider-left";
 import { ButtonSliderRight } from "../button-slider-right";
-import { colors } from "styles";
+import { colors, breakpointsWidth, } from "styles";
 import styled from "@emotion/styled";
 
 export const SlideWrapper = styled.div`
@@ -81,6 +81,10 @@ export const Slide = styled.div`
     scale(${({ index }) => positions[index].scale});
   z-index: ${({ index }) => 10 - index};
   transform-origin: left center;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    
+  }
 `;
 
 export const SlideNext = styled(ButtonSliderRight)`

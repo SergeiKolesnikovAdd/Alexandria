@@ -17,6 +17,7 @@ import {
   H3Styled,
   StyledText,
   DescText,
+  TabletButton,
 } from "./offer-slide.style";
 
 
@@ -80,7 +81,7 @@ export const OfferSlide = ({ ...props }) => {
         <PackageColumn>
           <PackageItem pt="md" pb="mdsm">
             <Standart />
-            <Text mt="sm">Пакет Стандарт</Text>
+            <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
               onClick={() => {
                 setOpen(true);
@@ -103,12 +104,13 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton>Начать работу</NewButton>
+            <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Comfort />
-            <Text mt="sm">Пакет Комфорт</Text>
+            <StyledText mt="sm">Пакет Комфорт</StyledText>
             <StyledCaption
               onClick={() => {
                 setOpen(true);
@@ -135,12 +137,13 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton>Начать работу</NewButton>
+            <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
           <PackageItem>
             <Premium />
-            <Text mt="sm">Пакет Премиум</Text>
+            <StyledText mt="sm">Пакет Премиум</StyledText>
             <StyledCaption
               onClick={() => {
                 setOpen(true);
@@ -171,6 +174,7 @@ export const OfferSlide = ({ ...props }) => {
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton>Начать работу</NewButton>
+            <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>

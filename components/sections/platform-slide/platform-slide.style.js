@@ -30,22 +30,46 @@ export const TextWrapper = styled.div`
     span {
       display: inline;
     }
-    @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
       display: block;
     }
   }
 `;
 
-export const StyledDesktopBR = styled.br`
+export const StyledDesktopLGBR = styled.br`
   display: block;
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    display: none;
+  }
+`;
+
+export const StyledDesktopMDBR = styled.br`
+  display: none;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    display: block;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    display: none;
+  }
+`;
+
+export const StyledDesktopSMBR = styled.br`
+  display: none;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    display: block;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: none;
   }
 `;
 
 export const StyledTabletSMBR = styled.br`
   display: none;
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: block;
   }
 `;
