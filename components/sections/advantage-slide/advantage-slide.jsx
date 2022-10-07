@@ -22,7 +22,6 @@ export const AdvantageSlide = ({ ...props }) => {
         <H3Styled style={{ opacity: 0.4 }}>Преимущества</H3Styled>
         <StyledH2 mt="mdsm">
           Почему выбирают
-          <br />
           именно нас?
         </StyledH2>
         <AdvantageWrapper>
@@ -30,14 +29,11 @@ export const AdvantageSlide = ({ ...props }) => {
             <TextWrapper>
               <StyledText>
                 Продвижение в международные
-                <br />
                 наукометрические и предметные базы данных
               </StyledText>
               <StyledCaption>
                 Составление подробного плана
-                <br />
                 продвижения журнала в базы данных с его
-                <br />
                 последующей реализацией.
               </StyledCaption>
             </TextWrapper>
@@ -49,7 +45,6 @@ export const AdvantageSlide = ({ ...props }) => {
             <TextWrapper>
               <StyledText>
                 Консультации и полное
-                <br />
                 сопровождение
               </StyledText>
               <StyledCaption>
@@ -74,16 +69,12 @@ export const AdvantageSlide = ({ ...props }) => {
             <TextWrapper>
               <StyledText>
                 Экспертное редактирование,
-                <br />
                 перевод и подготовка научных
-                <br />
                 рукописей
               </StyledText>
               <StyledCaption>
                 Редактирование научных рукописей
-                <br />
                 экспертами международного уровня,
-                <br />
                 перевод и полная подготовка в публикации.
               </StyledCaption>
             </TextWrapper>

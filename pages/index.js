@@ -20,8 +20,8 @@ const Home = () => {
       {/* <AboutSlide pt="xxxlg"/> */}
       {/* <FocusSlide></FocusSlide> */}
       {/* <PlatformSlide mt="xxxlg"></PlatformSlide> */}
-      <OfferSlide pt="xxxlg"></OfferSlide>
-      {/* <AdvantageSlide></AdvantageSlide> */}
+      {/* <OfferSlide pt="xxxlg"></OfferSlide> */}
+      <AdvantageSlide></AdvantageSlide>
       {/* <FaqSlide pt="xxxlg"></FaqSlide> */}
       {/* <Footer /> */}
     </>
