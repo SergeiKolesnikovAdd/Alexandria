@@ -57,6 +57,8 @@ import { FaqSlide } from "./sections/faq-slide";
 
 /*    Импорты модальных окон    */
 import { OfferModal } from "./modal";
+import { FormModal } from "./modal/form-modal";
+import { QuestionsFormModal } from "./modal/questions-modal";
 
 export {
   H1,
@@ -96,4 +98,6 @@ export {
   TextArea,
   Checkbox,
   AccordionSmall,
+  FormModal,
+  QuestionsFormModal,
 };

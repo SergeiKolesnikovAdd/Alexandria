@@ -66,6 +66,9 @@ export const InputStyled = styled.input`
   }
   ${errorConditionColor}
   ${getCurrentFontSizeStyle("h3")};
+  &::placeholder {
+    color: ${errorConditionColor};
+  }
 `;
 
 export const Error = styled.div`
@@ -190,5 +193,5 @@ export const MinusWrapper = styled.div`
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     height: 1.625vw;
     width: 1.625vw;
-  } 
+  }
 `;
