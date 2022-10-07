@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   position: fixed;
   background-color: ${colors.lightOrange};
   display: flex;

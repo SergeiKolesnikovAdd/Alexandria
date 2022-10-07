@@ -12,9 +12,9 @@ export const DropDownField = ({name, rules = null, multiple = false, ...props}) 
         <Controller
             control={control}
             name={name}
-            rules={rules || {validate: (val) => !!val || 'the field is filled incorrectly'}}
+            rules={rules || {validate: (val) => !!val || 'Поле заполнено неверно'}}
             render={({field: {onChange, value, ...other}}) => (
-                <DropDown {...props} multiple={multiple} {...other} value={currentOption} error={errors?.[name]?.message}
+                <DropDown  {...props} multiple={multiple} {...other} value={currentOption} error={errors?.[name]?.message}
                           onChange={(option) => {
                               if (multiple) {
                                   onChange(option.map(({value}) => value));

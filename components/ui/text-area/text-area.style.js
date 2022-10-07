@@ -20,7 +20,6 @@ export const InputWrapper = styled.div`
 export const TextAreaInput = styled("textarea")`
   width: 100%;
   overflow: hidden;
-  text-transform: uppercase;
   resize: none;
   ${getCurrentFontSizeStyle("h3")};
   font-family: ${fontFamilies.Font};
@@ -73,7 +72,6 @@ export const TextAreaWrapper = styled.div`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.brightRed};
-  text-transform: uppercase;
   position: absolute;
   top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};

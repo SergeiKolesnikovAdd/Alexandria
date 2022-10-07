@@ -1,10 +1,4 @@
-import {
-  applyMargins,
-  applyPaddings,
-  colors,
-  breakpointsWidth,
-} from "styles";
-
+import { applyMargins, applyPaddings, colors, breakpointsWidth } from "styles";
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
@@ -27,7 +21,16 @@ export const Button = styled.button`
       color: ${colors.red};
     }
   }
-
+  &:disabled {
+    opacity: 0.2;
+    &:hover {
+      background-color: ${colors.red};
+      border: 1px solid ${colors.red};
+      span {
+        color: ${colors.white};
+      }
+    }
+  }
   ${applyMargins}
   ${applyPaddings}
 

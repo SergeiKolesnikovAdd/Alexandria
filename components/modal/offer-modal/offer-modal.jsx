@@ -1,4 +1,6 @@
-import {Caption, H3, Modal,Text} from "components";
+import { FormModal } from "components";
+import { Caption, H3, Modal, Text } from "components";
+import { useState } from "react";
 import { Standart } from "../../common";
 
 import {
@@ -30,9 +32,10 @@ export const OfferModal = ({
   setOpen,
   ...props
 }) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
-      <OfferModalInner>
+      <OfferModalInner isOpenForm={isOpenForm}>
         <ContentSection>
           <ProductImage src={img} />
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
@@ -51,10 +54,16 @@ export const OfferModal = ({
               <Heading>{headingMarketing}</Heading>
               <Text>{textMarketing}</Text>
             </Description>
-            <StyledButtonLG>Начать работу</StyledButtonLG>
+            <StyledButtonLG
+              onClick={() => {
+                setOpenForm(true);
+              }}>
+              Начать работу
+            </StyledButtonLG>
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
+      <FormModal setOpen={setOpenForm} isOpen={isOpenForm} />
     </Modal>
   );
 };

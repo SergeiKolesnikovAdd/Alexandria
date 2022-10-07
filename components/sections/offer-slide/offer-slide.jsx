@@ -1,9 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import { H2, Text, ButtonXLG, OfferModal } from "components";
+import { H2, Text, ButtonXLG, OfferModal, FormModal } from "components";
 import { arrOfferInfo } from "./constant";
-import { Comfort, Mark, Premium, Standart, } from "../../common";
-
+import { Comfort, Mark, Premium, Standart } from "../../common";
 import {
   ContentWrapper,
   DescColumn,
@@ -19,10 +18,10 @@ import {
   DescText,
 } from "./offer-slide.style";
 
-
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
+  const [isOpenForm, setOpenForm] = useState(false);
 
   return (
     <ContentWrapper {...props} id="offer">
@@ -42,7 +41,14 @@ export const OfferSlide = ({ ...props }) => {
           <br />
           потребностей издателя
         </Text>
-        <ButtonXLG mt="lg">Получить индивидуальное предложение</ButtonXLG>
+        <ButtonXLG
+          onClick={() => {
+            setOpenForm(true);
+            setChooseItem(arrOfferInfo[0]);
+          }}
+        >
+          Получить индивидуальное предложение
+        </ButtonXLG>
       </ButtonRow>
       <TableOffer px="lg">
         <DescColumn>
@@ -175,10 +181,16 @@ export const OfferSlide = ({ ...props }) => {
         </PackageColumn>
       </TableOffer>
       <OfferModal
+        title
         isOpen={isOpen}
         setOpen={setOpen}
         {...chooseItem}
       ></OfferModal>
+      <FormModal
+        isOpen={isOpenForm}
+        setOpen={setOpenForm}
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };
