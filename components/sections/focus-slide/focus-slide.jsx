@@ -14,6 +14,7 @@ import {
   SliderWrapper,
   TextWrapper,
   ControlButtons,
+  StyledDesktopBR,
 } from "./focus-slide.style";
 
 import { colors } from "styles";
@@ -49,38 +50,38 @@ export const FocusSlide = ({ ...props }) => {
               Фокусность проекта
             </H3Styled>
             <H2 mt="mdsm" style={{ color: colors.white }}>
-              Для кого наша
-              <br />
+              Для кого наша&nbsp;
+              <StyledDesktopBR />
               платформа?
             </H2>
             <ControlButtons mt="md">
               <ButtonSliderLeft
-                onClick={ onNextClick }
+                onClick={onNextClick}
                 mr="xsm"
               ></ButtonSliderLeft>
-              <ButtonSliderRight 
-              onClick={ onPrevClick }
-              ></ButtonSliderRight>
+              <ButtonSliderRight onClick={onPrevClick}></ButtonSliderRight>
             </ControlButtons>
           </HigherPart>
           <Text style={{ color: colors.white }}>
             Мы помогаем создавать, развивать и продвигать
-            <br />
+            <StyledDesktopBR />
             в различные базы данных научные журналы и книги
-            <br />
+            <StyledDesktopBR />
             издателям абсолютно любого масштаба. Самые удобные
-            <br />
+            <StyledDesktopBR />
             современные инструменты для ведения публикационной
-            <br />
+            <StyledDesktopBR />
             деятельности позволяют находить оптимальные решения,
-            <br />
+            <StyledDesktopBR />
             исходя из потребностей каждого издателя.
           </Text>
         </TextWrapper>
         <SliderWrapper>
-          <Slider currentSlide={currentSlide}
-                  isNextDirection={isNextDirection}
-                  getCurrentIndex={getCurrentIndex}/>
+          <Slider
+            currentSlide={currentSlide}
+            isNextDirection={isNextDirection}
+            getCurrentIndex={getCurrentIndex}
+          />
         </SliderWrapper>
       </ContentWrapper>
     </SectionWrapper>

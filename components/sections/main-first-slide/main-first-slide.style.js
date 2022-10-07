@@ -14,6 +14,18 @@ export const FirstSlideWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  h1 {
+    span {
+      @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+        font-size: 4em;
+      }
+
+      @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+        font-size: 3em;
+      }
+
+    }
+  }
 
   ${applyMargins}
   ${applyPaddings}
@@ -39,12 +51,11 @@ export const LeftHand = styled.img`
   position: absolute;
   left: 0;
   width: 50%;
-  height: 480px;
+  height: 30vw;
   content: url(${imgLeft.src});
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
-    height: 30vw;
   }
 `;
 
@@ -52,11 +63,10 @@ export const RightHand = styled.img`
   position: absolute;
   right: 0;
   width: 50%;
-  height: 480px;
+  height: 30vw;
   content: url(${imgRight.src});
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
-    height: 30vw;
   }
 `;

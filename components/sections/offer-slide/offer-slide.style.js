@@ -104,6 +104,12 @@ export const DescItem = styled.div`
   span {
     font-size: 14px;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    span {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const DescText = styled(Text)`
@@ -126,6 +132,20 @@ export const PackageItem = styled.div`
 export const NewButton = styled(ButtonMD)`
   width: 100%;
   opacity: 0;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    display: none;
+  }
+`;
+
+export const TabletButton = styled(ButtonMD)`
+  display: none;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    width: 100%;
+    opacity: 0;
+    display: block;
+  }
 `;
 
 export const StyledCaption = styled(Caption)`

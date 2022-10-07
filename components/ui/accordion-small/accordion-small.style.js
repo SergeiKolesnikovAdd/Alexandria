@@ -25,11 +25,11 @@ export const AccordionButton = styled.button`
   background-color: ${colors.white};
   border-radius: 24px;
   transition: background-color 0.3s;
-  ${getCurrentPaddingStyle("right", "none")}
-  ${getCurrentPaddingStyle("left", "md")}
+  padding: 0;
   background-color: ${({ isShowing }) =>
     isShowing ? colors.red : colors.white};
   transition: background-color 0.3s;
+  ${getCurrentMarginStyle("top", "xsm")}
 
   ${applyPaddings}
   ${applyMargins}
@@ -41,7 +41,6 @@ export const AccordionButton = styled.button`
 
 export const InnerContent = styled.div`
   display: flex;
-  width: 100%;
   display: ${({ isShowing }) => (isShowing ? "flex" : "none")};
   border-radius: 24px;
   background-color: ${({ isShowing }) =>
@@ -51,23 +50,18 @@ export const InnerContent = styled.div`
   ${getCurrentPaddingStyle("top", "mdsm")}
   ${getCurrentPaddingStyle("right", "md2")}
   ${getCurrentPaddingStyle("bottom", "md2")}
+  ${getCurrentMarginStyle("top", "xsm")}
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 18px;
   }
 `;
 
-export const LinkWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-radius: 32px;
-  text-align: left;
-`;
-
 export const Title = styled(H3)`
   color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
   text-align: left;
   transition: color 0.3s;
+  ${getCurrentMarginStyle("left", "md")}
 
   ${applyPaddings}
   ${applyMargins}
@@ -92,6 +86,10 @@ export const IconWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     width: 48px;
     height: 48px;
+    border-radius: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
   }
 `;
 
@@ -116,6 +114,10 @@ export const TextWrapper = styled.div`
   opacity: ${({ isShowing }) => (isShowing ? 0 : 1)};
   transition: color 0.2s, opacity 0.2s;
   transition-delay: 0.1s;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    width: 100%;
+  }
 `;
 
 export const StyledText = styled(Text)`
@@ -134,4 +136,9 @@ export const StyledText = styled(Text)`
 export const H3Styled = styled(Text)`
   ${getCurrentFontSizeStyle("h3")};
   color: ${({ isShowing }) => (isShowing ? colors.black : colors.white)};
+  max-width: 28vw;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    max-width: 100%;
+  }
 `;

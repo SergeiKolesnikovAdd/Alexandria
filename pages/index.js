@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Header />
       <MainFirstSlide pt="xxxlg" />
-      <AboutSlide pt="xxxlg"></AboutSlide>
+      <AboutSlide pt="xxxlg"/>
       <FocusSlide></FocusSlide>
       <PlatformSlide mt="xxxlg"></PlatformSlide>
       <OfferSlide pt="xxxlg"></OfferSlide>
