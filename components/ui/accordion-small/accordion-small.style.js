@@ -37,6 +37,10 @@ export const AccordionButton = styled.button`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 18px;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 12px;
+  }
 `;
 
 export const InnerContent = styled.div`
@@ -54,6 +58,10 @@ export const InnerContent = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 18px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 12px;
   }
 `;
 
@@ -90,6 +98,15 @@ export const IconWrapper = styled.div`
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: 8px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 6px;
   }
 `;
 

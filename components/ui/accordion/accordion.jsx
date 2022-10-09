@@ -26,13 +26,13 @@ export const Accordion = (props) => {
 
   return (
     <AccordionWrapper {...props}>
-      <AccordionButton px="mdlg" onClick={toggle} isShowing={isShowing}>
+      <AccordionButton onClick={toggle} isShowing={isShowing}>
         <Title isShowing={isShowing}>
           {props.title}
           <br />
           {props.title2}
         </Title>
-        <IconWrapper my="mdlg" isShowing={isShowing}>
+        <IconWrapper isShowing={isShowing}>
           <IconPlus isShowing={isShowing} />
           <IconMinus isShowing={isShowing} />
         </IconWrapper>

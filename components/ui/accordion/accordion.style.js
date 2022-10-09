@@ -4,7 +4,8 @@ import {
   applyPaddings,
   applyMargins,
   colors,
-  getCurrentFontSizeStyle
+  getCurrentFontSizeStyle,
+  breakpointsWidth,
 } from "styles";
 
 import { Text, H3 } from "components";
@@ -22,6 +23,7 @@ export const AccordionButton = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-height: 120px;
   width: 100%;
   height: 100%;
   background-color: ${colors.white};
@@ -29,9 +31,19 @@ export const AccordionButton = styled.button`
   background-color: ${({ isShowing }) =>
     isShowing ? colors.black : colors.white};
   transition: background-color 0.3s;
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  ${getCurrentPaddingStyle("vertical", "mdlg")}
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    max-height: 96px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 18px;
+  }
 `;
 
 export const InnerContent = styled.div`
@@ -45,6 +57,10 @@ export const InnerContent = styled.div`
   background-color: ${({ isShowing }) =>
     isShowing ? colors.black : colors.lightOrange};
   transition: background-color 0.3s;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 18px;
+  }
 `;
 
 export const LinkWrapper = styled.div`
