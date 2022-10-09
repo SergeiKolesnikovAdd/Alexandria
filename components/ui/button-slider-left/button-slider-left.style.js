@@ -1,4 +1,4 @@
-import { applyMargins, applyPaddings, colors } from "styles";
+import { applyMargins, applyPaddings, colors, breakpointsWidth, } from "styles";
 
 import styled from "@emotion/styled";
 
@@ -31,4 +31,18 @@ export const ButtonWrapper = styled.button`
 
   ${applyMargins}
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    position: absolute;
+    top: 25%;
+    z-index: 1000;
+    width: 100%;
+    height: 20%;
+    background-color: none;
+    border: none;
+    opacity: 0;
+    &:hover {
+      background-color: none;
+    }
+  }
 `;

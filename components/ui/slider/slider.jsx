@@ -44,8 +44,6 @@ const data = [
 ];
 
 export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...props) => {
-  // const [currentSlide, setCurrentSlide] = useState(10000);
-  // const [isNextDirection, setDirection] = useState(false);
 
   return (
     <>
@@ -68,22 +66,6 @@ export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...pro
           </Slide>
         ))}
       </SlideWrapper>
-      {/* <button
-        onClick={() => {
-          setDirection(true);
-          setCurrentSlide((prev) => prev + 1);
-        }}
-      >
-        +
-      </button>
-      <button
-        onClick={() => {
-          setDirection(false);
-          setCurrentSlide((prev) => prev - 1);
-        }}
-      >
-        -
-      </button> */}
     </>
   );
 };

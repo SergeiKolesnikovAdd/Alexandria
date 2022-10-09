@@ -11,6 +11,7 @@ export const SlideWrapper = styled.div`
   position: relative;
   width: 45vw;
   height: 45vw;
+
 `;
 
 const positions = [
@@ -61,6 +62,10 @@ export const SliderOverlay = styled.div`
   opacity: ${({ index }) => 1 - positions[index].opacityOverlay};
   transition: ${({ isNextDirection, index }) =>
     isNextDirection ? (index === 0 ? 0 : 1) : index === 4 ? 0 : 1}s;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 93, 75vw;
+  }
 `;
 
 const getTransitionTime = ({ isNextDirection, index }) =>
@@ -83,7 +88,10 @@ export const Slide = styled.div`
   transform-origin: left center;
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    
+    transform: translateY(${({ index }) => positions[index].translateY})
+      scale(${({ index }) => positions[index].scale});
+    transform-origin: bottom center;
+    width: 93, 75vw;
   }
 `;
 
@@ -102,5 +110,10 @@ export const SlidePrev = styled(ButtonSliderLeft)`
 export const TextWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 1000;
+  color: ${colors.white};
 `;

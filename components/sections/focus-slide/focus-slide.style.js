@@ -29,16 +29,19 @@ export const ContentWrapper = styled.div`
   border: 1px solid ${colors.black};
   border-radius: 80px;
   width: 100%;
+  padding-top: 40px;
 
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
-  ${getCurrentPaddingStyle("vertical", "lg")};
+  ${getCurrentPaddingStyle("bottom", "lg")};
 
   ${applyMargins}
   ${applyPaddings}
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     flex-direction: column;
+    border-radius: 48px;
+    position: relative;
   }
 `;
 

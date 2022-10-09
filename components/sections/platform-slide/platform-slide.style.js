@@ -73,3 +73,12 @@ export const StyledTabletSMBR = styled.br`
     display: block;
   }
 `;
+
+export const StyledImg = styled.img`
+  width: 7vw;
+  height: 7vw;
+  border-radius: 32px;
+  object-fit: cover;
+  z-index: 200;
+  transform: scale(2, 2);
+`;
