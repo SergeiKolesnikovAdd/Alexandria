@@ -83,6 +83,7 @@ export const AccordionContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  ${getCurrentMarginStyle("right", "mdsm")};
 
   ${applyPaddings}
   ${applyMargins}
@@ -114,6 +115,7 @@ export const ImgContainer = styled.div`
 
 export const StyledCaption = styled(Caption)`
   opacity: 0.4;
+  ${({ isOpen }) => !isOpen && "display: none;"}
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
     align-self: right;

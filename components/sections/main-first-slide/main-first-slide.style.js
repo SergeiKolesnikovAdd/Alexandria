@@ -1,12 +1,14 @@
-import {
-  applyMargins,
-  applyPaddings,
-  breakpointsWidth,
-} from "styles";
+import { applyMargins, applyPaddings, breakpointsWidth } from "styles";
 
 import imgLeft from "public/left-hand.png";
 import imgRight from "public/right-hand.png";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/css";
+import { css } from "@emotion/react";
+
+// export const HeaderDynamicStyle = ({ transparency }) => css`
+//   transform: translateX(calc(${transparency}*250px));
+// `;
 
 export const FirstSlideWrapper = styled.div`
   display: flex;
@@ -23,7 +25,6 @@ export const FirstSlideWrapper = styled.div`
       @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
         font-size: 3em;
       }
-
     }
   }
 
@@ -43,16 +44,13 @@ export const FirstSlideBGImageWrapper = styled.div`
   }
 `;
 
-const moveRight = ({}) => (
-  addEventListener(scrolly, rightDirection)
-)
-
 export const LeftHand = styled.img`
   position: absolute;
   left: 0;
   width: 50%;
   height: 30vw;
   content: url(${imgLeft.src});
+  /* ${HeaderDynamicStyle} */
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
@@ -65,6 +63,7 @@ export const RightHand = styled.img`
   width: 50%;
   height: 30vw;
   content: url(${imgRight.src});
+  /* ${HeaderDynamicStyle} */
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
