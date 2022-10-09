@@ -4,9 +4,26 @@ import {
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
 } from "./main-first-slide.style";
+import { useEffect, useRef, useState, } from "react";
 import { ButtonMD, H3, H1 } from "components";
+import { setTransperentByScroll } from "./utils";
 
-export const MainFirstSlide = ( move, props) => {
+export const MainFirstSlide = (props) => {
+
+    // const headerRef = useRef(null);
+    // //Прозрачность фона
+    // const [transparentBg, setTransparentBg] = useState(1);
+    // //Открытие меню
+
+    // useEffect(() => {
+    //   return setTransperentByScroll(
+    //     transparentBg,
+    //     setTransparentBg,
+    //     headerRef,
+    //     window
+    //   );
+    // }, []);
+
   return (
     <FirstSlideWrapper {...props}>
       <H1 mx="lg">
@@ -26,9 +43,14 @@ export const MainFirstSlide = ( move, props) => {
       <ButtonMD mt="xxlg" mx="lg">
         Начать работу
       </ButtonMD>
+      {/* <FirstSlideBGImageWrapper ref={headerRef}>
+        <LeftHand transparency={transparentBg} />
+        <RightHand transparency={transparentBg} />
+      </FirstSlideBGImageWrapper> */}
+      {/* TODO: анимация рук */}
       <FirstSlideBGImageWrapper>
-        <LeftHand/>
-        <RightHand/>
+        <LeftHand  />
+        <RightHand />
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
   );

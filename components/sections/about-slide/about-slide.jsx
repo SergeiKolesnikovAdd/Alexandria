@@ -63,7 +63,7 @@ export const AboutSlide = ({ ...props }) => {
             <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
           ))}
           {contentAccordion.map(({ id, span }) => (
-            <StyledCaption mt="md" key={id} isOpen={chooseItem.id === id} span={span}>
+            <StyledCaption mt="md" key={id} isOpen={chooseItem.id === id}>
               {span}
             </StyledCaption>
           ))}
