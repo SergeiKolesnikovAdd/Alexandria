@@ -92,7 +92,7 @@ export const offsets = {
 
   [desktopMD]: {
     xxxlg: 150,
-    xxlg: 74,
+    xxlg: 72,
     xlg: 64,
     lg: 36,
     lg2: 34,
@@ -109,7 +109,7 @@ export const offsets = {
 
   [desktopSM]: {
     xxxlg: 140,
-    xxlg: 68,
+    xxlg: 64,
     xlg: 64,
     lg: 32,
     lg2: 30,
@@ -126,7 +126,7 @@ export const offsets = {
 
   [tabletLG]: {
     xxxlg: 130,
-    xxlg: 64,
+    xxlg: 56,
     xlg: 64,
     lg: 28,
     lg2: 26,
@@ -143,10 +143,27 @@ export const offsets = {
 
   [tabletSM]: {
     xxxlg: 120,
-    xxlg: 60,
+    xxlg: 48,
     xlg: 64,
     lg: 24,
     lg2: 22,
+    mdlg: 32,
+    // TODO:MDLG поправить, если найдёшь
+    md: 20,
+    mdsm: 12,
+    sm: 8,
+    xsm: 8,
+    xxsm: 4,
+    xxxsm: 2,
+    none: 0,
+  },
+
+  [phone]: {
+    xxxlg: 80,
+    xxlg: 32,
+    xlg: 64,
+    lg: 12,
+    lg2: 12,
     mdlg: 32,
     // TODO:MDLG поправить, если найдёшь
     md: 20,
@@ -227,6 +244,14 @@ export const fontSizes = {
     h3: "20px",
     text: "16px",
     caption: "12px",
+  },
+
+  [phone]: {
+    h1: "32px",
+    h2: "32px",
+    h3: "18px",
+    text: "14px",
+    caption: "10px",
   },
 };
 

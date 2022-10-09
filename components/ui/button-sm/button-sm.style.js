@@ -1,4 +1,4 @@
-import { applyMargins, applyPaddings, colors, breakpointsWidth, } from "styles";
+import { applyMargins, applyPaddings, colors, breakpointsWidth, getCurrentPaddingStyle, } from "styles";
 
 import styled from "@emotion/styled";
 
@@ -10,6 +10,8 @@ export const Button = styled.button`
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  ${getCurrentPaddingStyle("horizontal", "lg")};
+  ${getCurrentPaddingStyle("vertical", "md2")};
 
   span {
     color: ${colors.white};
@@ -26,9 +28,4 @@ export const Button = styled.button`
 
   ${applyMargins}
   ${applyPaddings}
-
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
-    width: 188px;
-    height: 52px;
-  }
 `;

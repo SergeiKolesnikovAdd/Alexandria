@@ -10,6 +10,7 @@ import styled from "@emotion/styled";
 
 export const Button = styled.button`
   width: max-content;
+  height: max-content;
   background-color: ${colors.orange};
   border: 1px solid ${colors.orange};
   border-radius: 12px;
@@ -21,6 +22,7 @@ export const Button = styled.button`
   span {
     color: ${colors.red};
     transition: color 0.3s;
+    display: block;
   }
 
   &:hover {
@@ -30,6 +32,7 @@ export const Button = styled.button`
   ${applyMargins}
   ${applyPaddings}
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 8px;
   }
 `;
