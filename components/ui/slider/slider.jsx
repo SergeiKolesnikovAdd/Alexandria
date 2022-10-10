@@ -6,9 +6,9 @@ import {
   SlideWrapper,
   SliderOverlay,
   TextWrapper,
+  StyledCaption,
 } from "./slider.style";
 import { useEffect, useState } from "react";
-import { Caption } from "components";
 
 const data = [
   {
@@ -60,8 +60,8 @@ export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...pro
               index={getCurrentIndex(index, currentSlide)}
             />
             <TextWrapper>
-              <Caption>{number}</Caption>
-              <Caption>{text}</Caption>
+              <StyledCaption>{number}</StyledCaption>
+              <StyledCaption>{text}</StyledCaption>
             </TextWrapper>
           </Slide>
         ))}
