@@ -9,7 +9,7 @@ export const ModalWrapper = styled.div`
   width: 100%;
   transition: height 0.7s, visibility 0.7s;
   height: 0;
-  overflow: auto;
+  overflow-y: scroll;
   visibility: hidden;
   z-index:20;
   ${getCurrentMarginStyle("top","header")}

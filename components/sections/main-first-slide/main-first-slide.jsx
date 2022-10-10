@@ -4,8 +4,7 @@ import {
   FirstSlideBGImageWrapper,
   FirstSlideWrapper,
 } from "./main-first-slide.style";
-import { ButtonMD, H3, H1 } from "components";
-import { FormModal } from "components";
+import { ButtonMD, H3, H1, FormModal} from "components";
 import { useState } from "react";
 
 export const MainFirstSlide = ( move, props) => {
@@ -38,7 +37,7 @@ export const MainFirstSlide = ( move, props) => {
         <RightHand/>
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
-          <FormModal setOpen={setOpenForm} isOpen={isOpenForm}/> 
+          <FormModal setOpen={setOpenForm} isOpen={isOpenForm}/>
           </>
   );
 };

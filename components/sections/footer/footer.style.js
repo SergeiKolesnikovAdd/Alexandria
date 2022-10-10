@@ -41,7 +41,7 @@ export const FooterRow = styled.div`
   justify-content: space-between;
   ${applyMargins};
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {  
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     grid-template-columns: repeat(2, 50%);
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -91,7 +91,6 @@ export const LogoWrapper = styled.div`
       }
     }
     background-color: ${colors.red};
-    /* transform: scale(1.1); */
   }
 `;
 
