@@ -109,7 +109,9 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton>Начать работу</NewButton>
+            <NewButton onClick={() => {
+                setOpenForm(true);
+              }}>Начать работу</NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
@@ -142,7 +144,9 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton>Начать работу</NewButton>
+            <NewButton onClick={() => {
+                setOpenForm(true);
+              }}>Начать работу</NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
@@ -179,7 +183,9 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton>Начать работу</NewButton>
+            <NewButton onClick={() => {
+                setOpenForm(true);
+              }}>Начать работу</NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
