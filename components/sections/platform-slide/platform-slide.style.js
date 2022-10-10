@@ -14,6 +14,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
+  position: relative;
 
   ${applyMargins}
   ${applyPaddings}
@@ -72,4 +73,14 @@ export const StyledTabletSMBR = styled.br`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: block;
   }
+`;
+
+export const StyledImg = styled.img`
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 32px;
+  object-fit: cover;
+  z-index: 200;
+  overflow: hidden;
 `;
