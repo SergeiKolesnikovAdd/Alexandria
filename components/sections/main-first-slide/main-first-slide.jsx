@@ -5,9 +5,13 @@ import {
   FirstSlideWrapper,
 } from "./main-first-slide.style";
 import { ButtonMD, H3, H1 } from "components";
+import { FormModal } from "components";
+import { useState } from "react";
 
 export const MainFirstSlide = ( move, props) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   return (
+    <>
     <FirstSlideWrapper {...props}>
       <H1 mx="lg">
         многофункциональная
@@ -23,7 +27,10 @@ export const MainFirstSlide = ( move, props) => {
         <br />
         издательским стандартам
       </H3>
-      <ButtonMD mt="xxlg" mx="lg">
+      <ButtonMD mt="xxlg" mx="lg"      onClick={() => {
+                setOpenForm(true);
+              }}>
+
         Начать работу
       </ButtonMD>
       <FirstSlideBGImageWrapper>
@@ -31,5 +38,7 @@ export const MainFirstSlide = ( move, props) => {
         <RightHand/>
       </FirstSlideBGImageWrapper>
     </FirstSlideWrapper>
+          <FormModal setOpen={setOpenForm} isOpen={isOpenForm}/> 
+          </>
   );
 };
