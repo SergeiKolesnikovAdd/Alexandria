@@ -1,5 +1,6 @@
 import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies } from "styles";
 import styled from "@emotion/styled";
+import { breakpointsWidth } from "styles";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -9,14 +10,20 @@ export const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${sizes["desktopLG"].half};
+  height: 96px;
   ${getCurrentPaddingStyle("horizontal", "lg")};
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    height:68px;
+  }
 `;
 
 export const HeaderMenu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    display:none;
+  }
 `;
 
 export const HeaderTitle = styled.div`
