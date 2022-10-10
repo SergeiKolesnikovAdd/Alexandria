@@ -3,8 +3,8 @@ import { applyMargins, applyPaddings, colors, breakpointsWidth, getCurrentPaddin
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
-  width: 220px;
-  height: 64px;
+  width: max-content;
+  height: max-content;
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
   border-radius: 16px;
