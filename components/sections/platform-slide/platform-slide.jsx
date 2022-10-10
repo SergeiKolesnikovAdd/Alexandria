@@ -20,35 +20,77 @@ export const PlatformSlide = ({ ...props }) => {
   const ImgTimers = [
     {
       id: 1,
-      styles: "transition: scale 3s 1s, position: absolute, right: 0, top: 5%,",
+      // styles: "transition: scale 3s 1s, position: absolute, right: 0, top: 5%,",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transform 3s 1s",
+        position: "absolute",
+        right: "0",
+        top: "5%",
+      },
       img: img1.src,
     },
     {
       id: 2,
-      styles: "transition: scale 3s 2s, position: absolute, left: 0%, top: 5%",
+      // styles: "transition: scale 3s 2s, position: absolute, left: 0%, top: 5%",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transform 3s 0.5s",
+        position: "absolute",
+        left: "0",
+        top: "5%",
+      },
       img: img1.src,
     },
     {
       id: 3,
-      styles: "transition: scale 3s 2s, position: absolute, left: 5%, top: -5%",
+      // styles: "transition: scale 3s 2s, position: absolute, left: 5%, top: -5%",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transform 3s 0.7s",
+        position: "absolute",
+        left: "5%",
+        top: "-5%",
+      },
       img: img1.src,
     },
     {
       id: 4,
-      styles:
-        "transition: scale 3s 2s, position: absolute, left: 20%, bottom: 5%",
+      // styles:
+      //   "transition: scale 3s 2s, position: absolute, left: 20%, bottom: 5%",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transform 3s 3s",
+        position: "absolute",
+        left: "20%",
+        bottom: "5%",
+      },
       img: img1.src,
     },
     {
       id: 5,
-      styles:
-        "transition: scale 3s 2s, position: absolute, right: 10%, bottom: -5%",
+      // styles:
+      //   "transition: scale 3s 2s, position: absolute, right: 10%, bottom: -5%",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transfrom 3s 2.5s",
+        position: "absolute",
+        right: "10%",
+        bottom: "-5%",
+      },
       img: img1.src,
     },
     {
       id: 6,
-      styles:
-        "transition: scale 3s 2s, position: absolute, right: 20%, bottom: 15%",
+      // styles:
+      //   "transition: scale 3s 2s, position: absolute, right: 20%, bottom: 15%",
+      style: {
+        transform: "scale(2.5, 2.5)",
+        transition: "transform 3s 1.5s",
+        position: "absolute",
+        right: "20%",
+        bottom: "15%",
+      },
       img: img1.src,
     },
   ];
@@ -99,9 +141,10 @@ export const PlatformSlide = ({ ...props }) => {
       </TextWrapper>
       <ButtonMD mt="lg">О платформе</ButtonMD>
       <StyledImg />
-      {ImgTimers.map(({ id, img, styles }) => (
-        <StyledImg key={id} src={img} style={{styles}}/>
+      {ImgTimers.map(({ id, img, style }) => (
+        <StyledImg key={id} src={img} style={style}/>
       ))}
+      {/* TODO: АНИМАЦИИ ПРИ СКРОЛЕ, УВЕЛИЧЕНИЕ КАРТИНОК */}
     </ContentWrapper>
   );
 };

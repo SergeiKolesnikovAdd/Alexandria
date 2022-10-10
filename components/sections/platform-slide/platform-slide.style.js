@@ -14,6 +14,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
+  position: relative;
 
   ${applyMargins}
   ${applyPaddings}
@@ -75,10 +76,11 @@ export const StyledTabletSMBR = styled.br`
 `;
 
 export const StyledImg = styled.img`
+  display: block;
   width: 7vw;
   height: 7vw;
   border-radius: 32px;
   object-fit: cover;
   z-index: 200;
-  transform: scale(2, 2);
+  overflow: hidden;
 `;
