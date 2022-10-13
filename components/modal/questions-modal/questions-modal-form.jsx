@@ -4,13 +4,25 @@ import { FormLabel, FormWrapper } from "./questions-modal.style";
 import { withFormProvider } from "utils";
 import { Checkbox } from "components";
 import { useState } from "react";
+import { postQuestion } from "utils";
 
 export const Form = withFormProvider(({ cost, discription, title }) => {
   const [isChecked, setIsChecked] = useState(false)
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {
-    console.log(data);
-  };
+    postQuestion({
+      email: data.email,
+      name: data.name,
+      message : data.message,
+    })
+      .then(() => {
+        // setOpen(true)
+        // console.log(data);
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   const handleCheck = () => {
     setIsChecked((prev) => !prev);
@@ -28,7 +40,7 @@ export const Form = withFormProvider(({ cost, discription, title }) => {
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
       <FormLabel>Дополнительная информация</FormLabel>
-      <TextAreaField name="about" rules={{}} />
+      <TextAreaField name="message" rules={{}} />
       <Checkbox
         isActive={isChecked}
         setActive={handleCheck}

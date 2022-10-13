@@ -10,9 +10,9 @@ export async function getContent(params = '', props = {}) {
   }
 }
 
-export async function postContact(body) {
+export async function postQuestion(body) {
   try {
-    await fetch(`${BASE_URL}/contact`, {
+    await fetch(`${BASE_URL}/leads/question`, {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -26,9 +26,9 @@ export async function postContact(body) {
   }
 }
 
-export async function postOrder(body) {
+export async function postMain(body) {
   try {
-    await fetch(`${BASE_URL}/order`, {
+    await fetch(`${BASE_URL}/leads/main`, {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
