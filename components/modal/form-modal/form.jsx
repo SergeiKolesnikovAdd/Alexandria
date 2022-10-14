@@ -7,7 +7,7 @@ import { Checkbox } from "components";
 import { useState } from "react";
 import { postContact } from "utils";
 
-export const Form =  withFormProvider(({ cost, discription, title }) => {
+export const Form =  withFormProvider(({ cost, discription, title, tariff="" }) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const { handleSubmit } = useFormContext();
@@ -38,7 +38,7 @@ export const Form =  withFormProvider(({ cost, discription, title }) => {
       />
       <FormLabel>Электронная почта*</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel>
+      <FormLabel name="journalName">
         Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
       </FormLabel>
       <InputField mb="md" name="magazine" />
@@ -46,14 +46,14 @@ export const Form =  withFormProvider(({ cost, discription, title }) => {
       <DropDownField
         mb="md"
         title="Выберите из списка"
-        name="services"
+        name="action"
         options={selectServicesOptions}
       />
       <FormLabel>
         Дополнительная информация
         <FormLabelGray>(Не обязательно)</FormLabelGray>
       </FormLabel>
-      <TextAreaField name="about" rules={{}} />
+      <TextAreaField name="message" rules={{}} />
       <Checkbox
         isActive={isChecked}
         setActive={handleCheck}

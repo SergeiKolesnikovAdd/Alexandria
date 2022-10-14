@@ -1,5 +1,4 @@
-export const BASE_URL =
-  process.env.BACKEND_BASE_URL || "https://api.alexandrina.tech/v1";
+export const BASE_URL = "https://api.alexandrina.tech/v1";
 
 export async function getContent(params = '', props = {}) {
   try {
@@ -20,7 +19,7 @@ export async function postQuestion(body) {
       method: 'POST',
       body: JSON.stringify(body),
     })
-    return true
+    return false
   } catch (e) {
     return new Error(e)
   }
