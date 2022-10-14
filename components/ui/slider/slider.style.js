@@ -13,9 +13,14 @@ export const SlideWrapper = styled.div`
   width: 45vw;
   height: 45vw;
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    ${getCurrentMarginStyle("top","xlg")}
+    ${getCurrentMarginStyle("top", "xlg")}
     width: 93.75vw;
     height: 93.75vw;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    margin-top: 24px;
+    width: 100%;
   }
 `;
 
@@ -129,8 +134,12 @@ export const TextWrapper = styled.div`
   z-index: 1000;
   color: ${colors.white};
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     margin: 0px 24px 24px 24px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    margin: 0px 12px 12px 12px;
   }
 `;
 

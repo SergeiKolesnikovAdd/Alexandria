@@ -164,7 +164,7 @@ export const offsets = {
     xlg: 64,
     lg: 12,
     lg2: 12,
-    mdlg: 32,
+    mdlg: 16,
     // TODO:MDLG поправить, если найдёшь
     md: 20,
     mdsm: 12,
@@ -248,7 +248,7 @@ export const fontSizes = {
 
   [phone]: {
     h1: "32px",
-    h2: "32px",
+    h2: "1.5em",
     h3: "18px",
     text: "14px",
     caption: "10px",

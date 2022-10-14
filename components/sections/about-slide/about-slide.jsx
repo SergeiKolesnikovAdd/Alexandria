@@ -43,7 +43,7 @@ export const AboutSlide = ({ ...props }) => {
           </Link>
         </TextContainer>
       </ButtonRow>
-      <MediaContainer mt="xxlg" px="mdlg">
+      <MediaContainer>
         <AccordionContainer>
           {contentAccordion.map(({ title, id, desc }, index) => (
             <AccordionSmall
