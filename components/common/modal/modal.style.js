@@ -11,7 +11,7 @@ export const ModalWrapper = styled.div`
   height: 0;
   overflow-y: scroll;
   visibility: hidden;
-  z-index:20;
+  z-index:100;
   ${getCurrentMarginStyle("top","header")}
   ${({ isOpen }) => isOpen && "height: calc(100vh);height: calc(var(--fsvh, 1vh) * 100);visibility:visible;"}
 `;

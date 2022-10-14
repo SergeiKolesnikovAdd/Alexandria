@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { applyPaddings } from "styles";
+import { applyMargins } from "styles";
 import { breakpointsWidth } from "styles";
 
 export const LogoWrapper = styled.svg`
@@ -7,6 +9,8 @@ export const LogoWrapper = styled.svg`
   height: 64px;
   cursor: pointer;
   transition: transform 0.3s;
+  ${applyMargins};
+  ${applyPaddings};
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 48px;
     height: 48px;

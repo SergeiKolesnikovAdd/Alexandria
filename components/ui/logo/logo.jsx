@@ -1,8 +1,8 @@
 import { LogoWrapper } from "./logo.style";
 
-export const Logo = () => {
+export const Logo = ({...props}) => {
   return (
-    <LogoWrapper>
+    <LogoWrapper {...props}>
       <svg fill="none" viewBox="0 0 64 64">
         <rect width="64" height="64" fill="#D17456" rx="24" />
         <path
