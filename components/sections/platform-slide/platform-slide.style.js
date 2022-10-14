@@ -73,6 +73,17 @@ export const StyledTabletSMBR = styled.br`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: block;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: none;
+  }
+`;
+
+export const StyledPhoneBR = styled.br`
+  display: none;
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: block;
+  }
 `;
 
 export const StyledImg = styled.img`

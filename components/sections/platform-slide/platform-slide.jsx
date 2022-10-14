@@ -8,6 +8,7 @@ import {
   StyledDesktopSMBR,
   StyledTabletLGBR,
   StyledDesktopMDBR,
+  StyledPhoneBR,
   StyledImg,
 } from "./platform-slide.style";
 
@@ -103,47 +104,65 @@ export const PlatformSlide = ({ ...props }) => {
         <H2 mt="mdsm">
           Мы помогаем создавать&nbsp;
           <StyledTabletSMBR />
+          <StyledPhoneBR />
           научные&nbsp;
           <StyledDesktopMDBR />
-          журналы&nbsp;и&nbsp;книги,&nbsp;
+          журналы&nbsp;
+          <StyledPhoneBR />
+          и&nbsp;книги,&nbsp;
           <StyledDesktopLGBR />
           <StyledTabletSMBR />
           соответствующие&nbsp;
           <StyledDesktopMDBR />
           <StyledTabletSMBR />
-          международным стандартам
-          <br />
-          для издателей любого масштаба&nbsp;
+          <StyledPhoneBR />
+          международным&nbsp;
+          <StyledPhoneBR />
+          стандартам&nbsp;
+          <StyledDesktopLGBR />
+          <StyledDesktopMDBR />
+          <StyledTabletSMBR />
+          для издателей&nbsp;
+          <StyledPhoneBR />
+          любого масштаба&nbsp;
         </H2>
         <H2 style={{ color: colors.orange }}>
           и&nbsp;
           <StyledDesktopMDBR />
           амбиций&nbsp;
           <StyledDesktopLGBR />
-          вне зависимости&nbsp;
+          вне&nbsp;зависимости&nbsp;
           <StyledTabletSMBR />
+          <StyledPhoneBR />
           от того&nbsp;
           <StyledDesktopMDBR />
           являетесь ли вы&nbsp;
           <StyledTabletSMBR />
           <StyledDesktopLGBR />
+          <StyledPhoneBR />
           университетской&nbsp;
           <StyledDesktopMDBR />
           прессой,&nbsp;
           <StyledTabletSMBR />
+          <StyledPhoneBR />
           организатором&nbsp;
+          <StyledPhoneBR />
           <StyledDesktopLGBR />
           конференций&nbsp;
           <StyledTabletSMBR />
           <StyledDesktopMDBR />
-          или научно-исследовательским институтом
+          или научно-
+          <StyledPhoneBR />
+          исследовательским&nbsp;
+          <StyledPhoneBR />
+          институтом
         </H2>
       </TextWrapper>
       <ButtonMD mt="lg">О платформе</ButtonMD>
-      <StyledImg />
+      {/* <StyledImg />
       {ImgTimers.map(({ id, img, style }) => (
-        <StyledImg key={id} src={img} style={style}/>
-      ))}
+        <StyledImg key={id} src={img} style={style} />
+      ))} */}
       {/* TODO: АНИМАЦИИ ПРИ СКРОЛЕ, УВЕЛИЧЕНИЕ КАРТИНОК */}
     </ContentWrapper>
   );

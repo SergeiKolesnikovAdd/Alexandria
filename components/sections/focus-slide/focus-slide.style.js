@@ -30,19 +30,23 @@ export const ContentWrapper = styled.div`
   border-radius: 80px;
   width: 100%;
   padding-top: 40px;
-
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
-
-  ${applyMargins}
-  ${applyPaddings}
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     flex-direction: column;
     border-radius: 48px;
     position: relative;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px;
+    padding-top: 16px;
+  }
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const TextWrapper = styled.div`

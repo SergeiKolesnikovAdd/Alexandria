@@ -10,6 +10,7 @@ import {
 import { Text, H3 } from "components";
 import styled from "@emotion/styled";
 import { Caption } from "components";
+import { getCurrentPaddingStyle } from "styles";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ export const ButtonRow = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
+
 `;
 
 export const TextContainer = styled.div`
@@ -36,12 +38,22 @@ export const TextContainer = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
 `;
 
 export const Link = styled.a`
   :hover {
     transition: opacity 0.3s;
     opacity: 0.4;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    margin-bottom: 16px;
+    margin-top: 12px;
   }
 `;
 
@@ -65,17 +77,27 @@ export const H3Styled = styled(H3)`
 
 export const StyledDescription = styled(Text)`
   width: 55%;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    width: 100%;
+  }
 `;
 
 export const MediaContainer = styled.div`
   display: flex;
   width: 100%;
+  ${getCurrentMarginStyle("top", "xxlg")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
 
   ${applyPaddings}
   ${applyMargins}
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
     flex-direction: column;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    
   }
 `;
 
@@ -100,6 +122,10 @@ export const ImgSlide = styled.img`
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
     width: 100vw;
     align-self: center;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    padding: 0px 16px 0px 16px;
   }
 `;
 
