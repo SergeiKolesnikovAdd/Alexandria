@@ -29,7 +29,6 @@ export const MainFirstSlide = ( move, props) => {
       <ButtonMD mt="xxlg" mx="lg"      onClick={() => {
                 setOpenForm(true);
               }}>
-
         Начать работу
       </ButtonMD>
       <FirstSlideBGImageWrapper>

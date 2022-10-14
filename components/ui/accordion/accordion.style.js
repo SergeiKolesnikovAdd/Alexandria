@@ -43,6 +43,7 @@ export const AccordionButton = styled.button`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 18px;
+    max-height: inherit;
   }
 `;
 
@@ -84,14 +85,24 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 56px;
-  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   border-radius: 16px;
-  background-color: ${({ isShowing }) => (isShowing ? colors.red : colors.grey)};
+  background-color: ${({ isShowing }) =>
+    isShowing ? colors.red : colors.grey};
   transition: background-color 0.3s;
 
   ${applyPaddings}
   ${applyMargins}
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 16px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 12px;
+    margin-left: 8px;
+  }
 `;
 
 export const IconMinus = styled(Minus)`

@@ -29,9 +29,16 @@ export const ContentWrapper = styled.div`
   background-color: ${colors.black};
   border: 1px solid ${colors.black};
   border-radius: 80px;
-  ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
-  ${getCurrentPaddingStyle("vertical", "lg2")};
+  ${getCurrentPaddingStyle("vertical", "mdlg")};
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 48px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px;
+  }
 
   ${applyMargins}
   ${applyPaddings}
@@ -42,12 +49,18 @@ export const AdvantageWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   ${getCurrentMarginStyle("top", "xxlg")};
+  gap: 24px;
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr );
-    grid-template-rows: repeat(2, 1fr );
-    gap: 24px
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
   }
 `;
 
@@ -65,6 +78,14 @@ export const AdvantageItem = styled.div`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
     min-height: 354px;
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+    min-height: inherit;
+    height: max-content;
+    justify-content: flex-start;
   }
 `;
 
@@ -101,6 +122,11 @@ export const ImgWrapper = styled.div`
     border-radius: 16px;
     width: 48px;
     height: 48px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 12px;
+    margin-top: 24px;
   }
 `;
 

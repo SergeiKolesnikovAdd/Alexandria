@@ -23,7 +23,10 @@ export const FirstSlideWrapper = styled.div`
       @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
         font-size: 3em;
       }
-
+      
+      @media screen and (max-width: ${breakpointsWidth.phone}) {
+        font-size: 2em;
+      }
     }
   }
 
