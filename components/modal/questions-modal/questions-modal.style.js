@@ -2,10 +2,11 @@ import {
   colors,
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
-  applyMargins,getCurrentFontSizeStyle, fontFamilies, hexToRGBA,
+  applyMargins,getCurrentFontSizeStyle, fontFamilies, hexToRGBA, breakpointsWidth,
 } from "styles";
 import styled from "@emotion/styled";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
+import {  } from "styles";
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
@@ -30,6 +31,12 @@ export const ContentSection = styled.div`
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    ${getCurrentPaddingStyle("top", "xxxlg")};
+    ${getCurrentPaddingStyle("horizontal", "xxlg")};
+    ${getCurrentPaddingStyle("bottom", "xxlg")};
+  }
 `;
 
 export const ClsButton = styled(CloseButton)`
