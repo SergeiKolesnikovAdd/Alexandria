@@ -15,7 +15,7 @@ export const Header = () => {
       <HeaderWrapper>
         <HeaderTitle>
           <Logo />
-          <Name ml="xsm" />
+          <Name ml="mdsm" />
         </HeaderTitle>
 
         <HeaderMenu>

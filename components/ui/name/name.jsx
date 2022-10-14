@@ -1,9 +1,9 @@
 import { NameWrapper } from "./name.style";
 
 
-export const Name = () => {
+export const Name = ({...props}) => {
   return (
-    <NameWrapper>
+    <NameWrapper {...props}>
       <svg fill="none" viewBox="0 0 167 24">
         <path
           fill="#222"
