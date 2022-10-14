@@ -1,5 +1,4 @@
-import { Name } from "components";
-import { Caption, Logo, H3} from "components";
+import { Caption, H3, Name} from "components";
 import { colors } from "styles";
 import { Telegram, Instagram, Twitter, Vk, Youtube } from "../../common";
 import {

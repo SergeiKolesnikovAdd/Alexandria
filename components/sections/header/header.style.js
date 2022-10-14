@@ -1,6 +1,5 @@
-import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies } from "styles";
+import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies, breakpointsWidth} from "styles";
 import styled from "@emotion/styled";
-import { breakpointsWidth } from "styles";
 
 export const HeaderWrapper = styled.div`
   width: 100%;

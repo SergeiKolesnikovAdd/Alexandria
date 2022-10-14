@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
-import { applyPaddings } from "styles";
-import { applyMargins } from "styles";
-import { breakpointsWidth } from "styles";
+import {breakpointsWidth, applyPaddings, applyMargins} from "styles";
 
 export const LogoWrapper = styled.svg`
   display: inline-block;

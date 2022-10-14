@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { QuestionsFormModal } from "components";
-import { Logo, ButtonSM, Name } from "components";
+import { Logo, ButtonSM, Name, QuestionsFormModal} from "components";
 import {
   HeaderWrapper,
   HeaderMenu,
@@ -9,7 +8,11 @@ import {
 } from "./header.style";
 
 export const Header = () => {
-  const [isOpenForm, setOpenForm] = useState (false);
+  const [isOpenForm, setOpenForm] = useState(false);
+  const [title, setTitle] = useState("");
+
+
+
   return (
     <>
       <HeaderWrapper>
@@ -17,7 +20,6 @@ export const Header = () => {
           <Logo />
           <Name ml="mdsm" />
         </HeaderTitle>
-
         <HeaderMenu>
           <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
           <HeaderMenuItem href="#offer">Тарифы</HeaderMenuItem>
@@ -26,8 +28,9 @@ export const Header = () => {
           <HeaderMenuItem href="#faq">FAQ</HeaderMenuItem>
         </HeaderMenu>
         <ButtonSM
-          onClick={() => {
+          onClick={(e) => {
             setOpenForm(true);
+            setTitle(e.target.textContent);
           }}
         >
           Оставить заявку
@@ -36,6 +39,7 @@ export const Header = () => {
       <QuestionsFormModal
         isOpen={isOpenForm}
         setOpen={setOpenForm}
+        title={title}
       />
     </>
   );
