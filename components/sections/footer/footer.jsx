@@ -45,7 +45,7 @@ export const Footer = () => {
           <Caption mb={"sm"} style={{ color: colors.red }}>
             Свяжитесь с нами
           </Caption>
-          <H3 mb={"lg"}>info@alexandrina.ru</H3>
+          <H3 mb={"lg"}>info@alexandrina.tech</H3>
           <Caption mb={"sm"} style={{ color: colors.red }}>
             Адрес
           </Caption>

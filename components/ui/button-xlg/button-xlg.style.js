@@ -9,6 +9,8 @@ import {
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
+  height: max-content;
+  width: max-content;
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
   border-radius: 16px;

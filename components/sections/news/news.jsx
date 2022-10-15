@@ -12,11 +12,10 @@ import {
   ImgContainer,
   StyledCaption,
 } from "./news.style";
-import { ButtonXSM, H2, AccordionSmall,} from "components";
+import { ButtonSM, H2, AccordionSmall,} from "components";
 
 import { fontSizes } from "styles";
 import React, { useState } from "react";
-
 
 export const News = ({ ...props }) => {
 
@@ -26,65 +25,31 @@ export const News = ({ ...props }) => {
       <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
         Неделя открытого доступа
       </H2>
-      {/* <ButtonXSM ml="lg" mt="md">
-        О нас
-      </ButtonXSM> */}
-      <ButtonRow>
-        <TextContainer mt="lg" mx="lg">
+      <MediaContainer>
+        <TextContainer mt="lg" mr="mdsm">
           <StyledDescription>
             Начало работы проекта Alexandrina совпало с ежегодной международной
-            неделей открытого доступа. Мы приверженцы идеологии открытого
-            доступа и равенства в получении научных знаний, так как Наука не
-            сможет повлиять на мир, если мы будем держать ее под замком.
+            неделей открытого доступа. Мы разделяем идею открытого доступа для
+            всех и равенства в получении научных знаний, ведь Наука не сможет
+            повлиять на мир, если мы будем держать ее под замком.
           </StyledDescription>
-          {/* <Link href="/presentation" target="_blank">
-            <StyledText>Презентация,&nbsp;PDF</StyledText>
-          </Link> */}
+          <StyledDescription mt="lg">
+            Неделя открытого доступа - это бесценный шанс связать глобальный
+            импульс к открытому обмену знаниями с продвижением политических
+            изменений и важностью социальных проблем, затрагивающих людей во
+            всем мире. Именно поэтому с 24 по 30 октября мы бесплатно проводим
+            аудиты научных журналов на возможность вступления в DOAJ и
+            предоставляем скидку 20% для разработки журнала на платформе
+            Alexandrina.
+          </StyledDescription>
         </TextContainer>
-      </ButtonRow>
-      <MediaContainer>
-        <StyledDescription>
-          Неделя открытого доступа - это бесценный шанс связать глобальный
-          импульс к открытому обмену знаниями с продвижением политических
-          изменений и важностью социальных проблем, затрагивающих людей во всем
-          мире. Именно поэтому, в эту неделю (24-30 октября) мы бесплатно
-          проводим аудиты ваших научных журналов на возможность вступления в
-          DOAJ и предоставляем скидку 20% на разработку вашего журнала на нашей
-          платформе Alexandrina.
-        </StyledDescription>
-        {/* <AccordionContainer>
-          {contentAccordion.map(({ title, id, desc }, index) => (
-            <AccordionSmall
-              title={title}
-              key={id}
-              id={id}
-              desc1={desc}
-              isShowing={chooseItem.id === id}
-              onClick={() => {
-                setChooseItem(contentAccordion[index]);
-              }}
-            />
-          ))}
-        </AccordionContainer> */}
-        {/* <ImgContainer>
-          {contentAccordion.map(({ id, img }) => (
-            <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
-          ))}
-          {contentAccordion.map(({ id, span }) => (
-            <StyledCaption
-              mt="md"
-              key={id}
-              isOpen={chooseItem.id === id}
-              span={span}
-            >
-              {span}
-            </StyledCaption>
-          ))}
-        </ImgContainer> */}
         <ImgContainer>
-          {/* <ImgSlide src={img.src} /> */}
+          <ImgSlide />
         </ImgContainer>
       </MediaContainer>
+      <ButtonSM mt="xlg" style={{alignSelf: "center"}}>
+        Оставить заявку
+      </ButtonSM>
     </ContentWrapper>
   );
 };

@@ -186,7 +186,7 @@ export const ControlWrapper = styled.div`
 `;
 
 export const PackageItemTab = styled.button`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -198,13 +198,19 @@ export const PackageItemTab = styled.button`
   overflow-y: hidden;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "12%")};
   border-bottom: ${({ isOpen }) =>
-    isOpen ? `3px solid ${colors.red}` : `1px solid ${hexToRGBA(colors.black, 0.08)}`};
+    isOpen
+      ? `3px solid ${colors.red}`
+      : `1px solid ${hexToRGBA(colors.black, 0.08)}`};
   &:hover {
   }
 
   &:focus {
     opacity: 100%;
     border-bottom: 3px solid ${colors.red};
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: flex;
   }
 
   ${applyPaddings}

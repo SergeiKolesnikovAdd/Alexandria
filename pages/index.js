@@ -18,12 +18,12 @@ const Home = () => {
     <>
       <Header />
       <MainFirstSlide pt="xxxlg" />
-      <AboutSlide pt="xxxlg"/>
+      <AboutSlide pt="xxxlg" />
       <FocusSlide></FocusSlide>
       <PlatformSlide mt="xxxlg"></PlatformSlide>
       <OfferSlide pt="xxxlg"></OfferSlide>
       <AdvantageSlide></AdvantageSlide>
-      <News></News>
+      <News mt="xxxlg"></News>
       <FaqSlide pt="xxxlg"></FaqSlide>
       <Footer />
     </>
