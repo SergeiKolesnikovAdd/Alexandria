@@ -131,7 +131,7 @@ export const offsets = {
     lg: 28,
     lg2: 26,
     mdlg: 32,
-    md: 24,
+    md: 20,
     md2: 20,
     mdsm: 16,
     sm: 12,
@@ -166,7 +166,7 @@ export const offsets = {
     lg2: 12,
     mdlg: 16,
     // TODO:MDLG поправить, если найдёшь
-    md: 20,
+    md: 18,
     mdsm: 12,
     sm: 8,
     xsm: 8,

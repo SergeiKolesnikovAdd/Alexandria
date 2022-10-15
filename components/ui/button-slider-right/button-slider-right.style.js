@@ -35,7 +35,7 @@ export const ButtonWrapper = styled.button`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     position: absolute;
     bottom: 0;
-    z-index: 1000;
+    z-index: 90;
     width: 100%;
     height: 20%;
     background-color: none;

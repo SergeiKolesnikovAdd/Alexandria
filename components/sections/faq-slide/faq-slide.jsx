@@ -29,6 +29,7 @@ const TitleOptions = [
 export const FaqSlide = withFormProvider(({ ...props }) => {
 
   const [isOpenForm, setOpenForm] = useState(false);
+  const [title, setTitle] = useState("");
 
 
   return (
@@ -97,15 +98,16 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         Link3="Вход и регистрация"
       ></Accordion>
       <ButtonLG
-        onClick={() => {
+        onClick={(e) => {
           setOpenForm(true);
+          setTitle(e.target.textContent);
         }}
         mt="mdlg"
         style={{ alignSelf: "center" }}
       >
         Задать вопрос
       </ButtonLG>
-      <QuestionsFormModal isOpen={isOpenForm} setOpen={setOpenForm} />
+      <QuestionsFormModal title={title} isOpen={isOpenForm} setOpen={setOpenForm} />
     </ContentWrapper>
   );
 });

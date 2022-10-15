@@ -139,7 +139,7 @@ export const InputStyled = styled.div`
     } else if (isActive) {
       return { color: getCurrentColor("black") };
     } else if (isError) {
-      return { color: colors.red };
+      return { color: colors.brightRed};
     } else {
       return { color: hexToRGBA(colors.white, 0.2) };
     }
@@ -160,7 +160,7 @@ export const InputStyled = styled.div`
 
 export const Error = styled.div`
   width: 100%;
-  color: ${colors.red};
+  color: ${colors.brightRed};
   position: absolute;
   top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};

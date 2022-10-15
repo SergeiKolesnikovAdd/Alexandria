@@ -4,17 +4,7 @@ import { Form } from "./form"
 import { colors } from "styles";
 
 export const FormModal = ({
-  img,
-  color,
-  headingMaintance,
-  textMaintance,
-  headingService,
-  textService,
-  headingMarketing,
-  textMarketing,
-  caption,
   title,
-  subtitle,
   isOpen,
   setOpen,
   ...props
@@ -27,7 +17,7 @@ export const FormModal = ({
           <ContentWrapper>
             <Title mb="xsm">
               <H2 style={{color: colors.black}} mb="mdlg" mt="xlg" mr="mdsm">
-                Начать пользоваться
+                {title}
               </H2>
             </Title>
             <Form />

@@ -1,10 +1,9 @@
-import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies } from "styles";
+import { sizes, getCurrentMarginStyle, getCurrentPaddingStyle, colors, fontFamilies, breakpointsWidth} from "styles";
 import styled from "@emotion/styled";
-import { breakpointsWidth } from "styles";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
   position: fixed;
   background-color: ${colors.lightOrange};
   display: flex;
@@ -13,7 +12,7 @@ export const HeaderWrapper = styled.div`
   height: 96px;
   ${getCurrentPaddingStyle("horizontal", "lg")};
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    height:68px;
+    height: 68px;
   }
 `;
 

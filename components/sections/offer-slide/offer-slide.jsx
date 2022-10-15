@@ -27,7 +27,11 @@ export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
   const [isOpenForm, setOpenForm] = useState(false);
+<<<<<<< HEAD
   const [chooseItemTab, setChooseItemTab] = useState(arrOfferInfoTab[1]);
+=======
+  const [title, setTitle] = useState("");
+>>>>>>> d3df25d21428e1fbd543374999e7bc7f6327462b
 
   return (
     <ContentWrapper {...props} id="offer">
@@ -48,11 +52,11 @@ export const OfferSlide = ({ ...props }) => {
           потребностей издателя
         </Text>
         <ButtonXLG
-          onClick={() => {
+          onClick={(e) => {
+            setTitle(e.target.textContent);
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
-          }}
-        >
+          }}>
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -94,12 +98,12 @@ export const OfferSlide = ({ ...props }) => {
             <Standart />
             <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
-              onClick={() => {
+              onClick={(e) => {
+                setTitle(e.target.textContent);
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
               }}
-              mt="xxsm"
-            >
+              mt="xxsm">
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -115,10 +119,17 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
+<<<<<<< HEAD
               onClick={() => {
                 setOpenForm(true);
               }}
             >
+=======
+              onClick={(e) => {
+                setTitle(e.target.textContent);
+                setOpenForm(true);
+              }}>
+>>>>>>> d3df25d21428e1fbd543374999e7bc7f6327462b
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -129,12 +140,12 @@ export const OfferSlide = ({ ...props }) => {
             <Comfort />
             <StyledText mt="sm">Пакет Комфорт</StyledText>
             <StyledCaption
-              onClick={() => {
+              onClick={(e) => {
+                setTitle(e.target.textContent);
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
               }}
-              mt="xxsm"
-            >
+              mt="xxsm">
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -154,10 +165,17 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
+<<<<<<< HEAD
               onClick={() => {
                 setOpenForm(true);
               }}
             >
+=======
+              onClick={(e) => {
+                setTitle(e.target.textContent);
+                setOpenForm(true);
+              }}>
+>>>>>>> d3df25d21428e1fbd543374999e7bc7f6327462b
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -168,12 +186,12 @@ export const OfferSlide = ({ ...props }) => {
             <Premium />
             <StyledText mt="sm">Пакет Премиум</StyledText>
             <StyledCaption
-              onClick={() => {
+              onClick={(e) => {
+                setTitle(e.target.textContent);
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
               }}
-              mt="xxsm"
-            >
+              mt="xxsm">
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -197,10 +215,17 @@ export const OfferSlide = ({ ...props }) => {
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
+<<<<<<< HEAD
               onClick={() => {
                 setOpenForm(true);
               }}
             >
+=======
+              onClick={(e) => {
+                setTitle(e.target.textContent);
+                setOpenForm(true);
+              }}>
+>>>>>>> d3df25d21428e1fbd543374999e7bc7f6327462b
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -243,16 +268,15 @@ export const OfferSlide = ({ ...props }) => {
       {console.log(arrOfferInfoTab)}
       {console.log(chooseItem)}
       <OfferModal
-        title
+        title={title}
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}
-      ></OfferModal>
+        {...chooseItem}></OfferModal>
       <FormModal
+        title={title}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
-        {...chooseItem}
-      ></FormModal>
+        {...chooseItem}></FormModal>
     </ContentWrapper>
   );
 };

@@ -33,6 +33,8 @@ export const OfferModal = ({
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner isOpenForm={isOpenForm}>
@@ -55,7 +57,8 @@ export const OfferModal = ({
               <Text>{textMarketing}</Text>
             </Description>
             <StyledButtonLG
-              onClick={() => {
+              onClick={(e) => {
+                setTitle(e.target.textContent);
                 setOpenForm(true);
               }}>
               Начать работу
@@ -63,7 +66,7 @@ export const OfferModal = ({
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
-      <FormModal setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal title={modalTitle} setOpen={setOpenForm} isOpen={isOpenForm} />
     </Modal>
   );
 };
