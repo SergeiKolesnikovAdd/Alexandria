@@ -17,7 +17,12 @@ import {
   StyledText,
   DescText,
   TabletButton,
+  PackageItemTab,
+  ControlWrapper,
 } from "./offer-slide.style";
+import { Tab } from "components";
+
+import { arrOfferInfoTab } from "./tabs";
 
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
@@ -109,9 +114,13 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton onClick={() => {
+            <NewButton
+              onClick={() => {
                 setOpenForm(true);
-              }}>Начать работу</NewButton>
+              }}
+            >
+              Начать работу
+            </NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
@@ -144,9 +153,13 @@ export const OfferSlide = ({ ...props }) => {
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton onClick={() => {
+            <NewButton
+              onClick={() => {
                 setOpenForm(true);
-              }}>Начать работу</NewButton>
+              }}
+            >
+              Начать работу
+            </NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
@@ -183,13 +196,68 @@ export const OfferSlide = ({ ...props }) => {
             <Mark />
           </PackageItem>
           <PackageItem style={{ border: "none" }}>
-            <NewButton onClick={() => {
+            <NewButton
+              onClick={() => {
                 setOpenForm(true);
-              }}>Начать работу</NewButton>
+              }}
+            >
+              Начать работу
+            </NewButton>
             <TabletButton>Начать</TabletButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>
+      <ControlWrapper>
+        <PackageItemTab
+          // isShowing={isShowing}
+          pt="md"
+          pb="mdsm"
+          onClick={() => {
+            setChooseItem(arrOfferInfoTab[0]);
+          }}
+        >
+          <Standart />
+          <StyledText mt="sm">Пакет Стандарт</StyledText>
+        </PackageItemTab>
+        <PackageItemTab
+          // isShowing={isShowing}
+          pt="md"
+          pb="mdsm"
+          onClick={() => {
+            setChooseItem(arrOfferInfoTab[1]);
+          }}
+        >
+          <Comfort />
+          <StyledText mt="sm">Пакет Комфорт</StyledText>
+        </PackageItemTab>
+        <PackageItemTab
+          // isShowing={isShowing}
+          pt="md"
+          pb="mdsm"
+          onClick={() => {
+            setChooseItem(arrOfferInfoTab[2]);
+          }}
+        >
+          <Premium />
+          <StyledText mt="sm">Пакет Премиум</StyledText>
+        </PackageItemTab>
+      </ControlWrapper>
+      {arrOfferInfoTab.map(({ id, img }, index) => (
+        <Tab
+          key={id}
+          id={id}
+          m1img={img}
+          m2img={img}
+          m3img={img}
+          m4img={img}
+          m5img={img}
+          m6img={img}
+          isShowing={chooseItem.id === id}
+          onClick={() => {
+            setChooseItem(arrOfferInfoTab[index]);
+          }}
+        />
+      ))}
       <OfferModal
         title
         isOpen={isOpen}

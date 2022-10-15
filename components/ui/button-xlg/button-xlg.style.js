@@ -9,15 +9,13 @@ import {
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
-  width: 424px;
-  height: 64px;
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  ${getCurrentPaddingStyle("horizontal","lg")};
-  ${getCurrentPaddingStyle("vertical","md2")};
+  ${getCurrentPaddingStyle("horizontal", "lg")};
+  ${getCurrentPaddingStyle("vertical", "md2")};
 
   span {
     color: ${colors.white};
