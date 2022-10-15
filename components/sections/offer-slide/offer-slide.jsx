@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { H2, Text, ButtonXLG, OfferModal, FormModal } from "components";
+import { H2, Text, ButtonXLG, OfferModal, FormModal, Tab } from "components";
 import { arrOfferInfo } from "./constant";
 import { Comfort, Mark, Premium, Standart } from "../../common";
 import {
@@ -17,12 +17,17 @@ import {
   StyledText,
   DescText,
   TabletButton,
+  PackageItemTab,
+  ControlWrapper,
 } from "./offer-slide.style";
+
+import { arrOfferInfoTab } from "./tabs";
 
 export const OfferSlide = ({ ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
   const [isOpenForm, setOpenForm] = useState(false);
+  const [chooseItemTab, setChooseItemTab] = useState(arrOfferInfoTab[1]);
   const [title, setTitle] = useState("");
 
   return (
@@ -203,6 +208,41 @@ export const OfferSlide = ({ ...props }) => {
           </PackageItem>
         </PackageColumn>
       </TableOffer>
+      <ControlWrapper>
+        {arrOfferInfoTab.map(({ id, title, ...props }, index) => (
+          <PackageItemTab
+            key={id}
+            id={id}
+            pt="md"
+            pb="mdsm"
+            isOpen={chooseItemTab.id === id}
+            onClick={() => {
+              setChooseItemTab(arrOfferInfoTab[index]);
+            }}
+          >
+            <Standart />
+            <StyledText mt="sm">{title}</StyledText>
+          </PackageItemTab>
+        ))}
+      </ControlWrapper>
+      {arrOfferInfoTab.map(({ id, ...props }, index) => (
+        <Tab
+          key={id}
+          id={id}
+          m1img={props.m1img}
+          m2img={props.m2img}
+          m3img={props.m3img}
+          m4img={props.m4img}
+          m5img={props.m5img}
+          m6img={props.m6img}
+          isShowing={chooseItemTab.id === id}
+          onClick={() => {
+            setChooseItemTab(arrOfferInfoTab[index]);
+          }}
+        />
+      ))}
+      {console.log(arrOfferInfoTab)}
+      {console.log(chooseItem)}
       <OfferModal
         title={title}
         isOpen={isOpen}

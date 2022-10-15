@@ -48,6 +48,10 @@ export const TableOffer = styled.div`
   align-items: center;
 
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: none;
+  }
 `;
 
 export const DescColumn = styled.div`
@@ -110,6 +114,8 @@ export const DescItem = styled.div`
       font-size: 12px;
     }
   }
+
+  
 `;
 
 export const DescText = styled(Text)`
@@ -171,4 +177,35 @@ export const StyledText = styled(Text)`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     font-size: 12px;
   }
+`;
+
+export const ControlWrapper = styled.div`
+  display: flex;
+
+  ${applyMargins}
+`;
+
+export const PackageItemTab = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ${getCurrentPaddingStyle("horizontal", "mdsm")}
+  ${getCurrentPaddingStyle("top", "mdsm")}
+  padding-bottom: 24px;
+  border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
+  width: 60vw;
+  overflow-y: hidden;
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "12%")};
+  border-bottom: ${({ isOpen }) =>
+    isOpen ? `3px solid ${colors.red}` : `1px solid ${hexToRGBA(colors.black, 0.08)}`};
+  &:hover {
+  }
+
+  &:focus {
+    opacity: 100%;
+    border-bottom: 3px solid ${colors.red};
+  }
+
+  ${applyPaddings}
 `;

@@ -9,15 +9,13 @@ import {
 import styled from "@emotion/styled";
 
 export const Button = styled.button`
-  width: 424px;
-  height: 64px;
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  ${getCurrentPaddingStyle("horizontal","lg")};
-  ${getCurrentPaddingStyle("vertical","md2")};
+  ${getCurrentPaddingStyle("horizontal", "lg")};
+  ${getCurrentPaddingStyle("vertical", "md2")};
 
   span {
     color: ${colors.white};
@@ -37,5 +35,10 @@ export const Button = styled.button`
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     border-radius: 12px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 10px;
+    margin-top: 24px;
   }
 `;

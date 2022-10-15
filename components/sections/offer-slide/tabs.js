@@ -1,0 +1,32 @@
+export const arrOfferInfoTab = [
+  {
+    id: 1,
+    title: "Пакет Стандарт",
+    m1img: true,
+    m2img: true,
+    m3img: true,
+    m4img: true,
+    m5img: false,
+    m6img: false,
+  },
+  {
+    id: 2,
+    title: "Пакет Комфорт",
+    m1img: true,
+    m2img: true,
+    m3img: true,
+    m4img: true,
+    m5img: true,
+    m6img: false,
+  },
+  {
+    id: 3,
+    title: "Пакет Премиум",
+    m1img: true,
+    m2img: true,
+    m3img: true,
+    m4img: true,
+    m5img: true,
+    m6img: true,
+  },
+];

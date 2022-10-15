@@ -27,7 +27,6 @@ export const AccordionSmall = ({ id, img, span, isShowing, ...props }) => {
           <H3Styled
             isShowing={isShowing}
             mr="mdsm"
-            
           >
             {props.desc1}
           </H3Styled>

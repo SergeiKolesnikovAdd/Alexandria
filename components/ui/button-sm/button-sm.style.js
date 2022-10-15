@@ -26,6 +26,11 @@ export const Button = styled.button`
     }
   }
 
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    padding: 12px 24px 12px 24px;
+    border-radius: 10px;
+  }
+
   ${applyMargins}
   ${applyPaddings}
 `;
