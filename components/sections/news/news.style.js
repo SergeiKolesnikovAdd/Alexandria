@@ -10,7 +10,7 @@ import {
 
 import { Text, H3, Caption } from "components";
 import styled from "@emotion/styled";
-// import { img } from "../../../public/news.png";
+import News from "../../../public/news.png";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -33,16 +33,11 @@ export const ButtonRow = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  justify-content: space-between;
 
   ${applyPaddings}
   ${applyMargins}
-
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-  }
 `;
 
 export const Link = styled.a`
@@ -76,28 +71,30 @@ export const H3Styled = styled(H3)`
 `;
 
 export const StyledDescription = styled(Text)`
-  width: 55%;
+  width: auto;
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     width: 100%;
   }
+
+  ${applyMargins}
+  ${applyPaddings}
 `;
 
 export const MediaContainer = styled.div`
   display: flex;
   width: 100%;
-  ${getCurrentMarginStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
 
   ${applyPaddings}
   ${applyMargins}
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    flex-direction: column;
+
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    
+    flex-direction: column;
   }
 `;
 
@@ -106,6 +103,7 @@ export const AccordionContainer = styled.div`
   flex-direction: column;
   width: 100%;
   ${getCurrentMarginStyle("right","mdsm")}
+  
 
   ${applyPaddings}
   ${applyMargins}
@@ -117,15 +115,16 @@ export const SliderWrapper = styled.div`
 
 export const ImgSlide = styled.img`
   object-fit: contain;
-  width: 35vw;
+  width: 40vw;
+  content: url(${News.src});
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    width: 100vw;
-    align-self: center;
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     padding: 0px 16px 0px 16px;
+    width: 100vw;
+    align-self: center;
   }
 `;
 

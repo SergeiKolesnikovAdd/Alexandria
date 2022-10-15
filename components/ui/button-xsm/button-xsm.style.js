@@ -18,6 +18,7 @@ export const Button = styled.button`
   transition: background-color 0.3s;
   ${getCurrentPaddingStyle("vertical", "xsm")}
   ${getCurrentPaddingStyle("horizontal", "md")}
+  pointer-events: none;
 
   span {
     color: ${colors.red};
