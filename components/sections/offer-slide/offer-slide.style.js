@@ -114,6 +114,8 @@ export const DescItem = styled.div`
       font-size: 12px;
     }
   }
+
+  
 `;
 
 export const DescText = styled(Text)`
@@ -194,9 +196,14 @@ export const PackageItemTab = styled.button`
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
   width: 60vw;
   overflow-y: hidden;
-  opacity: ${({ isShowing }) => (isShowing ? "0" : "12%")};
-
+  opacity: ${({ isOpen }) => (isOpen ? "100%" : "12%")};
+  border-bottom: ${({ isOpen }) =>
+    isOpen ? `3px solid ${colors.red}` : `1px solid ${hexToRGBA(colors.black, 0.08)}`};
   &:hover {
+  }
+
+  &:focus {
+    opacity: 100%;
     border-bottom: 3px solid ${colors.red};
   }
 

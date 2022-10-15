@@ -36,4 +36,9 @@ export const Button = styled.button`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     border-radius: 12px;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 10px;
+    margin-top: 24px;
+  }
 `;

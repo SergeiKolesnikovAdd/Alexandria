@@ -11,9 +11,11 @@ import {
   DescText,
   NewButton,
 } from "./tab.style";
+import { Mark } from "components";
 
 export const Tab = ({
   id,
+  title,
   m1img,
   m2img,
   m3img,
@@ -30,7 +32,7 @@ export const Tab = ({
           isShowing={isShowing}
           onClick={() => {
             setOpen(true);
-            setChooseItem(arrOfferInfoTab[index]);
+            setChooseItemTab(arrOfferInfoTab[index]);
           }}
           mt="xxsm"
         >
@@ -41,35 +43,35 @@ export const Tab = ({
             Сайт журнала с системой рецензирования и редакционного управления
             соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ, DOAB)
           </DescText>
-          <svg src={m1img} />
+          {m1img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>Техническая поддержка</DescText>
-          <svg src={m2img} />
+          {m2img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Услуги рецензирования, редактирования, вёрстки и корректуры до
             финального PDF
           </DescText>
-          <svg src={m3img} />
+          {m3img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Маркетинговая и рекламная поддержка
           </DescText>
-          <svg src={m4img} />
+          {m4img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>Уникальный дизайн журнала</DescText>
-          <svg src={m5img} />
+          {m5img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Консультации и поддержка в индексации архивировании журналов в более
             чем 30 международных базах данных
           </DescText>
-          <svg src={m6img} />
+          {m6img && <Mark />}
         </DescItem>
         <NewButton
           isShowing={isShowing}
