@@ -19,6 +19,7 @@ import {
   TabletButton,
   PackageItemTab,
   ControlWrapper,
+  Icon,
 } from "./offer-slide.style";
 
 import { arrOfferInfoTab } from "./tabs";
@@ -53,7 +54,8 @@ export const OfferSlide = ({ ...props }) => {
             setTitle(e.target.textContent);
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
-          }}>
+          }}
+        >
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -100,7 +102,8 @@ export const OfferSlide = ({ ...props }) => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -119,7 +122,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={(e) => {
                 setTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -135,7 +139,8 @@ export const OfferSlide = ({ ...props }) => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -158,7 +163,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={(e) => {
                 setTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -174,7 +180,8 @@ export const OfferSlide = ({ ...props }) => {
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -201,7 +208,8 @@ export const OfferSlide = ({ ...props }) => {
               onClick={(e) => {
                 setTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton>Начать</TabletButton>
@@ -209,7 +217,7 @@ export const OfferSlide = ({ ...props }) => {
         </PackageColumn>
       </TableOffer>
       <ControlWrapper>
-        {arrOfferInfoTab.map(({ id, title, ...props }, index) => (
+        {arrOfferInfoTab.map(({ id, title, icon, ...props }, index) => (
           <PackageItemTab
             key={id}
             id={id}
@@ -220,7 +228,7 @@ export const OfferSlide = ({ ...props }) => {
               setChooseItemTab(arrOfferInfoTab[index]);
             }}
           >
-            <Standart />
+            <Icon src={icon} />
             <StyledText mt="sm">{title}</StyledText>
           </PackageItemTab>
         ))}
@@ -247,12 +255,14 @@ export const OfferSlide = ({ ...props }) => {
         title={title}
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}></OfferModal>
+        {...chooseItem}
+      ></OfferModal>
       <FormModal
         title={title}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
-        {...chooseItem}></FormModal>
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };

@@ -4,7 +4,7 @@ export const Standart = ({colorgrad, opacity,stopColor}) => {
       width="16"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      fill="#22222220"
       xmlns="http://www.w3.org/2000/svg"
     >
       <linearGradient x2="0.35" y2="1">

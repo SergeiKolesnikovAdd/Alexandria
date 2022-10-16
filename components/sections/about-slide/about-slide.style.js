@@ -120,7 +120,7 @@ export const ImgSlide = styled.img`
   object-fit: contain;
   width: 63vw;
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    width: 100vw;
+    width: 100%;
     align-self: center;
   }
 
