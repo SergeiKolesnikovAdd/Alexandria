@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Logo, ButtonSM, Name, QuestionsFormModal} from "components";
+import { Logo, ButtonSM, Name, FormModal} from "components";
 import {
   HeaderWrapper,
   HeaderMenu,
@@ -36,11 +36,7 @@ export const Header = () => {
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>
-      <QuestionsFormModal
-        isOpen={isOpenForm}
-        setOpen={setOpenForm}
-        title={title}
-      />
+      <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
     </>
   );
 };

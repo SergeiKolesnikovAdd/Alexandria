@@ -45,7 +45,6 @@ export const OfferModal = ({
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
               <Icon src={icon} />
-              {/* TODO: ПОДКЛЮЧИТЬ ИМПОРТ ЦВЕТА ИЛИ РАЗНЫХ СВГ(ЦВЕТОВЫЕ СХЕМЫ В OFFER-SLIDE/CONSTANT) CВГ В ASSETS И В COMMON*/}
             </Title>
             <Caption>{subtitle}</Caption>
             <Description mt="lg">

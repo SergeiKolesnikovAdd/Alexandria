@@ -76,6 +76,7 @@ export const Title = styled(H3)`
   text-align: left;
   color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
   transition: color 0.3s;
+  width: 35vw;
 
   ${applyPaddings}
   ${applyMargins}
@@ -125,7 +126,7 @@ export const TextWrapper = styled.div`
   transition-delay: 0.1s;
 `;
 
-export const StyledText = styled(Text)`
+export const StyledLinkText = styled(Text)`
   color: ${colors.red};
 
   &::after {
@@ -138,6 +139,13 @@ export const StyledText = styled(Text)`
   }
 `;
 
+export const StyledText = styled(Text)`
+  width: 23vw;
+  color: ${colors.white};
+`;
+
 export const H3Styled = styled(Text)`
   ${getCurrentFontSizeStyle("h3")};
+  width: 21vw;
+  color: ${colors.white};
 `;

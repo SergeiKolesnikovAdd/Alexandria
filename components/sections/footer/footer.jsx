@@ -50,7 +50,7 @@ export const Footer = () => {
             Адрес
           </Caption>
           <H3 mb={"lg"}>
-            624372, Россия, Тюмень, <br /> ул. Ленина, 17
+            398032, Россия, Липецк, <br /> ул. Циолковского, д 8/1
           </H3>
         </FooterColumn>
         <FooterColumn style={{ gridAutoFlow: "column" }}>
@@ -80,7 +80,7 @@ export const Footer = () => {
           <FooterLink mr={"lg"} href="#">
             Terms & Conditions
           </FooterLink>
-          <Deviant href="https://www.deviant-studio.com">
+          <Deviant href="https://www.deviant-studio.com" target={"_blank"}>
             Сделано в Deviant
           </Deviant>
         </FooterRowSecondBottom>
