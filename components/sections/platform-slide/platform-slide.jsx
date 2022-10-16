@@ -11,16 +11,43 @@ import {
   StyledPhoneBR,
   StyledImg,
 } from "./platform-slide.style";
-import { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 
 import { colors } from "styles";
 
 import img1 from "public/left-hand.png";
+import {debounce} from "../../../utils";
+
+function useScroll(platformRef) {
+  const handleScrollDebounce = debounce(handleScroll, 5);
+  const [scrollY, setScrollY] = useState(0);
+
+  function handleScroll(e) {
+    const offsetTop = platformRef.current.offsetTop;
+    const innerHeight = platformRef.current.scrollHeight;
+    const currentScrollY = window.scrollY;
+    const diff = (currentScrollY - (offsetTop - 2 * innerHeight));
+
+    if (diff > 0 && diff < 2 * innerHeight){
+      setScrollY(diff*0.2);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScrollDebounce);
+    return () => handleScrollDebounce;
+  }, []);
+
+  return scrollY;
+}
 
 export const PlatformSlide = ({ ...props }) => {
-  
-const [isOpenForm, setOpenForm] = useState(false);
-const [title, setTitle] = useState("");
+  const [isOpenForm, setOpenForm] = useState(false);
+  const [title, setTitle] = useState("");
+  const platformRef = useRef();
+  const scrollY = useScroll(platformRef);
+  //TODO: Используй значение scrollY для зуминга картинок
+
 
   // const ImgTimers = [
   //   {
@@ -102,7 +129,7 @@ const [title, setTitle] = useState("");
 
   return (
     <>
-      <ContentWrapper id="platform" {...props}>
+      <ContentWrapper ref={platformRef} id="platform" {...props}>
         <H3Styled>О платформе</H3Styled>
         <TextWrapper>
           <H2 mt="mdsm">

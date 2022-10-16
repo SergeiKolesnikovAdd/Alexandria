@@ -1,3 +1,4 @@
+import {useEffect, useRef, useState} from "react";
 import {
   LeftHand,
   RightHand,
@@ -5,11 +6,34 @@ import {
   FirstSlideWrapper,
 } from "./main-first-slide.style";
 import { ButtonMD, H3, H1, FormModal } from "components";
-import { useState } from "react";
+import {debounce} from "../../../utils";
+
+function useScroll() {
+  const handleScrollDebounce = debounce(handleScroll, 5);
+  const [scrollY, setScrollY] = useState(0);
+
+  function handleScroll(e) {
+    const clientHeight = window.innerHeight;
+    const currentScrollY = window.scrollY;
+    const diff = (currentScrollY - clientHeight * 0.4);
+
+    if (diff > 0 && diff < 300){
+      setScrollY(diff*0.2);
+    }
+  }
+
+  useEffect(() => {
+     window.addEventListener('scroll', handleScrollDebounce);
+    return () => handleScrollDebounce;
+  }, []);
+
+  return scrollY;
+}
 
 export const MainFirstSlide = ({...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [title, setTitle] = useState("");
+  const scrollY = useScroll();
 
   return (
     <>
@@ -38,8 +62,8 @@ export const MainFirstSlide = ({...props }) => {
           Начать работу
         </ButtonMD>
         <FirstSlideBGImageWrapper>
-          <LeftHand />
-          <RightHand />
+          <LeftHand scrollY={scrollY} />
+          <RightHand scrollY={scrollY}/>
         </FirstSlideBGImageWrapper>
       </FirstSlideWrapper>
       <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
