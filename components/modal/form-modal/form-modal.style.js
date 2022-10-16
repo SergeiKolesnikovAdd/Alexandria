@@ -75,7 +75,7 @@ export const FormWrapper = styled.form``;
 export const FormLabel = styled.label`
   font-family: ${fontFamilies.Font};
   color: ${colors.red};
-  ${getCurrentFontSizeStyle("caption")}
+  ${getCurrentFontSizeStyle("caption")};
   ${getCurrentPaddingStyle("bottom", "xxsm")};
 `;
 

@@ -1,4 +1,4 @@
-import { Caption, H3, Name} from "components";
+import { Caption, H3, Name } from "components";
 import { colors } from "styles";
 import { Telegram, Instagram, Twitter, Vk, Youtube } from "../../common";
 import {
@@ -42,15 +42,15 @@ export const Footer = () => {
           </FooterLink>
         </FooterColumn>
         <FooterColumn>
-          <Caption mb={"sm"} style={{ color: colors.red }}>
+          <Caption mb="sm" style={{ color: colors.red }}>
             Свяжитесь с нами
           </Caption>
-          <H3 mb={"lg"}>info@alexandrina.tech</H3>
-          <Caption mb={"sm"} style={{ color: colors.red }}>
+          <H3 mb="lg">info@alexandrina.tech</H3>
+          <Caption mb="sm" style={{ color: colors.red }}>
             Адрес
           </Caption>
-          <H3 mb={"lg"}>
-            398032, Россия, Липецк, <br /> ул. Циолковского, д 8/1
+          <H3 mb="lg">
+            398032, Россия, г. Липецк, <br /> ул. Циолковского, д 8/1
           </H3>
         </FooterColumn>
         <FooterColumn style={{ gridAutoFlow: "column" }}>
@@ -74,13 +74,13 @@ export const Footer = () => {
       <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
         <FooterRowSecondBottom>
-          <FooterLink mr={"lg"} href="#">
+          <FooterLink mr="lg" href="#">
             Privacy Policy
           </FooterLink>
-          <FooterLink mr={"lg"} href="#">
+          {/* <FooterLink mr={"lg"} href="#">
             Terms & Conditions
-          </FooterLink>
-          <Deviant href="https://www.deviant-studio.com" target={"_blank"}>
+          </FooterLink> */}
+          <Deviant href="https://www.deviant-studio.com" target="_blank">
             Сделано в Deviant
           </Deviant>
         </FooterRowSecondBottom>

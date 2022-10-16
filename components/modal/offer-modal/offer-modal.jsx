@@ -30,6 +30,8 @@ export const OfferModal = ({
   subtitle,
   isOpen,
   setOpen,
+  id,
+  formName,
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
@@ -57,7 +59,8 @@ export const OfferModal = ({
             </Description>
             <StyledButtonLG
               onClick={(e) => {
-                setTitle(e.target.textContent);
+                console.log(id);
+                setModalTitle(e.target.textContent);
                 setOpenForm(true);
               }}>
               Начать работу
@@ -65,7 +68,13 @@ export const OfferModal = ({
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
-      <FormModal title={modalTitle} setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal
+        formName={formName}
+        tariff={id}
+        modalTitle={modalTitle}
+        setOpen={setOpenForm}
+        isOpen={isOpenForm}
+      />
     </Modal>
   );
 };
