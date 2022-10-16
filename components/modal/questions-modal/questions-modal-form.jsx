@@ -7,7 +7,7 @@ import { postQuestion } from "utils/api"
 
 
 
-export const Form = withFormProvider(({ cost, discription, title }) => {
+export const Form = withFormProvider(() => {
   const [isChecked, setIsChecked] = useState(false);
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {

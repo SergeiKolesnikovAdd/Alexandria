@@ -19,7 +19,7 @@ export async function postQuestion(body) {
       method: 'POST',
       body: JSON.stringify(body),
     })
-    return false
+    return true
   } catch (e) {
     return new Error(e)
   }

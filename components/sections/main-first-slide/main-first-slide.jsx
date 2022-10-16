@@ -32,7 +32,7 @@ function useScroll() {
 
 export const MainFirstSlide = ({...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [title, setTitle] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
   const scrollY = useScroll();
 
   return (
@@ -57,16 +57,21 @@ export const MainFirstSlide = ({...props }) => {
           mx="lg"
           onClick={(e) => {
             setOpenForm(true);
-            setTitle(e.target.textContent);
+            setModalTitle(e.target.textContent);
           }}>
           Начать работу
         </ButtonMD>
         <FirstSlideBGImageWrapper>
           <LeftHand scrollY={scrollY} />
-          <RightHand scrollY={scrollY}/>
+          <RightHand scrollY={scrollY} />
         </FirstSlideBGImageWrapper>
       </FirstSlideWrapper>
-      <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal
+        formName="Первый слайд"
+        modalTitle={modalTitle}
+        setOpen={setOpenForm}
+        isOpen={isOpenForm}
+      />
     </>
   );
 };

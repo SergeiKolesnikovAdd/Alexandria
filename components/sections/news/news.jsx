@@ -19,7 +19,7 @@ import React, { useState } from "react";
 
 export const News = ({ ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [title, setTitle] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
 
   return (
     <>
@@ -54,15 +54,18 @@ export const News = ({ ...props }) => {
         <ButtonSM
           onClick={(e) => {
             setOpenForm(true);
-            setTitle(e.target.textContent);
+            setModalTitle(e.target.textContent);
           }}
           mt="xlg"
-          style={{ alignSelf: "center" }}
-        >
+          style={{ alignSelf: "center" }}>
           Оставить заявку
         </ButtonSM>
       </ContentWrapper>
-      <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal
+        modalTitle={modalTitle}
+        setOpen={setOpenForm}
+        isOpen={isOpenForm}
+      />
     </>
   );
 };

@@ -43,7 +43,7 @@ function useScroll(platformRef) {
 
 export const PlatformSlide = ({ ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [title, setTitle] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
   const platformRef = useRef();
   const scrollY = useScroll(platformRef);
   //TODO: Используй значение scrollY для зуминга картинок
@@ -192,10 +192,9 @@ export const PlatformSlide = ({ ...props }) => {
         <ButtonMD
           onClick={(e) => {
             setOpenForm(true);
-            setTitle(e.target.textContent);
+            setModalTitle(e.target.textContent);
           }}
-          mt="lg"
-        >
+          mt="lg">
           Начать работу
         </ButtonMD>
         {/* <StyledImg />
@@ -204,7 +203,12 @@ export const PlatformSlide = ({ ...props }) => {
       ))} */}
         {/* TODO: АНИМАЦИИ ПРИ СКРОЛЕ, УВЕЛИЧЕНИЕ КАРТИНОК */}
       </ContentWrapper>
-      <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal
+        formName="О платформе"
+        modalTitle={modalTitle}
+        setOpen={setOpenForm}
+        isOpen={isOpenForm}
+      />
     </>
   );
 };

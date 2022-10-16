@@ -9,7 +9,7 @@ import {
 
 export const Header = () => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [title, setTitle] = useState("");
+  const [modalTitle, setModalTitle] = useState("");
 
 
 
@@ -18,7 +18,7 @@ export const Header = () => {
       <HeaderWrapper>
         <HeaderTitle>
           <Logo />
-          <Name />
+          <Name ml="mdsm" />
         </HeaderTitle>
         <HeaderMenu>
           <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
@@ -30,13 +30,17 @@ export const Header = () => {
         <ButtonSM
           onClick={(e) => {
             setOpenForm(true);
-            setTitle(e.target.textContent);
-          }}
-        >
+            setModalTitle(e.target.textContent);
+          }}>
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>
-      <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
+      <FormModal
+        formName="Шапка"
+        modalTitle={modalTitle}
+        setOpen={setOpenForm}
+        isOpen={isOpenForm}
+      />
     </>
   );
 };

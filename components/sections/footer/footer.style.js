@@ -96,8 +96,9 @@ export const FooterRowSecondBottom = styled(FooterRowBottom)`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     /* justify-content: space-between;
     display: grid; */
+    line-height: 150%;
     grid-auto-flow: row;
-    grid-gap:12px;
+    grid-gap: 12px;
   }
 `;
 
@@ -184,7 +185,7 @@ export const FooterLogo = styled.a`
 export const FooterLink = styled.a`
   color: ${colors.black};
   font-family: ${fontFamilies.Font};
-  text-align: center;
+  text-align: start ;
   transition: opacity 0.3s;
   opacity: 0.4;
   ${applyMargins};
