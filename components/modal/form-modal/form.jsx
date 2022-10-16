@@ -29,12 +29,12 @@ export const Form =  withFormProvider(({ cost, discription, title, tariff="" }) 
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormLabel>Как вас зовут?</FormLabel>
+      <FormLabel>Как вас зовут?*</FormLabel>
       <InputField
         name="name"
         mb="md"
         propsInput={{ placeholder: "Ваше имя" }}
-        title="Name *"
+        title="Name"
       />
       <FormLabel>Электронная почта*</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />

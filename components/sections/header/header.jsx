@@ -18,7 +18,7 @@ export const Header = () => {
       <HeaderWrapper>
         <HeaderTitle>
           <Logo />
-          <Name ml="mdsm" />
+          <Name />
         </HeaderTitle>
         <HeaderMenu>
           <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
