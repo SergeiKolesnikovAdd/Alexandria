@@ -44,7 +44,8 @@ const data = [
 ];
 
 export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...props) => {
-
+console.log(getCurrentIndex());
+console.log(currentSlide);
   return (
     <>
       <SlideWrapper>
@@ -65,6 +66,7 @@ export const Slider = ({isNextDirection, currentSlide, getCurrentIndex,}, ...pro
             </TextWrapper>
           </Slide>
         ))}
+        
       </SlideWrapper>
     </>
   );

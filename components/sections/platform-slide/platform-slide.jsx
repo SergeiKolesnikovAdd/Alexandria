@@ -1,4 +1,4 @@
-import { H2, ButtonMD, FormModal, } from "components";
+import { H2, ButtonMD, FormModal } from "components";
 import {
   ContentWrapper,
   H3Styled,
@@ -11,12 +11,17 @@ import {
   StyledPhoneBR,
   StyledImg,
 } from "./platform-slide.style";
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { colors } from "styles";
 
-import img1 from "public/left-hand.png";
-import {debounce} from "../../../utils";
+import img1 from "public/platform1.png";
+import img2 from "public/platform2.png";
+import img3 from "public/platform3.png";
+import img4 from "public/platform4.png";
+import img5 from "public/platform5.png";
+import img6 from "public/platform6.png";
+import { debounce } from "../../../utils";
 
 function useScroll(platformRef) {
   const handleScrollDebounce = debounce(handleScroll, 5);
@@ -26,15 +31,15 @@ function useScroll(platformRef) {
     const offsetTop = platformRef.current.offsetTop;
     const innerHeight = platformRef.current.scrollHeight;
     const currentScrollY = window.scrollY;
-    const diff = (currentScrollY - (offsetTop - 2 * innerHeight));
+    const diff = currentScrollY - (offsetTop - 2 * innerHeight);
 
-    if (diff > 0 && diff < 2 * innerHeight){
-      setScrollY(diff*0.2);
+    if (diff > 0 && diff < 2 * innerHeight) {
+      setScrollY(diff / innerHeight);
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScrollDebounce);
+    window.addEventListener("scroll", handleScrollDebounce);
     return () => handleScrollDebounce;
   }, []);
 
@@ -46,86 +51,74 @@ export const PlatformSlide = ({ ...props }) => {
   const [title, setTitle] = useState("");
   const platformRef = useRef();
   const scrollY = useScroll(platformRef);
-  //TODO: Используй значение scrollY для зуминга картинок
 
+  const ImgTimers = [
+    {
+      id: 1,
+      style: {
+        position: "absolute",
+        right: "3%",
+        top: "21%",
+        transition: `transition: transform 3s 1s linear`,
+      },
+      img: img1.src,
+    },
+    {
+      id: 2,
 
-  // const ImgTimers = [
-  //   {
-  //     id: 1,
-  //     // styles: "transition: scale 3s 1s, position: absolute, right: 0, top: 5%,",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transform 3s 1s",
-  //       position: "absolute",
-  //       right: "0",
-  //       top: "5%",
-  //     },
-  //     img: img1.src,
-  //   },
-  //   {
-  //     id: 2,
-  //     // styles: "transition: scale 3s 2s, position: absolute, left: 0%, top: 5%",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transform 3s 0.5s",
-  //       position: "absolute",
-  //       left: "0",
-  //       top: "5%",
-  //     },
-  //     img: img1.src,
-  //   },
-  //   {
-  //     id: 3,
-  //     // styles: "transition: scale 3s 2s, position: absolute, left: 5%, top: -5%",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transform 3s 0.7s",
-  //       position: "absolute",
-  //       left: "5%",
-  //       top: "-5%",
-  //     },
-  //     img: img1.src,
-  //   },
-  //   {
-  //     id: 4,
-  //     // styles:
-  //     //   "transition: scale 3s 2s, position: absolute, left: 20%, bottom: 5%",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transform 3s 3s",
-  //       position: "absolute",
-  //       left: "20%",
-  //       bottom: "5%",
-  //     },
-  //     img: img1.src,
-  //   },
-  //   {
-  //     id: 5,
-  //     // styles:
-  //     //   "transition: scale 3s 2s, position: absolute, right: 10%, bottom: -5%",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transfrom 3s 2.5s",
-  //       position: "absolute",
-  //       right: "10%",
-  //       bottom: "-5%",
-  //     },
-  //     img: img1.src,
-  //   },
-  //   {
-  //     id: 6,
-  //     // styles:
-  //     //   "transition: scale 3s 2s, position: absolute, right: 20%, bottom: 15%",
-  //     style: {
-  //       transform: "scale(2.5, 2.5)",
-  //       transition: "transform 3s 1.5s",
-  //       position: "absolute",
-  //       right: "20%",
-  //       bottom: "15%",
-  //     },
-  //     img: img1.src,
-  //   },
-  // ];
+      style: {
+        position: "absolute",
+        left: "3%",
+        top: "16%",
+        transition: `transition: transform 1s 2s linear`,
+      },
+      img: img2.src,
+    },
+    {
+      id: 3,
+
+      style: {
+        position: "absolute",
+        left: "20%",
+        top: "-15%",
+        transition: `transition: transform 2s 2s linear`,
+      },
+      img: img3.src,
+    },
+    {
+      id: 4,
+
+      style: {
+        position: "absolute",
+        left: "20%",
+        bottom: "5%",
+        transition: `transition: transform 1s 3s linear`,
+      },
+      img: img4.src,
+    },
+    {
+      id: 5,
+
+      style: {
+        position: "absolute",
+        right: "10%",
+        bottom: "-5%",
+        transition: `transition: transform 3s 3s linear`,
+      },
+      img: img5.src,
+    },
+    {
+      id: 6,
+
+      style: {
+        position: "absolute",
+        right: "25%",
+        bottom: "10%",
+        transition: `transition: transform 3s 2s linear`,
+      },
+      img: img6.src,
+    },
+  ];
 
   return (
     <>
@@ -198,11 +191,10 @@ export const PlatformSlide = ({ ...props }) => {
         >
           Начать работу
         </ButtonMD>
-        {/* <StyledImg />
-      {ImgTimers.map(({ id, img, style }) => (
-        <StyledImg key={id} src={img} style={style} />
-      ))} */}
-        {/* TODO: АНИМАЦИИ ПРИ СКРОЛЕ, УВЕЛИЧЕНИЕ КАРТИНОК */}
+        <StyledImg />
+        {ImgTimers.map(({ id, img, style, }) => (
+          <StyledImg key={id} src={img} style={style} scrollY={scrollY} />
+        ))}
       </ContentWrapper>
       <FormModal title={title} setOpen={setOpenForm} isOpen={isOpenForm} />
     </>

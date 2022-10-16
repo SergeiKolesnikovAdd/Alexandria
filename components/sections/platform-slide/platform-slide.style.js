@@ -94,4 +94,5 @@ export const StyledImg = styled.img`
   object-fit: cover;
   z-index: 200;
   overflow: hidden;
+  ${({ scrollY }) => scrollY && `transform: scale(${scrollY});`};
 `;
