@@ -10,6 +10,7 @@ import {
   FooterRowBottom,
   FooterRowflex,
   FooterRowGrid,
+  FooterRowPhone,
   FooterRowSecondBottom,
   FooterWrapper,
   IconAlexandrina,
@@ -19,12 +20,12 @@ import {
 export const Footer = () => {
   return (
     <FooterWrapper>
-      <FooterRow my="xxxlg">
+      <FooterRow my="xxlg">
         <FooterLogo>
           <IconAlexandrina />
           <Name />
         </FooterLogo>
-        <FooterColumn>
+        {/* <FooterColumn>
           <FooterLink href="#about" mb="md">
             Что мы предлагаем?
           </FooterLink>
@@ -40,20 +41,26 @@ export const Footer = () => {
           <FooterLink href="#faq" mb="md">
             Часто задаваемые вопросы
           </FooterLink>
-        </FooterColumn>
-        <FooterColumn>
-          <Caption mb="sm" style={{ color: colors.red }}>
-            Свяжитесь с нами
-          </Caption>
-          <H3 mb="lg">info@alexandrina.tech</H3>
-          <Caption mb="sm" style={{ color: colors.red }}>
-            Адрес
-          </Caption>
-          <H3 mb="lg">
-            398032, Россия, г. Липецк, <br /> ул. Циолковского, д 8/1
-          </H3>
-        </FooterColumn>
-        <FooterColumn style={{ gridAutoFlow: "column" }}>
+        </FooterColumn> */}
+        <FooterRowPhone>
+          <FooterColumn>
+            <Caption mb="sm" style={{ color: colors.red }}>
+              Свяжитесь с нами
+            </Caption>
+            <H3 mb="lg">info@alexandrina.tech</H3>
+          </FooterColumn>
+        </FooterRowPhone>
+        <FooterRowPhone>
+          <FooterColumn>
+            <Caption mb="sm" style={{ color: colors.red }}>
+              Адрес
+            </Caption>
+            <H3 mb="lg">
+              398032, Россия, г. Липецк, <br /> ул. Циолковского, д 8/1
+            </H3>
+          </FooterColumn>
+        </FooterRowPhone>
+        {/* <FooterColumn style={{ gridAutoFlow: "column" }}>
           <LogoWrapper>
             <Telegram />
           </LogoWrapper>
@@ -69,7 +76,7 @@ export const Footer = () => {
           <LogoWrapper>
             <Youtube />
           </LogoWrapper>
-        </FooterColumn>
+        </FooterColumn> */}
       </FooterRow>
       <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
