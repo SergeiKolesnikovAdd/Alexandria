@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d44ce157-d2df-443d-9f88-bd1723e918b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modal/offer-modal/offer-modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/offer-modal/offer-modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modal/offer-modal/offer-modal.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/modal/offer-modal/offer-modal.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/footer/footer.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/footer/footer.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sections/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/header/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/button-md/button-md.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/button-md/button-md.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/global.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.style.js" afterDir="false" />
+    <list default="true" id="7d4d9849-f211-4011-bd2a-795b8528a937" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/main-first-slide/main-first-slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/main-first-slide/main-first-slide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/main-first-slide/main-first-slide.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/main-first-slide/main-first-slide.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/platform-slide/platform-slide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/platform-slide/platform-slide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +15,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -35,13 +28,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2EzlSJLalqKPRlAAJEtd2mao6iL" />
+  <component name="ProjectId" id="2GCkPIkBBWxADw1kIMzVQFiFAnP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -51,11 +44,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -63,19 +56,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d44ce157-d2df-443d-9f88-bd1723e918b6" name="Changes" comment="" />
-      <created>1663606292462</created>
+      <changelist id="7d4d9849-f211-4011-bd2a-795b8528a937" name="Changes" comment="" />
+      <created>1665899927641</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663606292462</updated>
-      <workItem from="1663606294254" duration="1077000" />
+      <updated>1665899927641</updated>
+      <workItem from="1665899930028" duration="3990000" />
     </task>
     <servers />
   </component>

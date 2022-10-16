@@ -8,6 +8,7 @@ import {
   MainFirstSlide,
   OfferSlide,
   PlatformSlide,
+  News,
 } from "components";
 
 import React from "react";
@@ -17,12 +18,13 @@ const Home = () => {
     <>
       <Header />
       <MainFirstSlide pt="xxxlg" />
-      <AboutSlide pt="xxxlg"/>
-      <FocusSlide></FocusSlide>
-      <PlatformSlide mt="xxxlg"></PlatformSlide>
-      <OfferSlide pt="xxxlg"></OfferSlide>
-      <AdvantageSlide></AdvantageSlide>
-      <FaqSlide pt="xxxlg"></FaqSlide>
+      <AboutSlide pt="xxxlg" />
+      <FocusSlide/>
+      <PlatformSlide mt="xxxlg"/>
+      <OfferSlide pt="xxxlg"/>
+      <AdvantageSlide/>
+      <News mt="xxxlg"/>
+      <FaqSlide pt="xxxlg"/>
       <Footer />
     </>
   );

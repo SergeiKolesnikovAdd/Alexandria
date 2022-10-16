@@ -46,16 +46,14 @@ export const FirstSlideBGImageWrapper = styled.div`
   }
 `;
 
-const moveRight = ({}) => (
-  addEventListener(scrolly, rightDirection)
-)
-
 export const LeftHand = styled.img`
   position: absolute;
   left: 0;
   width: 50%;
   height: 30vw;
   content: url(${imgLeft.src});
+  transition: transform 0.25s linear;
+  ${({scrollY}) => (scrollY && `transform: translateX(-${scrollY}px);`)};
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
@@ -68,7 +66,9 @@ export const RightHand = styled.img`
   width: 50%;
   height: 30vw;
   content: url(${imgRight.src});
-
+  transition: transform 0.2s linear;
+  ${({scrollY}) => (scrollY && `transform: translateX(${scrollY}px);`)};
+  
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
   }

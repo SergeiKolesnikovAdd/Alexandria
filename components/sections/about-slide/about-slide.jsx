@@ -38,9 +38,9 @@ export const AboutSlide = ({ ...props }) => {
             книг открытого доступа. Наше модульное программное обеспечение
             позволяет вам вести издательскую деятельность легко и просто.
           </StyledDescription>
-          <Link href="/presentation" target="_blank">
+          {/* <Link href="/presentation" target="_blank">
             <StyledText>Презентация,&nbsp;PDF</StyledText>
-          </Link>
+          </Link> */}
         </TextContainer>
       </ButtonRow>
       <MediaContainer>

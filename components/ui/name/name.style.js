@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { applyPaddings } from "styles";
+import { applyMargins } from "styles";
 import { breakpointsWidth } from "styles";
 import { getVW } from "styles";
 import { getCurrentPaddingStyle } from "styles";
@@ -8,7 +10,9 @@ export const NameWrapper = styled.svg`
   height: 64px;
   display: inline-block;
   cursor: pointer;
-  ${getCurrentPaddingStyle("left", "mdsm")};
+
+  ${applyPaddings}
+  ${applyMargins}
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 125px;
     height: 18px;

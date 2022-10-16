@@ -2,7 +2,11 @@ import {
   colors,
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
-  applyMargins,getCurrentFontSizeStyle, fontFamilies, hexToRGBA,
+  applyMargins,
+  getCurrentFontSizeStyle,
+  fontFamilies,
+  hexToRGBA,
+  breakpointsWidth,
 } from "styles";
 import styled from "@emotion/styled";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
@@ -20,6 +24,11 @@ export const FormModalInner = styled.div`
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    ${getCurrentPaddingStyle("top", "xxxlg")};
+    ${getCurrentPaddingStyle("horizontal", "xxlg")};
+    ${getCurrentPaddingStyle("bottom", "xxlg")};
+  }
 `;
 
 export const ContentSection = styled.div`
@@ -30,6 +39,10 @@ export const ContentSection = styled.div`
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    width: 100%;
+  }
 `;
 
 export const ClsButton = styled(CloseButton)`
@@ -57,9 +70,7 @@ export const Title = styled.div`
   ${applyMargins};
 `;
 
-export const FormWrapper = styled.form`
-
-`;
+export const FormWrapper = styled.form``;
 
 export const FormLabel = styled.label`
   font-family: ${fontFamilies.Font};
@@ -69,14 +80,14 @@ export const FormLabel = styled.label`
 `;
 
 export const FormLabelGray = styled(FormLabel)`
-  opacity:0.4;
+  opacity: 0.4;
   color: ${colors.black};
   ${getCurrentPaddingStyle("left", "xxsm")};
 `;
 
 export const ErrorField = styled.div`
-${activeErrorField};
-height:40px;
+  ${activeErrorField};
+  height: 40px;
 `;
 export const ErrorMessage = styled.p`
   height: 40px;

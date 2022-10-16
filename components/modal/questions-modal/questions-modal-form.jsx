@@ -8,7 +8,7 @@ import { postQuestion } from "utils/api"
 
 
 export const Form = withFormProvider(({ cost, discription, title }) => {
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState(false);
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {
     postQuestion({
@@ -28,7 +28,7 @@ export const Form = withFormProvider(({ cost, discription, title }) => {
 
   const handleCheck = () => {
     setIsChecked((prev) => !prev);
-  }
+  };
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +41,7 @@ export const Form = withFormProvider(({ cost, discription, title }) => {
       />
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel>Дополнительная информация</FormLabel>
+      <FormLabel>Вопрос интересующий вас</FormLabel>
       <TextAreaField name="message" rules={{}} />
       <Checkbox
         isActive={isChecked}

@@ -32,6 +32,8 @@ import { Slider } from "./ui/slider";
 import { ButtonSliderLeft } from "./ui/button-slider-left";
 import { ButtonSliderRight } from "./ui/button-slider-right";
 import { DropDown } from "./ui/drop-down";
+import { Tab } from "./ui/tab";
+
 import {
   InputField,
   TextAreaField,
@@ -54,6 +56,7 @@ import { OfferSlide } from "./sections/offer-slide";
 import { AboutSlide } from "./sections/about-slide";
 import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
+import { News } from "./sections/news";
 
 /*    Импорты модальных окон    */
 import { OfferModal } from "./modal";
@@ -100,4 +103,6 @@ export {
   AccordionSmall,
   FormModal,
   QuestionsFormModal,
+  Tab,
+  News,
 };

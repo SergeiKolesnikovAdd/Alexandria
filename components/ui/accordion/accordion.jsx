@@ -14,19 +14,19 @@ import {
   TextWrapper,
   LinkWrapper,
   StyledText,
+  StyledLinkText,
   H3Styled,
 } from "./accordion.style";
 
-export const Accordion = (props) => {
-  const [isShowing, setIsShowing] = useState(false);
-
-  const toggle = () => {
-    setIsShowing((prev) => !prev);
-  };
+export const Accordion = ({id, isShowing, ...props}) => {
+  
+  // const toggle = () => {
+  //   setIsShowing((prev) => !prev);
+  // };
 
   return (
     <AccordionWrapper {...props}>
-      <AccordionButton onClick={toggle} isShowing={isShowing}>
+      <AccordionButton isShowing={isShowing}>
         <Title isShowing={isShowing}>
           {props.title}
           <br />
@@ -39,25 +39,25 @@ export const Accordion = (props) => {
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
         <TextWrapper style={{ marginRight: "25vw" }} isShowing={isShowing}>
-          <H3Styled mr="mdsm" style={{ width: "50vw", color: colors.white }}>
+          <H3Styled mr="mdsm" style={{ width: "21vw", color: colors.white }}>
             {props.desc1}
           </H3Styled>
-          {/* <Text style={{ width: "30vw", color: colors.white }}>
+          <StyledText>
             {props.desc2}
-          </Text> */}
+          </StyledText>
         </TextWrapper>
         {/* <LinkWrapper>
           <Text style={{ color: colors.white, opacity: "0.4" }}>
             {props.descLink}
           </Text>
           <Link href="/" mt="md">
-            <StyledText>{props.Link1}</StyledText>
+            <StyledLinkText>{props.Link1}</StyledText>
           </Link>
           <Link href="/" mt="sm">
-            <StyledText>{props.Link2}</StyledText>
+            <StyledLinkText>{props.Link2}</StyledText>
           </Link>
           <Link href="/" mt="sm">
-            <StyledText>{props.Link3}</StyledText>
+            <StyledLinkText>{props.Link3}</StyledText>
           </Link>
         </LinkWrapper> */}
       </InnerContent>

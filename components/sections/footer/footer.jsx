@@ -1,5 +1,4 @@
-import { Name } from "components";
-import { Caption, Logo, H3} from "components";
+import { Caption, H3, Name} from "components";
 import { colors } from "styles";
 import { Telegram, Instagram, Twitter, Vk, Youtube } from "../../common";
 import {
@@ -11,7 +10,9 @@ import {
   FooterRowBottom,
   FooterRowflex,
   FooterRowGrid,
+  FooterRowSecondBottom,
   FooterWrapper,
+  IconAlexandrina,
   LogoWrapper,
 } from "./footer.style";
 
@@ -20,7 +21,7 @@ export const Footer = () => {
     <FooterWrapper>
       <FooterRow my="xxxlg">
         <FooterLogo>
-          <Logo />
+          <IconAlexandrina />
           <Name />
         </FooterLogo>
         <FooterColumn>
@@ -44,12 +45,12 @@ export const Footer = () => {
           <Caption mb={"sm"} style={{ color: colors.red }}>
             Свяжитесь с нами
           </Caption>
-          <H3 mb={"lg"}>info@alexandrina.ru</H3>
+          <H3 mb={"lg"}>info@alexandrina.tech</H3>
           <Caption mb={"sm"} style={{ color: colors.red }}>
             Адрес
           </Caption>
           <H3 mb={"lg"}>
-            624372, Россия, Тюмень, <br /> ул. Ленина, 17
+            398032, Россия, Липецк, <br /> ул. Циолковского, д 8/1
           </H3>
         </FooterColumn>
         <FooterColumn style={{ gridAutoFlow: "column" }}>
@@ -72,17 +73,17 @@ export const Footer = () => {
       </FooterRow>
       <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
-        <FooterRowBottom>
+        <FooterRowSecondBottom>
           <FooterLink mr={"lg"} href="#">
             Privacy Policy
           </FooterLink>
           <FooterLink mr={"lg"} href="#">
             Terms & Conditions
           </FooterLink>
-          <Deviant mb={"sm"} href="https://www.deviant-studio.com">
+          <Deviant href="https://www.deviant-studio.com" target={"_blank"}>
             Сделано в Deviant
           </Deviant>
-        </FooterRowBottom>
+        </FooterRowSecondBottom>
       </FooterRowBottom>
     </FooterWrapper>
   );
