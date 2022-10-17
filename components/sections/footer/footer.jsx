@@ -81,7 +81,7 @@ export const Footer = () => {
       <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
         <FooterRowSecondBottom>
-          <FooterLink mr="lg" href="#">
+          <FooterLink mr="lg" href="../../../pages/politica.html">
             Privacy Policy
           </FooterLink>
           {/* <FooterLink mr={"lg"} href="#">
