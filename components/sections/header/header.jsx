@@ -38,9 +38,9 @@ export const Header = ({ isOpenForm, setOpenForm }) => {
           </HeaderMenuItem>
         </HeaderMenu>
         <ButtonSM
-          onClick={(e) => {
+          onClick={() => {
+            setModalTitle("Оставить заявку");
             setOpenForm(true);
-            setModalTitle(e.target.textContent);
           }}
         >
           Оставить заявку

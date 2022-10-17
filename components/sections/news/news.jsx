@@ -17,12 +17,8 @@ import { ButtonSM, H2, AccordionSmall, FormModal,} from "components";
 import { fontSizes } from "styles";
 import React, { useState } from "react";
 
-export const News = ({
-  isOpenForm,
-  setOpenForm,
-  ...props
-}) => {
-  // const [isOpenForm, setOpenForm] = useState(false);
+export const News = ({...props}) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
   return (
