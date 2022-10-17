@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Logo, ButtonSM, Name, FormModal} from "components";
 import {
   HeaderWrapper,
@@ -7,34 +6,34 @@ import {
   HeaderMenuItem,
 } from "./header.style";
 import Link from "next/link";
+import { useState } from "react";
 
-export const Header = () => {
-  const [isOpenForm, setOpenForm] = useState(false);
+export const Header = ({ isOpenForm, setOpenForm }) => {
   const [modalTitle, setModalTitle] = useState("");
 
   return (
     <>
-      <FormModal isOpen={isOpenForm} />
-      <HeaderWrapper isOpen={isOpenForm}>
+      <FormModal isOpenForm={isOpenForm} setOpenForm={setOpenForm} />
+      <HeaderWrapper isOpenForm={isOpenForm}>
         <HeaderTitle>
           <Link href="/">
             <Logo />
           </Link>
           <Link href="/">
-            <Name isOpen={isOpenForm} ml="mdsm" />
+            <Name isOpenForm={isOpenForm} ml="mdsm" />
           </Link>
         </HeaderTitle>
         <HeaderMenu>
-          <HeaderMenuItem isOpen={isOpenForm} href="#about">
+          <HeaderMenuItem isOpenForm={isOpenForm} href="#about">
             О платформе
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isOpenForm} href="#offer">
+          <HeaderMenuItem isOpenForm={isOpenForm} href="#offer">
             Тарифы
           </HeaderMenuItem>
           <HeaderMenuItem isOpen={isOpenForm} href="#focus">
             Клиенты
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isOpenForm} href="#faq">
+          <HeaderMenuItem isOpenForm={isOpenForm} href="#faq">
             FAQ
           </HeaderMenuItem>
         </HeaderMenu>

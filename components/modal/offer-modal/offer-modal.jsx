@@ -32,10 +32,11 @@ export const OfferModal = ({
   setOpen,
   id,
   formName,
+  modalTitle,
+  setModalTitle,
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [modalTitle, setModalTitle] = useState("");
 
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
@@ -58,11 +59,11 @@ export const OfferModal = ({
               <Text>{textMarketing}</Text>
             </Description>
             <StyledButtonLG
-              onClick={(e) => {
+              onClick={() => {
                 console.log(id);
-                setModalTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </StyledButtonLG>
           </ContentWrapper>
@@ -72,6 +73,7 @@ export const OfferModal = ({
         formName={formName}
         tariff={id}
         modalTitle={modalTitle}
+        setModalTitle={setModalTitle}
         setOpen={setOpenForm}
         isOpen={isOpenForm}
       />

@@ -30,8 +30,12 @@ function useScroll() {
   return scrollY;
 }
 
-export const MainFirstSlide = ({...props }) => {
-  const [isOpenForm, setOpenForm] = useState(false);
+export const MainFirstSlide = ({
+  isOpenForm,
+  setOpenForm,
+  ...props
+}) => {
+  // const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const scrollY = useScroll();
 
@@ -58,7 +62,8 @@ export const MainFirstSlide = ({...props }) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-          }}>
+          }}
+        >
           Начать работу
         </ButtonMD>
         <FirstSlideBGImageWrapper>

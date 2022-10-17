@@ -17,8 +17,12 @@ import { ButtonSM, H2, AccordionSmall, FormModal,} from "components";
 import { fontSizes } from "styles";
 import React, { useState } from "react";
 
-export const News = ({ ...props }) => {
-  const [isOpenForm, setOpenForm] = useState(false);
+export const News = ({
+  isOpenForm,
+  setOpenForm,
+  ...props
+}) => {
+  // const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
   return (
@@ -57,7 +61,8 @@ export const News = ({ ...props }) => {
             setModalTitle(e.target.textContent);
           }}
           mt="xlg"
-          style={{ alignSelf: "center" }}>
+          style={{ alignSelf: "center" }}
+        >
           Оставить заявку
         </ButtonSM>
       </ContentWrapper>
