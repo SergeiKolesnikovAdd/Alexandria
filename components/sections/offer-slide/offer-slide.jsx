@@ -24,15 +24,17 @@ import {
 
 import { arrOfferInfoTab } from "./tabs";
 
-export const OfferSlide = ({ ...props }) => {
+export const OfferSlide = ({
+  isOpenForm,
+  setOpenForm,
+  ...props
+}) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
-  const [isOpenForm, setOpenForm] = useState(false);
+  // const [isOpenForm, setOpenForm] = useState(false);
   const [chooseItemTab, setChooseItemTab] = useState(arrOfferInfoTab[1]);
   const [modalTitle, setModalTitle] = useState("");
   const [formName, setFormName] = useState("");
-
-
 
   return (
     <ContentWrapper {...props} id="offer">
@@ -58,7 +60,8 @@ export const OfferSlide = ({ ...props }) => {
             setModalTitle(e.target.textContent);
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
-          }}>
+          }}
+        >
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -100,11 +103,13 @@ export const OfferSlide = ({ ...props }) => {
             <Standart />
             <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
-              onClick={() => {
+              onClick={(e) => {
+                setModalTitle("Пакет Стандарт");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -124,10 +129,19 @@ export const OfferSlide = ({ ...props }) => {
                 setFormName("Пакет Стандарт");
                 setModalTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
-            <TabletButton>Начать</TabletButton>
+            <TabletButton
+              onClick={(e) => {
+                setFormName("Пакет Стандарт");
+                setModalTitle(e.target.textContent);
+                setOpenForm(true);
+              }}
+            >
+              Начать
+            </TabletButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -136,10 +150,12 @@ export const OfferSlide = ({ ...props }) => {
             <StyledText mt="sm">Пакет Комфорт</StyledText>
             <StyledCaption
               onClick={() => {
+                setModalTitle("Пакет Комфорт");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -163,10 +179,19 @@ export const OfferSlide = ({ ...props }) => {
                 setFormName("Пакет Комфорт");
                 setModalTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
-            <TabletButton>Начать</TabletButton>
+            <TabletButton
+              onClick={(e) => {
+                setFormName("Пакет Комфорт");
+                setModalTitle(e.target.textContent);
+                setOpenForm(true);
+              }}
+            >
+              Начать
+            </TabletButton>
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
@@ -175,10 +200,12 @@ export const OfferSlide = ({ ...props }) => {
             <StyledText mt="sm">Пакет Премиум</StyledText>
             <StyledCaption
               onClick={() => {
+                setModalTitle("Пакет Премиум");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItem>
@@ -206,10 +233,19 @@ export const OfferSlide = ({ ...props }) => {
                 setFormName("Пакет Премиум");
                 setModalTitle(e.target.textContent);
                 setOpenForm(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
-            <TabletButton>Начать</TabletButton>
+            <TabletButton
+              onClick={(e) => {
+                setFormName("Пакет Премиум");
+                setModalTitle(e.target.textContent);
+                setOpenForm(true);
+              }}
+            >
+              Начать
+            </TabletButton>
           </PackageItem>
         </PackageColumn>
       </TableOffer>
@@ -223,7 +259,8 @@ export const OfferSlide = ({ ...props }) => {
             isOpen={chooseItemTab.id === id}
             onClick={() => {
               setChooseItemTab(arrOfferInfoTab[index]);
-            }}>
+            }}
+          >
             <Icon src={icon} />
             <StyledText mt="sm">{modalTitle}</StyledText>
           </PackageItemTab>
@@ -248,16 +285,19 @@ export const OfferSlide = ({ ...props }) => {
       {console.log(arrOfferInfoTab)}
       {console.log(chooseItem)}
       <OfferModal
+        modalTitle={modalTitle}
         formName={formName}
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}></OfferModal>
+        {...chooseItem}
+      ></OfferModal>
       <FormModal
         formName={formName}
         modalTitle={modalTitle}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
-        {...chooseItem}></FormModal>
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };
