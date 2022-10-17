@@ -1,59 +1,67 @@
 import { selectServicesOptions } from "./constants";
-import {ButtonMD, DropDownField, TextAreaField, InputField} from "components";
+import {ButtonMD, DropDownField, TextAreaField, InputField, Checkbox} from "components";
 import { useFormContext } from "react-hook-form";
 import { FormLabelGray, FormLabel, FormWrapper, ErrorField } from "./form-modal.style";
 import { withFormProvider } from "utils";
-import { Checkbox } from "components";
 import { useState } from "react";
-import { postContact } from "utils";
+import { postMain } from "utils/api";
 
-export const Form =  withFormProvider(({ cost, discription, title }) => {
+export const Form =  withFormProvider(({tariff="", formName}) => {
   const [isChecked, setIsChecked] = useState(false)
 
   const { handleSubmit } = useFormContext();
-  const onSubmit = (data) => { console.log(data); };
+  // const onSubmit = (data) => { console.log(data); };
 
-  // const onSubmit = (data) => {
-  //   postContact({ ...data, titles: [data?.titles || ""] })
-  //     .then(() => {
-  //       setModalOpen(true);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  const onSubmit = (data) => {
+    postMain({
+      ...data,
+      email: data.email,
+      name: data.name,
+      journalName: data.journalName,
+      action: data.action,
+      tariff: tariff,
+      message: data.message,
+      formName: formName,
+    })
+      .then(() => {
+        // setOpen(true)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  const handleCheck = () => {
-    setIsChecked((prev) => !prev);
-  }
+    const handleCheck = () => {
+      setIsChecked((prev) => !prev);
+    };
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormLabel>Как вас зовут?</FormLabel>
+      <FormLabel>Как вас зовут?*</FormLabel>
       <InputField
         name="name"
         mb="md"
         propsInput={{ placeholder: "Ваше имя" }}
-        title="Name *"
+        title="Name"
       />
       <FormLabel>Электронная почта*</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel>
+      <FormLabel >
         Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
       </FormLabel>
-      <InputField mb="md" name="magazine" />
+      <InputField rules={{}} mb="md" name="journalName" />
       <FormLabel>Что вас интересует</FormLabel>
       <DropDownField
         mb="md"
         title="Выберите из списка"
-        name="services"
+        name="action"
         options={selectServicesOptions}
       />
       <FormLabel>
         Дополнительная информация
         <FormLabelGray>(Не обязательно)</FormLabelGray>
       </FormLabel>
-      <TextAreaField name="about" rules={{}} />
+      <TextAreaField name="message" rules={{}} />
       <Checkbox
         isActive={isChecked}
         setActive={handleCheck}

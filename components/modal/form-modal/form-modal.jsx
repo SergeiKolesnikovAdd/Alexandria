@@ -3,12 +3,7 @@ import { H2, Modal } from "components";
 import { Form } from "./form"
 import { colors } from "styles";
 
-export const FormModal = ({
-  title,
-  isOpen,
-  setOpen,
-  ...props
-}) => {
+export const FormModal = ({ modalTitle, tariff, formName, isOpen, setOpen, ...props }) => {
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <FormModalInner>
@@ -16,11 +11,11 @@ export const FormModal = ({
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
           <ContentWrapper>
             <Title mb="xsm">
-              <H2 style={{color: colors.black}} mb="mdlg" mt="xlg" mr="mdsm">
-                {title}
+              <H2 style={{ color: colors.black }} mb="mdlg" mt="xlg" mr="mdsm">
+                {modalTitle}
               </H2>
             </Title>
-            <Form />
+            <Form tariff={tariff} formName={formName} />
           </ContentWrapper>
         </ContentSection>
       </FormModalInner>
