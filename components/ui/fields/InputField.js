@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from "prop-types";
 import { Controller, useFormContext } from "react-hook-form";
 import { Input } from "../input";
+import { Warning } from 'components';
 
 export const InputField = ({ name, rules = null, normalizer, ...props }) => {
   const { control, formState: { errors } } = useFormContext();
@@ -29,7 +30,7 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
               onChange(value);
             }
           }}
-          error={errors?.[name]?.message}
+          error={  <span style={{paddingTop:"15px"}}><Warning/>  `{errors?.[name]?.message}` </span>}
         />
       )}
     />
