@@ -23,9 +23,8 @@ export const OfferModalInner = styled.div`
   background-color: ${hexToRGBA(colors.black, 0.9)};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
-  ${getCurrentPaddingStyle("top", "xlg")};
+  ${getCurrentPaddingStyle("top", "xxlg")};
   overflow: hidden;
-  z-index: 500;
 `;
 
 export const ContentSection = styled.div`
@@ -36,8 +35,9 @@ export const ContentSection = styled.div`
   border-radius: 48px;
   position: relative;
   overflow: hidden;
-  height : 764px;
+  height: 764px;
   opacity: 1;
+  ${getCurrentMarginStyle("top", "mdsm")}
 `;
 
 export const ContentWrapper = styled.div`

@@ -92,6 +92,7 @@ export const StyledImg = styled.img`
   height: 7vw;
   border-radius: 32px;
   object-fit: cover;
-  z-index: 200;
+  z-index: 50;
   overflow: hidden;
+  ${({ scrollY }) => scrollY && `transform: scale(${scrollY});`};
 `;
