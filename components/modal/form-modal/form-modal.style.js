@@ -24,6 +24,8 @@ export const FormModalInner = styled.div`
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
+  overflow: hidden;
+  
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     ${getCurrentPaddingStyle("top", "xxxlg")};
     ${getCurrentPaddingStyle("horizontal", "xxlg")};
@@ -33,12 +35,14 @@ export const FormModalInner = styled.div`
 
 export const ContentSection = styled.div`
   width: 50%;
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
   ${getCurrentMarginStyle("top", "mdsm")};
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     width: 100%;
@@ -53,12 +57,14 @@ export const ClsButton = styled(CloseButton)`
 
 export const ContentWrapper = styled.div`
   width: 100%;
+  height: available;
   display: flex;
   flex-direction: column;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
+  overflow: scroll;
 `;
 
 export const Title = styled.div`
@@ -75,7 +81,7 @@ export const FormWrapper = styled.form``;
 export const FormLabel = styled.label`
   font-family: ${fontFamilies.Font};
   color: ${colors.red};
-  ${getCurrentFontSizeStyle("caption")};
+  ${getCurrentFontSizeStyle("caption")}
   ${getCurrentPaddingStyle("bottom", "xxsm")};
 `;
 
