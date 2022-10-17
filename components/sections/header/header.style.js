@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   z-index: 1000;
   position: fixed;
-  background-color: ${colors.lightOrange};
+  background-color: ${({ isOpen }) => (isOpen ? colors.lightOrange : "none")};
   display: flex;
   justify-content: space-between;
   align-items: center;

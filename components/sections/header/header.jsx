@@ -15,6 +15,7 @@ export const Header = () => {
 
   return (
     <>
+      <FormModal isOpen={isOpenForm} />
       <HeaderWrapper>
         <HeaderTitle>
           <Logo />
