@@ -18,7 +18,7 @@ export const Checkbox = ({ error, isActive, setActive,  ...props} ) => {
       </CheckboxBorder>
       <TextWrapper>
         <Caption isError={error}>Я даю согласие на обработку моих</Caption>
-        <Link href="../../../pages/politica.html">
+        <Link href="/politica" target="_blank">
           <StyledCaption isError={error}>персональных данных</StyledCaption>
         </Link>
       </TextWrapper>

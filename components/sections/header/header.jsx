@@ -6,20 +6,23 @@ import {
   HeaderTitle,
   HeaderMenuItem,
 } from "./header.style";
+import Link from "next/link";
 
 export const Header = () => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
-
-
   return (
     <>
       <FormModal isOpen={isOpenForm} />
-      <HeaderWrapper>
+      <HeaderWrapper isOpen={isOpenForm}>
         <HeaderTitle>
-          <Logo />
-          <Name isOpen={isOpenForm} ml="mdsm" />
+          <Link href="/">
+            <Logo />
+          </Link>
+          <Link href="/">
+            <Name isOpen={isOpenForm} ml="mdsm" />
+          </Link>
         </HeaderTitle>
         <HeaderMenu>
           <HeaderMenuItem isOpen={isOpenForm} href="#about">
