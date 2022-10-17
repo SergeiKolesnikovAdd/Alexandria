@@ -146,6 +146,6 @@ export const StyledText = styled(Text)`
 
 export const H3Styled = styled(Text)`
   ${getCurrentFontSizeStyle("h3")};
-  width: 21vw;
+  width: 50vw;
   color: ${colors.white};
 `;

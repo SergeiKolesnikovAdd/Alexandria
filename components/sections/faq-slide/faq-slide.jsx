@@ -11,8 +11,8 @@ import { QuestionsFormModal } from "components";
 import { contentAccordionFaq } from "./constant";
 
 export const FaqSlide = withFormProvider(
-  ({ isOpenForm, setOpenForm, ...props }) => {
-    // const [isOpenForm, setOpenForm] = useState(false);
+  ({ ...props }) => {
+    const [isOpenForm, setOpenForm] = useState(false);
     const [title, setTitle] = useState("");
     const [chooseItem, setChooseItem] = useState({});
 

@@ -59,9 +59,9 @@ export const MainFirstSlide = ({
         <ButtonMD
           mt="xxlg"
           mx="lg"
-          onClick={(e) => {
+          onClick={() => {
             setOpenForm(true);
-            setModalTitle(e.target.textContent);
+            setModalTitle("Начать работу");
           }}
         >
           Начать работу

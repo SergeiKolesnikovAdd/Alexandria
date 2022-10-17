@@ -55,9 +55,9 @@ export const OfferSlide = ({
           потребностей издателя
         </Text>
         <ButtonXLG
-          onClick={(e) => {
+          onClick={() => {
             setFormName("Пакеты услуг");
-            setModalTitle(e.target.textContent);
+            setModalTitle("Получить индивидуальное предложение");
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
           }}
@@ -103,7 +103,7 @@ export const OfferSlide = ({
             <Standart />
             <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
-              onClick={(e) => {
+              onClick={() => {
                 setModalTitle("Пакет Стандарт");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
