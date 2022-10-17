@@ -90,9 +90,12 @@ export const StyledImg = styled.img`
   display: block;
   width: 7vw;
   height: 7vw;
-  border-radius: 32px;
+  border-radius: 2vw;
   object-fit: cover;
   z-index: 50;
-  overflow: hidden;
   ${({ scrollY }) => scrollY && `transform: scale(${scrollY});`};
+
+  :first-of-type {
+    display: none;
+  }
 `;
