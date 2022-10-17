@@ -19,20 +19,28 @@ export const Header = () => {
       <HeaderWrapper>
         <HeaderTitle>
           <Logo />
-          <Name ml="mdsm" />
+          <Name isOpen={isOpenForm} ml="mdsm" />
         </HeaderTitle>
         <HeaderMenu>
-          <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
-          <HeaderMenuItem href="#offer">Тарифы</HeaderMenuItem>
-          <HeaderMenuItem href="#advantages">Преимущества</HeaderMenuItem>
-          <HeaderMenuItem href="#focus">Клиенты</HeaderMenuItem>
-          <HeaderMenuItem href="#faq">FAQ</HeaderMenuItem>
+          <HeaderMenuItem isOpen={isOpenForm} href="#about">
+            О платформе
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isOpenForm} href="#offer">
+            Тарифы
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isOpenForm} href="#focus">
+            Клиенты
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isOpenForm} href="#faq">
+            FAQ
+          </HeaderMenuItem>
         </HeaderMenu>
         <ButtonSM
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-          }}>
+          }}
+        >
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>

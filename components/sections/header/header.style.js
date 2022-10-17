@@ -38,13 +38,13 @@ export const HeaderTitle = styled.div`
 `;
 
 export const HeaderMenuItem = styled.a`
-  color: ${colors.black};
   font-family: ${fontFamilies.Font};
   display: flex;
   ${getCurrentMarginStyle("right", "lg")};
   align-items: center;
   cursor: pointer;
   transition: color 0.3s;
+  color: ${({ isOpen }) => (isOpen ? colors.white : colors.black)};
 
   &:hover {
     color: ${colors.red};
