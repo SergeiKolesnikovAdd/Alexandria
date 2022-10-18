@@ -13,33 +13,21 @@ import {
 
 import { useState } from "react";
 import React from "react";
+import { useState } from "react";
 
 const Home = () => {
-  const [isOpenForm, setOpenForm] = useState(false);
-
+  const [isColored, setColored] = useState(false);
   return (
     <>
-      <Header isOpenForm={isOpenForm} setOpenForm={setOpenForm} />
-      <MainFirstSlide
-        isOpenForm={isOpenForm}
-        setOpenForm={setOpenForm}
-        pt="xxxlg"
-      />
+      <Header setColored={setColored} isColored={isColored} />
+      <MainFirstSlide setColored={setColored} pt="xxxlg" />
       <AboutSlide pt="xxxlg" />
       <FocusSlide />
-      <PlatformSlide
-        isOpenForm={isOpenForm}
-        setOpenForm={setOpenForm}
-        mt="xxxlg"
-      />
-      <OfferSlide
-        isOpenForm={isOpenForm}
-        setOpenForm={setOpenForm}
-        pt="xxxlg"
-      />
+      <PlatformSlide setColored={setColored} mt="xxxlg" />
+      <OfferSlide setColored={setColored} pt="xxxlg" />
       <AdvantageSlide />
-      <News mt="xxxlg" />
-      <FaqSlide pt="xxxlg" />
+      <News setColored={setColored} mt="xxxlg" />
+      <FaqSlide setColored={setColored} pt="xxxlg" />
       <Footer />
     </>
   );

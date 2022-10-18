@@ -46,8 +46,8 @@ function useScroll(platformRef) {
   return scrollY;
 }
 
-export const PlatformSlide = ({ isOpenForm, setOpenForm, ...props }) => {
-  // const [isOpenForm, setOpenForm] = useState(false);
+export const PlatformSlide = ({setColored, ...props }) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const platformRef = useRef();
   const scrollY = useScroll(platformRef);
@@ -186,6 +186,7 @@ export const PlatformSlide = ({ isOpenForm, setOpenForm, ...props }) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
+            setColored(true);
           }}
           mt="lg"
         >
@@ -197,6 +198,7 @@ export const PlatformSlide = ({ isOpenForm, setOpenForm, ...props }) => {
         ))}
       </ContentWrapper>
       <FormModal
+        setColored={setColored}
         formName="О платформе"
         modalTitle={modalTitle}
         setOpen={setOpenForm}

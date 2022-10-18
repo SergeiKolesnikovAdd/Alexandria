@@ -12,12 +12,11 @@ import {
   ImgContainer,
   StyledCaption,
 } from "./news.style";
-import { ButtonSM, H2, AccordionSmall, FormModal,} from "components";
-
+import { ButtonSM, H2, AccordionSmall, FormModal } from "components";
 import { fontSizes } from "styles";
 import React, { useState } from "react";
 
-export const News = ({...props}) => {
+export const News = ({ setColored, ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
@@ -55,6 +54,7 @@ export const News = ({...props}) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
+            setColored(true);
           }}
           mt="xlg"
           style={{ alignSelf: "center" }}
@@ -63,6 +63,8 @@ export const News = ({...props}) => {
         </ButtonSM>
       </ContentWrapper>
       <FormModal
+        setColored={setColored}
+        formName="Новости"
         modalTitle={modalTitle}
         setOpen={setOpenForm}
         isOpen={isOpenForm}
