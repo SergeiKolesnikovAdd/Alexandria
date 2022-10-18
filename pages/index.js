@@ -13,7 +13,6 @@ import {
 
 import { useState } from "react";
 import React from "react";
-import { useState } from "react";
 
 const Home = () => {
   const [isColored, setColored] = useState(false);
