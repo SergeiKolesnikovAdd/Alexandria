@@ -1,4 +1,4 @@
-import { Logo, ButtonSM, Name, FormModal} from "components";
+import { Logo, ButtonSM, Name, FormModal } from "components";
 import {
   HeaderWrapper,
   HeaderMenu,
@@ -8,13 +8,12 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-export const Header = ({isColored, setColored}) => {
+export const Header = ({ isColored, setColored }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
-
-
   return (
+    <>
       <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
           <Link href="/">
@@ -43,8 +42,7 @@ export const Header = ({isColored, setColored}) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
             setColored(true);
-          }}
-        >
+          }}>
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>

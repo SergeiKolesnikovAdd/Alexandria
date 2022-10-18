@@ -12,7 +12,8 @@ export const NameWrapper = styled.svg`
   display: inline-block;
   cursor: pointer;
   path {
-    fill: ${({ isOpenForm }) => (isOpenForm ? colors.white : colors.black)};
+    /* fill: ${({ isOpen }) => (isOpen ? colors.white : colors.black)}; */
+    fill: ${colors.black};
   }
 
   ${applyPaddings}

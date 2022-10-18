@@ -3,10 +3,10 @@ import styled from "@emotion/styled";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   position: fixed;
-  background-color: ${({ isOpenForm }) =>
-    isOpenForm ? "none" : colors.lightOrange};
+  /* background-color: ${({ isOpen }) => (isOpen ? "none" : colors.lightOrange)}; */
+  background-color:${colors.lightOrange};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,8 @@ export const HeaderMenuItem = styled.a`
   align-items: center;
   cursor: pointer;
   transition: color 0.3s;
-  color: ${({ isOpenForm }) => (isOpenForm ? colors.white : colors.black)};
+  /* color: ${({ isOpen }) => (isOpen ? colors.white : colors.black)}; */
+  color: ${colors.black};
 
   &:hover {
     color: ${colors.red};

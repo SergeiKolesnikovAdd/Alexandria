@@ -27,7 +27,7 @@ import { arrOfferInfoTab } from "./tabs";
 export const OfferSlide = ({ setColored, ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
-  // const [isOpenForm, setOpenForm] = useState(false);
+  const [isOpenForm, setOpenForm] = useState(false);
   const [chooseItemTab, setChooseItemTab] = useState(arrOfferInfoTab[1]);
   const [modalTitle, setModalTitle] = useState("");
   const [formName, setFormName] = useState("");
@@ -291,7 +291,6 @@ export const OfferSlide = ({ setColored, ...props }) => {
         formName={formName}
         isOpen={isOpen}
         setOpen={setOpen}
-        modalTitle={modalTitle}
         setColored={setColored}
         {...chooseItem}></OfferModal>
       <FormModal
