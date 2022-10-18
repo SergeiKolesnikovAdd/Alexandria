@@ -11,14 +11,13 @@ import {
 } from "styles";
 
 import styled from "@emotion/styled";
+import { getCurrentMarginStyle } from "styles";
 
 const errorConditionColor = ({ isError }) =>
   isError ? `color:${colors.brightRed};` : "";
 
 const errorConditionBackgroundColor = ({ isError }) =>
-  isError
-    ? `background-color: ${colors.brightRed}; transform: scaleX(1);`
-    : "";
+  isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
 
 export const UnderlineInner = styled.div`
   width: 100%;
@@ -62,10 +61,11 @@ export const InputStyled = styled.input`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.brightRed};
-  position: absolute;
-  top: calc(100% + 4px);
+  /* position: absolute; */
+  /* top: calc(100% + 4px); */
   font-family: ${fontFamilies.Font};
-
+  display: flex;
+  align-items: center;
   ${getCurrentFontSizeStyle("caption")};
 `;
 
@@ -75,4 +75,11 @@ export const InputWrapper = styled.div`
   ${applyPaddings}
   ${getCurrentPaddingStyle("right", "none")};
   ${({ isFullWidth }) => isFullWidth && "width: 100%;"}
+`;
+
+export const ErrorWrapper = styled.span`
+${getCurrentMarginStyle("top", "xxsm")}
+display:flex;
+align-items:center;
+flex-direction:row;
 `;

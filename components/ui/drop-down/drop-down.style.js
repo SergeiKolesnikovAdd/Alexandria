@@ -174,3 +174,9 @@ export const InputWrapper = styled.div`
   ${applyMargins};
   ${applyPaddings}
 `;
+
+export const ErrorWrapper = styled.span`
+display:flex;
+align-items:center;
+flex-direction:row;
+`;
