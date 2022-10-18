@@ -38,13 +38,13 @@ export const Accordion = ({id, isShowing, ...props}) => {
         </IconWrapper>
       </AccordionButton>
       <InnerContent isShowing={isShowing}>
-        <TextWrapper style={{ marginRight: "25vw" }} isShowing={isShowing}>
-          <H3Styled mr="mdsm" style={{ width: "21vw", color: colors.white }}>
+        <TextWrapper isShowing={isShowing}>
+          <H3Styled mr="mdsm" style={{color: colors.white }}>
             {props.desc1}
           </H3Styled>
-          <StyledText>
+          {/* <StyledText>
             {props.desc2}
-          </StyledText>
+          </StyledText> */}
         </TextWrapper>
         {/* <LinkWrapper>
           <Text style={{ color: colors.white, opacity: "0.4" }}>

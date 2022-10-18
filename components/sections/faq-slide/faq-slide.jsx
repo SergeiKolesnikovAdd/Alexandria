@@ -6,13 +6,12 @@ import {
   InputField,
   TextAreaField,
   Checkbox,
+  ButtonLG,
+  QuestionsFormModal,
 } from "components";
 import { H3Styled, ContentWrapper } from "./faq-slide.style";
 import { formatPhoneNumber, withFormProvider } from "utils";
-import { ButtonLG } from "components";
 import { useState } from "react";
-import { QuestionsFormModal } from "components";
-
 import { contentAccordionFaq } from "./constant";
 
 export const FaqSlide = withFormProvider(({ setColored, ...props }) => {

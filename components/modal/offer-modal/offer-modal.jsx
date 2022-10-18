@@ -65,7 +65,7 @@ export const OfferModal = ({
               <Text>{textMarketing}</Text>
             </Description>
             <StyledButtonLG
-              onClick={(e) => {
+              onClick={() => {
                 console.log(id);
                 // setModalTitle(e.target.textContent);
                 setOpenForm(true);
@@ -82,6 +82,7 @@ export const OfferModal = ({
         formName={formName}
         tariff={id}
         modalTitle={modalTitle}
+        setModalTitle={setModalTitle}
         setOpen={setOpenForm}
         isOpen={isOpenForm}
       />

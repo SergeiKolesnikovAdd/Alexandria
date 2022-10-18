@@ -188,7 +188,8 @@ export const PlatformSlide = ({setColored, ...props }) => {
             setModalTitle(e.target.textContent);
             setColored(true);
           }}
-          mt="lg">
+          mt="lg"
+        >
           Начать работу
         </ButtonMD>
         <StyledImg />

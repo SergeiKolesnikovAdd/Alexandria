@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Logo, ButtonSM, Name, FormModal} from "components";
 import {
   HeaderWrapper,
@@ -7,6 +6,7 @@ import {
   HeaderMenuItem,
 } from "./header.style";
 import Link from "next/link";
+import { useState } from "react";
 
 export const Header = ({isColored, setColored}) => {
   const [isOpenForm, setOpenForm] = useState(false);
@@ -15,7 +15,6 @@ export const Header = ({isColored, setColored}) => {
 
 
   return (
-    <>
       <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
           <Link href="/">

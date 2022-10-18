@@ -5,7 +5,8 @@ export const HeaderWrapper = styled.div`
   width: 100%;
   z-index: 1000;
   position: fixed;
-  background-color: ${({ isOpen }) => (isOpen ? "none" : colors.lightOrange)};
+  background-color: ${({ isOpenForm }) =>
+    isOpenForm ? "none" : colors.lightOrange};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +45,7 @@ export const HeaderMenuItem = styled.a`
   align-items: center;
   cursor: pointer;
   transition: color 0.3s;
-  color: ${({ isOpen }) => (isOpen ? colors.white : colors.black)};
+  color: ${({ isOpenForm }) => (isOpenForm ? colors.white : colors.black)};
 
   &:hover {
     color: ${colors.red};

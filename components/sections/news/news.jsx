@@ -13,7 +13,6 @@ import {
   StyledCaption,
 } from "./news.style";
 import { ButtonSM, H2, AccordionSmall, FormModal } from "components";
-
 import { fontSizes } from "styles";
 import React, { useState } from "react";
 
@@ -58,7 +57,8 @@ export const News = ({ setColored, ...props }) => {
             setColored(true);
           }}
           mt="xlg"
-          style={{ alignSelf: "center" }}>
+          style={{ alignSelf: "center" }}
+        >
           Оставить заявку
         </ButtonSM>
       </ContentWrapper>

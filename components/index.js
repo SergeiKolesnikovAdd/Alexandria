@@ -12,6 +12,7 @@ export { Minus } from "./common";
 export { Modal } from "./common";
 export { Portal } from "./common";
 export { Close } from "./common";
+export { Warning } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
