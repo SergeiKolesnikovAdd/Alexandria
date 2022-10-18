@@ -1,4 +1,4 @@
-import { Logo, ButtonSM, Name, FormModal} from "components";
+import { Logo, ButtonSM, Name, FormModal } from "components";
 import {
   HeaderWrapper,
   HeaderMenu,
@@ -8,31 +8,32 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-export const Header = ({ isOpenForm, setOpenForm }) => {
+export const Header = ({ isColored, setColored }) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
   return (
     <>
-      <HeaderWrapper isOpenForm={isOpenForm}>
+      <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
           <Link href="/">
             <Logo />
           </Link>
           <Link href="/">
-            <Name isOpenForm={isOpenForm} ml="mdsm" />
+            <Name isOpen={isColored} ml="mdsm" />
           </Link>
         </HeaderTitle>
         <HeaderMenu>
-          <HeaderMenuItem isOpenForm={isOpenForm} href="#about">
+          <HeaderMenuItem isOpen={isColored} href="#about">
             О платформе
           </HeaderMenuItem>
-          <HeaderMenuItem isOpenForm={isOpenForm} href="#offer">
+          <HeaderMenuItem isOpen={isColored} href="#offer">
             Тарифы
           </HeaderMenuItem>
-          <HeaderMenuItem isOpenForm={isOpenForm} href="#focus">
+          <HeaderMenuItem isOpen={isColored} href="#focus">
             Клиенты
           </HeaderMenuItem>
-          <HeaderMenuItem isOpenForm={isOpenForm} href="#faq">
+          <HeaderMenuItem isOpen={isColored} href="#faq">
             FAQ
           </HeaderMenuItem>
         </HeaderMenu>
@@ -40,12 +41,13 @@ export const Header = ({ isOpenForm, setOpenForm }) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-          }}
-        >
+            setColored(true);
+          }}>
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>
       <FormModal
+        setColored={setColored}
         formName="Шапка"
         modalTitle={modalTitle}
         setOpen={setOpenForm}

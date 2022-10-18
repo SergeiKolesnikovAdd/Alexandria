@@ -24,14 +24,10 @@ import {
 
 import { arrOfferInfoTab } from "./tabs";
 
-export const OfferSlide = ({
-  isOpenForm,
-  setOpenForm,
-  ...props
-}) => {
+export const OfferSlide = ({ setColored, ...props }) => {
   const [isOpen, setOpen] = useState(false);
   const [chooseItem, setChooseItem] = useState({});
-  // const [isOpenForm, setOpenForm] = useState(false);
+  const [isOpenForm, setOpenForm] = useState(false);
   const [chooseItemTab, setChooseItemTab] = useState(arrOfferInfoTab[1]);
   const [modalTitle, setModalTitle] = useState("");
   const [formName, setFormName] = useState("");
@@ -60,8 +56,8 @@ export const OfferSlide = ({
             setModalTitle("Получить индивидуальное предложение");
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
-          }}
-        >
+            setColored(true);
+          }}>
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -107,6 +103,8 @@ export const OfferSlide = ({
                 setModalTitle("Пакет Стандарт");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[0]);
+                setColored(true);
+                setModalTitle("Пакет Стандарт");
               }}
               mt="xxsm"
             >
@@ -126,11 +124,11 @@ export const OfferSlide = ({
           <PackageItem style={{ border: "none" }}>
             <NewButton
               onClick={(e) => {
+                setModalTitle("Пакет Стандарт");
                 setFormName("Пакет Стандарт");
-                setModalTitle(e.target.textContent);
                 setOpenForm(true);
-              }}
-            >
+                setColored(true);
+              }}>
               Начать работу
             </NewButton>
             <TabletButton
@@ -153,6 +151,8 @@ export const OfferSlide = ({
                 setModalTitle("Пакет Комфорт");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[1]);
+                setColored(true);
+                setModalTitle("Пакет Комфорт");
               }}
               mt="xxsm"
             >
@@ -177,10 +177,10 @@ export const OfferSlide = ({
             <NewButton
               onClick={(e) => {
                 setFormName("Пакет Комфорт");
-                setModalTitle(e.target.textContent);
+                setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
-              }}
-            >
+                setColored(true);
+              }}>
               Начать работу
             </NewButton>
             <TabletButton
@@ -203,6 +203,8 @@ export const OfferSlide = ({
                 setModalTitle("Пакет Премиум");
                 setOpen(true);
                 setChooseItem(arrOfferInfo[2]);
+                setColored(true);
+                setModalTitle("Пакет Премиум");
               }}
               mt="xxsm"
             >
@@ -231,10 +233,10 @@ export const OfferSlide = ({
             <NewButton
               onClick={(e) => {
                 setFormName("Пакет Премиум");
-                setModalTitle(e.target.textContent);
+                setModalTitle("Пакет Премиум");
                 setOpenForm(true);
-              }}
-            >
+                setColored(true);
+              }}>
               Начать работу
             </NewButton>
             <TabletButton
@@ -289,15 +291,15 @@ export const OfferSlide = ({
         formName={formName}
         isOpen={isOpen}
         setOpen={setOpen}
-        {...chooseItem}
-      ></OfferModal>
+        setColored={setColored}
+        {...chooseItem}></OfferModal>
       <FormModal
         formName={formName}
-        modalTitle={modalTitle}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
-        {...chooseItem}
-      ></FormModal>
+        modalTitle={modalTitle}
+        setColored={setColored}
+        {...chooseItem}></FormModal>
     </ContentWrapper>
   );
 };

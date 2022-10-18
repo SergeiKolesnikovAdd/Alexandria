@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import {
   LeftHand,
   RightHand,
@@ -6,7 +6,7 @@ import {
   FirstSlideWrapper,
 } from "./main-first-slide.style";
 import { ButtonMD, H3, H1, FormModal } from "components";
-import {debounce} from "../../../utils";
+import { debounce } from "../../../utils";
 
 function useScroll() {
   const handleScrollDebounce = debounce(handleScroll, 5);
@@ -15,27 +15,23 @@ function useScroll() {
   function handleScroll(e) {
     const clientHeight = window.innerHeight;
     const currentScrollY = window.scrollY;
-    const diff = (currentScrollY - clientHeight * 0.4);
+    const diff = currentScrollY - clientHeight * 0.4;
 
-    if (diff > 0 && diff < 300){
-      setScrollY(diff*0.2);
+    if (diff > 0 && diff < 300) {
+      setScrollY(diff * 0.2);
     }
   }
 
   useEffect(() => {
-     window.addEventListener('scroll', handleScrollDebounce);
+    window.addEventListener("scroll", handleScrollDebounce);
     return () => handleScrollDebounce;
   }, []);
 
   return scrollY;
 }
 
-export const MainFirstSlide = ({
-  isOpenForm,
-  setOpenForm,
-  ...props
-}) => {
-  // const [isOpenForm, setOpenForm] = useState(false);
+export const MainFirstSlide = ({ setColored, ...props }) => {
+  const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const scrollY = useScroll();
 
@@ -62,8 +58,8 @@ export const MainFirstSlide = ({
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-          }}
-        >
+            setColored(true);
+          }}>
           Начать работу
         </ButtonMD>
         <FirstSlideBGImageWrapper>
@@ -72,6 +68,7 @@ export const MainFirstSlide = ({
         </FirstSlideBGImageWrapper>
       </FirstSlideWrapper>
       <FormModal
+        setColored={setColored}
         formName="Первый слайд"
         modalTitle={modalTitle}
         setOpen={setOpenForm}

@@ -1,6 +1,7 @@
 import { Caption,  } from "components";
 import Link from "next/link";
 import { useState } from "react";
+import { colors } from "styles";
 import {
   CheckboxWrapper,
   CheckboxBorder,
@@ -18,9 +19,11 @@ export const Checkbox = ({ error, isActive, setActive,  ...props} ) => {
       </CheckboxBorder>
       <TextWrapper>
         <Caption isError={error}>Я даю согласие на обработку моих</Caption>
-        <Link href="/politica" target="_blank">
-          <StyledCaption isError={error}>персональных данных</StyledCaption>
-        </Link>
+
+
+        <StyledCaption isError={error}><Link href="/politica" ><a style={{color: colors.black}}
+          target="_blank">персональных данных</a></Link></StyledCaption>
+
       </TextWrapper>
     </CheckboxWrapper>
   );

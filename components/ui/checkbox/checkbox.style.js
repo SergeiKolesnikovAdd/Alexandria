@@ -5,7 +5,7 @@ import { getCurrentFontSizeStyle } from "styles";
 import { fontFamilies } from "styles";
 
 import { colors, getCurrentMarginStyle, hexToRGBA } from "styles";
-  
+
 export const CheckboxWrapper = styled.div`
   display: flex;
   ${applyMargins}
@@ -24,7 +24,7 @@ export const CheckboxBorder = styled.div`
   transition: border-color 0.3s;
   border-color: ${({ isError }) => (isError ? colors.brightRed : hexToRGBA(colors.black, 0.2))};
 
-  
+
 
   &:hover {
     border-color: ${colors.red};
@@ -37,7 +37,7 @@ export const CheckboxInner = styled.div`
   height: 24px;
   border-radius: 6px;
   display: ${({ isActive }) => (isActive ? "block" : "none")};
-  
+
 `;
 
 export const TextWrapper = styled.div`
@@ -53,7 +53,7 @@ export const TextWrapper = styled.div`
 export const StyledCaption = styled(Caption)`
   opacity: 0.4;
   cursor: pointer;
-
+  color: ${colors.black};
 
 `;
 
