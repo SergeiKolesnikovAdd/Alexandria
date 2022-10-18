@@ -13,7 +13,6 @@ export const Header = ({ isOpenForm, setOpenForm }) => {
 
   return (
     <>
-      <FormModal isOpenForm={isOpenForm} setOpenForm={setOpenForm} />
       <HeaderWrapper isOpenForm={isOpenForm}>
         <HeaderTitle>
           <Link href="/">
@@ -30,7 +29,7 @@ export const Header = ({ isOpenForm, setOpenForm }) => {
           <HeaderMenuItem isOpenForm={isOpenForm} href="#offer">
             Тарифы
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isOpenForm} href="#focus">
+          <HeaderMenuItem isOpenForm={isOpenForm} href="#focus">
             Клиенты
           </HeaderMenuItem>
           <HeaderMenuItem isOpenForm={isOpenForm} href="#faq">
@@ -38,9 +37,9 @@ export const Header = ({ isOpenForm, setOpenForm }) => {
           </HeaderMenuItem>
         </HeaderMenu>
         <ButtonSM
-          onClick={() => {
-            setModalTitle("Оставить заявку");
+          onClick={(e) => {
             setOpenForm(true);
+            setModalTitle(e.target.textContent);
           }}
         >
           Оставить заявку
