@@ -11,20 +11,35 @@ import {
   News,
 } from "components";
 
+import { useState } from "react";
 import React from "react";
 
 const Home = () => {
+  const [isOpenForm, setOpenForm] = useState(false);
+
   return (
     <>
-      <Header />
-      <MainFirstSlide pt="xxxlg" />
+      <Header isOpenForm={isOpenForm} setOpenForm={setOpenForm} />
+      <MainFirstSlide
+        isOpenForm={isOpenForm}
+        setOpenForm={setOpenForm}
+        pt="xxxlg"
+      />
       <AboutSlide pt="xxxlg" />
-      <FocusSlide/>
-      <PlatformSlide mt="xxxlg"/>
-      <OfferSlide pt="xxxlg"/>
-      <AdvantageSlide/>
-      <News mt="xxxlg"/>
-      <FaqSlide pt="xxxlg"/>
+      <FocusSlide />
+      <PlatformSlide
+        isOpenForm={isOpenForm}
+        setOpenForm={setOpenForm}
+        mt="xxxlg"
+      />
+      <OfferSlide
+        isOpenForm={isOpenForm}
+        setOpenForm={setOpenForm}
+        pt="xxxlg"
+      />
+      <AdvantageSlide />
+      <News mt="xxxlg" />
+      <FaqSlide pt="xxxlg" />
       <Footer />
     </>
   );

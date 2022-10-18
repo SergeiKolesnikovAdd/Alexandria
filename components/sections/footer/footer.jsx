@@ -16,6 +16,7 @@ import {
   IconAlexandrina,
   LogoWrapper,
 } from "./footer.style";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -81,7 +82,7 @@ export const Footer = () => {
       <FooterRowBottom mb="lg">
         <FooterLink href="#">Alexandrina 2022</FooterLink>
         <FooterRowSecondBottom>
-          <FooterLink mr="lg" href="#">
+          <FooterLink mr="lg" href="/politica" target="_blank">
             Privacy Policy
           </FooterLink>
           {/* <FooterLink mr={"lg"} href="#">
