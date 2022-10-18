@@ -1,13 +1,24 @@
 import { selectServicesOptions } from "./constants";
-import {ButtonMD, DropDownField, TextAreaField, InputField, Checkbox} from "components";
+import {
+  ButtonMD,
+  DropDownField,
+  TextAreaField,
+  InputField,
+  Checkbox,
+} from "components";
 import { useFormContext } from "react-hook-form";
-import { FormLabelGray, FormLabel, FormWrapper, ErrorField } from "./form-modal.style";
+import {
+  FormLabelGray,
+  FormLabel,
+  FormWrapper,
+  ErrorField,
+} from "./form-modal.style";
 import { withFormProvider } from "utils";
 import { useState } from "react";
 import { postMain } from "utils/api";
 
-export const Form =  withFormProvider(({tariff="", formName}) => {
-  const [isChecked, setIsChecked] = useState(false)
+export const Form = withFormProvider(({ tariff = "", formName }) => {
+  const [isChecked, setIsChecked] = useState(false);
 
   const { handleSubmit } = useFormContext();
   // const onSubmit = (data) => { console.log(data); };
@@ -31,9 +42,9 @@ export const Form =  withFormProvider(({tariff="", formName}) => {
       });
   };
 
-    const handleCheck = () => {
-      setIsChecked((prev) => !prev);
-    };
+  const handleCheck = () => {
+    setIsChecked((prev) => !prev);
+  };
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
@@ -46,7 +57,7 @@ export const Form =  withFormProvider(({tariff="", formName}) => {
       />
       <FormLabel>Электронная почта*</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel >
+      <FormLabel>
         Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
       </FormLabel>
       <InputField rules={{}} mb="md" name="journalName" />

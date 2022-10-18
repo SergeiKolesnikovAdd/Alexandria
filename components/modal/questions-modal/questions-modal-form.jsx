@@ -38,6 +38,7 @@ export const Form = withFormProvider(() => {
         mb="md"
         propsInput={{ placeholder: "Ваше имя" }}
         title="Name *"
+        
       />
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
