@@ -13,6 +13,7 @@ import {
 
 import { useState } from "react";
 import React from "react";
+import { Gratitude } from "components";
 
 const Home = () => {
   const [isOpenForm, setOpenForm] = useState(false);
