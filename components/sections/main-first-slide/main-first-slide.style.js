@@ -1,8 +1,4 @@
-import {
-  applyMargins,
-  applyPaddings,
-  breakpointsWidth,
-} from "styles";
+import { applyMargins, applyPaddings, breakpointsWidth } from "styles";
 
 import imgLeft from "public/left-hand.png";
 import imgRight from "public/right-hand.png";
@@ -23,7 +19,7 @@ export const FirstSlideWrapper = styled.div`
       @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
         font-size: 3em;
       }
-      
+
       @media screen and (max-width: ${breakpointsWidth.phone}) {
         font-size: 2em;
       }
@@ -48,12 +44,12 @@ export const FirstSlideBGImageWrapper = styled.div`
 
 export const LeftHand = styled.img`
   position: absolute;
-  left: 0;
+  left: -4%;
   width: 50%;
   height: 30vw;
   content: url(${imgLeft.src});
   transition: transform 0.25s linear;
-  ${({scrollY}) => (scrollY && `transform: translateX(-${scrollY}px);`)};
+  ${({ scrollY }) => scrollY && `transform: translateX(${scrollY}px);`};
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
@@ -62,13 +58,13 @@ export const LeftHand = styled.img`
 
 export const RightHand = styled.img`
   position: absolute;
-  right: 0;
+  right: -4%;
   width: 50%;
   height: 30vw;
   content: url(${imgRight.src});
   transition: transform 0.2s linear;
-  ${({scrollY}) => (scrollY && `transform: translateX(${scrollY}px);`)};
-  
+  ${({ scrollY }) => scrollY && `transform: translateX(-${scrollY}px);`};
+
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
   }

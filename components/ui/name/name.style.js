@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { applyPaddings } from "styles";
+import { colors } from "styles";
 import { applyMargins } from "styles";
 import { breakpointsWidth } from "styles";
 import { getVW } from "styles";
@@ -10,6 +11,9 @@ export const NameWrapper = styled.svg`
   height: 64px;
   display: inline-block;
   cursor: pointer;
+  path {
+    fill: ${({ isOpen }) => (isOpen ? colors.white : colors.black)};
+  }
 
   ${applyPaddings}
   ${applyMargins}

@@ -12,12 +12,20 @@ import {
 } from "components";
 
 import React from "react";
+import { useState } from "react";
 
 const Home = () => {
+  const [isColored, setColored] = useState(false);
+
+  // const setColored = () =>{
+
+
+  // }
+
   return (
     <>
-      <Header />
-      <MainFirstSlide pt="xxxlg" />
+      <Header setColored={setColored} isColored={isColored } />
+      <MainFirstSlide setColored={setColored}  pt="xxxlg" />
       <AboutSlide pt="xxxlg" />
       <FocusSlide/>
       <PlatformSlide mt="xxxlg"/>

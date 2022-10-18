@@ -6,8 +6,9 @@ import {
   HeaderTitle,
   HeaderMenuItem,
 } from "./header.style";
+import Link from "next/link";
 
-export const Header = () => {
+export const Header = ({isColored, setColored}) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
@@ -15,27 +16,41 @@ export const Header = () => {
 
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
-          <Logo />
-          <Name ml="mdsm" />
+          <Link href="/">
+            <Logo />
+          </Link>
+          <Link href="/">
+            <Name isOpen={isColored} ml="mdsm" />
+          </Link>
         </HeaderTitle>
         <HeaderMenu>
-          <HeaderMenuItem href="#about">О платформе</HeaderMenuItem>
-          <HeaderMenuItem href="#offer">Тарифы</HeaderMenuItem>
-          <HeaderMenuItem href="#advantages">Преимущества</HeaderMenuItem>
-          <HeaderMenuItem href="#focus">Клиенты</HeaderMenuItem>
-          <HeaderMenuItem href="#faq">FAQ</HeaderMenuItem>
+          <HeaderMenuItem isOpen={isColored} href="#about">
+            О платформе
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isColored} href="#offer">
+            Тарифы
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isColored} href="#focus">
+            Клиенты
+          </HeaderMenuItem>
+          <HeaderMenuItem isOpen={isColored} href="#faq">
+            FAQ
+          </HeaderMenuItem>
         </HeaderMenu>
         <ButtonSM
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-          }}>
+            setColored(true);
+          }}
+        >
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>
       <FormModal
+        setColored={setColored}
         formName="Шапка"
         modalTitle={modalTitle}
         setOpen={setOpenForm}

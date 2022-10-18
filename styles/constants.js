@@ -251,7 +251,7 @@ export const fontSizes = {
     h2: "1.5em",
     h3: "18px",
     text: "14px",
-    caption: "10px",
+    caption: "12px",
   },
 };
 
