@@ -46,7 +46,7 @@ function useScroll(platformRef) {
   return scrollY;
 }
 
-export const PlatformSlide = ({ ...props }) => {
+export const PlatformSlide = ({setColored, ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const platformRef = useRef();
@@ -186,16 +186,18 @@ export const PlatformSlide = ({ ...props }) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
+            setColored(true);
           }}
           mt="lg">
           Начать работу
         </ButtonMD>
         <StyledImg />
-        {ImgTimers.map(({ id, img, style, }) => (
+        {ImgTimers.map(({ id, img, style }) => (
           <StyledImg key={id} src={img} style={style} scrollY={scrollY} />
         ))}
       </ContentWrapper>
       <FormModal
+        setColored={setColored}
         formName="О платформе"
         modalTitle={modalTitle}
         setOpen={setOpenForm}

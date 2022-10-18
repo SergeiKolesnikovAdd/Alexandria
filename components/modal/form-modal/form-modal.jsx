@@ -23,7 +23,7 @@ export const FormModal = ({
     setColored(false);
   };
   return (
-    <Modal setOpen={setOpen} setColored={setColored} isOpen={isOpen}>
+    <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
       <FormModalInner>
         <ContentSection>
           <ClsButton mt="mdlg" mr="mdlg" onClick={() => handleClose()} />

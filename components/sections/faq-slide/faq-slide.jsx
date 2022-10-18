@@ -1,8 +1,13 @@
-import { H2, ButtonXSM, Accordion, DropDownField, InputField, TextAreaField, Checkbox, } from "components";
 import {
-  H3Styled,
-  ContentWrapper,
-} from "./faq-slide.style";
+  H2,
+  ButtonXSM,
+  Accordion,
+  DropDownField,
+  InputField,
+  TextAreaField,
+  Checkbox,
+} from "components";
+import { H3Styled, ContentWrapper } from "./faq-slide.style";
 import { formatPhoneNumber, withFormProvider } from "utils";
 import { ButtonLG } from "components";
 import { useState } from "react";
@@ -10,8 +15,7 @@ import { QuestionsFormModal } from "components";
 
 import { contentAccordionFaq } from "./constant";
 
-export const FaqSlide = withFormProvider(({ ...props }) => {
-
+export const FaqSlide = withFormProvider(({ setColored, ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [title, setTitle] = useState("");
   const [chooseItem, setChooseItem] = useState({});
@@ -56,10 +60,10 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
           onClick={(e) => {
             setOpenForm(true);
             setTitle(e.target.textContent);
+            setColored(true);
           }}
           mt="mdlg"
-          style={{ alignSelf: "center" }}
-        >
+          style={{ alignSelf: "center" }}>
           Задать вопрос
         </ButtonLG>
       </ContentWrapper>
@@ -67,6 +71,7 @@ export const FaqSlide = withFormProvider(({ ...props }) => {
         title={title}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
+        setColored={setColored}
       />
     </>
   );

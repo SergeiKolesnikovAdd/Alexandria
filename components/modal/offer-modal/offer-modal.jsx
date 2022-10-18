@@ -32,17 +32,24 @@ export const OfferModal = ({
   setOpen,
   id,
   formName,
+  setColored,
+  modalTitle,
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-  const [modalTitle, setModalTitle] = useState("");
 
   return (
-    <Modal setOpen={setOpen} isOpen={isOpen}>
+    <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
       <OfferModalInner isOpenForm={isOpenForm}>
         <ContentSection>
           <ProductImage src={img} />
-          <ClsButton mt="mdlg" mr="mdlg" onClick={() => setOpen(false)} />
+          <ClsButton
+            mt="mdlg"
+            mr="mdlg"
+            onClick={() => {
+              setOpen(false), setColored(false);
+            }}
+          />
           <ContentWrapper>
             <Title mb="xsm">
               <H3 mr="mdsm">{title}</H3>
@@ -60,8 +67,10 @@ export const OfferModal = ({
             <StyledButtonLG
               onClick={(e) => {
                 console.log(id);
-                setModalTitle(e.target.textContent);
+                // setModalTitle(e.target.textContent);
                 setOpenForm(true);
+                setColored(true);
+                setOpen(false);
               }}>
               Начать работу
             </StyledButtonLG>
@@ -69,6 +78,7 @@ export const OfferModal = ({
         </ContentSection>
       </OfferModalInner>
       <FormModal
+        setColored={setColored}
         formName={formName}
         tariff={id}
         modalTitle={modalTitle}

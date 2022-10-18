@@ -16,23 +16,17 @@ import { useState } from "react";
 
 const Home = () => {
   const [isColored, setColored] = useState(false);
-
-  // const setColored = () =>{
-
-
-  // }
-
   return (
     <>
-      <Header setColored={setColored} isColored={isColored } />
-      <MainFirstSlide setColored={setColored}  pt="xxxlg" />
+      <Header setColored={setColored} isColored={isColored} />
+      <MainFirstSlide setColored={setColored} pt="xxxlg" />
       <AboutSlide pt="xxxlg" />
-      <FocusSlide/>
-      <PlatformSlide mt="xxxlg"/>
-      <OfferSlide pt="xxxlg"/>
-      <AdvantageSlide/>
-      <News mt="xxxlg"/>
-      <FaqSlide pt="xxxlg"/>
+      <FocusSlide />
+      <PlatformSlide setColored={setColored} mt="xxxlg" />
+      <OfferSlide setColored={setColored} pt="xxxlg" />
+      <AdvantageSlide />
+      <News setColored={setColored} mt="xxxlg" />
+      <FaqSlide setColored={setColored} pt="xxxlg" />
       <Footer />
     </>
   );
