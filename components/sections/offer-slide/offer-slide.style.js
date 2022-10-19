@@ -34,8 +34,11 @@ export const ButtonRow = styled.div`
   ${applyMargins}
   ${applyPaddings}
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     flex-direction: column;
+    button {
+      margin-top: 24px;
+    }
   }
 `;
 
@@ -43,7 +46,6 @@ export const TableOffer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row;
-  gap: 16px;
   justify-items: center;
   align-items: center;
 
@@ -64,6 +66,10 @@ export const DescColumn = styled.div`
   align-items: center;
 
   ${applyPaddings}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    grid-template-rows: repeat(8, 80px);
+  }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     grid-template-columns: repeat(1, 324px);
@@ -93,6 +99,10 @@ export const PackageColumn = styled.div`
     }
   }
 
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    grid-template-rows: repeat(8, 80px);
+  }
+
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     grid-template-columns: repeat(1, 120px);
   }
@@ -110,12 +120,11 @@ export const DescItem = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    height: 80px;
     span {
       font-size: 12px;
     }
   }
-
-  
 `;
 
 export const DescText = styled(Text)`
@@ -132,14 +141,23 @@ export const PackageItem = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdsm")}
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
 
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    height: 80px;
+  }
+
   ${applyPaddings}
 `;
 
 export const NewButton = styled(ButtonMD)`
   width: 100%;
+  height: 100%;
   opacity: 0;
+  display: flex;
+  padding: 0px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     display: none;
   }
 `;
@@ -147,10 +165,14 @@ export const NewButton = styled(ButtonMD)`
 export const TabletButton = styled(ButtonMD)`
   display: none;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
+    height: 100%;
     opacity: 0;
     display: block;
+    padding: 0px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

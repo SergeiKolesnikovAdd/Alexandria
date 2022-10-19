@@ -1,15 +1,17 @@
 import {
   colors,
   getCurrentPaddingStyle,
-  getCurrentMarginStyle, applyMargins,
+  getCurrentMarginStyle,
+  applyMargins,
   colros,
+  hexToRGBA,
+  breakpointsWidth,
 } from "styles";
 import styled from "@emotion/styled";
 import { ButtonLG } from "../../ui/button-lg";
 import { Text } from "components";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
 import { Standart } from "../../common";
-import { hexToRGBA } from "styles";
 
 const activeForm = ({ isOpenForm }) => {
   isOpenForm ? `background-color: transparent` : `background-color: ${hexToRGBA(colors.black, 0.9)}`;
@@ -18,6 +20,7 @@ const activeForm = ({ isOpenForm }) => {
 export const OfferModalInner = styled.div`
   width: 100%;
   min-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   background-color: ${hexToRGBA(colors.black, 0.9)};
@@ -38,6 +41,12 @@ export const ContentSection = styled.div`
   height: 764px;
   opacity: 1;
   ${getCurrentMarginStyle("top", "mdsm")}
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
 `;
 
 export const ContentWrapper = styled.div`

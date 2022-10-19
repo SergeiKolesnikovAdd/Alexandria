@@ -51,7 +51,7 @@ export const AdvantageWrapper = styled.div`
   ${getCurrentMarginStyle("top", "xxlg")};
   gap: 24px;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: 1084px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -75,7 +75,7 @@ export const AdvantageItem = styled.div`
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: 1084px) {
     width: 100%;
     min-height: 354px;
     border-radius: 32px;
@@ -106,6 +106,7 @@ export const StyledCaption = styled(Caption)`
   color: ${colors.white};
   opacity: 0.4;
   ${getCurrentMarginStyle("top", "mdsm")};
+  line-height: 140%;
 `;
 
 export const ImgWrapper = styled.div`
@@ -117,6 +118,15 @@ export const ImgWrapper = styled.div`
   border-radius: 24px;
   align-self: flex-end;
   background-color: ${colors.white};
+  margin-top: 0px;
+
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    margin-top: 24px;
+  }
+
+  @media screen and (max-width: 1084px) {
+    margin-top: 0;
+  }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     border-radius: 16px;
@@ -131,15 +141,23 @@ export const ImgWrapper = styled.div`
 `;
 
 export const StyledPen = styled(Pen)`
+height: 80%;
+width: 80%;
 `;
 
 export const StyledFlag = styled(Flag)`
+  height: 80%;
+  width: 80%;
 `;
 
 export const StyledDiagram = styled(Diagram)`
+  height: 80%;
+  width: 80%;
 `;
 
 export const StyledMessage = styled(Message)`
+  height: 80%;
+  width: 80%;
 `;
 
 export const H3Styled = styled(H3)`

@@ -58,7 +58,7 @@ export const PlatformSlide = ({setColored, ...props }) => {
       style: {
         position: "absolute",
         right: "3%",
-        top: "21%",
+        top: "25%",
         transition: "transform 1s 0.3s linear",
       },
       img: img1.src,
