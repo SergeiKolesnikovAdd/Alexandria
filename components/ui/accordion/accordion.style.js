@@ -78,6 +78,10 @@ export const Title = styled(H3)`
   transition: color 0.3s;
   width: 35vw;
 
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    width: 100%;
+  }
+
   ${applyPaddings}
   ${applyMargins}
 `;
@@ -148,4 +152,8 @@ export const H3Styled = styled(Text)`
   ${getCurrentFontSizeStyle("h3")};
   width: 50vw;
   color: ${colors.white};
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    width: 100%;
+  }
 `;

@@ -27,8 +27,8 @@ export const News = ({ setColored, ...props }) => {
         <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
           Неделя открытого доступа
         </H2>
-        <MediaContainer>
-          <TextContainer mt="lg" mr="mdsm">
+        <MediaContainer mt="lg">
+          <TextContainer mr="mdsm">
             <StyledDescription>
               Начало работы проекта Alexandrina совпало с ежегодной
               международной неделей открытого доступа. Мы разделяем идею

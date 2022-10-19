@@ -44,7 +44,7 @@ export const ContentSection = styled.div`
   position: relative;
   overflow: hidden;
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     width: 100%;
   }
 `;

@@ -132,11 +132,6 @@ export const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
-
-  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    margin-top: 24px;
-  }
 `;
 
 export const StyledCaption = styled(Caption)`

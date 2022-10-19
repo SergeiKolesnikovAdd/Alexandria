@@ -32,6 +32,10 @@ export const ContentSection = styled.div`
   border-radius: 48px;
   position: relative;
 
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    width: 100%;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     ${getCurrentPaddingStyle("top", "xxxlg")};
     ${getCurrentPaddingStyle("horizontal", "xxlg")};
