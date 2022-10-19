@@ -7,7 +7,7 @@ import { postQuestion } from "utils/api"
 
 
 
-export const Form = withFormProvider(() => {
+export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
   const [isChecked, setIsChecked] = useState(false);
   const { handleSubmit } = useFormContext();
   const onSubmit = (data) => {
@@ -18,8 +18,8 @@ export const Form = withFormProvider(() => {
       message : data.message,
     })
       .then(() => {
-        // setOpen(true)
-        // console.log(data);
+        setOpen(false);
+        setIsGratitude(true);
       })
       .catch((error) => {
         console.log(error)

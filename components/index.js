@@ -64,6 +64,7 @@ import { OfferModal } from "./modal";
 import { FormModal } from "./modal/form-modal";
 import { QuestionsFormModal } from "./modal/questions-modal";
 import { Gratitude } from "./modal";
+import { GratitudeModal } from "./modal";
 
 export {
   H1,
@@ -108,4 +109,5 @@ export {
   Tab,
   News,
   Gratitude,
+  GratitudeModal,
 };

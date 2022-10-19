@@ -17,7 +17,7 @@ import { withFormProvider } from "utils";
 import { useState } from "react";
 import { postMain } from "utils/api";
 
-export const Form = withFormProvider(({ tariff = "", formName }) => {
+export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, setOpen }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const { handleSubmit } = useFormContext();
@@ -35,7 +35,9 @@ export const Form = withFormProvider(({ tariff = "", formName }) => {
       formName: formName,
     })
       .then(() => {
-        // setOpen(true)
+        setOpen(false);
+        setIsGratitude(true);
+
       })
       .catch((error) => {
         console.log(error);

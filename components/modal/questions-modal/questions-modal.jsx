@@ -8,6 +8,8 @@ import {
 import { H2, Modal } from "components";
 import { Form } from "./questions-modal-form";
 import { colors } from "styles";
+import { GratitudeModal } from "components";
+import { useState } from "react";
 
 export const QuestionsFormModal = ({
   title,
@@ -16,6 +18,8 @@ export const QuestionsFormModal = ({
   setColored,
   ...props
 }) => {
+  const [isGratitude, setIsGratitude] = useState(false);
+
   return (
     <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
       <FormModalInner>
@@ -34,10 +38,15 @@ export const QuestionsFormModal = ({
                 {title}
               </H2>
             </Title>
-            <Form />
+            <Form setIsGratitude={setIsGratitude} setOpen={setOpen} />
           </ContentWrapper>
         </ContentSection>
       </FormModalInner>
+      <GratitudeModal
+        isGratitude={isGratitude}
+        setIsGratitude={setIsGratitude}
+        setColored={setColored}
+      />
     </Modal>
   );
 };
