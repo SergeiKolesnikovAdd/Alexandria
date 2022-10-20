@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import React from "react";
 import { Gratitude } from "components";
+import { NewsSlide } from "components";
 
 const Home = () => {
   const [isColored, setColored] = useState(false);
@@ -27,6 +28,7 @@ const Home = () => {
       <OfferSlide setColored={setColored} pt="xxxlg" />
       <AdvantageSlide />
       <News setColored={setColored} mt="xxxlg" />
+      <NewsSlide mt="xxxlg" />
       <FaqSlide setColored={setColored} pt="xxxlg" />
       <Footer />
     </>

@@ -17,4 +17,5 @@ export { Modal } from "./modal";
 export { Portal } from "./portal";
 export { Close } from "./close";
 export { Warning } from "./warning";
+export { Subscription } from "./close copy";
 
