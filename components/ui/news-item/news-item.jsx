@@ -8,12 +8,13 @@ import {
   LinkRow,
   Dot,
   TabletDate,
+  Overlay,
 } from "./news-item.style";
 
 export const NewsItem = ({ id, date, title1, title2, description, img, index, ...props }) => {
   return (
     <ContentWrapper {...props}>
-      <PromoSection>
+      <PromoSection img={img}>
         <Date>{date}</Date>
         <LinkRow>
           <Link href="">
@@ -28,9 +29,10 @@ export const NewsItem = ({ id, date, title1, title2, description, img, index, ..
             <Caption>Новое</Caption>
           </Link>
         </LinkRow>
+        <Overlay/>
       </PromoSection>
       <TabletDate>{date}</TabletDate>
-      <H3 px="mdlg">
+      <H3 px="mdlg" mt="md">
         {title1}
         <br />
         {title2}

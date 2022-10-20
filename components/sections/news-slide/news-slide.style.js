@@ -6,11 +6,14 @@ import {
   getCurrentMarginStyle,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
+  fontSizes,
 } from "styles";
 
 import { Text, H3, ButtonSliderRight, } from "components";
 import styled from "@emotion/styled";
 import { Subscription } from "../../common";
+import sub from "../../../public/subscription.png";
+import { InputField } from "../../ui/fields";
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -50,7 +53,9 @@ export const SubscriptionWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 48px;
-  background-color: ${colors.black};
+  background-image: url(${sub.src});
+  background-repeat: no-repeat;
+  background-size: cover;
   ${getCurrentPaddingStyle("top","xxxlg")};
   text-align: center;
 
@@ -75,6 +80,12 @@ export const InputRow = styled.div`
 
   ${applyPaddings}
   ${applyMargins}
+`;
+
+export const StyledInput = styled(InputField)`
+  border: 1px solid #22222208;
+  ${applyPaddings};
+  ${applyMargins};
 `;
 
 export const SendButton = styled(ButtonSliderRight)`
@@ -124,6 +135,7 @@ export const Link = styled.a`
 export const StyledText = styled(Text)`
   text-align: center;
   color: ${colors.white};
+  ${getCurrentFontSizeStyle("h3")};
 `;
 
 export const H3Styled = styled(H3)`

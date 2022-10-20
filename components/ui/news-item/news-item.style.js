@@ -4,6 +4,8 @@ import {
   applyPaddings,
   applyMargins,
   colors,
+  fontSizes,
+  fontFamilies,
   getCurrentFontSizeStyle,
   breakpointsWidth,
 } from "styles";
@@ -11,7 +13,6 @@ import {
 import { Text, H3, Caption } from "components";
 
 import styled from "@emotion/styled";
-import { arrNews } from "../../sections/news-slide/constant";
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -40,20 +41,48 @@ export const PromoSection = styled.div`
   align-items: flex-end;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("bottom", "md")};
-  background-image: url(${arrNews.img});
+  background-image: url(${({ img }) => img});
   /* TODO: ПРОВЕРИТЬ КАК РАБОТАЕТ */
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  border-radius: 48px 48px 0px 0px;
 
   ${applyPaddings}
   ${applyMargins}
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     height: 180px;
+    border-radius: 32px 32px 0px 0px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     height: 160px;
+    border-radius: 24px 24px 0px 0px;
+  }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  border-radius: 48px 48px 0px 0px;
+  background: linear-gradient(
+    360deg,
+    rgba(40, 42, 46, 0.8) 0%,
+    rgba(40, 42, 46, 0) 100%
+  );
+  background-size: cover;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    border-radius: 32px 32px 0px 0px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px 24px 0px 0px;
   }
 `;
 
@@ -67,8 +96,13 @@ export const SendButton = styled.button`
   }
 `;
 
-export const Date = styled(Caption)`
+export const Date = styled.div`
+  color: ${colors.white};
+  z-index: 50;
   opacity: 0.4;
+  font-weight: 500;
+  font-size: ${fontSizes.Caption};
+  font-family: ${fontFamilies.Font};
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     display: none;
@@ -80,8 +114,10 @@ export const TabletDate = styled(Caption)`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     display: inline-block;
     opacity: 0.4;
+    color: ${colors.white};
   }
 `;
+
 
 export const Dot = styled.div`
   align-self: center;
@@ -94,4 +130,9 @@ export const Dot = styled.div`
 
 export const LinkRow = styled.div`
   display: flex;
+  z-index: 20;
+  span {
+    color: ${colors.white};
+    font-weight: 500;
+  }
 `;

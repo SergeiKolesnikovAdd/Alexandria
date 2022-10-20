@@ -8,8 +8,9 @@ import {
   SendButton,
   InputRow,
   Logo,
+  StyledInput,
 } from "./news-slide.style";
-import { ButtonXSM, H2, NewsItem, Caption } from "components";
+import { ButtonXSM, H2, NewsItem, Caption, } from "components";
 import { arrNews } from "./constant";
 import { colors } from "styles";
 
@@ -44,17 +45,21 @@ export const NewsSlide = ({}) => {
               чтобы быть в курсе новостей
             </StyledText>
             <InputRow>
-              {/* TODO: import input */}
+              {/* <StyledInput></StyledInput> */}
+              {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}
               <SendButton />
             </InputRow>
             <Logo />
-            <Caption mt="mdsm" style={{ color: colors.white }}>
+            <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
               Мы заботимся о безопасности ваших данных.
             </Caption>
-            <Link mt="xxsm" href="">
+            <Link href="" style={{ lineHeight: "140%" }}>
               <Caption>Подробнее</Caption>
             </Link>
-            <Caption mt="xlg" style={{ color: colors.white }}>
+            <Caption
+              mt="xlg"
+              style={{ color: colors.white, lineHeight: "140%" }}
+            >
               Будьте в курсе актуальных новостей и получайте их первыми.
               <br />
               Подпишитесь на полезную рассылку от Alexandrina
