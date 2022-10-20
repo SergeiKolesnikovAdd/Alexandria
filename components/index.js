@@ -13,6 +13,7 @@ export { Modal } from "./common";
 export { Portal } from "./common";
 export { Close } from "./common";
 export { Warning } from "./common";
+export { Subscription } from "./common";
 
 /*    Импорты UI-ых компонентов    */
 import { H1 } from "./ui/h1";
@@ -34,6 +35,7 @@ import { ButtonSliderLeft } from "./ui/button-slider-left";
 import { ButtonSliderRight } from "./ui/button-slider-right";
 import { DropDown } from "./ui/drop-down";
 import { Tab } from "./ui/tab";
+import { NewsItem } from "./ui/news-item";
 
 import {
   InputField,
@@ -58,6 +60,7 @@ import { AboutSlide } from "./sections/about-slide";
 import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
 import { News } from "./sections/news";
+import { NewsSlide } from "./sections/news-slide";
 
 /*    Импорты модальных окон    */
 import { OfferModal } from "./modal";
@@ -110,4 +113,6 @@ export {
   News,
   Gratitude,
   GratitudeModal,
+  NewsItem,
+  NewsSlide,
 };
