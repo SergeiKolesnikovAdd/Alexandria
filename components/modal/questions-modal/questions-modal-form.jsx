@@ -38,12 +38,15 @@ export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
         mb="md"
         propsInput={{ placeholder: "Ваше имя" }}
         title="Name *"
-        
       />
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
       <FormLabel>Вопрос интересующий вас</FormLabel>
-      <TextAreaField name="message" rules={{}} />
+      <TextAreaField
+        name="message"
+        propsInput={{ placeholder: "Ваш вопрос" }}
+        // rules={{}}
+      />
       <Checkbox
         isActive={isChecked}
         setActive={handleCheck}

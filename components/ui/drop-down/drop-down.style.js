@@ -161,8 +161,6 @@ export const InputStyled = styled.div`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.brightRed};
-  position: absolute;
-  top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};
 
   ${getCurrentFontSizeStyle("caption")};

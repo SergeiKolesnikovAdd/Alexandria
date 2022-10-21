@@ -24,8 +24,6 @@ export const CheckboxBorder = styled.div`
   transition: border-color 0.3s;
   border-color: ${({ isError }) => (isError ? colors.brightRed : hexToRGBA(colors.black, 0.2))};
 
-
-
   &:hover {
     border-color: ${colors.red};
   }
@@ -60,8 +58,6 @@ export const StyledCaption = styled(Caption)`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.red};
-  position: absolute;
-  top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};
 
   ${getCurrentFontSizeStyle("caption")};
