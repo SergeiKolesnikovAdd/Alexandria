@@ -20,6 +20,8 @@ import {
   PackageItemTab,
   ControlWrapper,
   Icon,
+  StyledDesktopBR,
+  StyledPhoneBR,
 } from "./offer-slide.style";
 
 import { arrOfferInfoTab } from "./tabs";
@@ -42,13 +44,21 @@ export const OfferSlide = ({ setColored, ...props }) => {
       </H2>
       <ButtonRow mb="lg" px="lg">
         <Text mt="lg">
-          Мы предлагаем оптимальные пакеты комплексных
-          <br />
-          услуг, а также возможность разработать персональное
-          <br />
-          предложение, исходя из индивидуальных
-          <br />
-          потребностей издателя
+          Мы предлагаем оптимальные пакеты&nbsp;
+          <StyledPhoneBR />
+          комплексных&nbsp;
+          <StyledDesktopBR />
+          услуг, а также возможность&nbsp;
+          <StyledPhoneBR />
+          разработать персональное&nbsp;
+          <StyledDesktopBR />
+          предложение,&nbsp;
+          <StyledPhoneBR />
+          исходя из индивидуальных&nbsp;
+          <StyledDesktopBR />
+          потребностей&nbsp;
+          <StyledPhoneBR />
+          издателя
         </Text>
         <ButtonXLG
           onClick={() => {
@@ -57,7 +67,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
             setColored(true);
-          }}>
+          }}
+        >
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -65,37 +76,33 @@ export const OfferSlide = ({ setColored, ...props }) => {
         <DescColumn>
           <DescItem></DescItem>
           <DescItem>
-            <DescText>
-              Сайт журнала с системой рецензирования и редакционного управления
-              соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ,
-              DOAB)
-            </DescText>
-          </DescItem>
-          <DescItem>
-            <DescText>Техническая поддержка</DescText>
+            <DescText>Разработка сайта журнала</DescText>
           </DescItem>
           <DescItem>
             <DescText>
-              Услуги рецензирования, редактирования, вёрстки и корректуры до
-              финального PDF
+              Техническое обеспечение системы рецензирования, редактирования и
+              выпуска научных статей
             </DescText>
           </DescItem>
           <DescItem>
-            <DescText>Маркетинговая и рекламная поддержка</DescText>
+            <DescText>Консалтинг и обучение редакционной коллегии</DescText>
           </DescItem>
           <DescItem>
-            <DescText>Уникальный дизайн журнала</DescText>
+            <DescText>Переводы и редакторские услуги специалистов</DescText>
           </DescItem>
           <DescItem>
             <DescText>
-              Консультации и поддержка в индексации архивировании журналов в
-              более чем 30 международных базах данных
+              Маркетинговая и рекламная поддержка для привлечения качественного
+              контента
             </DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Индивидуальный дизайн журнала</DescText>
           </DescItem>
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
         <PackageColumn>
-          <PackageItem pt="md" pb="mdsm">
+          <PackageItem pt="mdsm" pb="mdsm">
             <Standart />
             <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
@@ -128,7 +135,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setFormName("Пакет Стандарт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -180,7 +188,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -236,7 +245,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -292,14 +302,16 @@ export const OfferSlide = ({ setColored, ...props }) => {
         isOpen={isOpen}
         setOpen={setOpen}
         setColored={setColored}
-        {...chooseItem}></OfferModal>
+        {...chooseItem}
+      ></OfferModal>
       <FormModal
         formName={formName}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
         modalTitle={modalTitle}
         setColored={setColored}
-        {...chooseItem}></FormModal>
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };

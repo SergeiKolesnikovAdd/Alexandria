@@ -39,37 +39,37 @@ export const Tab = ({
           Подробнее
         </StyledCaption>
         <DescItem isShowing={isShowing}>
-          <DescText isShowing={isShowing}>
-            Сайт журнала с системой рецензирования и редакционного управления
-            соответствующий стандартам МНБД (Scopus, Web of Science, DOAJ, DOAB)
-          </DescText>
+          <DescText isShowing={isShowing}>Разработка сайта журнала</DescText>
           {m1img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
-          <DescText isShowing={isShowing}>Техническая поддержка</DescText>
+          <DescText isShowing={isShowing}>
+            Техническое обеспечение системы рецензирования, редактирования и
+          </DescText>
           {m2img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Услуги рецензирования, редактирования, вёрстки и корректуры до
-            финального PDF
+            Консалтинг и обучение редакционной коллегии
           </DescText>
           {m3img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Маркетинговая и рекламная поддержка
+            Переводы и редакторские услуги специалистов
           </DescText>
           {m4img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
-          <DescText isShowing={isShowing}>Уникальный дизайн журнала</DescText>
+          <DescText isShowing={isShowing}>
+            Маркетинговая и рекламная поддержка для привлечения качественного
+            контента
+          </DescText>
           {m5img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Консультации и поддержка в индексации архивировании журналов в более
-            чем 30 международных базах данных
+            Индивидуальный дизайн журнала
           </DescText>
           {m6img && <Mark />}
         </DescItem>

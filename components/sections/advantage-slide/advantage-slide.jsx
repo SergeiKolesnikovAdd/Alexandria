@@ -18,7 +18,7 @@ import {
 export const AdvantageSlide = ({ ...props }) => {
   return (
     <SectionWrapper id="advantages">
-      <ContentWrapper {...props} mt="xxxlg">
+      <ContentWrapper {...props} mt="xxlg">
         <H3Styled style={{ opacity: 0.4 }}>Преимущества</H3Styled>
         <StyledH2 mt="mdsm">Почему выбирают именно нас?</StyledH2>
         <AdvantageWrapper>
@@ -69,9 +69,8 @@ export const AdvantageSlide = ({ ...props }) => {
             <TextWrapper>
               <StyledText>Различные бизнес-модели</StyledText>
               <StyledCaption>
-                Подробные инструкции, воркшопы и консультации помогут
-                досконально разобраться в процессе издательской деятельности и
-                повысят уровень экспертности назначенной редакционной коллегии.
+                Удобные и понятные тарифы с оптимальным наполнением услуг, а
+                также система индивидуального подхода к каждому издателю
               </StyledCaption>
             </TextWrapper>
             <ImgWrapper>

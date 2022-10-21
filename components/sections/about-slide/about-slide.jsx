@@ -26,7 +26,7 @@ export const AboutSlide = ({ ...props }) => {
     <ContentWrapper {...props} id="about">
       <H3Styled mx="lg">В чем наша идея</H3Styled>
       <H2 mx="lg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
-        Alexandrina—это
+        Alexandrina-это
       </H2>
       <ButtonXSM ml="lg" mt="md">
         О нас
@@ -34,9 +34,9 @@ export const AboutSlide = ({ ...props }) => {
       <ButtonRow>
         <TextContainer mt="lg" mx="lg">
           <StyledDescription>
-            Комплексное решение для развития научных рецензируемых журналов и
+            комплексное решение для развития научных рецензируемых журналов и
             книг открытого доступа. Наше модульное программное обеспечение
-            позволяет вам вести издательскую деятельность легко и просто.
+            позволяет вести издательскую деятельность просто и эффективно.
           </StyledDescription>
           {/* <Link href="/presentation" target="_blank">
             <StyledText>Презентация,&nbsp;PDF</StyledText>
@@ -63,7 +63,12 @@ export const AboutSlide = ({ ...props }) => {
             <ImgSlide key={id} isOpen={chooseItem.id === id} src={img} />
           ))}
           {contentAccordion.map(({ id, span }) => (
-            <StyledCaption mt="md" key={id} isOpen={chooseItem.id === id} span={span}>
+            <StyledCaption
+              mt="md"
+              key={id}
+              isOpen={chooseItem.id === id}
+              span={span}
+            >
               {span}
             </StyledCaption>
           ))}

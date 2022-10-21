@@ -39,16 +39,16 @@ export const MainFirstSlide = ({ setColored, ...props }) => {
     <>
       <FirstSlideWrapper {...props}>
         <H1 mx="lg">
-          многофункциональная
+          Многофункциональная
           <br />
           научно-издательская
           <br />
           платформа
         </H1>
         <H3 mt="lg" mx="lg">
-          Создайте свой научный журнал, который
+          Создавайте научные журналы, которые
           <br />
-          будет соответствовать самым высоким
+          соответствуют самым высоким
           <br />
           издательским стандартам
         </H3>
@@ -59,7 +59,8 @@ export const MainFirstSlide = ({ setColored, ...props }) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
             setColored(true);
-          }}>
+          }}
+        >
           Начать работу
         </ButtonMD>
         <FirstSlideBGImageWrapper>

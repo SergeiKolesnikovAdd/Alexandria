@@ -30,6 +30,7 @@ export const TextWrapper = styled.div`
     display: inline;
     span {
       display: inline;
+      letter-spacing: -0.04em;
     }
     @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
       display: block;
@@ -51,7 +52,7 @@ export const StyledDesktopMDBR = styled.br`
     display: block;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
     display: none;
   }
 `;
@@ -92,7 +93,7 @@ export const StyledImg = styled.img`
   height: 7vw;
   border-radius: 2vw;
   object-fit: cover;
-  z-index: 50;
+  z-index: -10;
   ${({ scrollY }) => scrollY && `transform: scale(${scrollY});`};
 
   :first-of-type {

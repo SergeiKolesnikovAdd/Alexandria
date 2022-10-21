@@ -131,55 +131,67 @@ export const PlatformSlide = ({setColored, ...props }) => {
             <StyledPhoneBR />
             научные&nbsp;
             <StyledDesktopMDBR />
+            <StyledDesktopSMBR />
             журналы&nbsp;
             <StyledPhoneBR />
             и&nbsp;книги,&nbsp;
             <StyledDesktopLGBR />
             <StyledTabletSMBR />
-            соответствующие&nbsp;
+            международного&nbsp;
+            <StyledDesktopSMBR />
+            <StyledPhoneBR />
+            уровня&nbsp;
             <StyledDesktopMDBR />
             <StyledTabletSMBR />
-            <StyledPhoneBR />
-            международным&nbsp;
-            <StyledPhoneBR />
-            стандартам&nbsp;
-            <StyledDesktopLGBR />
-            <StyledDesktopMDBR />
-            <StyledTabletSMBR />
-            для издателей&nbsp;
+            издателям&nbsp;
             <StyledPhoneBR />
             любого масштаба&nbsp;
+            <StyledDesktopSMBR />
           </H2>
           <H2 style={{ color: colors.orange }}>
-            и&nbsp;
+            и&nbsp;амбиций:&nbsp;
             <StyledDesktopMDBR />
-            амбиций&nbsp;
-            <StyledDesktopLGBR />
-            вне&nbsp;зависимости&nbsp;
-            <StyledTabletSMBR />
-            <StyledPhoneBR />
-            от того&nbsp;
-            <StyledDesktopMDBR />
-            являетесь ли вы&nbsp;
-            <StyledTabletSMBR />
-            <StyledDesktopLGBR />
-            <StyledPhoneBR />
             университетской&nbsp;
-            <StyledDesktopMDBR />
-            прессой,&nbsp;
-            <StyledTabletSMBR />
-            <StyledPhoneBR />
-            организатором&nbsp;
-            <StyledPhoneBR />
             <StyledDesktopLGBR />
-            конференций&nbsp;
             <StyledTabletSMBR />
+            <StyledPhoneBR />
+            прессе,&nbsp;
+            <StyledDesktopSMBR />
+            организаторам&nbsp;
             <StyledDesktopMDBR />
-            или научно-
+            <StyledTabletSMBR />
+            <StyledPhoneBR />
+            конференций,&nbsp;
+            <StyledDesktopLGBR />
+            <StyledDesktopSMBR />
+            научно-
+            <StyledTabletSMBR />
             <StyledPhoneBR />
             исследовательским&nbsp;
+            <StyledDesktopMDBR />
+            <StyledTabletSMBR />
+            институтам&nbsp;
+            <StyledDesktopLGBR />
+            <StyledDesktopSMBR />
             <StyledPhoneBR />
-            институтом
+            и&nbsp;другим&nbsp;
+            <StyledTabletSMBR />
+            организациям,&nbsp;
+            <StyledDesktopMDBR />
+            <StyledDesktopSMBR />
+            <StyledPhoneBR />
+            желающим&nbsp;
+            <StyledTabletSMBR />
+            повысить&nbsp;
+            <StyledPhoneBR />
+            <StyledDesktopLGBR />
+            качество&nbsp;
+            <StyledDesktopMDBR />
+            <StyledDesktopSMBR />
+            своей&nbsp;
+            <StyledTabletSMBR />
+            <StyledPhoneBR />
+            издательской деятельности
           </H2>
         </TextWrapper>
         <ButtonMD

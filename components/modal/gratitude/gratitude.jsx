@@ -18,7 +18,7 @@ export const Gratitude = () => {
           <H2>Благодарим за обращение в Alexandrina!</H2>
         </Title>
         <Subtitle>
-          <Caption>Мы ответим на Ваш вопрос
+          <Caption>Мы ответим на Ваш запрос
             <br/>в течение 24 часов</Caption>
         </Subtitle>
       </ContentWrapper>
