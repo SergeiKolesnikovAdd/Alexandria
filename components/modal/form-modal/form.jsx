@@ -62,19 +62,29 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
       <FormLabel>
         Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
       </FormLabel>
-      <InputField rules={{}} mb="md" name="journalName" />
+      <InputField
+        rules={{}}
+        mb="md"
+        name="journalName"
+        propsInput={{ placeholder: "Ваш журнал" }}
+      />
       <FormLabel>Что вас интересует</FormLabel>
       <DropDownField
         mb="md"
         title="Выберите из списка"
         name="action"
         options={selectServicesOptions}
+        propsInput={{ placeholder: "Выберите из списка" }}
       />
       <FormLabel>
         Дополнительная информация
         <FormLabelGray>(Не обязательно)</FormLabelGray>
       </FormLabel>
-      <TextAreaField name="message" rules={{}} />
+      <TextAreaField
+        name="message"
+        rules={{}}
+        propsInput={{ placeholder: "Текст информации" }}
+      />
       <Checkbox
         isActive={isChecked}
         setActive={handleCheck}

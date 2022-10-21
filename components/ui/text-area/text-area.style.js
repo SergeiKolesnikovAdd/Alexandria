@@ -1,17 +1,24 @@
 import styled from "@emotion/styled";
 import {
-    breakpointsWidth,
-    colors,
-    fontFamilies,
-    fontSizes, getCurrentColor,
-    getCurrentFontSizeStyle,
-    getCurrentPaddingStyle,
-    getCurrentMarginStyle,
-    hexToRGBA,
-    applyMargins,
+  breakpointsWidth,
+  colors,
+  fontFamilies,
+  fontSizes,
+  getCurrentColor,
+  getCurrentFontSizeStyle,
+  getCurrentPaddingStyle,
+  getCurrentMarginStyle,
+  hexToRGBA,
+  applyMargins,
 } from "styles";
 
-const lineHeight = 38
+const errorConditionColor = ({ isError }) =>
+  isError ? `color:${colors.brightRed};` : "";
+
+const errorConditionBackgroundColor = ({ isError }) =>
+  isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
+
+const lineHeight = 38;
 export const InputWrapper = styled.div`
   position: relative;
   ${({ isFullWidth }) => isFullWidth && "width: 100%;"}
@@ -33,11 +40,13 @@ export const TextAreaInput = styled("textarea")`
   ${applyMargins}
 
   &::placeholder {
-    color: ${hexToRGBA(colors.black, 0)};
+    font-family: ${fontFamilies.Font};
+    color: ${hexToRGBA(colors.black, 0.2)};
   }
+
+  ${errorConditionColor}
+  ${getCurrentFontSizeStyle("h3")};
 `;
-
-
 
 export const TextAreaWrapper = styled.div`
   width: 100%;
@@ -57,10 +66,13 @@ export const TextAreaWrapper = styled.div`
     font-size: ${fontSizes.h3};
     font-family: ${fontFamilies.Font};
     line-height: ${lineHeight + "px"};
-    background-image: ${`linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${colors.red} 0px)`};
+    background-image: ${({ isError }) =>
+      isError
+        ? `linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${colors.brightRed} 0px)`
+        : `linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${colors.red} 0px)`};
     background-size: ${`100% ${lineHeight}px`};
     transition: transform 0.5s;
-    transform: scaleX(${({ isActive }) => (isActive ? 1 : 0)});
+    transform: scaleX(${({ isActive, isError }) => (isActive || isError ? 1 : 0)});
     transform-origin: left;
   }
 
@@ -72,9 +84,17 @@ export const TextAreaWrapper = styled.div`
 export const Error = styled.div`
   width: 100%;
   color: ${colors.brightRed};
-  position: absolute;
   top: calc(100% + 4px);
   font-family: ${fontFamilies.Font};
 
   ${getCurrentFontSizeStyle("caption")};
 `;
+
+export const ErrorWrapper = styled.span`
+  ${getCurrentMarginStyle("top", "xxsm")}
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+`;
+
+

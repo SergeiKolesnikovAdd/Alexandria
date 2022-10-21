@@ -10,11 +10,12 @@ import { propTypesMargin, propTypesPadding } from "../../types";
 
 export const TextArea = ({
   title,
+  error,
   value = "",
   onChange,
   defaultValue,
   rows = 1,
-  maxLength = 152,
+  maxLength = 255,
   propsInput,
   isFullWidth = false,
   isResizable = true,
@@ -29,15 +30,16 @@ export const TextArea = ({
   function handleKeyUp(e) {
     isResizable && resizeHeight(e);
     const value = e.target.value;
+    console.log(value);
     if (value.length > maxLength) return;
     onChange?.(value);
   }
 
   return (
     <InputWrapper isFullWidth={isFullWidth} {...props}>
-      <TextAreaWrapper isActive={!!value} maxRows={rows}>
+      <TextAreaWrapper isError={error} isActive={!!value} maxRows={rows}>
         <TextAreaInput
-          placeholder="About your work"
+          placeholder=""
           onChange={handleKeyUp}
           defaultValue={defaultValue}
           maxLength={maxLength}
@@ -45,6 +47,7 @@ export const TextArea = ({
           rows={rows}
           {...propsInput}
         />
+        {error && <Error>{error}</Error>}
       </TextAreaWrapper>
     </InputWrapper>
   );
