@@ -57,8 +57,8 @@ export const OfferModal = ({
             </Title>
             <Caption>{subtitle}</Caption>
             <Description mt="lg">
-              <Heading>{headingMaintance}</Heading>
-              <Text>{textMaintance}</Text>
+              {/* <Heading>{headingMaintance}</Heading>
+              <Text>{textMaintance}</Text> */}
               <Heading>{headingService}</Heading>
               <Text>{textService}</Text>
               <Heading>{headingMarketing}</Heading>

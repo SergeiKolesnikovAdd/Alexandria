@@ -33,7 +33,7 @@ export const GratitudeModal = ({
           <H2>Благодарим за обращение в Alexandrina!</H2>
         </Title>
         <Subtitle>
-          <Caption mt="lg">Мы ответим на Ваш вопрос
+          <Caption mt="lg">Мы ответим на Ваш запрос
             <br/>в течение 24 часов</Caption>
         </Subtitle>
           </ContentWrapper>

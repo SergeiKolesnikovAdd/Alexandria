@@ -20,7 +20,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  ${getCurrentPaddingStyle("vertical", "lg")};
+  ${getCurrentPaddingStyle("top", "lg")};
 
   ${applyMargins}
   ${applyPaddings}
@@ -68,11 +68,11 @@ export const DescColumn = styled.div`
   ${applyPaddings}
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-rows: repeat(8, 80px);
+    grid-template-rows: 120px repeat(7, 80px);
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
-    grid-template-columns: repeat(1, 324px);
+    grid-template-columns: repeat(1, 42vw);
   }
 `;
 
@@ -84,6 +84,7 @@ export const PackageColumn = styled.div`
   grid-auto-flow: column;
   justify-items: center;
   align-items: center;
+  text-align: center;
   transition: background-color 0.3s;
   border-radius: 32px;
 
@@ -100,11 +101,11 @@ export const PackageColumn = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-rows: repeat(8, 80px);
+    grid-template-rows: 120px repeat(7, 80px);;
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
-    grid-template-columns: repeat(1, 120px);
+    grid-template-columns: repeat(1, 15.6vw);
   }
 `;
 
@@ -120,7 +121,7 @@ export const DescItem = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    height: 80px;
+    height: 100%;
     span {
       font-size: 12px;
     }
@@ -142,7 +143,7 @@ export const PackageItem = styled.div`
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    height: 80px;
+    height: 100%;
   }
 
   ${applyPaddings}
@@ -241,4 +242,18 @@ export const PackageItemTab = styled.button`
 export const Icon = styled.img`
   width: 24px;
   height: 24px;
+`;
+
+export const StyledDesktopBR = styled.br`
+  display: block;
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: none;
+  }
+`;
+
+export const StyledPhoneBR = styled.br`
+  display: none;
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    display: block;
+  }
 `;

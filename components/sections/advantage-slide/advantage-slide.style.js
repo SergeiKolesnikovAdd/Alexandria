@@ -77,7 +77,7 @@ export const AdvantageItem = styled.div`
 
   @media screen and (max-width: 1084px) {
     width: 100%;
-    min-height: 354px;
+    height: 46vw;
     border-radius: 32px;
   }
 
