@@ -50,7 +50,7 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormLabel>Как вас зовут?*</FormLabel>
+      <FormLabel>Как Вас зовут?*</FormLabel>
       <InputField
         name="name"
         mb="md"
@@ -68,7 +68,7 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
         name="journalName"
         propsInput={{ placeholder: "Ваш журнал" }}
       />
-      <FormLabel>Что вас интересует</FormLabel>
+      <FormLabel>Что Вас интересует</FormLabel>
       <DropDownField
         mb="md"
         title="Выберите из списка"

@@ -211,6 +211,7 @@ export const FooterLink = styled.a`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     align-self: end;
     text-align: right;
+    margin-bottom: 12px;
   }
 `;
 export const IconAlexandrina = styled(Logo)`

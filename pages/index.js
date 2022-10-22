@@ -28,7 +28,7 @@ const Home = () => {
       <OfferSlide setColored={setColored} pt="xxxlg" />
       <AdvantageSlide />
       <News setColored={setColored} mt="xxxlg" />
-      <NewsSlide mt="xxxlg" />
+      {/* <NewsSlide mt="xxxlg" /> */}
       <FaqSlide setColored={setColored} pt="xxxlg" />
       <Footer />
     </>

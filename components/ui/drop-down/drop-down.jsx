@@ -13,6 +13,7 @@ import {
   Underline,
   UnderlineInner,
   IconWrapper,
+  IconMinus,
 } from "./drop-down.style";
 import {useEscHandler} from "../../../utils";
 
@@ -96,6 +97,14 @@ export const DropDown = ({
             >
               <path d="M0 13H26M13 26L13 0" strokeWidth="2" />
             </IconPlus>
+            <IconMinus
+              isOpen={isOpen}
+              isActive={isActive}
+              viewBox="0 0 16 2"
+              fill="none"
+            >
+              <path d="M16 1L0 1" stroke="white" strokeWidth="2" />
+            </IconMinus>
           </IconWrapper>
         </InputStyled>
         <Underline>

@@ -42,5 +42,8 @@ export const Button = styled.button`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 10px;
     margin-top: 24px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 `;

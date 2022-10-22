@@ -35,14 +35,14 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("bottom", "lg")};
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    flex-direction: column;
     border-radius: 48px;
-    position: relative;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px;
     padding-top: 16px;
+    flex-direction: column;
+    position: relative;
   }
 
   ${applyMargins}
@@ -51,16 +51,15 @@ export const ContentWrapper = styled.div`
 
 export const TextWrapper = styled.div`
   height: 100%;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: ${getCurrentBackgroundColorStyles("black")};
 
-  /* @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    span {
-      width: 100%;
-    }
-  } */
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    width: 100%;
+  }
 `;
 
 export const HigherPart = styled.div`

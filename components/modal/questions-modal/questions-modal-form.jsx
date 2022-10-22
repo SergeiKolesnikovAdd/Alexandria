@@ -32,7 +32,7 @@ export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormLabel>Как вас зовут?</FormLabel>
+      <FormLabel>Как Вас зовут?</FormLabel>
       <InputField
         name="name"
         mb="md"
@@ -41,7 +41,7 @@ export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
       />
       <FormLabel>Электронная почта</FormLabel>
       <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel>Вопрос интересующий вас</FormLabel>
+      <FormLabel>Интересующий вопрос</FormLabel>
       <TextAreaField
         name="message"
         propsInput={{ placeholder: "Ваш вопрос" }}
