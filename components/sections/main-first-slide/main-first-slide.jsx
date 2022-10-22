@@ -37,7 +37,7 @@ export const MainFirstSlide = ({ setColored, ...props }) => {
 
   return (
     <>
-      <FirstSlideWrapper {...props}>
+      <FirstSlideWrapper id="main" {...props}>
         <H1 mx="lg">
           Многофункциональная
           <br />

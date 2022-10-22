@@ -29,8 +29,8 @@ export const ContentWrapper = styled.div`
   background-color: ${colors.black};
   border: 1px solid ${colors.black};
   border-radius: 80px;
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
-  ${getCurrentPaddingStyle("vertical", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "lg2")};
+  ${getCurrentPaddingStyle("vertical", "lg")};
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     border-radius: 48px;
@@ -61,6 +61,7 @@ export const AdvantageWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     grid-template-columns: repeat(1, 1fr);
     gap: 8px;
+    height: min-content;
   }
 `;
 
@@ -107,6 +108,7 @@ export const StyledCaption = styled(Caption)`
   opacity: 0.4;
   ${getCurrentMarginStyle("top", "mdsm")};
   line-height: 140%;
+  font-weight: 500;
 `;
 
 export const ImgWrapper = styled.div`
@@ -164,4 +166,11 @@ export const H3Styled = styled(H3)`
   ${getCurrentFontSizeStyle("text")};
   opacity: 0.4;
   color: ${colors.white};
+`;
+
+export const StyledPhoneBR = styled.br`
+  display: none;
+  @media screen and (max-width: 850px) {
+    display: block;
+  }
 `;

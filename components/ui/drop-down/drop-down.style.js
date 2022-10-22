@@ -78,9 +78,9 @@ export const IconPlus = styled.svg`
   transition: stroke .3s;
   ${({isOpen, isActive, isError, }) => {
     if (isOpen) {
-      return { stroke: colors.white };
+      return { display: "none" };
     } else if (isActive) {
-      return { stroke: colors.white };
+      return { display: "block" };
     } else if (isError) {
       return { stroke: colors.white };
     } else {
@@ -88,6 +88,20 @@ export const IconPlus = styled.svg`
     }
   }};
 
+`;
+
+export const IconMinus = styled.svg`
+  display: none;
+  width: 12px;
+  height: 12px;
+  transition: stroke 0.3s;
+  ${({ isOpen, isActive,}) => {
+    if (isOpen) {
+      return { display: "block" };
+    } else if (isActive) {
+      return { display: "none" };
+    } 
+  }};
 `;
 
 export const DropDownItem = styled.li`

@@ -19,7 +19,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  ${getCurrentMarginStyle("horizontal", "lg")};
+  ${getCurrentPaddingStyle("horizontal", "lg")};
 
   ${applyMargins}
   ${applyPaddings}
@@ -27,7 +27,7 @@ export const ContentWrapper = styled.div`
 
 export const NewsWrapper = styled.div`
   display: grid;
-  width: 100%;
+  width: max-content;
   grid-template-columns: repeat(3, 31vw);
   grid-template-rows: repeat(2, 580px);
   gap: 16px;

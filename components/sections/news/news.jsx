@@ -11,6 +11,7 @@ import {
   ImgSlide,
   ImgContainer,
   StyledCaption,
+  StyledLink,
 } from "./news.style";
 import { ButtonSM, H2, AccordionSmall, FormModal } from "components";
 import { fontSizes } from "styles";
@@ -29,20 +30,28 @@ export const News = ({ setColored, ...props }) => {
         </H2>
         <MediaContainer mt="lg">
           <TextContainer mr="mdsm">
-            <StyledDescription>
+            <StyledDescription style={{ display: "inline" }}>
               Начало работы проекта Alexandrina совпало с ежегодной
-              международной неделей открытого доступа. Мы разделяем идею
-              открытого доступа для всех и равенства в получении научных знаний,
-              ведь Наука не сможет повлиять на мир, если мы будем держать ее под
-              замком.
+              международной&nbsp;
+            </StyledDescription>
+            <StyledLink href="openaccessweek.org">
+              неделей открытого доступа
+            </StyledLink>
+            <StyledDescription style={{ display: "inline" }}>
+              . Мы разделяем идею открытого доступа для всех и равенства в
+              получении научных знаний, ведь Наука не сможет повлиять на мир,
+              если мы будем держать ее под замком.
             </StyledDescription>
             <StyledDescription mt="lg">
               Неделя открытого доступа - это бесценный шанс связать глобальный
               импульс к открытому обмену знаниями с продвижением политических
               изменений и важностью социальных проблем, затрагивающих людей во
               всем мире. Именно поэтому с 24 по 30 октября мы бесплатно проводим
-              аудиты научных журналов на возможность вступления в DOAJ и
-              предоставляем скидку 20% для разработки журнала на платформе
+              аудиты научных журналов на возможность вступления в&nbsp;
+              <StyledLink href="https://doaj.org/">
+                <StyledDescription>DOAJ&nbsp;</StyledDescription>
+              </StyledLink>
+              и предоставляем скидку 20% для разработки журнала на платформе
               Alexandrina.
             </StyledDescription>
           </TextContainer>
