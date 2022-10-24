@@ -40,8 +40,15 @@ export const OfferModal = ({
 
   return (
     <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
-      <OfferModalInner isOpenForm={isOpenForm}>
-        <ContentSection>
+      <OfferModalInner
+        onClick={() => {
+          setOpen(false), setColored(false);
+        }}
+        isOpenForm={isOpenForm}>
+        <ContentSection
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
           <ProductImage src={img} />
           <ClsButton
             mt="mdlg"
@@ -66,7 +73,6 @@ export const OfferModal = ({
             </Description>
             <StyledButtonLG
               onClick={() => {
-                console.log(id);
                 setOpenForm(true);
                 setColored(true);
                 setOpen(false);

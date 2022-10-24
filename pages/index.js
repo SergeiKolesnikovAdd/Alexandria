@@ -13,7 +13,6 @@ import {
 
 import { useState } from "react";
 import React from "react";
-import { Gratitude } from "components";
 import { NewsSlide } from "components";
 
 const Home = () => {
