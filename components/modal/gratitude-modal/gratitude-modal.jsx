@@ -17,9 +17,19 @@ export const GratitudeModal = ({
   ...props
 }) => {
   return (
-    <Modal setOpen={setIsGratitude} isOpen={isGratitude} setColored={setColored}>
-      <FormModalInner>
-        <ContentSection>
+    <Modal
+      setOpen={setIsGratitude}
+      isOpen={isGratitude}
+      setColored={setColored}>
+      <FormModalInner
+        onClick={() => {
+          setIsGratitude(false);
+          setColored(false);
+        }}>
+        <ContentSection
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
           <ClsButton
             mt="mdlg"
             mr="mdlg"
@@ -29,13 +39,15 @@ export const GratitudeModal = ({
             }}
           />
           <ContentWrapper>
-          <Title>
-          <H2>Благодарим за обращение в Alexandrina!</H2>
-        </Title>
-        <Subtitle>
-          <Caption mt="lg">Мы ответим на Ваш запрос
-            <br/>в течение 24 часов</Caption>
-        </Subtitle>
+            <Title>
+              <H2>Благодарим за обращение в Alexandrina!</H2>
+            </Title>
+            <Subtitle>
+              <Caption mt="lg">
+                Мы ответим на Ваш запрос
+                <br />в течение 24 часов
+              </Caption>
+            </Subtitle>
           </ContentWrapper>
         </ContentSection>
       </FormModalInner>

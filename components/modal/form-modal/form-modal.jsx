@@ -4,6 +4,7 @@ import {
   ClsButton,
   ContentWrapper,
   Title,
+  CloseSection,
 } from "./form-modal.style";
 import { H2, Modal } from "components";
 import { Form } from "./form";
@@ -24,8 +25,15 @@ export const FormModal = ({
 
   return (
     <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
-      <FormModalInner>
-        <ContentSection>
+      <FormModalInner
+        onClick={() => {
+          setOpen(false);
+          setColored(false);
+        }}>
+        <ContentSection
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
           <ClsButton
             mt="mdlg"
             mr="mdlg"

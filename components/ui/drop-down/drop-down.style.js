@@ -100,7 +100,7 @@ export const IconMinus = styled.svg`
       return { display: "block" };
     } else if (isActive) {
       return { display: "none" };
-    } 
+    }
   }};
 `;
 
@@ -149,13 +149,13 @@ export const InputStyled = styled.div`
 
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
-      return { color: colors.white };
+      return { color: colors.black };
     } else if (isActive) {
       return { color: getCurrentColor("black") };
     } else if (isError) {
       return { color: colors.brightRed};
     } else {
-      return { color: hexToRGBA(colors.white, 0.2) };
+      return { color: hexToRGBA(colors.black, 0.2) };
     }
   }}
 

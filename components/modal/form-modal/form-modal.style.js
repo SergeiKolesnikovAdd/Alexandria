@@ -25,7 +25,7 @@ export const FormModalInner = styled.div`
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
   overflow: hidden;
-  
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     ${getCurrentPaddingStyle("top", "xxxlg")};
     ${getCurrentPaddingStyle("horizontal", "xxlg")};
@@ -64,7 +64,8 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: auto;
 `;
 
 export const Title = styled.div`

@@ -20,7 +20,7 @@ export const TextAreaField = ({name, rules = null, ...props}) => {
         }
         render={({ field }) => (
             <TextArea
-                {...register("message", {
+                {...register(rules && "message", {
               minLength: {
                 value: 3,
                 message: "Введите не менее 3 символов",
