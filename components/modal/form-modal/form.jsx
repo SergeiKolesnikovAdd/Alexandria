@@ -6,7 +6,7 @@ import {
   InputField,
   Checkbox,
 } from "components";
-import { useFormContext } from "react-hook-form";
+import { useForm, useFormContext } from "react-hook-form";
 import {
   FormLabelGray,
   FormLabel,
@@ -14,14 +14,18 @@ import {
   ErrorField,
 } from "./form-modal.style";
 import { withFormProvider } from "utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { postMain } from "utils/api";
 
-export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, setOpen }) => {
+export const Form = withFormProvider(
+  ({ tariff = "", formName, setIsGratitude, setOpen }) => {
     const [isChecked, setIsChecked] = useState(false);
 
-    const { handleSubmit } = useFormContext();
-    // const onSubmit = (data) => { console.log(data); };
+    const {
+      handleSubmit,
+      formState: { isValid },
+      reset,
+    } = useFormContext();
 
     const onSubmit = (data) => {
       postMain({
@@ -49,13 +53,13 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
     };
 
     const disabledButton = () => {
-      if (!ErrorField && !isChecked) return true;
-      else return false;
+      if (isValid && isChecked) return false;
+      else return true;
     };
 
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-        <FormLabel>Как вас зовут?*</FormLabel>
+        <FormLabel>Как Вас зовут?*</FormLabel>
         <InputField
           name="name"
           mb="md"
@@ -77,7 +81,7 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
           name="journalName"
           propsInput={{ placeholder: "Ваш журнал" }}
         />
-        <FormLabel>Что вас интересует*</FormLabel>
+        <FormLabel>Что Вас интересует*</FormLabel>
         <DropDownField
           mb="md"
           title="Выберите из списка"
@@ -106,5 +110,6 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
   },
   {
     mode: "onBlur",
+    reValidateMode: "onBlur",
   }
 );
