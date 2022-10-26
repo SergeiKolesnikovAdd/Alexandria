@@ -12,7 +12,8 @@ export const SlideWrapper = styled.div`
   position: relative;
   width: 45vw;
   height: 45vw;
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     ${getCurrentMarginStyle("top", "xlg")}
     width: 93.75vw;
     height: 93.75vw;
@@ -102,7 +103,7 @@ export const Slide = styled.div`
   z-index: ${({ index }) => 10 - index};
   transform-origin: left center;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     transform: translateY(${({ index }) => positions[index].translateY})
       scale(${({ index }) => positions[index].scale});
     transform-origin: bottom center;

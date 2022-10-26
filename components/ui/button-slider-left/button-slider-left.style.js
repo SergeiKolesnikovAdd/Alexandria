@@ -32,7 +32,7 @@ export const ButtonWrapper = styled.button`
   ${applyMargins}
   ${applyPaddings}
 
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     position: absolute;
     top: 25%;
     z-index: 90;

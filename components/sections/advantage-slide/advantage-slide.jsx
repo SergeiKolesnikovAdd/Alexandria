@@ -13,6 +13,7 @@ import {
   StyledPen,
   H3Styled,
   SectionWrapper,
+  StyledPhoneBR,
 } from "./advantage-slide.style";
 
 export const AdvantageSlide = ({ ...props }) => {
@@ -20,7 +21,7 @@ export const AdvantageSlide = ({ ...props }) => {
     <SectionWrapper id="advantages">
       <ContentWrapper {...props} mt="xxlg">
         <H3Styled style={{ opacity: 0.4 }}>Преимущества</H3Styled>
-        <StyledH2 mt="mdsm">Почему выбирают именно нас?</StyledH2>
+        <StyledH2 mt="mdsm">Почему выбирают <StyledPhoneBR/>именно нас?</StyledH2>
         <AdvantageWrapper>
           <AdvantageItem mr="mdsm">
             <TextWrapper>

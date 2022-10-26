@@ -3,6 +3,7 @@ import {
   applyPaddings,
   breakpointsWidth,
   colors,
+  fontFamilies,
   getCurrentMarginStyle,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
@@ -32,8 +33,7 @@ export const ButtonRow = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: inline;
   width: 100%;
 
   ${applyPaddings}
@@ -132,6 +132,10 @@ export const ImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    ${getCurrentMarginStyle("top","lg")};
+  }
 `;
 
 export const StyledCaption = styled(Caption)`
@@ -140,5 +144,31 @@ export const StyledCaption = styled(Caption)`
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
     align-self: right;
+  }
+`;
+
+export const StyledLink = styled.a`
+  display: inline-block;
+  color: ${colors.red};
+  font-family: ${fontFamilies.Font};
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  transition: color 0.3s;
+  ${getCurrentFontSizeStyle("text")};
+  letter-spacing: -0.04em;
+
+  :hover {
+    transition: opacity 0.3s;
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: ${colors.red};
+    display: block;
+    ${getCurrentMarginStyle("top", "xxxsm")};
   }
 `;
