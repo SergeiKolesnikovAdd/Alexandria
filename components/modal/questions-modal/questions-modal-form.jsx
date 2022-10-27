@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { ButtonMD, TextAreaField, InputField, Checkbox } from "components";
 import { useFormContext } from "react-hook-form";
-import { FormLabel, FormWrapper } from "./questions-modal.style";
-import { withFormProvider } from "utils";
-import { postQuestion } from "utils/api";
+import {
+  FormLabel,
+  FormWrapper,
+  FormFields,
+  ButtonWrapper,
+} from "./questions-modal.style";
+import { withFormProvider, } from "utils";
+import { postQuestion } from "utils/api"
 
 export const Form = withFormProvider(
   ({ setIsGratitude, setOpen }) => {
@@ -39,6 +44,7 @@ export const Form = withFormProvider(
     };
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
+        <FormFields>
         <FormLabel>Как Вас зовут?</FormLabel>
         <InputField
           name="name"
@@ -58,6 +64,8 @@ export const Form = withFormProvider(
           propsInput={{ placeholder: "Ваш вопрос" }}
           // rules={{}}
         />
+        </FormFields>
+        <ButtonWrapper>
         <Checkbox
           isActive={isChecked}
           setActive={handleCheck}
@@ -65,6 +73,7 @@ export const Form = withFormProvider(
           mb="lg"
         />
         <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
+        </ButtonWrapper>
       </FormWrapper>
     );
   },
@@ -73,3 +82,4 @@ export const Form = withFormProvider(
     reValidateMode: "onBlur",
   }
 );
+

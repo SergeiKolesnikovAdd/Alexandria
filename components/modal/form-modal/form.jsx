@@ -12,6 +12,8 @@ import {
   FormLabel,
   FormWrapper,
   ErrorField,
+  FormFields,
+  ButtonWrapper,
 } from "./form-modal.style";
 import { withFormProvider } from "utils";
 import { useEffect, useState } from "react";
@@ -59,6 +61,7 @@ export const Form = withFormProvider(
 
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
+        <FormFields>
         <FormLabel>Как Вас зовут?*</FormLabel>
         <InputField
           name="name"
@@ -98,16 +101,19 @@ export const Form = withFormProvider(
           rules={{}}
           propsInput={{ placeholder: "Текст информации" }}
         />
+      </FormFields>
+      <ButtonWrapper>
         <Checkbox
           isActive={isChecked}
           setActive={handleCheck}
           name="checkbox"
-          mb="lg"
+          mb="mdsm"
         />
-        <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
-      </FormWrapper>
-    );
-  },
+        <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
+      </ButtonWrapper>
+    </FormWrapper>
+  );
+    },
   {
     mode: "onBlur",
     reValidateMode: "onBlur",

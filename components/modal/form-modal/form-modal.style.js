@@ -44,8 +44,13 @@ export const ContentSection = styled.div`
   position: relative;
   overflow: hidden;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
   }
 `;
 
@@ -57,6 +62,7 @@ export const ClsButton = styled(CloseButton)`
 
 export const ContentWrapper = styled.div`
   width: 100%;
+  height: 100%;
   height: available;
   display: flex;
   flex-direction: column;
@@ -66,6 +72,15 @@ export const ContentWrapper = styled.div`
   border-radius: 48px;
   overflow-y: scroll;
   overflow-x: auto;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
 `;
 
 export const Title = styled.div`
@@ -77,7 +92,12 @@ export const Title = styled.div`
   ${applyMargins};
 `;
 
-export const FormWrapper = styled.form``;
+export const FormWrapper = styled.form`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 export const FormLabel = styled.label`
   font-family: ${fontFamilies.Font};
@@ -98,4 +118,18 @@ export const ErrorField = styled.div`
 `;
 export const ErrorMessage = styled.p`
   height: 40px;
+`;
+
+export const FormFields = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 `;

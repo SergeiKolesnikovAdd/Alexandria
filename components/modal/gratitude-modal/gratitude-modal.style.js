@@ -32,10 +32,20 @@ export const ContentSection = styled.div`
   border-radius: 48px;
   position: relative;
 
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
+    border-radius: 32px;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     ${getCurrentPaddingStyle("top", "xxxlg")};
     ${getCurrentPaddingStyle("horizontal", "xxlg")};
     ${getCurrentPaddingStyle("bottom", "xxlg")};
+    border-radius: 24px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
   }
 `;
 
@@ -53,6 +63,14 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
 `;
 
 export const Title = styled.div`
