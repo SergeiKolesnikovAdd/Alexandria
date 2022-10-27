@@ -10,11 +10,11 @@ import {
 } from "./slider.style";
 import { useEffect, useState } from "react";
 
-import img1 from "public/01.png";
-import img2 from "public/02.png";
-import img3 from "public/03.png";
-import img4 from "public/04.png";
-import img5 from "public/05.png";
+import img1 from "public/slider-1.png";
+import img2 from "public/slider-2.png";
+import img3 from "public/slider-3.png";
+import img4 from "public/slider-4.png";
+import img5 from "public/slider-5.png";
 
 const data = [
   {

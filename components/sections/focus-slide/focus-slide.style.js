@@ -45,6 +45,10 @@ export const ContentWrapper = styled.div`
     position: relative;
   }
 
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 32px;
+  }
+
   ${applyMargins}
   ${applyPaddings}
 `;
