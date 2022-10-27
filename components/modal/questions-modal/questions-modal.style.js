@@ -23,6 +23,20 @@ export const FormModalInner = styled.div`
   ${getCurrentPaddingStyle("top", "xxlg")};
 `;
 
+export const FormFields = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
 export const ContentSection = styled.div`
   width: 50%;
   display: flex;
@@ -32,14 +46,16 @@ export const ContentSection = styled.div`
   border-radius: 48px;
   position: relative;
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
+    border-radius: 32px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     ${getCurrentPaddingStyle("top", "xxxlg")};
     ${getCurrentPaddingStyle("horizontal", "xxlg")};
     ${getCurrentPaddingStyle("bottom", "xxlg")};
+    border-radius: 24px;
   }
 `;
 
@@ -51,12 +67,21 @@ export const ClsButton = styled(CloseButton)`
 
 export const ContentWrapper = styled.div`
   width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
 `;
 
 export const Title = styled.div`
@@ -69,7 +94,10 @@ export const Title = styled.div`
 `;
 
 export const FormWrapper = styled.form`
-
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const FormLabel = styled.label`

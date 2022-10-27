@@ -16,10 +16,10 @@ export const Header = ({ isColored, setColored }) => {
     <>
       <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
-          <Link href="/">
+          <Link href="#main" rel="m_PageScroll2id" data-ps2id-offset="0">
             <Logo />
           </Link>
-          <Link href="/">
+          <Link href="#main" rel="m_PageScroll2id" data-ps2id-offset="0">
             <Name isOpen={isColored} ml="mdsm" />
           </Link>
         </HeaderTitle>
@@ -42,7 +42,8 @@ export const Header = ({ isColored, setColored }) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
             setColored(true);
-          }}>
+          }}
+        >
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>

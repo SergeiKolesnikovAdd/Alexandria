@@ -80,8 +80,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
           </DescItem>
           <DescItem>
             <DescText>
-              Техническое обеспечение системы рецензирования, редактирования и
-              выпуска научных статей
+              ПО рецензирования, редактирования и
+              выпуска статей
             </DescText>
           </DescItem>
           <DescItem>
@@ -92,8 +92,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           </DescItem>
           <DescItem>
             <DescText>
-              Маркетинговая и рекламная поддержка для привлечения качественного
-              контента
+              Маркетинговая и рекламная поддержка
             </DescText>
           </DescItem>
           <DescItem>

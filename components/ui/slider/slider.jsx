@@ -10,34 +10,40 @@ import {
 } from "./slider.style";
 import { useEffect, useState } from "react";
 
+import img1 from "public/01.png";
+import img2 from "public/02.png";
+import img3 from "public/03.png";
+import img4 from "public/04.png";
+import img5 from "public/05.png";
+
 const data = [
   {
     id: 1,
-    img: "https://drive.google.com/uc?id=1OMNLcE8cllz-Gd7BaUuT3OjNoERdPpRG",
+    img: img5.src,
     number: "05",
     text: "Учреждения и компании",
   },
   {
     id: 2,
-    img: "https://drive.google.com/uc?id=1ziar4UJuRx2u0QlYYLKv_qU7xLMUtPsb",
+    img: img1.src,
     number: "01",
     text: "Научные сообщества",
   },
   {
     id: 3,
-    img: "https://drive.google.com/uc?id=1OMNLcE8cllz-Gd7BaUuT3OjNoERdPpRG",
+    img: img2.src,
     number: "02",
     text: "Университеты",
   },
   {
     id: 4,
-    img: "https://drive.google.com/uc?id=1Xiw7XuQ-I2gzcaHVob8KMHSsuH6tQBTl",
+    img: img3.src,
     number: "03",
     text: "Независимые издания",
   },
   {
     id: 5,
-    img: "https://drive.google.com/uc?id=1KLi1n20RK74RHXAbY6Srh6CEEkphqQou",
+    img: img4.src,
     number: "04",
     text: "Организаторы конференций",
   },

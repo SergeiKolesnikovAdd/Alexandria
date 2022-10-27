@@ -22,6 +22,10 @@ export const ContentSection = styled.div`
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
   overflow: hidden;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -35,6 +39,15 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("bottom", "lg")};
   ${getCurrentPaddingStyle("top", "xxlg")};
   overflow: hidden;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    width: 100%;
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
 `;
 
 export const Title = styled.div`

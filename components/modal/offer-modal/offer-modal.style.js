@@ -37,8 +37,8 @@ export const ContentSection = styled.div`
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
-  overflow: hidden;
-  height: 764px;
+  overflow: auto;
+  height: 100%;
   opacity: 1;
   ${getCurrentMarginStyle("top", "mdsm")}
 
@@ -46,6 +46,11 @@ export const ContentSection = styled.div`
     width: 100%;
     height: 100%;
     margin-top: 0;
+    border-radius: 32px;
+  }
+  
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
   }
 `;
 
@@ -57,7 +62,14 @@ export const ContentWrapper = styled.div`
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
-  overflow: auto;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -96,11 +108,19 @@ export const StyledButtonLG = styled(ButtonLG)`
 `;
 
 export const ProductImage = styled.img`
-display: inline-block;
-width: 100%;
-object-position: center;
-object-fit: cover;
-border-radius:48px 48px 0px 0px;
+  display: inline-block;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 48px 48px 0px 0px;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 32px 32px 0px 0px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px 24px 0px 0px;
+  }
 `;
 
 export const ClsButton = styled(CloseButton)`

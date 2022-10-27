@@ -12,6 +12,8 @@ import {
   FormLabel,
   FormWrapper,
   ErrorField,
+  FormFields,
+  ButtonWrapper,
 } from "./form-modal.style";
 import { withFormProvider } from "utils";
 import { useState } from "react";
@@ -50,48 +52,56 @@ export const Form = withFormProvider(({ tariff = "", formName, setIsGratitude, s
 
   return (
     <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormLabel>Как Вас зовут?*</FormLabel>
-      <InputField
-        name="name"
-        mb="md"
-        propsInput={{ placeholder: "Ваше имя" }}
-        title="Name"
-      />
-      <FormLabel>Электронная почта*</FormLabel>
-      <InputField name="email" mb="md" propsInput={{ placeholder: "E-mail" }} />
-      <FormLabel>
-        Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
-      </FormLabel>
-      <InputField
-        rules={{}}
-        mb="md"
-        name="journalName"
-        propsInput={{ placeholder: "Ваш журнал" }}
-      />
-      <FormLabel>Что Вас интересует</FormLabel>
-      <DropDownField
-        mb="md"
-        title="Выберите из списка"
-        name="action"
-        options={selectServicesOptions}
-        propsInput={{ placeholder: "Выберите из списка" }}
-      />
-      <FormLabel>
-        Дополнительная информация
-        <FormLabelGray>(Не обязательно)</FormLabelGray>
-      </FormLabel>
-      <TextAreaField
-        name="message"
-        rules={{}}
-        propsInput={{ placeholder: "Текст информации" }}
-      />
-      <Checkbox
-        isActive={isChecked}
-        setActive={handleCheck}
-        name="checkbox"
-        mb="lg"
-      />
-      <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
+      <FormFields>
+        <FormLabel>Как Вас зовут?*</FormLabel>
+        <InputField
+          name="name"
+          mb="md"
+          propsInput={{ placeholder: "Ваше имя" }}
+          title="Name"
+        />
+        <FormLabel>Электронная почта*</FormLabel>
+        <InputField
+          name="email"
+          mb="md"
+          propsInput={{ placeholder: "E-mail" }}
+        />
+        <FormLabel>
+          Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
+        </FormLabel>
+        <InputField
+          rules={{}}
+          mb="md"
+          name="journalName"
+          propsInput={{ placeholder: "Ваш журнал" }}
+        />
+        <FormLabel>Что Вас интересует</FormLabel>
+        <DropDownField
+          mb="md"
+          title="Выберите из списка"
+          name="action"
+          options={selectServicesOptions}
+          propsInput={{ placeholder: "Выберите из списка" }}
+        />
+        <FormLabel>
+          Дополнительная информация
+          <FormLabelGray>(Не обязательно)</FormLabelGray>
+        </FormLabel>
+        <TextAreaField
+          name="message"
+          rules={{}}
+          propsInput={{ placeholder: "Текст информации" }}
+        />
+      </FormFields>
+      <ButtonWrapper>
+        <Checkbox
+          isActive={isChecked}
+          setActive={handleCheck}
+          name="checkbox"
+          mb="mdsm"
+        />
+        <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
+      </ButtonWrapper>
     </FormWrapper>
   );
 });

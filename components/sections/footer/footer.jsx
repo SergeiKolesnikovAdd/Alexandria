@@ -26,19 +26,19 @@ export const Footer = () => {
           <Name />
         </FooterLogo>
         {/* <FooterColumn>
-          <FooterLink href="#about" mb="md">
+          <FooterLink href="about" mb="md">
             Что мы предлагаем?
           </FooterLink>
-          <FooterLink href="#focus" mb="md">
+          <FooterLink href="focus" mb="md">
             Для кого наша платформа?
           </FooterLink>
-          <FooterLink href="#advantages" mb="md">
+          <FooterLink href="advantages" mb="md">
             Почему Alexandrina?
           </FooterLink>
-          <FooterLink href="#offer" mb="md">
+          <FooterLink href="offer" mb="md">
             Пакеты услуг
           </FooterLink>
-          <FooterLink href="#faq" mb="md">
+          <FooterLink href="faq" mb="md">
             Часто задаваемые вопросы
           </FooterLink>
         </FooterColumn> */}
@@ -79,7 +79,7 @@ export const Footer = () => {
         </FooterColumn> */}
       </FooterRow>
       <FooterRowBottom mb="lg">
-        <FooterLink href="">Alexandrina 2022</FooterLink>
+        <FooterLink href="main">Alexandrina 2022</FooterLink>
         <FooterRowSecondBottom>
           <FooterLink mr="lg" href="/politica" target="_blank">
             Privacy Policy
