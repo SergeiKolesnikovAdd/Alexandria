@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ButtonMD, TextAreaField, InputField, Checkbox} from "components";
+import { ButtonMD, TextAreaField, InputField, Checkbox } from "components";
 import { useFormContext } from "react-hook-form";
 import {
   FormLabel,
@@ -10,34 +10,41 @@ import {
 import { withFormProvider, } from "utils";
 import { postQuestion } from "utils/api"
 
-
-
-export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
-  const [isChecked, setIsChecked] = useState(false);
-  const { handleSubmit } = useFormContext();
-  const onSubmit = (data) => {
-    postQuestion({
-      ...data,
-      email: data.email,
-      name: data.name,
-      message : data.message,
-    })
-      .then(() => {
-        setOpen(false);
-        setIsGratitude(true);
+export const Form = withFormProvider(
+  ({ setIsGratitude, setOpen }) => {
+    const [isChecked, setIsChecked] = useState(false);
+    const {
+      handleSubmit,
+      formState: { isValid },
+      reset,
+    } = useFormContext();
+    const onSubmit = (data) => {
+      postQuestion({
+        ...data,
+        email: data.email,
+        name: data.name,
+        message: data.message,
       })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+        .then(() => {
+          setOpen(false);
+          setIsGratitude(true);
+          reset();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
 
-  const handleCheck = () => {
-    setIsChecked((prev) => !prev);
-  };
-
-  return (
-    <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-      <FormFields>
+    const handleCheck = () => {
+      setIsChecked((prev) => !prev);
+    };
+    const disabledButton = () => {
+      if (isValid && isChecked) return false;
+      else return true;
+    };
+    return (
+      <FormWrapper onSubmit={handleSubmit(onSubmit)}>
+        <FormFields>
         <FormLabel>Как Вас зовут?</FormLabel>
         <InputField
           name="name"
@@ -57,16 +64,22 @@ export const Form = withFormProvider(({setIsGratitude, setOpen}) => {
           propsInput={{ placeholder: "Ваш вопрос" }}
           // rules={{}}
         />
-      </FormFields>
-      <ButtonWrapper>
+        </FormFields>
+        <ButtonWrapper>
         <Checkbox
           isActive={isChecked}
           setActive={handleCheck}
           name="checkbox"
-          mb="mdsm"
+          mb="lg"
         />
-        <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
-      </ButtonWrapper>
-    </FormWrapper>
-  );
-});
+        <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
+        </ButtonWrapper>
+      </FormWrapper>
+    );
+  },
+  {
+    mode: "onBlur",
+    reValidateMode: "onBlur",
+  }
+);
+

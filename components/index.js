@@ -66,7 +66,6 @@ import { NewsSlide } from "./sections/news-slide";
 import { OfferModal } from "./modal";
 import { FormModal } from "./modal/form-modal";
 import { QuestionsFormModal } from "./modal/questions-modal";
-import { Gratitude } from "./modal";
 import { GratitudeModal } from "./modal";
 
 export {
@@ -111,7 +110,6 @@ export {
   QuestionsFormModal,
   Tab,
   News,
-  Gratitude,
   GratitudeModal,
   NewsItem,
   NewsSlide,

@@ -10,6 +10,7 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
     control,
     formState: { errors },
     register,
+    trigger,
   } = useFormContext();
 
   return (
@@ -25,10 +26,6 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
         <Input
           {...register("email", {
             required: "Поле заполнено неверно",
-            minLength: {
-              value: 3,
-              message: "Введите не менее 3 символов",
-            },
             maxLength: {
               value: 255,
               message: "Введите не более 255 символов",
@@ -41,10 +38,6 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
           })}
           {...register("name", {
             required: "Поле заполнено неверно",
-            minLength: {
-              value: 3,
-              message: "Введите не менее 3 символов",
-            },
             maxLength: {
               value: 255,
               message: "Введите не более 255 символов",
@@ -54,7 +47,12 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
           {...other}
           onChange={(event) => {
             const { value } = event.target;
-
+            if (errors.name) {
+              trigger("name");
+            }
+            if (errors.email) {
+              trigger("email");
+            }
             if (normalizer) {
               event.target.value = normalizer(value);
               onChange(value);

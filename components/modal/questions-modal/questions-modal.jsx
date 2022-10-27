@@ -22,8 +22,15 @@ export const QuestionsFormModal = ({
 
   return (
     <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
-      <FormModalInner>
-        <ContentSection>
+      <FormModalInner
+        onClick={() => {
+          setOpen(false);
+          setColored(false);
+        }}>
+        <ContentSection
+          onClick={(e) => {
+            e.stopPropagation();
+          }}>
           <ClsButton
             mt="mdlg"
             mr="mdlg"

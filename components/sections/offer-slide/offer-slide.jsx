@@ -141,8 +141,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
             <TabletButton
               onClick={(e) => {
                 setFormName("Пакет Стандарт");
-                setModalTitle(e.target.textContent);
+                setModalTitle("Пакет Стандарт");
                 setOpenForm(true);
+                setColored(true);
               }}
             >
               Начать
@@ -194,8 +195,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
             <TabletButton
               onClick={(e) => {
                 setFormName("Пакет Комфорт");
-                setModalTitle(e.target.textContent);
+                setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
+                setColored(true);
               }}
             >
               Начать
@@ -251,8 +253,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
             <TabletButton
               onClick={(e) => {
                 setFormName("Пакет Премиум");
-                setModalTitle(e.target.textContent);
+                setModalTitle("Пакет Премиум");
                 setOpenForm(true);
+                setColored(true);
               }}
             >
               Начать
@@ -293,8 +296,6 @@ export const OfferSlide = ({ setColored, ...props }) => {
           }}
         />
       ))}
-      {console.log(arrOfferInfoTab)}
-      {console.log(chooseItem)}
       <OfferModal
         modalTitle={modalTitle}
         formName={formName}
