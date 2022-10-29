@@ -8,10 +8,11 @@ export const arrOfferInfoTab = [
     title: "Пакет Стандарт",
     m1img: true,
     m2img: true,
-    m3img: false,
+    m3img: true,
     m4img: false,
     m5img: false,
     m6img: false,
+    m7img: false,
     icon: icon1.src,
   },
   {
@@ -21,8 +22,9 @@ export const arrOfferInfoTab = [
     m2img: true,
     m3img: true,
     m4img: true,
-    m5img: false,
+    m5img: true,
     m6img: false,
+    m7img: false,
     icon: icon2.src,
   },
   {
@@ -34,6 +36,7 @@ export const arrOfferInfoTab = [
     m4img: true,
     m5img: true,
     m6img: true,
+    m7img: true,
     icon: icon3.src,
   },
 ];

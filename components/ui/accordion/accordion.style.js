@@ -37,7 +37,8 @@ export const AccordionButton = styled.button`
 
   /* TODO: разобраться с hover */
   :hover {
-    background-color: #f5f5f5;
+    background-color: ${colors.lightOrange};
+    border: 1px solid ${colors.red};
     div {
       background-color: ${colors.red};
       svg {

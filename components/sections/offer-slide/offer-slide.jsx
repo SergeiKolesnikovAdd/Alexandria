@@ -22,6 +22,7 @@ import {
   Icon,
   StyledDesktopBR,
   StyledPhoneBR,
+  StyledTextH3,
 } from "./offer-slide.style";
 
 import { arrOfferInfoTab } from "./tabs";
@@ -80,8 +81,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           </DescItem>
           <DescItem>
             <DescText>
-              ПО рецензирования, редактирования и
-              выпуска статей
+              ПО рецензирования, редактирования и выпуска статей
             </DescText>
           </DescItem>
           <DescItem>
@@ -91,12 +91,13 @@ export const OfferSlide = ({ setColored, ...props }) => {
             <DescText>Переводы и редакторские услуги специалистов</DescText>
           </DescItem>
           <DescItem>
-            <DescText>
-              Маркетинговая и рекламная поддержка
-            </DescText>
+            <DescText>Маркетинговая и рекламная поддержка</DescText>
           </DescItem>
           <DescItem>
             <DescText>Индивидуальный дизайн журнала</DescText>
+          </DescItem>
+          <DescItem>
+            <DescText>Продвижение и индексирование в базах данных</DescText>
           </DescItem>
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
@@ -116,6 +117,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
             >
               Подробнее
             </StyledCaption>
+          </PackageItem>
+          <PackageItem>
+            <Mark />
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -166,6 +170,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
             >
               Подробнее
             </StyledCaption>
+          </PackageItem>
+          <PackageItem>
+            <Mark />
           </PackageItem>
           <PackageItem>
             <Mark />
@@ -239,6 +246,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
+          <PackageItem>
+            <Mark />
+          </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
               onClick={(e) => {
@@ -264,21 +274,24 @@ export const OfferSlide = ({ setColored, ...props }) => {
         </PackageColumn>
       </TableOffer>
       <ControlWrapper>
-        {arrOfferInfoTab.map(({ id, modalTitle, icon, ...props }, index) => (
-          <PackageItemTab
-            key={id}
-            id={id}
-            pt="md"
-            pb="mdsm"
-            isOpen={chooseItemTab.id === id}
-            onClick={() => {
-              setChooseItemTab(arrOfferInfoTab[index]);
-            }}
-          >
-            <Icon src={icon} />
-            <StyledText mt="sm">{modalTitle}</StyledText>
-          </PackageItemTab>
-        ))}
+        {arrOfferInfoTab.map(
+          ({ id, modalTitle, title, icon, ...props }, index) => (
+            <PackageItemTab
+              key={id}
+              id={id}
+              pt="md"
+              pb="mdsm"
+              isOpen={chooseItemTab.id === id}
+              onClick={() => {
+                setChooseItemTab(arrOfferInfoTab[index]);
+              }}
+            >
+              <Icon src={icon} />
+              <StyledTextH3 mt="sm">{title}</StyledTextH3>
+              <StyledText mt="sm">{modalTitle}</StyledText>
+            </PackageItemTab>
+          )
+        )}
       </ControlWrapper>
       {arrOfferInfoTab.map(({ id, ...props }, index) => (
         <Tab
@@ -290,6 +303,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           m4img={props.m4img}
           m5img={props.m5img}
           m6img={props.m6img}
+          m7img={props.m7img}
           isShowing={chooseItemTab.id === id}
           onClick={() => {
             setChooseItemTab(arrOfferInfoTab[index]);
