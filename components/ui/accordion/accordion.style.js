@@ -32,7 +32,21 @@ export const AccordionButton = styled.button`
     isShowing ? colors.black : colors.white};
   transition: background-color 0.3s;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
-  ${getCurrentPaddingStyle("vertical", "mdlg")}
+  ${getCurrentPaddingStyle("vertical", "mdlg")};
+  transition: 0.3s;
+
+  /* TODO: разобраться с hover */
+  :hover {
+    background-color: #f5f5f5;
+    div {
+      background-color: ${colors.red};
+      svg {
+        path {
+          stroke: white;
+        }
+      }
+    }
+  }
 
   ${applyPaddings}
   ${applyMargins}
@@ -44,6 +58,11 @@ export const AccordionButton = styled.button`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 18px;
     max-height: inherit;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    max-height: 7.5vw;
+    border-radius: 2vw;
   }
 `;
 
@@ -61,6 +80,10 @@ export const InnerContent = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 18px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 2vw;
   }
 `;
 
@@ -107,6 +130,12 @@ export const IconWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 12px;
     margin-left: 8px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    min-width: 3.5vw;
+    min-height: 3.5vw;
+    border-radius: 1vw;
   }
 `;
 

@@ -18,8 +18,14 @@ export const NameWrapper = styled.svg`
 
   ${applyPaddings}
   ${applyMargins}
+
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 125px;
     height: 18px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 10vw;
+    height: 4vw;
   }
 `;

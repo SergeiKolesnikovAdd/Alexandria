@@ -47,6 +47,11 @@ export const IconPlus = styled.svg`
       return { stroke: colors.white };
     }
   }}
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 1.625vw;
+    height: 1.625vw;
+  }
 `;
 
 export const InputStyled = styled.input`
@@ -68,6 +73,11 @@ export const InputStyled = styled.input`
   ${getCurrentFontSizeStyle("h3")};
   &::placeholder {
     color: ${errorConditionColor};
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    padding-top: 0.3125vw;
+    padding-bottom: 0.3125vw;
   }
 `;
 

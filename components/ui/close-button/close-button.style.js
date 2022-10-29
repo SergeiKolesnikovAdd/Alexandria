@@ -38,4 +38,10 @@ export const ButtonWrapper = styled.button`
     width: 48px;
     border-radius: 12px;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2.5vw;
+  }
 `;
