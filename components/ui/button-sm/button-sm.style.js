@@ -16,7 +16,7 @@ export const Button = styled.button`
   span {
     color: ${colors.white};
     transition: color 0.3s;
-  }
+  };
 
   &:hover {
     background-color: ${colors.lightOrange};
@@ -24,12 +24,17 @@ export const Button = styled.button`
     span {
       color: ${colors.red};
     }
-  }
+  };
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     padding: 12px 24px 12px 24px;
     border-radius: 10px;
-  }
+  };
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    padding: 1.5vw 3.75vw 1.5vw 3.75vw;
+    border-radius: 1vw;
+  };
 
   ${applyMargins}
   ${applyPaddings}

@@ -46,4 +46,8 @@ export const Button = styled.button`
     padding-top: 12px;
     padding-bottom: 12px;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 1vw;
+  }
 `;

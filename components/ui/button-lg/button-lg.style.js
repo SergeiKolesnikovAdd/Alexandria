@@ -42,4 +42,14 @@ export const Button = styled.button`
     padding: 12px 32px 12px 32px;
     border-radius: 12px;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.dekstopXLG}) {
+    padding: 1.5vw 3.75vw 1.5vw 3.75vw;
+    border-radius: 1vw;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopXLG}) {
+    padding: 1.5vw 3.75vw 1.5vw 3.75vw;
+    border-radius: 1vw;
+  }
 `;

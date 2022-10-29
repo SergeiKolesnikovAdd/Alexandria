@@ -1,10 +1,14 @@
 import styled from "@emotion/styled";
 import { Caption } from "components";
-import { applyMargins } from "styles";
-import { getCurrentFontSizeStyle } from "styles";
-import { fontFamilies } from "styles";
-
-import { colors, getCurrentMarginStyle, hexToRGBA } from "styles";
+import {
+  applyMargins,
+  getCurrentFontSizeStyle,
+  fontFamilies,
+  colors,
+  getCurrentMarginStyle,
+  hexToRGBA,
+  breakpointsWidth,
+} from "styles";
 
 export const CheckboxWrapper = styled.div`
   display: flex;
@@ -22,10 +26,17 @@ export const CheckboxBorder = styled.div`
   border-color: ${({ isActive }) =>
     isActive ? colors.red : hexToRGBA(colors.black, 0.2)};
   transition: border-color 0.3s;
-  border-color: ${({ isError }) => (isError ? colors.brightRed : hexToRGBA(colors.black, 0.2))};
+  border-color: ${({ isError }) =>
+    isError ? colors.brightRed : hexToRGBA(colors.black, 0.2)};
 
   &:hover {
     border-color: ${colors.red};
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 0.75vw;
   }
 `;
 
@@ -36,6 +47,11 @@ export const CheckboxInner = styled.div`
   border-radius: 6px;
   display: ${({ isActive }) => (isActive ? "block" : "none")};
 
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 0.375vw;
+  }
 `;
 
 export const TextWrapper = styled.div`

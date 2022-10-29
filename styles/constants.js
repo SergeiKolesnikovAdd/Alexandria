@@ -57,6 +57,23 @@ export const breakpointsWidth = {
 };
 
 export const offsets = {
+  [desktopXXLG]: {
+    xxxlg: "10vw",
+    xxlg: "5vw",
+    xlg: "4vw",
+    lg: "2.5vw",
+    lg2: "2.375vw",
+    mdlg: "2vw",
+    md: "1.5vw",
+    md2: "1.25vw",
+    mdsm: "1vw",
+    sm: "0.75vw",
+    xsm: "0.5vw",
+    xxsm: "0.25vw",
+    xxxsm: "0.125vw",
+    none: 0,
+  },
+
   [desktopXLG]: {
     xxxlg: "10vw",
     xxlg: "5vw",
@@ -65,6 +82,7 @@ export const offsets = {
     lg2: "2.375vw",
     mdlg: "2vw",
     md: "1.5vw",
+    md2: "1.25vw",
     mdsm: "1vw",
     sm: "0.75vw",
     xsm: "0.5vw",
@@ -185,6 +203,7 @@ export const sizes = {
     half: "6.25vw",
     count: 8,
   },
+  
   [tabletLG]: {
     x2: "50vw",
     x1: "25vw",
@@ -196,6 +215,14 @@ export const sizes = {
 };
 
 export const fontSizes = {
+  [desktopXXLG]: {
+    h1: "6.5vw",
+    h2: "4vw",
+    h3: "1.5vw",
+    text: "1.125vw",
+    caption: "0.875vw",
+  },
+
   [desktopXLG]: {
     h1: "6.5vw",
     h2: "4vw",

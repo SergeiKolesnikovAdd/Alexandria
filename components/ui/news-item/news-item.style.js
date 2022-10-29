@@ -30,6 +30,10 @@ export const ContentWrapper = styled.div`
     border-radius: 24px;
   }
 
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 3vw;
+  }
+
   ${applyMargins}
 `;
 
@@ -60,6 +64,11 @@ export const PromoSection = styled.div`
     height: 160px;
     border-radius: 24px 24px 0px 0px;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    height: 16.25vw;
+    border-radius: 3vw 3vw 0px 0px;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -83,6 +92,10 @@ export const Overlay = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px 24px 0px 0px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 3vw 3vw 0px 0px;
   }
 `;
 
@@ -125,7 +138,12 @@ export const Dot = styled.div`
   height: 4px;
   border-radius: 50%;
   background-color: ${colors.red};
-  ${getCurrentMarginStyle("horizontal","xsm")};
+  ${getCurrentMarginStyle("horizontal", "xsm")};
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 0.25vw;
+    height: 0.25vw;
+  }
 `;
 
 export const LinkRow = styled.div`

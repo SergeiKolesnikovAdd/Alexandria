@@ -109,6 +109,14 @@ export const Slide = styled.div`
     transform-origin: bottom center;
     width: 93, 75vw;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.phone}) {
+    border-radius: 24px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 3vw;
+  }
 `;
 
 export const SlideNext = styled(ButtonSliderRight)`
@@ -141,6 +149,10 @@ export const TextWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     margin: 0px 12px 12px 12px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    margin: 0px 0.75vw 0.75vw 0.75vw;
   }
 `;
 

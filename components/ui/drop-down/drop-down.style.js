@@ -45,10 +45,15 @@ export const DropDownList = styled.ul`
   overflow: hidden;
   z-index: 5;
 
-  ${({isOpen}) => (isOpen && {
-    visibility: "visible",
-    maxHeight: "var(--height-drop-down, 40vh)",
-  })};
+  ${({ isOpen }) =>
+    isOpen && {
+      visibility: "visible",
+      maxHeight: "var(--height-drop-down, 40vh)",
+    }};
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    border-radius: 2vw;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -75,8 +80,8 @@ export const IconPlus = styled.svg`
   display: inline-block;
   width: 12px;
   height: 12px;
-  transition: stroke .3s;
-  ${({isOpen, isActive, isError, }) => {
+  transition: stroke 0.3s;
+  ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
       return { display: "none" };
     } else if (isActive) {
@@ -88,6 +93,10 @@ export const IconPlus = styled.svg`
     }
   }};
 
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 0.75vw;
+    height: 0.75vw;
+  }
 `;
 
 export const IconMinus = styled.svg`
@@ -95,13 +104,18 @@ export const IconMinus = styled.svg`
   width: 12px;
   height: 12px;
   transition: stroke 0.3s;
-  ${({ isOpen, isActive,}) => {
+  ${({ isOpen, isActive }) => {
     if (isOpen) {
       return { display: "block" };
     } else if (isActive) {
       return { display: "none" };
     }
   }};
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 0.75vw;
+    height: 0.75vw;
+  }
 `;
 
 export const DropDownItem = styled.li`
@@ -114,7 +128,7 @@ export const DropDownItem = styled.li`
   font-weight: 500;
   letter-spacing: 0.01em;
   font-size: ${fontSizes.h3};
-  line-height:150%;
+  line-height: 150%;
   &:hover {
     color: ${colors.red};
     background-color: ${colors.orange};
@@ -125,6 +139,10 @@ export const DropDownItem = styled.li`
     `
     background-color: ${colors.darkOrange};
     `};
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    padding: 0.75vw 1vw 0.75vw 1vw;
+  }
 `;
 
 export const CurrentLabel = styled.span`

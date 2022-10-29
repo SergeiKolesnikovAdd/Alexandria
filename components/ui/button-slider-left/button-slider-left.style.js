@@ -45,4 +45,10 @@ export const ButtonWrapper = styled.button`
       background-color: none;
     }
   }
+
+  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 1vw;
+  }
 `;
