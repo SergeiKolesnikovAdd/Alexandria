@@ -61,6 +61,7 @@ import { PlatformSlide } from "./sections/platform-slide";
 import { FaqSlide } from "./sections/faq-slide";
 import { News } from "./sections/news";
 import { NewsSlide } from "./sections/news-slide";
+import { BriefFirstSlide } from "./sections/brief-first-slide";
 
 /*    Импорты модальных окон    */
 import { OfferModal } from "./modal";
@@ -113,4 +114,5 @@ export {
   GratitudeModal,
   NewsItem,
   NewsSlide,
+  BriefFirstSlide,
 };

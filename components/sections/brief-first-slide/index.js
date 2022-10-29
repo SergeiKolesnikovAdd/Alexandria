@@ -1,0 +1,1 @@
+export { BriefFirstSlide } from "./brief-first-slide";
