@@ -10,18 +10,19 @@ import {
   DescItem,
   DescText,
   NewButton,
+  StyledText,
 } from "./tab.style";
 import { Mark } from "components";
 
 export const Tab = ({
   id,
-  title,
   m1img,
   m2img,
   m3img,
   m4img,
   m5img,
   m6img,
+  m7img,
   isShowing,
   ...props
 }) => {
@@ -72,6 +73,12 @@ export const Tab = ({
             Индивидуальный дизайн журнала
           </DescText>
           {m6img && <Mark />}
+        </DescItem>
+        <DescItem isShowing={isShowing}>
+          <DescText isShowing={isShowing}>
+            Продвижение и индексирование в базах данных
+          </DescText>
+          {m7img && <Mark />}
         </DescItem>
         <NewButton
           isShowing={isShowing}

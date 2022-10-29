@@ -60,7 +60,7 @@ export const DescColumn = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(8, 120px);
+  grid-template-rows: 120px repeat(7, 88px) 104px;
   grid-auto-flow: column;
   justify-items: center;
   align-items: center;
@@ -68,7 +68,7 @@ export const DescColumn = styled.div`
   ${applyPaddings}
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-rows: 120px repeat(7, 80px);
+    grid-template-rows: 120px repeat(8, 80px);
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
@@ -80,7 +80,7 @@ export const PackageColumn = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(8, 120px);
+  grid-template-rows: 120px repeat(7, 88px) 104px;
   grid-auto-flow: column;
   justify-items: center;
   align-items: center;
@@ -101,17 +101,17 @@ export const PackageColumn = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-rows: 120px repeat(7, 80px);;
+    grid-template-rows: 120px repeat(8, 80px);
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
-    grid-template-columns: repeat(1, 15.6vw);
+    grid-template-columns: 1 100%;
   }
 `;
 
 export const DescItem = styled.div`
   width: 100%;
-  height: 120px;
+  height: 100%;
   display: flex;
   align-items: center;
   text-align: left;
@@ -133,7 +133,7 @@ export const DescText = styled(Text)`
 
 export const PackageItem = styled.div`
   width: 100%;
-  height: 120px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,6 +202,11 @@ export const StyledText = styled(Text)`
   }
 `;
 
+export const StyledTextH3 = styled(Text)`
+  ${getCurrentFontSizeStyle("h3")};
+  font-weight: 500;
+`;
+
 export const ControlWrapper = styled.div`
   display: flex;
 
@@ -211,13 +216,14 @@ export const ControlWrapper = styled.div`
 export const PackageItemTab = styled.button`
   display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   ${getCurrentPaddingStyle("horizontal", "mdsm")}
   ${getCurrentPaddingStyle("top", "mdsm")}
   padding-bottom: 24px;
   border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
   width: 60vw;
+  height: min-content;
   overflow-y: hidden;
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "12%")};
   border-bottom: ${({ isOpen }) =>
