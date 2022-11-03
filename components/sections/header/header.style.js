@@ -7,6 +7,7 @@ import {
   breakpointsWidth,
 } from "styles";
 import styled from "@emotion/styled";
+import { getCurrentFontSizeStyle } from "styles";
 
 export const HeaderWrapper = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ export const HeaderWrapper = styled.div`
     height: 68px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     height: 6vw;
   } ;
 `;
@@ -54,6 +55,7 @@ export const HeaderTitle = styled.div`
 
 export const HeaderMenuItem = styled.a`
   font-family: ${fontFamilies.Font};
+  ${getCurrentFontSizeStyle("text")};
   display: flex;
   ${getCurrentMarginStyle("right", "lg")};
   align-items: center;

@@ -4,6 +4,7 @@ export { Message } from "./message";
 export { Flag } from "./flag";
 export { Comfort } from "./comfort";
 export { Mark } from "./mark";
+export { MarkGrey } from "./mark-grey";
 export { Standart } from "./standart";
 export { Premium } from "./premium";
 export { Plus } from "./plus";

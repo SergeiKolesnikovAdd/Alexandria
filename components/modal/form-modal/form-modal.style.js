@@ -52,6 +52,10 @@ export const ContentSection = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
+  }
 `;
 
 export const ClsButton = styled(CloseButton)`
@@ -80,6 +84,10 @@ export const ContentWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
   }
 `;
 

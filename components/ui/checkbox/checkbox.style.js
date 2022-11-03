@@ -33,7 +33,7 @@ export const CheckboxBorder = styled.div`
     border-color: ${colors.red};
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 0.75vw;
@@ -47,7 +47,7 @@ export const CheckboxInner = styled.div`
   border-radius: 6px;
   display: ${({ isActive }) => (isActive ? "block" : "none")};
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 1.5vw;
     height: 1.5vw;
     border-radius: 0.375vw;
@@ -68,7 +68,6 @@ export const StyledCaption = styled(Caption)`
   opacity: 0.4;
   cursor: pointer;
   color: ${colors.black};
-
 `;
 
 export const Error = styled.div`

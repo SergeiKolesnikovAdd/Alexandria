@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Logo } from "components";
 import { Text } from "components";
 import { getVW } from "styles";
+import { getCurrentFontSizeStyle } from "styles";
 import { breakpointsWidth } from "styles";
 import {
   fontFamilies,
@@ -156,6 +157,7 @@ export const LogoWrapper = styled.div`
 
 export const Deviant = styled.a`
   font-family: ${fontFamilies.Font};
+  ${getCurrentFontSizeStyle("caption")};
   color: ${colors.black};
   transition: color 0.3s;
   &:hover {
@@ -196,6 +198,7 @@ export const FooterLogo = styled.a`
 export const FooterLink = styled.a`
   color: ${colors.black};
   font-family: ${fontFamilies.Font};
+  ${getCurrentFontSizeStyle("caption")};
   text-align: start;
   transition: opacity 0.3s;
   opacity: 0.4;

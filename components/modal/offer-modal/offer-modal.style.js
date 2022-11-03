@@ -48,9 +48,13 @@ export const ContentSection = styled.div`
     margin-top: 0;
     border-radius: 32px;
   }
-  
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
   }
 `;
 
@@ -69,6 +73,10 @@ export const ContentWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
   }
 `;
 
@@ -120,6 +128,10 @@ export const ProductImage = styled.img`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px 24px 0px 0px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw 3vw 0px 0px;
   }
 `;
 

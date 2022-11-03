@@ -1,7 +1,10 @@
 import {
-  applyMargins, applyPaddings,
+  applyMargins,
+  applyPaddings,
   colors,
-  fontFamilies, fontSizes, getCurrentColor,
+  fontFamilies,
+  fontSizes,
+  getCurrentColor,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
   getCurrentMarginStyle,
@@ -11,8 +14,8 @@ import {
 
 import styled from "@emotion/styled";
 
-const errorConditionBackgroundColor = ({isError}) =>
-    isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
+const errorConditionBackgroundColor = ({ isError }) =>
+  isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
 
 export const UnderlineInner = styled.div`
   width: 100%;
@@ -51,7 +54,7 @@ export const DropDownList = styled.ul`
       maxHeight: "var(--height-drop-down, 40vh)",
     }};
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 2vw;
   }
 `;
@@ -62,7 +65,7 @@ export const IconWrapper = styled.div`
   align-items: center;
   border-radius: 8px;
   transition: stroke 0.3s;
-  padding:10px;
+  padding: 10px;
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
       return { backgroundColor: colors.red };
@@ -74,6 +77,12 @@ export const IconWrapper = styled.div`
       return { backgroundColor: colors.darkOrange };
     }
   }};
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 0.5vw;
+  }
 `;
 
 export const IconPlus = styled.svg`
@@ -85,7 +94,7 @@ export const IconPlus = styled.svg`
     if (isOpen) {
       return { display: "none" };
     } else if (isActive) {
-      return { display: "block" };
+      return { stroke: colors.white };
     } else if (isError) {
       return { stroke: colors.white };
     } else {
@@ -93,7 +102,7 @@ export const IconPlus = styled.svg`
     }
   }};
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 0.75vw;
     height: 0.75vw;
   }
@@ -112,7 +121,7 @@ export const IconMinus = styled.svg`
     }
   }};
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 0.75vw;
     height: 0.75vw;
   }
@@ -140,7 +149,7 @@ export const DropDownItem = styled.li`
     background-color: ${colors.darkOrange};
     `};
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     padding: 0.75vw 1vw 0.75vw 1vw;
   }
 `;
@@ -171,7 +180,7 @@ export const InputStyled = styled.div`
     } else if (isActive) {
       return { color: getCurrentColor("black") };
     } else if (isError) {
-      return { color: colors.brightRed};
+      return { color: colors.brightRed };
     } else {
       return { color: hexToRGBA(colors.black, 0.2) };
     }
@@ -184,7 +193,7 @@ export const InputStyled = styled.div`
   }
 
   &::placeholder {
-    color: ${colors.black}
+    color: ${colors.black};
   }
 
   ${getCurrentFontSizeStyle("h3")};
@@ -200,13 +209,13 @@ export const Error = styled.div`
 
 export const InputWrapper = styled.div`
   position: relative;
-  ${({isFullWidth}) => isFullWidth && "width: 100%;"}
+  ${({ isFullWidth }) => isFullWidth && "width: 100%;"}
   ${applyMargins};
   ${applyPaddings}
 `;
 
 export const ErrorWrapper = styled.span`
-display:flex;
-align-items:center;
-flex-direction:row;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 `;

@@ -1,6 +1,12 @@
 import { ButtonSliderLeft } from "../button-slider-left";
 import { ButtonSliderRight } from "../button-slider-right";
-import { colors, breakpointsWidth, getCurrentFontSizeStyle, getCurrentPaddingStyle, getCurrentMarginStyle, } from "styles";
+import {
+  colors,
+  breakpointsWidth,
+  getCurrentFontSizeStyle,
+  getCurrentPaddingStyle,
+  getCurrentMarginStyle,
+} from "styles";
 import styled from "@emotion/styled";
 import { Caption } from "components";
 
@@ -12,7 +18,7 @@ export const SlideWrapper = styled.div`
   position: relative;
   width: 45vw;
   height: 45vw;
-  
+
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     ${getCurrentMarginStyle("top", "xlg")}
     width: 93.75vw;
@@ -114,7 +120,7 @@ export const Slide = styled.div`
     border-radius: 24px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 3vw;
   }
 `;
@@ -151,7 +157,7 @@ export const TextWrapper = styled.div`
     margin: 0px 12px 12px 12px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     margin: 0px 0.75vw 0.75vw 0.75vw;
   }
 `;

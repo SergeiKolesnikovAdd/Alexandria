@@ -40,6 +40,10 @@ export const ContentWrapper = styled.div`
     border-radius: 32px;
   }
 
+  @media screen and (min-width: ${breakpointsWidth.desktopXLG}) {
+    border-radius: 5vw;
+  }
+
   ${applyMargins}
   ${applyPaddings}
 `;
@@ -88,6 +92,10 @@ export const AdvantageItem = styled.div`
     height: max-content;
     justify-content: flex-start;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopXLG}) {
+    border-radius: 3vw;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -122,6 +130,11 @@ export const ImgWrapper = styled.div`
   background-color: ${colors.white};
   margin-top: 0px;
 
+  svg {
+    width: 50%;
+    height: 50%;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
     margin-top: 24px;
   }
@@ -140,26 +153,24 @@ export const ImgWrapper = styled.div`
     border-radius: 12px;
     margin-top: 24px;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopXLG}) {
+    border-radius: 1.5vw;
+    width: 4vw;
+    height: 4vw;
+  }
 `;
 
 export const StyledPen = styled(Pen)`
-height: 80%;
-width: 80%;
 `;
 
 export const StyledFlag = styled(Flag)`
-  height: 80%;
-  width: 80%;
 `;
 
 export const StyledDiagram = styled(Diagram)`
-  height: 80%;
-  width: 80%;
 `;
 
 export const StyledMessage = styled(Message)`
-  height: 80%;
-  width: 80%;
 `;
 
 export const H3Styled = styled(H3)`

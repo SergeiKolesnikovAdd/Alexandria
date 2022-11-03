@@ -48,7 +48,7 @@ export const IconPlus = styled.svg`
     }
   }}
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 1.625vw;
     height: 1.625vw;
   }
@@ -75,7 +75,7 @@ export const InputStyled = styled.input`
     color: ${errorConditionColor};
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     padding-top: 0.3125vw;
     padding-bottom: 0.3125vw;
   }

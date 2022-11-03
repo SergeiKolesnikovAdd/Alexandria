@@ -42,7 +42,7 @@ export const AccordionButton = styled.button`
     border-radius: 12px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 1.5vw;
   }
 `;
@@ -68,7 +68,7 @@ export const InnerContent = styled.div`
     border-radius: 12px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 1.5vw;
   }
 `;
@@ -117,7 +117,7 @@ export const IconWrapper = styled.div`
     margin-right: 6px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 3.75vw;
     height: 3.75vw;
     border-radius: 1vw;
@@ -130,15 +130,25 @@ export const IconWrapper = styled.div`
 export const IconMinus = styled(Minus)`
   display: ${({ isShowing }) => (isShowing ? "block" : "none")};
   transition: display 0.3s;
-  
+
   path {
-    stroke:${colors.red};
+    stroke: ${colors.red};
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 1vw;
+    height: 1vw;
   }
 `;
 
 export const IconPlus = styled(Plus)`
   display: ${({ isShowing }) => (isShowing ? "none" : "block")};
   transition: display 0.3s;
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 1vw;
+    height: 1vw;
+  }
 `;
 
 export const TextWrapper = styled.div`

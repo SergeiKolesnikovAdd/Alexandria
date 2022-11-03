@@ -2,12 +2,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { H2, Text, ButtonXLG, OfferModal, FormModal, Tab } from "components";
 import { arrOfferInfo } from "./constant";
-import { Comfort, Mark, Premium, Standart } from "../../common";
+import { Comfort, Mark, Premium, Standart, MarkGrey, } from "../../common";
 import {
   ContentWrapper,
   DescColumn,
   DescItem,
   PackageItem,
+  PackageItemName,
   ButtonRow,
   TableOffer,
   PackageColumn,
@@ -102,7 +103,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
         <PackageColumn>
-          <PackageItem pt="mdsm" pb="mdsm">
+          <PackageItemName pt="mdsm" pb="mdsm">
             <Standart />
             <StyledText mt="sm">Пакет Стандарт</StyledText>
             <StyledCaption
@@ -117,7 +118,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
             >
               Подробнее
             </StyledCaption>
-          </PackageItem>
+          </PackageItemName>
           <PackageItem>
             <Mark />
           </PackageItem>
@@ -155,7 +156,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
-          <PackageItem>
+          <PackageItemName>
             <Comfort />
             <StyledText mt="sm">Пакет Комфорт</StyledText>
             <StyledCaption
@@ -170,7 +171,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
             >
               Подробнее
             </StyledCaption>
-          </PackageItem>
+          </PackageItemName>
           <PackageItem>
             <Mark />
           </PackageItem>
@@ -212,7 +213,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           </PackageItem>
         </PackageColumn>
         <PackageColumn>
-          <PackageItem>
+          <PackageItemName>
             <Premium />
             <StyledText mt="sm">Пакет Премиум</StyledText>
             <StyledCaption
@@ -227,7 +228,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
             >
               Подробнее
             </StyledCaption>
-          </PackageItem>
+          </PackageItemName>
           <PackageItem>
             <Mark />
           </PackageItem>

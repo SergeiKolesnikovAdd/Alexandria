@@ -6,7 +6,6 @@ import {
 } from "styles";
 import styled from "@emotion/styled";
 import { CloseButton } from "../../ui/close-button/close-button.jsx";
-import { } from "styles";
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
@@ -47,6 +46,10 @@ export const ContentSection = styled.div`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
+  }
 `;
 
 export const ClsButton = styled(CloseButton)`
@@ -70,6 +73,10 @@ export const ContentWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
   }
 `;
 
