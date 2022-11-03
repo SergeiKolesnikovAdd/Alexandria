@@ -37,7 +37,7 @@ export const Button = styled.button`
     border-radius: 8px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 0.75vw;
   }
 `;

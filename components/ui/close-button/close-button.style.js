@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { colors, breakpointsWidth } from "styles";
-import {applyMargins, applyPaddings,} from "styles";
+import { applyMargins, applyPaddings } from "styles";
 
 export const ButtonWrapper = styled.button`
   width: 64px;
@@ -39,9 +39,13 @@ export const ButtonWrapper = styled.button`
     border-radius: 12px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 4vw;
     height: 4vw;
-    border-radius: 2.5vw;
+    border-radius: 1.5vw;
+    svg {
+      width: 1vw;
+      height: 1vw;
+    }
   }
 `;

@@ -29,10 +29,9 @@ export const ContentWrapper = styled.div`
   border: 1px solid ${colors.black};
   border-radius: 80px;
   width: 100%;
-  padding-top: 40px;
   ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
-  ${getCurrentPaddingStyle("bottom", "lg")};
+  ${getCurrentPaddingStyle("vertical", "lg")};
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     border-radius: 48px;
@@ -40,13 +39,16 @@ export const ContentWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px;
-    padding-top: 16px;
     flex-direction: column;
     position: relative;
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 32px;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 5vw;
   }
 
   ${applyMargins}

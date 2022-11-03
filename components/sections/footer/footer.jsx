@@ -21,7 +21,7 @@ export const Footer = () => {
   return (
     <FooterWrapper>
       <FooterRow my="xxlg">
-        <FooterLogo href="#main" rel="m_PageScroll2id" data-ps2id-offset="0">
+        <FooterLogo href="#main">
           <IconAlexandrina />
           <Name />
         </FooterLogo>

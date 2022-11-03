@@ -74,6 +74,10 @@ export const DescColumn = styled.div`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     grid-template-columns: repeat(1, 42vw);
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    grid-template-rows: 7.5vw repeat(7, 5.5vw) 6.5vw;
+  }
 `;
 
 export const PackageColumn = styled.div`
@@ -107,6 +111,10 @@ export const PackageColumn = styled.div`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     grid-template-columns: 1 100%;
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    grid-template-rows: 7.5vw repeat(7, 5.5vw) 6.5vw;
+  }
 `;
 
 export const DescItem = styled.div`
@@ -126,6 +134,12 @@ export const DescItem = styled.div`
       font-size: 12px;
     }
   }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    span {
+      ${getCurrentFontSizeStyle("caption")};
+    }
+  } ;
 `;
 
 export const DescText = styled(Text)`
@@ -144,6 +158,38 @@ export const PackageItem = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     height: 100%;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    svg {
+      width: 1.25vw;
+      height: 0.5vw;
+    }
+  }
+
+  ${applyPaddings}
+`;
+
+export const PackageItemName = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ${getCurrentPaddingStyle("horizontal", "mdsm")}
+  ${getCurrentPaddingStyle("vertical", "mdsm")}
+  border-bottom: 1px solid ${hexToRGBA(colors.black, 0.08)};
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    height: 100%;
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    svg {
+      width: 1.25vw;
+      height: 1.25vw;
+    }
   }
 
   ${applyPaddings}

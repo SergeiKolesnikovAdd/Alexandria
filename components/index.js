@@ -5,6 +5,7 @@ export { Message } from "./common";
 export { Flag } from "./common";
 export { Comfort } from "./common";
 export { Mark } from "./common";
+export { MarkGrey } from "./common";
 export { Standart } from "./common";
 export { Premium } from "./common";
 export { Plus } from "./common";

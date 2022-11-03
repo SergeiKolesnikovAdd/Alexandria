@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import {breakpointsWidth, applyPaddings, applyMargins} from "styles";
+import { breakpointsWidth, applyPaddings, applyMargins } from "styles";
 
 export const LogoWrapper = styled.svg`
   display: inline-block;
@@ -20,7 +20,7 @@ export const LogoWrapper = styled.svg`
     height: 32px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 4vw;
     height: 4vw;
   }

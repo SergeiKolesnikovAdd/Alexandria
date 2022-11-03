@@ -16,10 +16,10 @@ export const Header = ({ isColored, setColored }) => {
     <>
       <HeaderWrapper isOpen={isColored}>
         <HeaderTitle>
-          <Link href="#main" rel="m_PageScroll2id" data-ps2id-offset="0">
+          <Link href="#main">
             <Logo />
           </Link>
-          <Link href="#main" rel="m_PageScroll2id" data-ps2id-offset="0">
+          <Link href="#main">
             <Name isOpen={isColored} ml="mdsm" />
           </Link>
         </HeaderTitle>

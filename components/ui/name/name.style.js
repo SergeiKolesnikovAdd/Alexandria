@@ -24,7 +24,7 @@ export const NameWrapper = styled.svg`
     height: 18px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 10vw;
     height: 4vw;
   }

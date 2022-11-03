@@ -26,19 +26,27 @@ export const AccordionButton = styled.button`
   max-height: 120px;
   width: 100%;
   height: 100%;
-  background-color: ${colors.white};
   border-radius: 32px;
+  border: 1px solid
+    ${({ isShowing }) => (isShowing ? colors.black : colors.white)};
   background-color: ${({ isShowing }) =>
     isShowing ? colors.black : colors.white};
   transition: background-color 0.3s;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentPaddingStyle("vertical", "mdlg")};
-  transition: 0.3s;
+  transition: all 0.3s;
+
+  h3 {
+    color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
+  }
 
   /* TODO: разобраться с hover */
   :hover {
     background-color: ${colors.lightOrange};
     border: 1px solid ${colors.red};
+    h3 {
+      color: ${colors.red};
+    }
     div {
       background-color: ${colors.red};
       svg {
@@ -61,7 +69,7 @@ export const AccordionButton = styled.button`
     max-height: inherit;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     max-height: 7.5vw;
     border-radius: 2vw;
   }
@@ -83,7 +91,7 @@ export const InnerContent = styled.div`
     border-radius: 18px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 2vw;
   }
 `;
@@ -96,10 +104,7 @@ export const LinkWrapper = styled.div`
 `;
 
 export const Title = styled(H3)`
-  color: ${colors.black};
   text-align: left;
-  color: ${({ isShowing }) => (isShowing ? colors.white : colors.black)};
-  transition: color 0.3s;
   width: 35vw;
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
@@ -133,7 +138,7 @@ export const IconWrapper = styled.div`
     margin-left: 8px;
   }
 
-  @media screen and (min-width: ${breakpointsWidth.dekstopLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     min-width: 3.5vw;
     min-height: 3.5vw;
     border-radius: 1vw;
@@ -143,11 +148,21 @@ export const IconWrapper = styled.div`
 export const IconMinus = styled(Minus)`
   display: ${({ isShowing }) => (isShowing ? "block" : "none")};
   transition: display 0.3s;
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 1vw;
+    height: 1vw;
+  }
 `;
 
 export const IconPlus = styled(Plus)`
   display: ${({ isShowing }) => (isShowing ? "none" : "block")};
   transition: display 0.3s;
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 1vw;
+    height: 1vw;
+  }
 `;
 
 export const TextWrapper = styled.div`
