@@ -45,12 +45,7 @@ export const Button = styled.button`
     border-radius: 12px;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.desktopXLG}) {
-    padding: 1.5vw 3.75vw 1.5vw 3.75vw;
-    border-radius: 1.5vw;
-  }
-
-  @media screen and (min-width: ${breakpointsWidth.desktopXLG}) {
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     padding: 1.5vw 3.75vw 1.5vw 3.75vw;
     border-radius: 1.5vw;
   }

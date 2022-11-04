@@ -40,7 +40,6 @@ export const ContentSection = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  ${getCurrentMarginStyle("top", "mdsm")};
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;

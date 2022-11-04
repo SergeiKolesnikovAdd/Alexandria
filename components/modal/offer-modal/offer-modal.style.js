@@ -40,7 +40,6 @@ export const ContentSection = styled.div`
   overflow: auto;
   height: 100%;
   opacity: 1;
-  ${getCurrentMarginStyle("top", "mdsm")}
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;

@@ -128,10 +128,18 @@ export const OfferSlide = ({ setColored, ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
-          <PackageItem></PackageItem>
-          <PackageItem></PackageItem>
-          <PackageItem></PackageItem>
-          <PackageItem></PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
               onClick={(e) => {
@@ -187,8 +195,12 @@ export const OfferSlide = ({ setColored, ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
-          <PackageItem></PackageItem>
-          <PackageItem></PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
+          <PackageItem>
+            <MarkGrey />
+          </PackageItem>
           <PackageItem style={{ border: "none" }}>
             <NewButton
               onClick={(e) => {
@@ -296,6 +308,14 @@ export const OfferSlide = ({ setColored, ...props }) => {
       </ControlWrapper>
       {arrOfferInfoTab.map(({ id, ...props }, index) => (
         <Tab
+          formName={formName}
+          modalTitle={modalTitle}
+          isOpenForm={isOpenForm}
+          setFormName={setFormName}
+          setModalTitle={setModalTitle}
+          setOpenForm={setOpenForm}
+          setColored={setColored}
+          setChooseItem={setChooseItem}
           key={id}
           id={id}
           m1img={props.m1img}

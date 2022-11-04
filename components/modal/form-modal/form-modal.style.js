@@ -38,7 +38,6 @@ export const ContentSection = styled.div`
   max-height: 85vh;
   display: flex;
   flex-direction: column;
-  ${getCurrentMarginStyle("top", "mdsm")};
   background-color: ${colors.white};
   border-radius: 48px;
   position: relative;
