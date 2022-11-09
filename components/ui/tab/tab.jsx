@@ -24,6 +24,11 @@ export const Tab = ({
   m6img,
   m7img,
   isShowing,
+  setOpenForm,
+  setOpen,
+  index,
+  setChooseItem,
+  arrOfferInfo,
   ...props
 }) => {
   return (
@@ -33,7 +38,7 @@ export const Tab = ({
           isShowing={isShowing}
           onClick={() => {
             setOpen(true);
-            setChooseItemTab(arrOfferInfoTab[index]);
+            setChooseItem(arrOfferInfo[index]);
           }}
           mt="xxsm"
         >
