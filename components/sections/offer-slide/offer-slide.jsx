@@ -77,15 +77,15 @@ export const OfferSlide = ({ setColored, ...props }) => {
         <DescColumn>
           <DescItem></DescItem>
           <DescItem>
-            <DescText>Разработка сайта журнала</DescText>
+            <DescText>Разработка сайта журнала согласно требованиям международных наукометрических баз данных</DescText>
           </DescItem>
           <DescItem>
             <DescText>
-              ПО рецензирования, редактирования и выпуска статей
+              Техническое обеспечение, консалтинг и обучение редакционной коллегии
             </DescText>
           </DescItem>
           <DescItem>
-            <DescText>Консалтинг и обучение редакционной коллегии</DescText>
+            <DescText>Аутсорсинг сопровождения научной рукописи от рецензирования до публикации</DescText>
           </DescItem>
           <DescItem>
             <DescText>Переводы и редакторские услуги специалистов</DescText>
@@ -97,7 +97,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
             <DescText>Индивидуальный дизайн журнала</DescText>
           </DescItem>
           <DescItem>
-            <DescText>Продвижение и индексирование в базах данных</DescText>
+            <DescText>Комплексная помощь в продвижении и индексировании журнала в международных базах данных</DescText>
           </DescItem>
           <DescItem style={{ border: "none" }}></DescItem>
         </DescColumn>
@@ -123,9 +123,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           <PackageItem>
             <Mark />
           </PackageItem>
-          <PackageItem>
-            <Mark />
-          </PackageItem>
+          <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>
           <PackageItem></PackageItem>

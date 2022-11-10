@@ -5,10 +5,10 @@ import icon3 from "assets/images/premium.svg";
 export const arrOfferInfoTab = [
   {
     id: 1,
-    title: "Пакет Стандарт",
+    title: "Стандарт",
     m1img: true,
     m2img: true,
-    m3img: true,
+    m3img: false,
     m4img: false,
     m5img: false,
     m6img: false,
@@ -17,7 +17,7 @@ export const arrOfferInfoTab = [
   },
   {
     id: 2,
-    title: "Пакет Комфорт",
+    title: "Комфорт",
     m1img: true,
     m2img: true,
     m3img: true,
@@ -29,7 +29,7 @@ export const arrOfferInfoTab = [
   },
   {
     id: 3,
-    title: "Пакет Премиум",
+    title: "Премиум",
     m1img: true,
     m2img: true,
     m3img: true,

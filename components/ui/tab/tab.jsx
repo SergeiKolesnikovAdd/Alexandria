@@ -45,18 +45,18 @@ export const Tab = ({
           Подробнее
         </StyledCaption>
         <DescItem isShowing={isShowing}>
-          <DescText isShowing={isShowing}>Разработка сайта журнала</DescText>
+          <DescText isShowing={isShowing}>Разработка сайта журнала согласно требованиям международных наукометрических баз данных</DescText>
           {m1img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Техническое обеспечение системы рецензирования, редактирования и
+            Техническое обеспечение, консалтинг и обучение редакционной коллегии
           </DescText>
           {m2img && <Mark />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Консалтинг и обучение редакционной коллегии
+            Аутсорсинг сопровождения научной рукописи от рецензирования до публикации
           </DescText>
           {m3img && <Mark />}
         </DescItem>
@@ -68,8 +68,7 @@ export const Tab = ({
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Маркетинговая и рекламная поддержка для привлечения качественного
-            контента
+            Маркетинговая и рекламная поддержка
           </DescText>
           {m5img && <Mark />}
         </DescItem>
@@ -81,7 +80,7 @@ export const Tab = ({
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Продвижение и индексирование в базах данных
+            Комплексная помощь в продвижении и индексировании журнала в международных базах данных
           </DescText>
           {m7img && <Mark />}
         </DescItem>

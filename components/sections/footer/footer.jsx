@@ -16,6 +16,7 @@ import {
   IconAlexandrina,
   LogoWrapper,
 } from "./footer.style";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -47,7 +48,7 @@ export const Footer = () => {
             <Caption mb="sm" style={{ color: colors.red }}>
               Свяжитесь с нами
             </Caption>
-            <H3 mb="lg">info@alexandrina.tech</H3>
+            <H3 mb="lg"><Link href="mailto:info@alexandrina.tech"><a target="_blank" style={{ color: "inherit" }}>info@alexandrina.tech</a></Link></H3>
           </FooterColumn>
         </FooterRowPhone>
         <FooterRowPhone>
@@ -56,7 +57,7 @@ export const Footer = () => {
               Адрес
             </Caption>
             <H3 mb="lg">
-              398032, Россия, г. Липецк, <br /> ул. Циолковского, д 8/1
+              <Link href="https://yandex.ru/maps/9/lipetsk/house/ulitsa_tsiolkovskogo_8_1/Z0AYcwJhSUEEQFtofXpwdH9lZA==/?ll=39.559440%2C52.613325&z=15.29"><a target="_blank" style={{ color: "inherit" }}>398032, Россия, г. Липецк, <br /> ул. Циолковского, д 8/1</a></Link>
             </H3>
           </FooterColumn>
         </FooterRowPhone>
@@ -79,7 +80,7 @@ export const Footer = () => {
         </FooterColumn> */}
       </FooterRow>
       <FooterRowBottom mb="lg">
-        <FooterLink href="main">Alexandrina 2022</FooterLink>
+        <FooterLink href="#main">Alexandrina 2022</FooterLink>
         <FooterRowSecondBottom>
           <FooterLink mr="lg" href="/politica" target="_blank">
             Privacy Policy

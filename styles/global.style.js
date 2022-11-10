@@ -11,5 +11,6 @@ export const initGlobalStyles = injectGlobal`
   
   body {
     background-color: ${colors.lightOrange};
+    overflow-x: hidden;
   }
 `;
