@@ -54,6 +54,11 @@ export const LeftHand = styled.img`
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    width: 50vw;
+    left: -6%;
+  }
 `;
 
 export const RightHand = styled.img`
@@ -67,5 +72,10 @@ export const RightHand = styled.img`
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 50vw;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    width: 50vw;
+    right: -6%;
   }
 `;

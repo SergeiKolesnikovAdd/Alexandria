@@ -12,7 +12,7 @@ import {
   NewButton,
   StyledText,
 } from "./tab.style";
-import { Mark } from "components";
+import { Mark, MarkGrey } from "components";
 
 export const Tab = ({
   id,
@@ -45,44 +45,49 @@ export const Tab = ({
           Подробнее
         </StyledCaption>
         <DescItem isShowing={isShowing}>
-          <DescText isShowing={isShowing}>Разработка сайта журнала согласно требованиям международных наукометрических баз данных</DescText>
-          {m1img && <Mark />}
+          <DescText isShowing={isShowing}>
+            Разработка сайта журнала согласно требованиям международных
+            наукометрических баз данных
+          </DescText>
+          {m1img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Техническое обеспечение, консалтинг и обучение редакционной коллегии
           </DescText>
-          {m2img && <Mark />}
+          {m2img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Аутсорсинг сопровождения научной рукописи от рецензирования до публикации
+            Аутсорсинг сопровождения научной рукописи от рецензирования до
+            публикации
           </DescText>
-          {m3img && <Mark />}
+          {m3img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Переводы и редакторские услуги специалистов
           </DescText>
-          {m4img && <Mark />}
+          {m4img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Маркетинговая и рекламная поддержка
           </DescText>
-          {m5img && <Mark />}
+          {m5img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
             Индивидуальный дизайн журнала
           </DescText>
-          {m6img && <Mark />}
+          {m6img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <DescItem isShowing={isShowing}>
           <DescText isShowing={isShowing}>
-            Комплексная помощь в продвижении и индексировании журнала в международных базах данных
+            Комплексная помощь в продвижении и индексировании журнала в
+            международных базах данных
           </DescText>
-          {m7img && <Mark />}
+          {m7img ? <Mark /> : <MarkGrey />}
         </DescItem>
         <NewButton
           isShowing={isShowing}
