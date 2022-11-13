@@ -21,6 +21,7 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   border-radius: 48px;
   background-color: ${colors.white};
+  ${getCurrentPaddingStyle("bottom", "md")};
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px;
@@ -117,17 +118,19 @@ export const Date = styled.div`
   font-size: ${fontSizes.Caption};
   font-family: ${fontFamilies.Font};
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
     display: none;
   }
 `;
 
 export const TabletDate = styled(Caption)`
   display: none;
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
     display: inline-block;
     opacity: 0.4;
-    color: ${colors.white};
+    color: ${colors.black};
+    ${getCurrentMarginStyle("left", "mdlg")};
+    ${getCurrentMarginStyle("top", "mdsm")};
   }
 `;
 

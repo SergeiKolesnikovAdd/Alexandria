@@ -110,7 +110,7 @@ export const Form = withFormProvider(
           propsInput={{ placeholder: "Текст информации" }}
         />
       </FormFields>
-      <ButtonWrapper>
+      <ButtonWrapper mb="mdlg">
         <Checkbox
           isActive={isChecked}
           setActive={handleCheck}

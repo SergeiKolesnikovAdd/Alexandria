@@ -44,11 +44,11 @@ export const NewsSlide = ({}) => {
               <br />
               чтобы быть в курсе новостей
             </StyledText>
-            <InputRow>
+            {/* <InputRow> */}
               {/* <StyledInput></StyledInput> */}
               {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}
-              <SendButton />
-            </InputRow>
+              {/* <SendButton /> */}
+            {/* </InputRow> */}
             <Logo />
             <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
               Мы заботимся о безопасности ваших данных.
@@ -58,11 +58,14 @@ export const NewsSlide = ({}) => {
             </Link>
             <Caption
               mt="xlg"
-              style={{ color: colors.white, lineHeight: "140%" }}
+              px="mdlg"
+              style={{
+                display: "block",
+                color: colors.white,
+                lineHeight: "140%",
+              }}
             >
-              Будьте в курсе актуальных новостей и получайте их первыми.
-              <br />
-              Подпишитесь на полезную рассылку от Alexandrina
+              Будьте в курсе актуальных новостей и получайте их первыми. Подпишитесь на полезную рассылку от Alexandrina
             </Caption>
           </SubscriptionWrapper>
         </NewsWrapper>

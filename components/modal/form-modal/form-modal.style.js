@@ -69,7 +69,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  ${getCurrentPaddingStyle("vertical", "mdlg")};
+  ${getCurrentPaddingStyle("top", "mdlg")};
   background-color: ${colors.white};
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
@@ -97,10 +97,18 @@ export const Title = styled.div`
 
 export const FormWrapper = styled.form`
   display: flex;
-  min-height: 100%;
+  height: stretch;
   flex-direction: column;
   justify-content: space-between;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
+
+  /* @media screen and (max-width: 1084px) {
+    min-height: 60%;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    min-height: 78%;
+  } */
 `;
 
 export const FormLabel = styled.label`
@@ -136,4 +144,6 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  ${applyMargins}
 `;

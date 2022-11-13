@@ -27,14 +27,18 @@ export const ContentWrapper = styled.div`
 
 export const NewsWrapper = styled.div`
   display: grid;
-  width: max-content;
   grid-template-columns: repeat(3, 31vw);
   grid-template-rows: repeat(2, 580px);
   gap: 16px;
+  width: 100%;
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 440px);
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    gap: 12px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
@@ -56,7 +60,8 @@ export const SubscriptionWrapper = styled.div`
   background-image: url(${sub.src});
   background-repeat: no-repeat;
   background-size: cover;
-  ${getCurrentPaddingStyle("top","xxxlg")};
+  ${getCurrentPaddingStyle("top", "xxxlg")};
+  ${getCurrentPaddingStyle("bottom", "mdlg")};
   text-align: center;
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
