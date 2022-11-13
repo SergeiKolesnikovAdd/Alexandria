@@ -45,80 +45,79 @@ function useScroll(platformRef) {
 
   return scrollY;
 }
+const ImgTimers = [
+  {
+    id: 1,
+    style: {
+      position: "absolute",
+      right: "3%",
+      top: "25%",
+      transition: "transform 0.3s linear",
+    },
+    img: img1.src,
+  },
+  {
+    id: 2,
+
+    style: {
+      position: "absolute",
+      left: "3%",
+      top: "16%",
+      transition: "transform 0.3s linear",
+    },
+    img: img2.src,
+  },
+  {
+    id: 3,
+
+    style: {
+      position: "absolute",
+      left: "20%",
+      top: "-15%",
+      transition: "transform 0.3s linear",
+    },
+    img: img3.src,
+  },
+  {
+    id: 4,
+
+    style: {
+      position: "absolute",
+      left: "20%",
+      bottom: "5%",
+      transition: "transform 0.3s linear",
+    },
+    img: img4.src,
+  },
+  {
+    id: 5,
+
+    style: {
+      position: "absolute",
+      right: "10%",
+      bottom: "-5%",
+      transition: "transform 0.3s linear",
+    },
+    img: img5.src,
+  },
+  {
+    id: 6,
+
+    style: {
+      position: "absolute",
+      right: "25%",
+      bottom: "10%",
+      transition: "transform 0.3s linear",
+    },
+    img: img6.src,
+  },
+];
 
 export const PlatformSlide = ({setColored, ...props }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const platformRef = useRef();
   const scrollY = useScroll(platformRef);
-
-  const ImgTimers = [
-    {
-      id: 1,
-      style: {
-        position: "absolute",
-        right: "3%",
-        top: "25%",
-        transition: "transform 0.3s linear",
-      },
-      img: img1.src,
-    },
-    {
-      id: 2,
-
-      style: {
-        position: "absolute",
-        left: "3%",
-        top: "16%",
-        transition: "transform 0.3s linear",
-      },
-      img: img2.src,
-    },
-    {
-      id: 3,
-
-      style: {
-        position: "absolute",
-        left: "20%",
-        top: "-15%",
-        transition: "transform 0.3s linear",
-      },
-      img: img3.src,
-    },
-    {
-      id: 4,
-
-      style: {
-        position: "absolute",
-        left: "20%",
-        bottom: "5%",
-        transition: "transform 0.3s linear",
-      },
-      img: img4.src,
-    },
-    {
-      id: 5,
-
-      style: {
-        position: "absolute",
-        right: "10%",
-        bottom: "-5%",
-        transition: "transform 0.3s linear",
-      },
-      img: img5.src,
-    },
-    {
-      id: 6,
-
-      style: {
-        position: "absolute",
-        right: "25%",
-        bottom: "10%",
-        transition: "transform 0.3s linear",
-      },
-      img: img6.src,
-    },
-  ];
 
   return (
     <>

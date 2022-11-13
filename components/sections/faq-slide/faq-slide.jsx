@@ -50,7 +50,11 @@ export const FaqSlide = withFormProvider(({ setColored, ...props }) => {
               Link3={Link3}
               isShowing={chooseItem.id === id}
               onClick={() => {
-                setChooseItem(contentAccordionFaq[index]);
+                setChooseItem(prevItem => {
+                    if (prevItem.id === contentAccordionFaq[index].id){
+                        return []
+                    } else return contentAccordionFaq[index];
+                });
               }}
             />
           )

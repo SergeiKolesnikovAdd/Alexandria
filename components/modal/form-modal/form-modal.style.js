@@ -1,18 +1,18 @@
 import {
-  colors,
-  getCurrentPaddingStyle,
-  getCurrentMarginStyle,
-  applyMargins,
-  getCurrentFontSizeStyle,
-  fontFamilies,
-  hexToRGBA,
-  breakpointsWidth,
+    colors,
+    getCurrentPaddingStyle,
+    getCurrentMarginStyle,
+    applyMargins,
+    getCurrentFontSizeStyle,
+    fontFamilies,
+    hexToRGBA,
+    breakpointsWidth,
 } from "styles";
 import styled from "@emotion/styled";
-import { CloseButton } from "../../ui/close-button/close-button.jsx";
+import {CloseButton} from "../../ui/close-button/close-button.jsx";
 
-const activeErrorField = ({ isError }) => {
-  isError ? `display: inline-block, color: red` : `display: none`;
+const activeErrorField = ({isError}) => {
+    isError ? `display: inline-block, color: red` : `display: none`;
 };
 
 export const FormModalInner = styled.div`
@@ -65,17 +65,12 @@ export const ClsButton = styled(CloseButton)`
 `;
 
 export const ContentWrapper = styled.div`
-  width: 100%;
   height: 100%;
-  height: available;
   display: flex;
   flex-direction: column;
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+  overflow: scroll;
   ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
-  border-radius: 48px;
-  overflow-y: scroll;
-  overflow-x: auto;
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     width: 100%;
@@ -96,15 +91,16 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   color: ${colors.red};
-
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${applyMargins};
 `;
 
 export const FormWrapper = styled.form`
   display: flex;
-  height: 100%;
+  min-height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
 `;
 
 export const FormLabel = styled.label`
