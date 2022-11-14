@@ -94,8 +94,8 @@ export const StyledImg = styled.img`
   border-radius: 2vw;
   object-fit: cover;
   z-index: -10;
-  ${({ scrollY }) => scrollY && `transform: scale(${scrollY}) translateY(${20 * scrollY}px);`};
-
+  ${({ scrollY }) =>
+    scrollY && `transform: scale(${scrollY}) translateY(${20 * scrollY}px);`};
   :first-of-type {
     display: none;
   }
