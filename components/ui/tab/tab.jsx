@@ -29,6 +29,7 @@ export const Tab = ({
   index,
   setChooseItem,
   arrOfferInfo,
+  formName,
   ...props
 }) => {
   return (
@@ -40,8 +41,7 @@ export const Tab = ({
             setOpen(true);
             setChooseItem(arrOfferInfo[index]);
           }}
-          mt="xxsm"
-        >
+          mt="xxsm">
           Подробнее
         </StyledCaption>
         <DescItem isShowing={isShowing}>
@@ -93,8 +93,7 @@ export const Tab = ({
           isShowing={isShowing}
           onClick={() => {
             setOpenForm(true);
-          }}
-        >
+          }}>
           Начать работу
         </NewButton>
         <DescItem isShowing={isShowing} style={{ border: "none" }}></DescItem>
