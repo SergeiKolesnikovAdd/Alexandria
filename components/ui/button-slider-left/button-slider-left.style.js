@@ -26,6 +26,7 @@ export const ButtonWrapper = styled.button`
       min-height: inherit;
       path {
         fill: ${colors.white};
+        min-height: inherit;
       }
     }
   }

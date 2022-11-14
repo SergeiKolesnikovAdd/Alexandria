@@ -18,5 +18,6 @@ export { Modal } from "./modal";
 export { Portal } from "./portal";
 export { Close } from "./close";
 export { Warning } from "./warning";
+export { Right } from "./right";
+export { Left } from "./left";
 export { Subscription } from "./close copy";
-

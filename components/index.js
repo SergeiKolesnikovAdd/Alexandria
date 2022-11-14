@@ -14,6 +14,8 @@ export { Modal } from "./common";
 export { Portal } from "./common";
 export { Close } from "./common";
 export { Warning } from "./common";
+export { Right } from "./common";
+export { Left } from "./common";
 export { Subscription } from "./common";
 
 /*    Импорты UI-ых компонентов    */
