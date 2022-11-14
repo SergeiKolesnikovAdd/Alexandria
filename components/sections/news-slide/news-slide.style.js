@@ -9,12 +9,16 @@ import {
   fontSizes,
 } from "styles";
 
-import { Text, H3, } from "components";
+import { Text, H3, ButtonSliderRight } from "components";
 import styled from "@emotion/styled";
 import { Subscription } from "../../common";
 import sub from "../../../public/subscription.png";
 import { InputField } from "../../ui/fields";
-import { ButtonSliderRight} from "../../ui/button-slider-right"
+import { fontFamilies } from "styles";
+
+const activeErrorField = ({ isError }) => {
+  isError ? `display: inline-block, color: red` : `display: none`;
+};
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -100,6 +104,13 @@ export const InputRow = styled.div`
 
 export const StyledInput = styled(InputField)`
   border: 1px solid #22222208;
+  color: ${colors.white} !important;
+  background: ${colors.black};
+  &::placeholder {
+    color: #ffffff !important;
+    background: ${colors.black};
+  }
+
   ${applyPaddings};
   ${applyMargins};
 `;
@@ -167,8 +178,7 @@ export const SendButton = styled(ButtonSliderRight)`
   }
 `;
 
-export const Logo = styled(Subscription)`
-`;
+export const Logo = styled(Subscription)``;
 
 export const Link = styled.a`
   span {
@@ -199,4 +209,34 @@ export const StyledText = styled(Text)`
 export const H3Styled = styled(H3)`
   ${getCurrentFontSizeStyle("text")};
   opacity: 0.4;
+`;
+
+export const FormWrapper = styled.form`
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+
+export const FormFields = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
+export const ErrorField = styled.div`
+  ${activeErrorField};
+  height: 40px;
+`;
+
+export const ErrorMessage = styled.p`
+  height: 40px;
 `;

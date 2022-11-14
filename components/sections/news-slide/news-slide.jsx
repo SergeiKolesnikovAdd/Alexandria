@@ -10,11 +10,16 @@ import {
   Logo,
   StyledInput,
 } from "./news-slide.style";
-import { ButtonXSM, H2, NewsItem, Caption, } from "components";
+import { ButtonXSM, H2, NewsItem, Caption, GratitudeModal,} from "components";
 import { arrNews } from "./constant";
 import { colors } from "styles";
+import { NewsForm } from "./news-form";
+import { useState } from "react";
 
-export const NewsSlide = ({}) => {
+export const NewsSlide = ({ }) => {
+
+const [isGratitude, setIsGratitude] = useState(false);
+
   return (
     <>
       <ContentWrapper>
@@ -34,8 +39,7 @@ export const NewsSlide = ({}) => {
                 description={description}
                 date={date}
                 title1={title1}
-                title2={title2}
-              ></NewsItem>
+                title2={title2}></NewsItem>
             )
           )}
           <SubscriptionWrapper>
@@ -44,14 +48,16 @@ export const NewsSlide = ({}) => {
               <br />
               чтобы быть в курсе новостей
             </StyledText>
+            <NewsForm setIsGratitude={setIsGratitude} />
             {/* <InputRow> */}
-              {/* <StyledInput></StyledInput> */}
-              {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}
-              {/* <SendButton /> */}
+            {/* <StyledInput></StyledInput> */}
+            {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}
+            {/* <SendButton /> */}
             {/* </InputRow> */}
             <Logo />
             <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
-              Мы заботимся о безопасности ваших данных.
+              Нажимая на кнопку «Отправить» я соглашаюсь с политикой
+              конфиденциальности данных
             </Caption>
             <Link href="" style={{ lineHeight: "140%" }}>
               <Caption>Подробнее</Caption>
@@ -63,13 +69,17 @@ export const NewsSlide = ({}) => {
                 display: "block",
                 color: colors.white,
                 lineHeight: "140%",
-              }}
-            >
-              Будьте в курсе актуальных новостей и получайте их первыми. Подпишитесь на полезную рассылку от Alexandrina
+              }}>
+              Будьте в курсе актуальных новостей и получайте их первыми.
+              Подпишитесь на полезную рассылку от Alexandrina
             </Caption>
           </SubscriptionWrapper>
         </NewsWrapper>
       </ContentWrapper>
+      <GratitudeModal
+        isGratitude={isGratitude}
+        setIsGratitude={setIsGratitude}
+      />
     </>
   );
 };
