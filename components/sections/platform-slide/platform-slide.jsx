@@ -50,7 +50,7 @@ const ImgTimers = [
     id: 1,
     style: {
       position: "absolute",
-      right: "3%",
+      right: "5%",
       top: "25%",
       transition: "transform 0.3s linear",
     },
@@ -61,7 +61,7 @@ const ImgTimers = [
 
     style: {
       position: "absolute",
-      left: "3%",
+      left: "5%",
       top: "16%",
       transition: "transform 0.3s linear",
     },
