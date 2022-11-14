@@ -9,11 +9,12 @@ import {
   fontSizes,
 } from "styles";
 
-import { Text, H3, ButtonSliderRight, } from "components";
+import { Text, H3, } from "components";
 import styled from "@emotion/styled";
 import { Subscription } from "../../common";
 import sub from "../../../public/subscription.png";
 import { InputField } from "../../ui/fields";
+import { ButtonSliderRight} from "../../ui/button-slider-right"
 
 export const ContentWrapper = styled.div`
   display: flex;
