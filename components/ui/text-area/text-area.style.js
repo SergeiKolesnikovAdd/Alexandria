@@ -32,7 +32,7 @@ export const TextAreaInput = styled("textarea")`
   font-family: ${fontFamilies.Font};
   color: ${colors.black};
   line-height: ${`${lineHeight}px`};
-  background-image: ${`linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${hexToRGBA(
+  -image: ${`linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${hexToRGBA(
     colors.black,
     0.2
   )} 0px)`};
@@ -72,7 +72,9 @@ export const TextAreaWrapper = styled.div`
         : `linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${colors.red} 0px)`};
     background-size: ${`100% ${lineHeight}px`};
     transition: transform 0.5s;
-    transform: scaleX(${({ isActive, isError }) => (isActive || isError ? 1 : 0)});
+    transform: scaleX(
+      ${({ isActive, isError }) => (isActive || isError ? 1 : 0)}
+    );
     transform-origin: left;
   }
 
@@ -96,5 +98,3 @@ export const ErrorWrapper = styled.span`
   align-items: center;
   flex-direction: row;
 `;
-
-

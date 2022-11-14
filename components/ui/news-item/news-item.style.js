@@ -23,6 +23,10 @@ export const ContentWrapper = styled.div`
   background-color: ${colors.white};
   ${getCurrentPaddingStyle("bottom", "md")};
 
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 3vw;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px;
   }
@@ -56,6 +60,11 @@ export const PromoSection = styled.div`
   ${applyPaddings}
   ${applyMargins}
 
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    height: 16.25vw;
+    border-radius: 3vw 3vw 0px 0px;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     height: 180px;
     border-radius: 32px 32px 0px 0px;
@@ -86,6 +95,10 @@ export const Overlay = styled.div`
     rgba(40, 42, 46, 0) 100%
   );
   background-size: cover;
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    height: 16.25vw;    border-radius: 3vw 3vw 0px 0px;
+  }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px 32px 0px 0px;

@@ -32,6 +32,12 @@ export const NewsWrapper = styled.div`
   gap: 16px;
   width: 100%;
 
+  @media screen and (min-width: 1601px) {
+    grid-template-columns: repeat(3, 31vw);
+    grid-template-rows: repeat(2, 36.25vw);
+    gap: 1vw;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, min-content);
@@ -63,6 +69,10 @@ export const SubscriptionWrapper = styled.div`
   ${getCurrentPaddingStyle("top", "xxxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
   text-align: center;
+
+  @media screen and (min-width: 1601px) {
+    border-radius: 3vw;
+  }
 
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     border-radius: 32px;
@@ -110,6 +120,48 @@ export const SendButton = styled(ButtonSliderRight)`
       path {
         fill: ${colors.red};
       }
+    }
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    position: relative;
+    bottom: auto;
+    z-index: 10;
+    width: 52px;
+    height: 52px;
+    background-color: ${colors.red};
+    border: 1px solid ${colors.red};
+    opacity: 1;
+    &:hover {
+      background-color: ${colors.red};
+    }
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    position: relative;
+    bottom: auto;
+    z-index: 10;
+    width: 52px;
+    height: 52px;
+    background-color: ${colors.red};
+    border: 1px solid ${colors.red};
+    opacity: 1;
+    &:hover {
+      background-color: ${colors.red};
+    }
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    position: relative;
+    bottom: auto;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    background-color: ${colors.red};
+    border: 1px solid ${colors.red};
+    opacity: 1;
+    &:hover {
+      background-color: ${colors.red};
     }
   }
 `;
