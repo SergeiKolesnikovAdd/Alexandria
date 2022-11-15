@@ -11,7 +11,7 @@ import {
 
 import { Text, H3, ButtonSliderRight } from "components";
 import styled from "@emotion/styled";
-import { Subscription } from "../../common";
+import { Right, Subscription } from "../../common";
 import sub from "../../../public/subscription.png";
 import { InputField } from "../../ui/fields";
 import { fontFamilies } from "styles";
@@ -115,7 +115,7 @@ export const StyledInput = styled(InputField)`
   ${applyMargins};
 `;
 
-export const SendButton = styled(ButtonSliderRight)`
+export const SendButton = styled(Right)`
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
 
@@ -213,9 +213,12 @@ export const H3Styled = styled(H3)`
 
 export const FormWrapper = styled.form`
   display: flex;
-  height: 100%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+
+
 `;
 
 

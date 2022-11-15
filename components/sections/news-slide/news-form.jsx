@@ -42,7 +42,7 @@ export const NewsForm = withFormProvider(
             style={{ color: colors.white }}
             name="email"
             mb="md"
-            propsInput={{ placeholder: "Введите адрес электронной почты" }}
+            propsInput={{isWhite:true, placeholder: "Введите адрес электронной почты" }}
           />
         </FormFields>
         <ButtonWrapper>

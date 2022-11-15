@@ -2,7 +2,7 @@ import { applyMargins, applyPaddings, colors, breakpointsWidth } from "styles";
 
 import styled from "@emotion/styled";
 
-export const ButtonWrapper = styled.button`
+export const ButtonWrapper = styled.div`
   width: 64px;
   height: 64px;
   background-color: ${colors.black};

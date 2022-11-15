@@ -19,6 +19,9 @@ const errorConditionColor = ({ isError }) =>
 const errorConditionBackgroundColor = ({ isError }) =>
   isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
 
+  const whiteInput = ({ isWhite }) =>
+  isWhite ? `color:${colors.brightRed};` : "";
+
 export const UnderlineInner = styled.div`
   width: 100%;
   height: 100%;
@@ -38,9 +41,9 @@ export const Underline = styled.div`
 
 export const InputStyled = styled.input`
   width: 100%;
-  color: ${hexToRGBA(colors.black, 0.2)};
+  color:  ${hexToRGBA(colors.black, 0.2)};
   font-family: ${fontFamilies.Font};
-  color: ${colors.black};
+  color: ${({ isWhite}) => (isWhite ? colors.white : colors.black )};
   font-size: ${fontSizes.h3};
 
   &:hover {
@@ -50,8 +53,10 @@ export const InputStyled = styled.input`
   }
 
   &::placeholder {
+    background: ${({ isWhite}) => (isWhite ? colors.black : "transparent")};
     font-family: ${fontFamilies.Font};
-    color: ${hexToRGBA(colors.black, 0.2)};
+    font-size: ${fontSizes.text}
+    color: ${({ isWhite}) => (isWhite ? hexToRGBA(colors.white, 0.2) : hexToRGBA(colors.black, 0.2) )};
   }
 
   ${errorConditionColor}
