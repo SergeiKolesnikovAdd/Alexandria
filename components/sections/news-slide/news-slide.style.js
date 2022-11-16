@@ -9,12 +9,14 @@ import {
   fontSizes,
 } from "styles";
 
-import { Text, H3, ButtonSliderRight } from "components";
+import { Text, H3,} from "components";
 import styled from "@emotion/styled";
-import { Subscription } from "../../common";
+import { Right, Subscription } from "../../common";
 import sub from "../../../public/subscription.png";
 import { InputField } from "../../ui/fields";
 import { fontFamilies } from "styles";
+import { getVW } from "styles";
+import { ButtonSliderRight } from "../../ui/button-slider-right"
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
@@ -118,7 +120,6 @@ export const StyledInput = styled(InputField)`
 export const SendButton = styled(ButtonSliderRight)`
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
-
   svg {
     path {
       fill: ${colors.white};
@@ -138,7 +139,6 @@ export const SendButton = styled(ButtonSliderRight)`
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     position: relative;
     bottom: auto;
-    z-index: 10;
     width: 52px;
     height: 52px;
     background-color: ${colors.red};
@@ -152,7 +152,6 @@ export const SendButton = styled(ButtonSliderRight)`
   @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
     position: relative;
     bottom: auto;
-    z-index: 10;
     width: 52px;
     height: 52px;
     background-color: ${colors.red};
@@ -166,7 +165,6 @@ export const SendButton = styled(ButtonSliderRight)`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     position: relative;
     bottom: auto;
-    z-index: 10;
     width: 48px;
     height: 48px;
     background-color: ${colors.red};
@@ -213,9 +211,12 @@ export const H3Styled = styled(H3)`
 
 export const FormWrapper = styled.form`
   display: flex;
-  height: 100%;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
+
+
 `;
 
 
@@ -223,17 +224,20 @@ export const FormFields = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  ${getCurrentMarginStyle("left", "xxsm")}
 `;
 
 export const ErrorField = styled.div`
   ${activeErrorField};
+  display:flex;
+  justify-content: center;
   height: 40px;
 `;
 

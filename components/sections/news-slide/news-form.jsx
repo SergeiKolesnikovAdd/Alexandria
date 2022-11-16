@@ -8,18 +8,16 @@ import {
   ButtonWrapper,
   StyledInput,
 } from "./news-slide.style";
-import { withFormProvider, } from "utils";
-import { postQuestion } from "utils/api"
+import { withFormProvider } from "utils";
+import { postQuestion } from "utils/api";
 import { SendButton } from "./news-slide.style";
 import { colors } from "styles";
+import { ButtonSliderRight } from "components";
 
 export const NewsForm = withFormProvider(
   ({ setIsGratitude, setOpen }) => {
     // const [isChecked, setIsChecked] = useState(false);
-    const {
-      handleSubmit,
-      formState: reset
-    } = useFormContext();
+    const { handleSubmit, formState: reset } = useFormContext();
     const onSubmit = (data) => {
       postQuestion({
         ...data,
@@ -41,8 +39,10 @@ export const NewsForm = withFormProvider(
           <StyledInput
             style={{ color: colors.white }}
             name="email"
-            mb="md"
-            propsInput={{ placeholder: "Введите адрес электронной почты" }}
+            propsInput={{
+              isWhite: true,
+              placeholder: "Введите адрес электронной почты",
+            }}
           />
         </FormFields>
         <ButtonWrapper>

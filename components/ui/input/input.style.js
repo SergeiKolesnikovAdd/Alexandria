@@ -12,12 +12,22 @@ import {
 
 import styled from "@emotion/styled";
 import { getCurrentMarginStyle } from "styles";
+import { getCurrentSizeStyle } from "styles";
 
 const errorConditionColor = ({ isError }) =>
   isError ? `color:${colors.brightRed};` : "";
 
 const errorConditionBackgroundColor = ({ isError }) =>
   isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "";
+
+const whiteInput = ({ isWhite }) =>
+  isWhite ? `color:${colors.brightRed}; ` : "";
+const whiteInputFont = ({ isWhite }) =>
+  isWhite ? getCurrentFontSizeStyle("text") : getCurrentFontSizeStyle("h3");
+const whiteInputPadding = ({ isWhite }) =>
+  isWhite
+    ? getCurrentPaddingStyle("left", "mdlg")
+    : getCurrentPaddingStyle("", "none");
 
 export const UnderlineInner = styled.div`
   width: 100%;
@@ -40,9 +50,8 @@ export const InputStyled = styled.input`
   width: 100%;
   color: ${hexToRGBA(colors.black, 0.2)};
   font-family: ${fontFamilies.Font};
-  color: ${colors.black};
-  font-size: ${fontSizes.h3};
-
+  color: ${({ isWhite }) => (isWhite ? colors.white : colors.black)};
+  font-size: ${({ isWhite }) => (isWhite ? fontSizes.text : fontSizes.h3)};
   &:hover {
     & + ${Underline} ${UnderlineInner} {
       transform: scaleX(1);
@@ -50,12 +59,17 @@ export const InputStyled = styled.input`
   }
 
   &::placeholder {
+    background: ${({ isWhite }) => (isWhite ? colors.black : "transparent")};
     font-family: ${fontFamilies.Font};
-    color: ${hexToRGBA(colors.black, 0.2)};
+    font-size: ${({ isWhite }) =>
+      isWhite ? getCurrentSizeStyle : fontSizes.h3};
+    color: ${({ isWhite }) =>
+      isWhite ? hexToRGBA(colors.white, 0.2) : hexToRGBA(colors.black, 0.2)};
+    text-align: ${({ isWhite }) => (isWhite ? "center" : "left")};
   }
-
-  ${errorConditionColor}
-  ${getCurrentFontSizeStyle("h3")};
+  ${whiteInputFont};
+  ${errorConditionColor};
+  ${whiteInputPadding};
 `;
 
 export const Error = styled.div`
@@ -64,6 +78,7 @@ export const Error = styled.div`
   font-family: ${fontFamilies.Font};
   display: flex;
   align-items: center;
+  justify-content: ${({ isWhite }) => (isWhite ? "center" : "flex-start")};
   ${getCurrentFontSizeStyle("caption")};
 `;
 
@@ -76,8 +91,8 @@ export const InputWrapper = styled.div`
 `;
 
 export const ErrorWrapper = styled.span`
-${getCurrentMarginStyle("top", "xxsm")}
-display:flex;
-align-items:center;
-flex-direction:row;
+  ${getCurrentMarginStyle("top", "xxsm")}
+  display:flex;
+  align-items: center;
+  flex-direction: row;
 `;

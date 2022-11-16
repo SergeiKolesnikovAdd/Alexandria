@@ -172,7 +172,6 @@ export const InputStyled = styled.div`
   transition: color 0.3s;
   background-color: ${colors.white};
   font-size: ${fontSizes.h3};
-  ${getCurrentMarginStyle("vertical", "xsm")};
 
   ${({ isOpen, isActive, isError }) => {
     if (isOpen) {
