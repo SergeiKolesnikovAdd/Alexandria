@@ -34,7 +34,7 @@ export const Input = forwardRef(
       <Underline>
         <UnderlineInner isActive={value} isError={error} />
       </Underline>
-      {error && <Error>{error}</Error>}
+      {error && <Error {...propsInput}>{error}</Error>}
     </InputWrapper>
   )
 );

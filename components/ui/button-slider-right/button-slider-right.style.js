@@ -1,6 +1,7 @@
 import { applyMargins, applyPaddings, colors, breakpointsWidth } from "styles";
 
 import styled from "@emotion/styled";
+import { getVW } from "styles";
 
 export const ButtonWrapper = styled.div`
   width: 64px;
@@ -51,6 +52,6 @@ export const ButtonWrapper = styled.div`
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 4vw;
     height: 4vw;
-    border-radius: 1vw;
+    border-radius: ${getVW(24)};
   }
 `;
