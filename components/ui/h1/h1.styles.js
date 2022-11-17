@@ -7,9 +7,6 @@ import {
 } from "styles";
 
 import styled from "@emotion/styled";
-
-console.log(getCurrentFontSizeStyle("h1"));
-
 export const Text = styled.span`
   font-family: ${fontFamilies.Font};
   /* TODO: НАСТРЙОКА СВОЙСТВ */

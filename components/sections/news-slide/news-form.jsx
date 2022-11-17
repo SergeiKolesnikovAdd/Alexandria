@@ -9,26 +9,29 @@ import {
   StyledInput,
 } from "./news-slide.style";
 import { withFormProvider } from "utils";
-import { postQuestion } from "utils/api";
+import { postSubscribe } from "utils/api";
 import { SendButton } from "./news-slide.style";
 import { colors } from "styles";
 import { ButtonSliderRight } from "components";
 
 export const NewsForm = withFormProvider(
-  ({ setIsGratitude, setOpen }) => {
+  ({ setIsGratitude, formName,}) => {
     // const [isChecked, setIsChecked] = useState(false);
     const { handleSubmit, formState: reset } = useFormContext();
     const onSubmit = (data) => {
-      postQuestion({
+      console.log(data);
+      postSubscribe({
         ...data,
         email: data.email,
+        formName: formName,
       })
         .then(() => {
-          setOpen(false);
+          console.log(data);
           setIsGratitude(true);
           reset();
         })
         .catch((error) => {
+          console.log("data:", data);
           console.log(error);
         });
     };
@@ -36,7 +39,7 @@ export const NewsForm = withFormProvider(
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
-          <StyledInput
+          <InputField
             style={{ color: colors.white }}
             name="email"
             propsInput={{
@@ -45,9 +48,7 @@ export const NewsForm = withFormProvider(
             }}
           />
         </FormFields>
-        <ButtonWrapper>
           <SendButton />
-        </ButtonWrapper>
       </FormWrapper>
     );
   },

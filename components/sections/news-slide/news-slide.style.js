@@ -17,6 +17,7 @@ import { InputField } from "../../ui/fields";
 import { fontFamilies } from "styles";
 import { getVW } from "styles";
 import { ButtonSliderRight } from "../../ui/button-slider-right"
+import { ButtonSM } from "../../ui/button-sm/";
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
@@ -117,10 +118,10 @@ export const StyledInput = styled(InputField)`
   ${applyMargins};
 `;
 
-export const SendButton = styled(ButtonSliderRight)`
+export const SendButton = styled(ButtonSM)`
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
-  svg {
+  /* svg {
     path {
       fill: ${colors.white};
     }
@@ -134,7 +135,7 @@ export const SendButton = styled(ButtonSliderRight)`
         fill: ${colors.red};
       }
     }
-  }
+  } */
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     position: relative;
