@@ -30,6 +30,7 @@ export const Form = withFormProvider(
     } = useFormContext();
 
     const onSubmit = (data) => {
+      console.log(data);
       postMain({
         ...data,
         email: data.email,

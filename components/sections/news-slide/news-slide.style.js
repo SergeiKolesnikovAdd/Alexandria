@@ -17,6 +17,7 @@ import { InputField } from "../../ui/fields";
 import { fontFamilies } from "styles";
 import { getVW } from "styles";
 import { ButtonSliderRight } from "../../ui/button-slider-right"
+import { ButtonSM } from "../../ui/button-sm/";
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
@@ -104,18 +105,19 @@ export const InputRow = styled.div`
   ${applyMargins}
 `;
 
-export const StyledInput = styled(InputField)`
-  border: 1px solid #22222208;
-  color: ${colors.white} !important;
-  background: ${colors.black};
-  &::placeholder {
-    color: #ffffff !important;
-    background: ${colors.black};
-  }
+// export const StyledInput = styled(InputField)`
+//   border: 1px solid #22222208;
+//   color: ${colors.white} !important;
+//   background: ${colors.black};
+//   text-align: center;
+//   &::placeholder {
+//     color: #ffffff !important;
+//     background: ${colors.black};
+//   }
 
-  ${applyPaddings};
-  ${applyMargins};
-`;
+//   ${applyPaddings};
+//   ${applyMargins};
+// `;
 
 export const SendButton = styled(ButtonSliderRight)`
   background-color: ${colors.red};
@@ -243,4 +245,16 @@ export const ErrorField = styled.div`
 
 export const ErrorMessage = styled.p`
   height: 40px;
+`;
+export const FormLabel = styled.label`
+  font-family: ${fontFamilies.Font};
+  color: ${colors.red};
+  ${getCurrentFontSizeStyle("caption")}
+  ${getCurrentPaddingStyle("bottom", "xxsm")};
+`;
+
+export const FormLabelGray = styled(FormLabel)`
+  opacity: 0.4;
+  color: ${colors.black};
+  ${getCurrentPaddingStyle("left", "xxsm")};
 `;

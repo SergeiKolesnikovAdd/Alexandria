@@ -18,28 +18,27 @@ export const FormModal = ({
   formName,
   isOpen,
   setOpen,
-  setColored,
   ...props
 }) => {
   const [isGratitude, setIsGratitude] = useState(false);
 
   return (
-    <Modal setOpen={setOpen} isOpen={isOpen} setColored={setColored}>
+    <Modal setOpen={setOpen} isOpen={isOpen}>
       <FormModalInner
         onClick={() => {
           setOpen(false);
-          setColored(false);
-        }}>
+        }}
+      >
         <ContentSection
           onClick={(e) => {
             e.stopPropagation();
-          }}>
+          }}
+        >
           <ClsButton
             mt="mdlg"
             mr="mdlg"
             onClick={() => {
               setOpen(false);
-              setColored(false);
             }}
           />
           <ContentWrapper>
@@ -60,7 +59,6 @@ export const FormModal = ({
       <GratitudeModal
         isGratitude={isGratitude}
         setIsGratitude={setIsGratitude}
-        setColored={setColored}
       />
     </Modal>
   );

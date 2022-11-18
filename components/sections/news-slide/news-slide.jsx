@@ -48,7 +48,7 @@ const [isGratitude, setIsGratitude] = useState(false);
               <br />
               чтобы быть в курсе новостей
             </StyledText>
-            <NewsForm setIsGratitude={setIsGratitude} />
+            <NewsForm formName="news" setIsGratitude={setIsGratitude} />
             {/* <InputRow> */}
             {/* <StyledInput></StyledInput> */}
             {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}

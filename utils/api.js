@@ -40,3 +40,20 @@ export async function postMain(body) {
     return new Error(e)
   }
 }
+
+export async function postSubscribe(body) {
+  console.log(JSON.stringify(body));
+  try {
+    await fetch(`${BASE_URL}/leads/subscribe`, {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify(body),
+    })
+    return true
+  } catch (e) {
+    return new Error(e)
+  }
+}

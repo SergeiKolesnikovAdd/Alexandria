@@ -1,34 +1,35 @@
-import { useState } from "react";
-import { ButtonMD, TextAreaField, InputField, Checkbox } from "components";
 import { useFormContext } from "react-hook-form";
 import {
-  FormLabel,
   FormWrapper,
   FormFields,
   ButtonWrapper,
-  StyledInput,
 } from "./news-slide.style";
 import { withFormProvider } from "utils";
-import { postQuestion } from "utils/api";
+import { postSubscribe } from "utils/api";
 import { SendButton } from "./news-slide.style";
 import { colors } from "styles";
-import { ButtonSliderRight } from "components";
+import { InputFieldNews } from "components";
+import { ButtonMD } from "components";
+import { Right } from "components";
+import { ButtonNews } from "components";
 
 export const NewsForm = withFormProvider(
-  ({ setIsGratitude, setOpen }) => {
-    // const [isChecked, setIsChecked] = useState(false);
-    const { handleSubmit, formState: reset } = useFormContext();
+  ({ setIsGratitude, formName,}) => {
+
+    const { handleSubmit, reset } = useFormContext();
     const onSubmit = (data) => {
-      postQuestion({
-        ...data,
+      console.log(data),
+      postSubscribe({
         email: data.email,
+        formName: formName,
       })
         .then(() => {
-          setOpen(false);
+          console.log(data);
           setIsGratitude(true);
           reset();
         })
         .catch((error) => {
+          console.log("data:", data);
           console.log(error);
         });
     };
@@ -36,7 +37,7 @@ export const NewsForm = withFormProvider(
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
-          <StyledInput
+          <InputFieldNews
             style={{ color: colors.white }}
             name="email"
             propsInput={{
@@ -45,9 +46,8 @@ export const NewsForm = withFormProvider(
             }}
           />
         </FormFields>
-        <ButtonWrapper>
-          <SendButton />
-        </ButtonWrapper>
+        <ButtonWrapper><ButtonNews/></ButtonWrapper>
+          
       </FormWrapper>
     );
   },

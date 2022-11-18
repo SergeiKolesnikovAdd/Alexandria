@@ -5,9 +5,9 @@ import {Portal} from "components";
 import {ModalWrapper} from "./modal.style";
 import {propTypesChildren} from "../../types";
 
-export const Modal = ({children, isOpen, setOpen, setColored, ...props}) => {
+export const Modal = ({children, isOpen, setOpen, ...props}) => {
     
-    useEscHandler(isOpen ? () => {setOpen(false); setColored(false)} : null);
+    useEscHandler(isOpen ? () => {setOpen(false);} : null);
     useNoScroll(isOpen);
     useVH();
 

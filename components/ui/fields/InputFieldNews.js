@@ -5,7 +5,7 @@ import { Input } from "../input";
 import { Warning } from "components";
 import { ErrorWrapper } from "../input/input.style";
 
-export const InputField = ({ name, rules = null, normalizer, ...props }) => {
+export const InputFieldNews = ({ name, rules = null, normalizer, ...props }) => {
   const {
     control,
     formState: { errors },
@@ -17,27 +17,9 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
     <Controller
       control={control}
       name={name}
-      rules={
-        rules || {
-          validate: (val) => !!val || "Поле заполнено неверно",
-        }
-      }
       render={({ field: { onChange, ...other } }) => (
         <Input
           {...register("email", {
-            required: "Поле заполнено неверно",
-            maxLength: {
-              value: 255,
-              message: "Введите не более 255 символов",
-            },
-            pattern: {
-              value:
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: "Пожалуйста введите корретный адрес",
-            },
-          })}
-          
-          {...register("name", {
             required: "Поле заполнено неверно",
             maxLength: {
               value: 255,
@@ -50,9 +32,6 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
             const { value } = event.target;
             if (errors.name) {
               trigger("name");
-            }
-            if (errors.email) {
-              trigger("email");
             }
             if (normalizer) {
               event.target.value = normalizer(value);
@@ -75,7 +54,7 @@ export const InputField = ({ name, rules = null, normalizer, ...props }) => {
   );
 };
 
-InputField.propTypes = {
+InputFieldNews.propTypes = {
   name: PropTypes.string.isRequired,
   rules: PropTypes.object,
   normalizer: PropTypes.func,

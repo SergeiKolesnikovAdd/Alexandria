@@ -53,8 +53,6 @@ export const Slider = (
   { isNextDirection, currentSlide, getCurrentIndex },
   ...props
 ) => {
-  console.log(getCurrentIndex());
-  console.log(currentSlide);
   return (
     <>
       <SlideWrapper>

@@ -8,7 +8,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-export const Header = ({ isColored, setColored }) => {
+export const Header = ({ isColored }) => {
   const [isOpenForm, setOpenForm] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
@@ -24,16 +24,16 @@ export const Header = ({ isColored, setColored }) => {
           </Link>
         </HeaderTitle>
         <HeaderMenu>
-          <HeaderMenuItem isOpen={isColored} href="#about">
+          <HeaderMenuItem href="#about">
             О платформе
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isColored} href="#offer">
+          <HeaderMenuItem href="#offer">
             Тарифы
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isColored} href="#focus">
+          <HeaderMenuItem href="#focus">
             Клиенты
           </HeaderMenuItem>
-          <HeaderMenuItem isOpen={isColored} href="#faq">
+          <HeaderMenuItem href="#faq">
             FAQ
           </HeaderMenuItem>
         </HeaderMenu>
@@ -41,14 +41,12 @@ export const Header = ({ isColored, setColored }) => {
           onClick={(e) => {
             setOpenForm(true);
             setModalTitle(e.target.textContent);
-            setColored(true);
           }}
         >
           Оставить заявку
         </ButtonSM>
       </HeaderWrapper>
       <FormModal
-        setColored={setColored}
         formName="Шапка"
         modalTitle={modalTitle}
         setOpen={setOpenForm}
