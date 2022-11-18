@@ -10,32 +10,24 @@ import { H2, Modal } from "components";
 import { colors } from "styles";
 import { Caption } from "components";
 
-export const GratitudeModal = ({
-  isGratitude,
-  setIsGratitude,
-  setColored,
-  ...props
-}) => {
+export const GratitudeModal = ({ isGratitude, setIsGratitude, ...props }) => {
   return (
-    <Modal
-      setOpen={setIsGratitude}
-      isOpen={isGratitude}
-      setColored={setColored}>
+    <Modal setOpen={setIsGratitude} isOpen={isGratitude}>
       <FormModalInner
         onClick={() => {
           setIsGratitude(false);
-          setColored(false);
-        }}>
+        }}
+      >
         <ContentSection
           onClick={(e) => {
             e.stopPropagation();
-          }}>
+          }}
+        >
           <ClsButton
             mt="mdlg"
             mr="mdlg"
             onClick={() => {
               setIsGratitude(false);
-              setColored(false);
             }}
           />
           <ContentWrapper>

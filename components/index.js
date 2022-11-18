@@ -39,12 +39,14 @@ import { ButtonSliderRight } from "./ui/button-slider-right";
 import { DropDown } from "./ui/drop-down";
 import { Tab } from "./ui/tab";
 import { NewsItem } from "./ui/news-item";
+import { ButtonNews } from "./ui/button-news";
 
 import {
   InputField,
   TextAreaField,
   DropDownField,
   CounterField,
+  InputFieldNews,
 } from "./ui/fields";
 import { Counter } from "./ui/counter";
 import { Input } from "./ui/input";
@@ -116,4 +118,6 @@ export {
   GratitudeModal,
   NewsItem,
   NewsSlide,
+  InputFieldNews,
+  ButtonNews
 };

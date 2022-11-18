@@ -42,6 +42,7 @@ export async function postMain(body) {
 }
 
 export async function postSubscribe(body) {
+  console.log(JSON.stringify(body));
   try {
     await fetch(`${BASE_URL}/leads/subscribe`, {
       headers: {
@@ -51,7 +52,7 @@ export async function postSubscribe(body) {
       method: 'POST',
       body: JSON.stringify(body),
     })
-    return console.log(body);
+    return true
   } catch (e) {
     return new Error(e)
   }

@@ -1,27 +1,25 @@
-import { useState } from "react";
-import { ButtonMD, TextAreaField, InputField, Checkbox } from "components";
 import { useFormContext } from "react-hook-form";
 import {
-  FormLabel,
   FormWrapper,
   FormFields,
   ButtonWrapper,
-  StyledInput,
 } from "./news-slide.style";
 import { withFormProvider } from "utils";
 import { postSubscribe } from "utils/api";
 import { SendButton } from "./news-slide.style";
 import { colors } from "styles";
-import { ButtonSliderRight } from "components";
+import { InputFieldNews } from "components";
+import { ButtonMD } from "components";
+import { Right } from "components";
+import { ButtonNews } from "components";
 
 export const NewsForm = withFormProvider(
   ({ setIsGratitude, formName,}) => {
-    // const [isChecked, setIsChecked] = useState(false);
-    const { handleSubmit, formState: reset } = useFormContext();
+
+    const { handleSubmit, reset } = useFormContext();
     const onSubmit = (data) => {
-      console.log(data);
+      console.log(data),
       postSubscribe({
-        ...data,
         email: data.email,
         formName: formName,
       })
@@ -39,7 +37,7 @@ export const NewsForm = withFormProvider(
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
-          <InputField
+          <InputFieldNews
             style={{ color: colors.white }}
             name="email"
             propsInput={{
@@ -48,7 +46,8 @@ export const NewsForm = withFormProvider(
             }}
           />
         </FormFields>
-          <SendButton />
+        <ButtonWrapper><ButtonNews/></ButtonWrapper>
+          
       </FormWrapper>
     );
   },
