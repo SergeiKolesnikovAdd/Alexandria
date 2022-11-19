@@ -43,18 +43,13 @@ const [isGratitude, setIsGratitude] = useState(false);
             )
           )}
           <SubscriptionWrapper>
-            <StyledText>
+            <StyledText mb="mdlg">
               Подписывайся,
               <br />
               чтобы быть в курсе новостей
             </StyledText>
-            <NewsForm formName="news" setIsGratitude={setIsGratitude} />
-            {/* <InputRow> */}
-            {/* <StyledInput></StyledInput> */}
-            {/* TODO: ВСТАВИТЬ СТИЛЛИЗОВАННЫЙ ИНПУТ */}
-            {/* <SendButton /> */}
-            {/* </InputRow> */}
-            <Logo />
+            <NewsForm formName="news" setIsGratitude={setIsGratitude}/>
+            <Logo mt="lg"/>
             <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
               Нажимая на кнопку «Отправить» я соглашаюсь с политикой
               конфиденциальности данных
@@ -63,7 +58,7 @@ const [isGratitude, setIsGratitude] = useState(false);
               <Caption>Подробнее</Caption>
             </Link>
             <Caption
-              mt="xlg"
+              mt="lg"
               px="mdlg"
               style={{
                 display: "block",

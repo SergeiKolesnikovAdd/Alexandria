@@ -52,6 +52,6 @@ export const ButtonWrapper = styled.div`
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 4vw;
     height: 4vw;
-    border-radius: ${getVW(24)};
+    border-radius: 1vw;
   }
 `;
