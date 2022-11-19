@@ -67,6 +67,7 @@ export const NewsWrapper = styled.div`
 export const SubscriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -74,7 +75,7 @@ export const SubscriptionWrapper = styled.div`
   background-image: url(${sub.src});
   background-repeat: no-repeat;
   background-size: cover;
-  ${getCurrentPaddingStyle("top", "xxxlg")};
+  ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
   text-align: center;
 
@@ -105,20 +106,6 @@ export const InputRow = styled.div`
   ${applyMargins}
 `;
 
-// export const StyledInput = styled(InputField)`
-//   border: 1px solid #22222208;
-//   color: ${colors.white} !important;
-//   background: ${colors.black};
-//   text-align: center;
-//   &::placeholder {
-//     color: #ffffff !important;
-//     background: ${colors.black};
-//   }
-
-//   ${applyPaddings};
-//   ${applyMargins};
-// `;
-
 export const SendButton = styled(ButtonSliderRight)`
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
@@ -136,6 +123,12 @@ export const SendButton = styled(ButtonSliderRight)`
         fill: ${colors.red};
       }
     }
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    width: 4vw;
+    height: 4vw;
+    border-radius: ${getVW(24)};
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
@@ -178,7 +171,9 @@ export const SendButton = styled(ButtonSliderRight)`
   }
 `;
 
-export const Logo = styled(Subscription)``;
+export const Logo = styled(Subscription)`
+  
+`;
 
 export const Link = styled.a`
   span {
@@ -217,8 +212,7 @@ export const FormWrapper = styled.form`
   flex-direction: row;
   justify-content: center;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
-
-
+  ${getCurrentMarginStyle("bottom", "lg")};
 `;
 
 
@@ -227,13 +221,30 @@ export const FormFields = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  border: 1px solid ${colors.red};
+  border-radius: 24px;
+
+  div {
+    input{
+      padding: 0;
+    }
+  }
+
+  @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
+    border-radius: 1.5vw;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 12px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  ${getCurrentMarginStyle("left", "xxsm")}
+  ${getCurrentMarginStyle("left", "xxsm")};
 `;
 
 export const ErrorField = styled.div`
