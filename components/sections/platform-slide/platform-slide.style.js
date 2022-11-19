@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { H2 } from "components";
 import { H3 } from "components";
 import {
   applyMargins,
@@ -95,8 +96,13 @@ export const StyledImg = styled.img`
   object-fit: cover;
   z-index: -10;
   ${({ scrollY }) =>
-    scrollY && `transform: scale(${scrollY}) translateY(${20 * scrollY}px);`};
+    scrollY && `transform: scale(${scrollY}) translateY(${30 * scrollY}px);`};
   :first-of-type {
     display: none;
   }
+`;
+
+export const StyledNBSP = styled(H2)`
+  opacity: 0;
+  pointer-events: none;
 `;
