@@ -10,6 +10,7 @@ import {
   StyledDesktopMDBR,
   StyledPhoneBR,
   StyledImg,
+  StyledNBSP,
 } from "./platform-slide.style";
 import { useEffect, useRef, useState } from "react";
 
@@ -17,10 +18,10 @@ import { colors } from "styles";
 
 import img1 from "public/platform1.png";
 import img2 from "public/platform2.png";
-import img3 from "public/platform3.png";
+import img3 from "public/platform6.png";
 import img4 from "public/platform4.png";
 import img5 from "public/platform5.png";
-import img6 from "public/platform6.png";
+import img6 from "public/platform3.png";
 import { debounce } from "../../../utils";
 
 function useScroll(platformRef) {
@@ -125,69 +126,69 @@ export const PlatformSlide = ({setColored, ...props }) => {
         <H3Styled>О платформе</H3Styled>
         <TextWrapper>
           <H2 mt="mdsm">
-            Мы помогаем создавать&nbsp;
+            Мы помогаем создавать<StyledNBSP>!</StyledNBSP>
             <StyledTabletSMBR />
             <StyledPhoneBR />
-            научные&nbsp;
+            научные<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledDesktopSMBR />
-            журналы&nbsp;
-            <StyledPhoneBR />
-            и&nbsp;книги,&nbsp;
+            журналы<StyledNBSP>!</StyledNBSP>
+            <StyledPhoneBR />и<StyledNBSP>!</StyledNBSP>книги,
+            <StyledNBSP>!</StyledNBSP>
             <StyledDesktopLGBR />
             <StyledTabletSMBR />
-            международного&nbsp;
+            международного<StyledNBSP>!</StyledNBSP>
             <StyledDesktopSMBR />
             <StyledPhoneBR />
-            уровня&nbsp;
+            уровня<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledTabletSMBR />
-            издателям&nbsp;
+            издателям<StyledNBSP>!</StyledNBSP>
             <StyledPhoneBR />
-            любого масштаба&nbsp;
+            любого масштаба<StyledNBSP>!</StyledNBSP>
             <StyledDesktopSMBR />
           </H2>
           <H2 style={{ color: colors.orange }}>
-            и&nbsp;амбиций:&nbsp;
+            и<StyledNBSP>!</StyledNBSP>амбиций:<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
-            университетской&nbsp;
+            университетской<StyledNBSP>!</StyledNBSP>
             <StyledDesktopLGBR />
             <StyledTabletSMBR />
             <StyledPhoneBR />
-            прессе,&nbsp;
+            прессе,<StyledNBSP>!</StyledNBSP>
             <StyledDesktopSMBR />
-            организаторам&nbsp;
+            организаторам<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledTabletSMBR />
             <StyledPhoneBR />
-            конференций,&nbsp;
+            конференций,<StyledNBSP>!</StyledNBSP>
             <StyledDesktopLGBR />
             <StyledDesktopSMBR />
             научно-
             <StyledTabletSMBR />
             <StyledPhoneBR />
-            исследовательским&nbsp;
+            исследовательским<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledTabletSMBR />
-            институтам&nbsp;
+            институтам<StyledNBSP>!</StyledNBSP>
             <StyledDesktopLGBR />
             <StyledDesktopSMBR />
-            <StyledPhoneBR />
-            и&nbsp;другим&nbsp;
+            <StyledPhoneBR />и<StyledNBSP>!</StyledNBSP>другим
+            <StyledNBSP>!</StyledNBSP>
             <StyledTabletSMBR />
-            организациям,&nbsp;
+            организациям,<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledDesktopSMBR />
             <StyledPhoneBR />
-            желающим&nbsp;
+            желающим<StyledNBSP>!</StyledNBSP>
             <StyledTabletSMBR />
-            повысить&nbsp;
+            повысить<StyledNBSP>!</StyledNBSP>
             <StyledPhoneBR />
             <StyledDesktopLGBR />
-            качество&nbsp;
+            качество<StyledNBSP>!</StyledNBSP>
             <StyledDesktopMDBR />
             <StyledDesktopSMBR />
-            своей&nbsp;
+            своей<StyledNBSP>!</StyledNBSP>
             <StyledTabletSMBR />
             <StyledPhoneBR />
             издательской деятельности
