@@ -222,13 +222,19 @@ export const FormFields = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: 1px solid ${colors.red};
+  border: 1px solid #ffffff14;
   border-radius: 24px;
-
+  background-color: ${colors.black};
+  transition: border 0.3s;
+  
   div {
-    input{
+    input {
       padding: 0;
     }
+  }
+
+  :hover {
+    border: 1px solid ${colors.red};
   }
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
