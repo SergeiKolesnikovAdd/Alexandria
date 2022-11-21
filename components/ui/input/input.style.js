@@ -37,7 +37,8 @@ export const UnderlineInner = styled.div`
   background-color: ${colors.red};
   transition: transform 0.5s;
 
-  ${errorConditionBackgroundColor}
+  ${({ isWhite }) =>
+    isWhite ? isActive ? "transform: scaleX(1)" : "":errorConditionBackgroundColor }
 `;
 
 export const Underline = styled.div`
@@ -54,7 +55,7 @@ export const InputStyled = styled.input`
   font-size: ${({ isWhite }) => (isWhite ? fontSizes.text : fontSizes.h3)};
   &:hover {
     & + ${Underline} ${UnderlineInner} {
-      transform: scaleX(1);
+      transform: ${({ isWhite }) => (isWhite ? "scaleX(0)" : "scale(1)")};
     }
   }
 
@@ -68,7 +69,7 @@ export const InputStyled = styled.input`
     text-align: ${({ isWhite }) => (isWhite ? "center" : "left")};
   }
   ${whiteInputFont};
-  ${errorConditionColor};
+  ${({ isWhite }) => (isWhite ? "" : errorConditionColor)};
   ${whiteInputPadding};
 `;
 

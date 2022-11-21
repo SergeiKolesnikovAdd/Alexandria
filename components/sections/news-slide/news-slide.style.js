@@ -172,7 +172,7 @@ export const SendButton = styled(ButtonSliderRight)`
 `;
 
 export const Logo = styled(Subscription)`
-  
+
 `;
 
 export const Link = styled.a`
@@ -217,6 +217,7 @@ export const FormWrapper = styled.form`
 
 
 export const FormFields = styled.div`
+  padding: ${getVW(8)};
   width: 100%;
   display: flex;
   flex-direction: column;
