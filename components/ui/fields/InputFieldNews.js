@@ -5,7 +5,7 @@ import { Input } from "../input";
 import { Warning } from "components";
 import { ErrorWrapper } from "../input/input.style";
 
-export const InputFieldNews = ({ name, rules = null, normalizer, ...props }) => {
+export const InputFieldNews = ({ name, rules = null, normalizer, isWhite, ...props }) => {
   const {
     control,
     formState: { errors },
