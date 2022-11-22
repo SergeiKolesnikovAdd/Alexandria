@@ -36,9 +36,15 @@ export const UnderlineInner = styled.div`
   transform-origin: left;
   background-color: ${colors.red};
   transition: transform 0.5s;
+  
+  ${({ isWhite, isError }) =>
+    isWhite ? ( isError ? `background-color: ${colors.brightRed}; transform: scaleX(1);` : "" ): ""}
 
-  ${({ isWhite }) =>
-    isWhite ? isActive ? "transform: scaleX(1)" : "":errorConditionBackgroundColor }
+${({ isWhite, isActive }) =>
+    !isWhite ?  (isActive?   "transform: scaleX(0)" : "transform: scaleX(1)") : "" }
+
+      /* ${({ isWhite }) =>
+    isWhite && isActive ? "transform: scaleX(0)" : errorConditionBackgroundColor} */
 `;
 
 export const Underline = styled.div`
@@ -63,9 +69,9 @@ export const InputStyled = styled.input`
     background: ${({ isWhite }) => (isWhite ? colors.black : "transparent")};
     font-family: ${fontFamilies.Font};
     font-size: ${({ isWhite }) =>
-      isWhite ? getCurrentSizeStyle : fontSizes.h3};
+    isWhite ? getCurrentSizeStyle : fontSizes.h3};
     color: ${({ isWhite }) =>
-      isWhite ? hexToRGBA(colors.white, 0.2) : hexToRGBA(colors.black, 0.2)};
+    isWhite ? hexToRGBA(colors.white, 0.2) : hexToRGBA(colors.black, 0.2)};
     text-align: ${({ isWhite }) => (isWhite ? "center" : "left")};
   }
   ${whiteInputFont};
