@@ -77,6 +77,7 @@ export const SubscriptionWrapper = styled.div`
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "xxsm")};
   text-align: center;
 
   @media screen and (min-width: 1601px) {
