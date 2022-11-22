@@ -1,6 +1,6 @@
 export const Right = (props) => {
   return (
-    <svg fill="none" viewBox="0 0 64 64">
+    <svg fill="#D17456" viewBox="0 0 64 64">
       <rect width="64" height="64" fill="transparent" rx="24" />
       <path
         fill="#D17456"

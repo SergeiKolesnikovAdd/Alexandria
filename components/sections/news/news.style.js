@@ -173,7 +173,7 @@ export const StyledLink = styled.a`
   }
 `;
 
-export const StyledNBSP = styled(H2)`
+export const StyledNBSP = styled(Text)`
   opacity: 0;
   pointer-events: none;
 `;

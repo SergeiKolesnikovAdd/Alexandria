@@ -47,19 +47,19 @@ export const OfferSlide = ({ setColored, ...props }) => {
       </H2>
       <ButtonRow mb="lg" px="lg">
         <Text mt="lg">
-          Мы предлагаем оптимальные пакеты<StyledNBSP>!</StyledNBSP>;
+          Мы предлагаем оптимальные пакеты<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          комплексных<StyledNBSP>!</StyledNBSP>;
+          комплексных<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          услуг, а также возможность<StyledNBSP>!</StyledNBSP>;
+          услуг, а также возможность<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          разработать персональное<StyledNBSP>!</StyledNBSP>;
+          разработать персональное<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          предложение,<StyledNBSP>!</StyledNBSP>;
+          предложение,<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          исходя из индивидуальных<StyledNBSP>!</StyledNBSP>;
+          исходя из индивидуальных<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          потребностей<StyledNBSP>!</StyledNBSP>;
+          потребностей<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
           издателя
         </Text>

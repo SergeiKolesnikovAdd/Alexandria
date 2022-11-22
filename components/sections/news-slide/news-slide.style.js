@@ -80,12 +80,12 @@ export const SubscriptionWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 48px;
-  background-image: url(${sub.src});
+  background-color: #222222;
   background-repeat: no-repeat;
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
-  ${getCurrentPaddingStyle("horizontal", "xxsm")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   text-align: center;
 
   @media screen and (min-width: 1601px) {
@@ -217,7 +217,6 @@ export const FormWrapper = styled.form`
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentMarginStyle("bottom", "lg")};
 `;
 
