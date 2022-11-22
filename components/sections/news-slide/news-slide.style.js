@@ -223,11 +223,11 @@ export const FormFields = styled.div`
   text-align: center;
   border: 1px solid #ffffff14;
   border-radius: 24px;
-  background-color: ${colors.black};
-  transition: border 0.3s;
-  
+
   div {
     input {
+      width:auto;
+      text-align: left;
       padding: 0;
     }
   }

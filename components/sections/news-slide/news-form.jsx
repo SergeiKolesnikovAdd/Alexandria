@@ -18,18 +18,15 @@ export const NewsForm = withFormProvider(
 
     const { handleSubmit, reset } = useFormContext();
     const onSubmit = (data) => {
-      console.log(data),
       postSubscribe({
         email: data.email,
         formName: formName,
       })
         .then(() => {
-          console.log(data);
           setIsGratitude(true);
           reset();
         })
         .catch((error) => {
-          console.log("data:", data);
           console.log(error);
         });
     };
@@ -47,7 +44,7 @@ export const NewsForm = withFormProvider(
           />
         </FormFields>
         <ButtonWrapper><ButtonNews/></ButtonWrapper>
-          
+
       </FormWrapper>
     );
   },

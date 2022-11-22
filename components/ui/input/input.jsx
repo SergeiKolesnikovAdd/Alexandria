@@ -12,7 +12,7 @@ import {
 // eslint-disable-next-line react/display-name
 export const Input = forwardRef(
   (
-    { 
+    {
       title,
       error,
       value = "",
@@ -31,8 +31,8 @@ export const Input = forwardRef(
         ref={ref}
         {...propsInput}
       />
-      <Underline>
-        <UnderlineInner isActive={value} isError={error} />
+      <Underline {...propsInput}>
+        <UnderlineInner {...propsInput} isActive={value} isError={error} />
       </Underline>
       {error && <Error {...propsInput}>{error}</Error>}
     </InputWrapper>
