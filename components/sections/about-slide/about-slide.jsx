@@ -40,7 +40,7 @@ export const AboutSlide = ({ ...props }) => {
             позволяет вести издательскую деятельность просто и эффективно.
           </StyledDescription>
           {/* <Link href="/presentation" target="_blank">
-            <StyledText>Презентация,<StyledNBSP>!</StyledNBSP>;PDF</StyledText>
+            <StyledText>Презентация,<StyledNBSP>!</StyledNBSP>PDF</StyledText>
           </Link> */}
         </TextContainer>
       </ButtonRow>

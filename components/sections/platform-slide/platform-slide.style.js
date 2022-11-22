@@ -102,7 +102,8 @@ export const StyledImg = styled.img`
   }
 `;
 
-export const StyledNBSP = styled(H2)`
+export const StyledNBSP = styled.span`
   opacity: 0;
   pointer-events: none;
+  ${getCurrentFontSizeStyle("H2")};
 `;

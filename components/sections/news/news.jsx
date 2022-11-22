@@ -33,7 +33,7 @@ export const News = ({ setColored, ...props }) => {
           <TextContainer mr="mdsm">
             <StyledDescription style={{ display: "inline" }}>
               Начало работы проекта Alexandrina совпало с ежегодной
-              международной<StyledNBSP>!</StyledNBSP>;
+              международной<StyledNBSP>!</StyledNBSP>
             </StyledDescription>
             <StyledLink target="_blank" href="https://www.openaccessweek.org/">
               неделей открытого доступа
@@ -49,10 +49,10 @@ export const News = ({ setColored, ...props }) => {
               изменений и важностью социальных проблем, затрагивающих людей во
               всем мире. Именно поэтому с 24 по 30 октября мы бесплатно проводим
               аудиты научных журналов на возможность вступления в
-              <StyledNBSP>!</StyledNBSP>;
+              <StyledNBSP>!</StyledNBSP>
               <StyledLink target="_blank" href="https://doaj.org/">
                 <StyledDescription>
-                  DOAJ<StyledNBSP>!</StyledNBSP>;
+                  DOAJ<StyledNBSP>!</StyledNBSP>
                 </StyledDescription>
               </StyledLink>
               и предоставляем скидку 20% для разработки журнала на платформе
