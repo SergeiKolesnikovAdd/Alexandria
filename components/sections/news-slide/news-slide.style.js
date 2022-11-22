@@ -77,7 +77,7 @@ export const SubscriptionWrapper = styled.div`
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
-  ${getCurrentPaddingStyle("horizontal", "xxsm")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   text-align: center;
 
   @media screen and (min-width: 1601px) {
@@ -209,7 +209,6 @@ export const FormWrapper = styled.form`
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentMarginStyle("bottom", "lg")};
 `;
 
