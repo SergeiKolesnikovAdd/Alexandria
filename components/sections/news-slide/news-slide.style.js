@@ -72,7 +72,7 @@ export const SubscriptionWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 48px;
-  background-image: url(${sub.src});
+  background-color: #222222;
   background-repeat: no-repeat;
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
