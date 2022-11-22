@@ -47,16 +47,8 @@ export const NewsWrapper = styled.div`
     gap: 1vw;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
-    grid-template-columns: repeat(3, 30.7vw);
-  }
-
-  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    grid-template-columns: repeat(3, 30.9vw);
-  }
-
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 47vw);
     grid-template-rows: repeat(3, min-content);
   }
 
@@ -65,7 +57,7 @@ export const NewsWrapper = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 95vw);
     grid-template-rows: repeat(3, 366px);
   }
 
