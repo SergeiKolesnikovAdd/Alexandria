@@ -39,7 +39,8 @@ const [isGratitude, setIsGratitude] = useState(false);
                 description={description}
                 date={date}
                 title1={title1}
-                title2={title2}></NewsItem>
+                title2={title2}
+              ></NewsItem>
             )
           )}
           <SubscriptionWrapper>
@@ -48,13 +49,17 @@ const [isGratitude, setIsGratitude] = useState(false);
               <br />
               чтобы быть в курсе новостей
             </StyledText>
-            <NewsForm formName="news" setIsGratitude={setIsGratitude}/>
-            <Logo mt="lg"/>
+            <NewsForm formName="news" setIsGratitude={setIsGratitude} />
+            <Logo mt="lg" />
             <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
               Нажимая на кнопку «Отправить» я соглашаюсь с политикой
               конфиденциальности данных
             </Caption>
-            <Link href="" style={{ lineHeight: "140%" }}>
+            <Link
+              href="/politica"
+              target="_blank"
+              style={{ lineHeight: "140%" }}
+            >
               <Caption>Подробнее</Caption>
             </Link>
             <Caption
@@ -64,7 +69,8 @@ const [isGratitude, setIsGratitude] = useState(false);
                 display: "block",
                 color: colors.white,
                 lineHeight: "140%",
-              }}>
+              }}
+            >
               Будьте в курсе актуальных новостей и получайте их первыми.
               Подпишитесь на полезную рассылку от Alexandrina
             </Caption>

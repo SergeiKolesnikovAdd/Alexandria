@@ -77,6 +77,7 @@ export const SubscriptionWrapper = styled.div`
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
+  ${getCurrentPaddingStyle("horizontal", "xxsm")};
   text-align: center;
 
   @media screen and (min-width: 1601px) {
@@ -90,9 +91,6 @@ export const SubscriptionWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
   }
-
-  ${applyPaddings}
-  ${applyMargins}
 `;
 
 export const InputRow = styled.div`
@@ -223,17 +221,27 @@ export const FormFields = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: 1px solid ${colors.red};
+  border: 1px solid #ffffff14;
   border-radius: 24px;
-
+  background-color: ${colors.black};
+  transition: border 0.3s;
+  
   div {
-    input{
+    input {
       padding: 0;
     }
   }
 
+  :hover {
+    border: 1px solid ${colors.red};
+  }
+
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 1.5vw;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 16px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {

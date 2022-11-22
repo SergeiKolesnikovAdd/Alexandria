@@ -8,7 +8,7 @@ export const ButtonWrapper = styled.button`
   height: 64px;
   background-color: ${colors.black};
   border: 1px solid ${colors.red};
-  border-radius: 16px;
+  border-radius: 24px;
   cursor: pointer;
   transition: background-color 0.3s;
   display: flex;
@@ -35,23 +35,17 @@ export const ButtonWrapper = styled.button`
   ${applyMargins}
   ${applyPaddings}
 
-  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
-    position: absolute;
-    bottom: 0;
-    z-index: 90;
-    width: 100%;
-    height: 20%;
-    background-color: none;
-    border: none;
-    opacity: 0;
-    &:hover {
-      background-color: none;
-    }
-  }
-
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     width: 4vw;
     height: 4vw;
     border-radius: ${getVW(24)};
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 16px;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 12px;
   }
 `;
