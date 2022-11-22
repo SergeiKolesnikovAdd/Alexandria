@@ -26,8 +26,9 @@ const activeErrorField = ({ isError }) => {
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  ${getCurrentPaddingStyle("horizontal", "lg")};
+  width: min-content;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
 
   ${applyMargins}
   ${applyPaddings}
@@ -37,8 +38,8 @@ export const NewsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 31vw);
   grid-template-rows: repeat(2, 580px);
-  gap: 16px;
-  width: 100%;
+  gap: 1vw;
+  width: max-content;
 
   @media screen and (min-width: 1601px) {
     grid-template-columns: repeat(3, 31vw);
@@ -47,11 +48,11 @@ export const NewsWrapper = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 30.7vw);
   }
 
   @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
-    grid-template-columns: repeat(3, 29vw);
+    grid-template-columns: repeat(3, 30.9vw);
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
