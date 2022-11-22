@@ -309,3 +309,8 @@ export const StyledPhoneBR = styled.br`
     display: block;
   }
 `;
+
+export const StyledNBSP = styled(Text)`
+  opacity: 0;
+  pointer-events: none;
+`;

@@ -172,3 +172,8 @@ export const StyledLink = styled.a`
     ${getCurrentMarginStyle("top", "xxxsm")};
   }
 `;
+
+export const StyledNBSP = styled(H2)`
+  opacity: 0;
+  pointer-events: none;
+`;
