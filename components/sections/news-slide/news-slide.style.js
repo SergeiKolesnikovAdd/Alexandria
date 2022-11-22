@@ -46,6 +46,14 @@ export const NewsWrapper = styled.div`
     gap: 1vw;
   }
 
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    grid-template-columns: repeat(3, 30vw);
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.desktopSM}) {
+    grid-template-columns: repeat(3, 29vw);
+  }
+
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, min-content);
