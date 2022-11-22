@@ -90,9 +90,6 @@ export const SubscriptionWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
   }
-
-  ${applyPaddings}
-  ${applyMargins}
 `;
 
 export const InputRow = styled.div`
@@ -227,13 +224,17 @@ export const FormFields = styled.div`
   border-radius: 24px;
 
   div {
-    input{
+    input {
       padding: 0;
     }
   }
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 1.5vw;
+  }
+
+  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+    border-radius: 16px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
