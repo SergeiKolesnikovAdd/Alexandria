@@ -51,6 +51,7 @@ export const ContentSection = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+    height: min-content;
   }
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
@@ -79,6 +80,7 @@ export const ContentWrapper = styled.div`
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
+    height: min-content;
   }
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
@@ -104,11 +106,11 @@ export const FormWrapper = styled.form`
 
   /* @media screen and (max-width: 1084px) {
     min-height: 60%;
-  }
-
-  @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    min-height: 78%;
   } */
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    justify-content: flex-start;
+  }
 `;
 
 export const FormLabel = styled.label`
@@ -144,6 +146,10 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    ${getCurrentMarginStyle("top", "lg")}
+  }
 
   ${applyMargins}
 `;
