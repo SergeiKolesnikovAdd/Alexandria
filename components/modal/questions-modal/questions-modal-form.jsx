@@ -45,34 +45,34 @@ export const Form = withFormProvider(
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
-        <FormLabel>Как Вас зовут?</FormLabel>
-        <InputField
-          name="name"
-          mb="md"
-          propsInput={{ placeholder: "Ваше имя" }}
-          title="Name *"
-        />
-        <FormLabel>Электронная почта</FormLabel>
-        <InputField
-          name="email"
-          mb="md"
-          propsInput={{ placeholder: "E-mail" }}
-        />
-        <FormLabel>Интересующий вопрос</FormLabel>
-        <TextAreaField
-          name="message"
-          propsInput={{ placeholder: "Ваш вопрос" }}
-          // rules={{}}
-        />
+          <FormLabel>Как Вас зовут?</FormLabel>
+          <InputField
+            name="name"
+            mb="md"
+            propsInput={{ placeholder: "Ваше имя" }}
+            title="Name *"
+          />
+          <FormLabel>Электронная почта</FormLabel>
+          <InputField
+            name="email"
+            mb="md"
+            propsInput={{ placeholder: "E-mail" }}
+          />
+          <FormLabel>Интересующий вопрос</FormLabel>
+          <TextAreaField
+            name="message"
+            propsInput={{ placeholder: "Ваш вопрос" }}
+            // rules={{}}
+          />
         </FormFields>
-        <ButtonWrapper>
-        <Checkbox
-          isActive={isChecked}
-          setActive={handleCheck}
-          name="checkbox"
-          mb="lg"
-        />
-        <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
+        <ButtonWrapper mb="mdlg">
+          <Checkbox
+            isActive={isChecked}
+            setActive={handleCheck}
+            name="checkbox"
+            mb="lg"
+          />
+          <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
         </ButtonWrapper>
       </FormWrapper>
     );

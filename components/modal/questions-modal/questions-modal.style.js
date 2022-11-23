@@ -34,10 +34,17 @@ export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    ${getCurrentMarginStyle("top", "lg")};
+  }
+
+  ${applyMargins}
 `;
 
 export const ContentSection = styled.div`
   width: 50%;
+  height: min-content;
   display: flex;
   flex-direction: column;
   ${getCurrentMarginStyle("top", "mdsm")};
@@ -51,9 +58,6 @@ export const ContentSection = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    ${getCurrentPaddingStyle("top", "xxxlg")};
-    ${getCurrentPaddingStyle("horizontal", "xxlg")};
-    ${getCurrentPaddingStyle("bottom", "xxlg")};
     border-radius: 24px;
   }
 
@@ -70,11 +74,9 @@ export const ClsButton = styled(CloseButton)`
 
 export const ContentWrapper = styled.div`
   width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
-  ${getCurrentPaddingStyle("vertical", "mdlg")};
   background-color: ${colors.white};
   border-radius: 48px;
 
@@ -105,6 +107,10 @@ export const FormWrapper = styled.form`
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    justify-content: flex-start;
+  }
 `;
 
 export const FormLabel = styled.label`

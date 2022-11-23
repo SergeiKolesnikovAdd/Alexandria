@@ -52,7 +52,7 @@ const [isGratitude, setIsGratitude] = useState(false);
             <NewsForm formName="news" setIsGratitude={setIsGratitude} />
             <Logo mt="lg" />
             <Caption mt="mdsm" mb="xxsm" style={{ color: colors.white }}>
-              Нажимая на кнопку «Отправить» я соглашаюсь с политикой
+              Нажимая на кнопку Отправить я соглашаюсь с политикой
               конфиденциальности данных
             </Caption>
             <Link
