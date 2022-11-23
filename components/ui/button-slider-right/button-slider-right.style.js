@@ -24,7 +24,8 @@ export const ButtonWrapper = styled.div`
     background-color: ${colors.red};
 
     svg {
-      min-height: inherit;
+      width: 100%;
+      height: 100%;
       path {
         fill: ${colors.white};
         min-height: inherit;
