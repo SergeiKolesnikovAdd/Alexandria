@@ -26,8 +26,9 @@ const activeErrorField = ({ isError }) => {
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  ${getCurrentPaddingStyle("horizontal", "lg")};
+  width: min-content;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
 
   ${applyMargins}
   ${applyPaddings}
@@ -37,8 +38,8 @@ export const NewsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 31vw);
   grid-template-rows: repeat(2, 580px);
-  gap: 16px;
-  width: 100%;
+  gap: 1vw;
+  width: max-content;
 
   @media screen and (min-width: 1601px) {
     grid-template-columns: repeat(3, 31vw);
@@ -47,7 +48,7 @@ export const NewsWrapper = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 47vw);
     grid-template-rows: repeat(3, min-content);
   }
 
@@ -56,7 +57,7 @@ export const NewsWrapper = styled.div`
   }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 95vw);
     grid-template-rows: repeat(3, 366px);
   }
 
@@ -72,12 +73,12 @@ export const SubscriptionWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 48px;
-  background-image: url(${sub.src});
+  background-color: #222222;
   background-repeat: no-repeat;
   background-size: cover;
   ${getCurrentPaddingStyle("top", "xxlg")};
   ${getCurrentPaddingStyle("bottom", "mdlg")};
-  ${getCurrentPaddingStyle("horizontal", "xxsm")};
+  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   text-align: center;
 
   @media screen and (min-width: 1601px) {
@@ -209,7 +210,6 @@ export const FormWrapper = styled.form`
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  ${getCurrentPaddingStyle("horizontal", "mdlg")};
   ${getCurrentMarginStyle("bottom", "lg")};
 `;
 

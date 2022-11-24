@@ -12,6 +12,7 @@ import {
   ImgContainer,
   StyledCaption,
   StyledLink,
+  StyledNBSP,
 } from "./news.style";
 import { ButtonSM, H2, AccordionSmall, FormModal } from "components";
 import { fontSizes } from "styles";
@@ -25,14 +26,14 @@ export const News = ({ setColored, ...props }) => {
     <>
       <ContentWrapper {...props} id="about">
         <H3Styled mx="mdlg">Новости</H3Styled>
-        <H2 mx="mdlg" mt="mdsm" style={{ fontSize: fontSizes.h2, }}>
+        <H2 mx="mdlg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
           Неделя открытого доступа
         </H2>
         <MediaContainer mt="lg">
           <TextContainer mr="mdsm">
             <StyledDescription style={{ display: "inline" }}>
               Начало работы проекта Alexandrina совпало с ежегодной
-              международной&nbsp;
+              международной<StyledNBSP>!</StyledNBSP>
             </StyledDescription>
             <StyledLink target="_blank" href="https://www.openaccessweek.org/">
               неделей открытого доступа
@@ -47,9 +48,12 @@ export const News = ({ setColored, ...props }) => {
               импульс к открытому обмену знаниями с продвижением политических
               изменений и важностью социальных проблем, затрагивающих людей во
               всем мире. Именно поэтому с 24 по 30 октября мы бесплатно проводим
-              аудиты научных журналов на возможность вступления в&nbsp;
+              аудиты научных журналов на возможность вступления в
+              <StyledNBSP>!</StyledNBSP>
               <StyledLink target="_blank" href="https://doaj.org/">
-                <StyledDescription>DOAJ&nbsp;</StyledDescription>
+                <StyledDescription>
+                  DOAJ<StyledNBSP>!</StyledNBSP>
+                </StyledDescription>
               </StyledLink>
               и предоставляем скидку 20% для разработки журнала на платформе
               Alexandrina.

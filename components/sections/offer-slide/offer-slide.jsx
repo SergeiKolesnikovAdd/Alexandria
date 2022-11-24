@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { H2, Text, ButtonXLG, OfferModal, FormModal, Tab } from "components";
 import { arrOfferInfo } from "./constant";
-import { Comfort, Mark, Premium, Standart, MarkGrey, } from "../../common";
+import { Comfort, Mark, Premium, Standart, MarkGrey } from "../../common";
 import {
   ContentWrapper,
   DescColumn,
@@ -24,6 +24,7 @@ import {
   StyledDesktopBR,
   StyledPhoneBR,
   StyledTextH3,
+  StyledNBSP,
 } from "./offer-slide.style";
 
 import { arrOfferInfoTab } from "./tabs";
@@ -46,19 +47,19 @@ export const OfferSlide = ({ setColored, ...props }) => {
       </H2>
       <ButtonRow mb="lg" px="lg">
         <Text mt="lg">
-          Мы предлагаем оптимальные пакеты&nbsp;
+          Мы предлагаем оптимальные пакеты<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          комплексных&nbsp;
+          комплексных<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          услуг, а также возможность&nbsp;
+          услуг, а также возможность<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          разработать персональное&nbsp;
+          разработать персональное<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          предложение,&nbsp;
+          предложение,<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
-          исходя из индивидуальных&nbsp;
+          исходя из индивидуальных<StyledNBSP>!</StyledNBSP>
           <StyledDesktopBR />
-          потребностей&nbsp;
+          потребностей<StyledNBSP>!</StyledNBSP>
           <StyledPhoneBR />
           издателя
         </Text>
@@ -69,7 +70,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
             setColored(true);
-          }}>
+          }}
+        >
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -123,7 +125,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setColored(true);
                 setModalTitle("Пакет Стандарт");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -155,7 +158,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setFormName("Пакет Стандарт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -164,7 +168,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Стандарт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -181,7 +186,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setColored(true);
                 setModalTitle("Пакет Комфорт");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -213,7 +219,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -222,7 +229,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -239,7 +247,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setColored(true);
                 setModalTitle("Пакет Премиум");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -271,7 +280,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -280,7 +290,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -297,7 +308,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
               isOpen={chooseItemTab.id === id}
               onClick={() => {
                 setChooseItemTab(arrOfferInfoTab[index]);
-              }}>
+              }}
+            >
               <Icon src={icon} />
               <StyledTextH3 mt="sm">{title}</StyledTextH3>
               <StyledText mt="sm">{modalTitle}</StyledText>
@@ -326,8 +338,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
           index={index}
           onClick={() => {
             setChooseItemTab(arrOfferInfoTab[index]);
-            setModalTitle(`Пакет ${ title }`)
-            setFormName(`Пакет ${ title }`)
+            setModalTitle(`Пакет ${title}`);
+            setFormName(`Пакет ${title}`);
           }}
         />
       ))}
@@ -337,14 +349,16 @@ export const OfferSlide = ({ setColored, ...props }) => {
         isOpen={isOpen}
         setOpen={setOpen}
         setColored={setColored}
-        {...chooseItem}></OfferModal>
+        {...chooseItem}
+      ></OfferModal>
       <FormModal
         formName={formName}
         isOpen={isOpenForm}
         setOpen={setOpenForm}
         modalTitle={modalTitle}
         setColored={setColored}
-        {...chooseItem}></FormModal>
+        {...chooseItem}
+      ></FormModal>
     </ContentWrapper>
   );
 };

@@ -11,8 +11,9 @@ import {
   ImgSlide,
   ImgContainer,
   StyledCaption,
+  StyledNBSP,
 } from "./about-slide.style";
-import { ButtonXSM, H2, AccordionSmall,} from "components";
+import { ButtonXSM, H2, AccordionSmall } from "components";
 
 import { fontSizes } from "styles";
 import React, { useState } from "react";
@@ -39,7 +40,7 @@ export const AboutSlide = ({ ...props }) => {
             позволяет вести издательскую деятельность просто и эффективно.
           </StyledDescription>
           {/* <Link href="/presentation" target="_blank">
-            <StyledText>Презентация,&nbsp;PDF</StyledText>
+            <StyledText>Презентация,<StyledNBSP>!</StyledNBSP>PDF</StyledText>
           </Link> */}
         </TextContainer>
       </ButtonRow>

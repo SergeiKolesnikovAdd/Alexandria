@@ -147,3 +147,8 @@ export const StyledCaption = styled(Caption)`
     align-self: right;
   }
 `;
+
+export const StyledNBSP = styled(Text)`
+  opacity: 0;
+  pointer-events: none;
+`;

@@ -20,7 +20,6 @@ const activeForm = ({ isOpenForm }) => {
 export const OfferModalInner = styled.div`
   width: 100%;
   min-height: 100%;
-  height: 100%;
   display: flex;
   justify-content: flex-end;
   background-color: ${hexToRGBA(colors.black, 0.9)};
@@ -38,7 +37,7 @@ export const ContentSection = styled.div`
   border-radius: 48px;
   position: relative;
   overflow: auto;
-  height: 100%;
+  max-height: 85vh;
   opacity: 1;
   ${getCurrentMarginStyle("top", "mdsm")}
 
