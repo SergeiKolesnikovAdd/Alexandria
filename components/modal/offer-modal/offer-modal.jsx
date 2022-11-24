@@ -1,6 +1,7 @@
 import { FormModal } from "components";
 import { Caption, H3, Modal, Text } from "components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNoScroll } from "utils";
 import { Standart } from "../../common";
 
 import {
@@ -33,15 +34,19 @@ export const OfferModal = ({
   id,
   formName,
   modalTitle,
+  setVisible,
+  setOpenInter,
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
+
 
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner
         onClick={() => {
           setOpen(false);
+          setOpenInter(false)
         }}
         isOpenForm={isOpenForm}
       >
@@ -55,7 +60,8 @@ export const OfferModal = ({
             mt="mdlg"
             mr="mdlg"
             onClick={() => {
-              setOpen(false);
+              setOpen(false)
+              setOpenInter(false);
             }}
           />
           <ContentWrapper>
@@ -76,6 +82,7 @@ export const OfferModal = ({
               onClick={() => {
                 setOpenForm(true);
                 setOpen(false);
+                setOpenInter(false);
               }}
             >
               Начать работу
