@@ -33,7 +33,7 @@ export const FooterColumn = styled.div`
       grid-row: 1/2;
     }
 
-    @media screen and (max-width: ${breakpointsWidth.phone}) {
+    @media screen and (max-width: 700px) {
       display: grid;
       justify-items: center;
       &:nth-child(4) {
@@ -71,7 +71,7 @@ export const FooterRow = styled.div`
     row-gap: 64px;
   } */
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,7 +83,7 @@ export const FooterRow = styled.div`
 `;
 
 export const FooterRowPhone = styled(FooterRow)`
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     grid-template-rows: none;
     height: 33%;
     justify-content: center;
@@ -98,7 +98,7 @@ export const FooterRowBottom = styled.div`
 
   ${applyMargins};
 
-  /* @media screen and (max-width: ${breakpointsWidth.phone}) {
+  /* @media screen and (max-width: 700px) {
     justify-content: space-between;
     display: grid;
     grid-auto-flow: column;
@@ -106,10 +106,10 @@ export const FooterRowBottom = styled.div`
 `;
 
 export const FooterRowSecondBottom = styled(FooterRowBottom)`
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     /* justify-content: space-between;
     display: grid; */
-    line-height: 150%;
+    /* line-height: 150%; */
     grid-auto-flow: row;
     grid-gap: 12px;
   }
@@ -150,7 +150,7 @@ export const LogoWrapper = styled.div`
     background-color: ${colors.red};
   }
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     justify-self: center;
   }
 `;
@@ -164,7 +164,7 @@ export const Deviant = styled.a`
     color: #e74141;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     margin-bottom: 12px;
   }
 `;
@@ -175,7 +175,7 @@ export const FooterLogo = styled.a`
   align-items: center;
   align-self: start;
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -211,7 +211,7 @@ export const FooterLink = styled.a`
     text-align: start;
   }
 
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     align-self: end;
     text-align: right;
     margin-bottom: 12px;
@@ -219,7 +219,7 @@ export const FooterLink = styled.a`
 `;
 export const IconAlexandrina = styled(Logo)`
   ${getCurrentMarginStyle("right", "mdsm")}
-  @media screen and (max-width: ${breakpointsWidth.phone}) {
+  @media screen and (max-width: 700px) {
     ${getCurrentMarginStyle("right", "none")}
     ${getCurrentMarginStyle("bottom", "mdsm")}
     width: 64px;
