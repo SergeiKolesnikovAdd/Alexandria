@@ -36,12 +36,13 @@ export const Tab = ({
     <TabWrapper isShowing={isShowing} {...props}>
       <DescWrapper isShowing={isShowing}>
         <StyledCaption
+          mt="mdsm"
           isShowing={isShowing}
           onClick={() => {
             setOpen(true);
             setChooseItem(arrOfferInfo[index]);
           }}
-          mt="xxsm">
+        >
           Подробнее
         </StyledCaption>
         <DescItem isShowing={isShowing}>
@@ -93,7 +94,8 @@ export const Tab = ({
           isShowing={isShowing}
           onClick={() => {
             setOpenForm(true);
-          }}>
+          }}
+        >
           Начать работу
         </NewButton>
         <DescItem isShowing={isShowing} style={{ border: "none" }}></DescItem>

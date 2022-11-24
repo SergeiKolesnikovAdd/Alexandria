@@ -65,7 +65,7 @@ export const AdvantageWrapper = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     grid-template-columns: repeat(1, 1fr);
     gap: 8px;
-    height: min-content;
+    height: fit-content;
   }
 `;
 
@@ -89,8 +89,8 @@ export const AdvantageItem = styled.div`
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
     min-height: inherit;
-    height: max-content;
-    justify-content: flex-start;
+    height: 100%;
+    justify-content: space-between;
   }
 
   @media screen and (min-width: ${breakpointsWidth.desktopXLG}) {

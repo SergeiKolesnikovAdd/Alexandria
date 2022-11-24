@@ -32,6 +32,9 @@ export const TextWrapper = styled.div`
     span {
       display: inline;
       letter-spacing: -0.04em;
+      @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+        font-size: 48px;
+      }
     }
     @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
       display: block;

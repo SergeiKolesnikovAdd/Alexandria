@@ -148,7 +148,7 @@ export const ButtonWrapper = styled.div`
   justify-content: flex-start;
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    ${getCurrentMarginStyle("top", "lg")}
+    ${getCurrentMarginStyle("top", "xxxlg")}
   }
 
   ${applyMargins}

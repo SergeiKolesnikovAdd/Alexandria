@@ -14,6 +14,11 @@ export const ButtonWrapper = styled.button`
   justify-content: center;
   align-items: center;
 
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
   span {
     color: rgba(255, 255, 255, 0.04);
     transition: color 0.3s;

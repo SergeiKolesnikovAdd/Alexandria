@@ -26,8 +26,8 @@ const Home = () => {
             <PlatformSlide setColored={setColored} mt="xxxlg"/>
             <OfferSlide setColored={setColored} pt="xxxlg"/>
             <AdvantageSlide/>
-            <News setColored={setColored} mt="xxxlg"/>
-            <NewsSlide mt="xxxlg"/>
+            <News setColored={setColored} my="xxxlg"/>
+            <NewsSlide my="xxxlg"/>
             <FaqSlide setColored={setColored} pt="xxxlg"/>
             <Footer/>
         </>
