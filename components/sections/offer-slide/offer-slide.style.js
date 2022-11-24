@@ -284,6 +284,8 @@ export const PackageItemTab = styled.button`
     border-bottom: 3px solid ${colors.red};
   }
 
+  
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     display: flex;
   }

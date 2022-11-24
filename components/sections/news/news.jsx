@@ -24,7 +24,7 @@ export const News = ({ setColored, ...props }) => {
 
   return (
     <>
-      <ContentWrapper {...props} id="about">
+      <ContentWrapper {...props} id="news">
         <H3Styled mx="mdlg">Новости</H3Styled>
         <H2 mx="mdlg" mt="mdsm" style={{ fontSize: fontSizes.h2 }}>
           Неделя открытого доступа

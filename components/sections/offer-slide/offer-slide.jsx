@@ -39,7 +39,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
 
   return (
     <ContentWrapper {...props} id="offer">
-      <H3Styled mb="lg" mx="lg">
+      <H3Styled mx="lg">
         Удобное ценообразование
       </H3Styled>
       <H2 mt="mdsm" mx="lg">
@@ -306,13 +306,13 @@ export const OfferSlide = ({ setColored, ...props }) => {
               pt="md"
               pb="mdsm"
               isOpen={chooseItemTab.id === id}
+              modalTitle={modalTitle}
               onClick={() => {
                 setChooseItemTab(arrOfferInfoTab[index]);
               }}
             >
               <Icon src={icon} />
               <StyledTextH3 mt="sm">{title}</StyledTextH3>
-              <StyledText mt="sm">{modalTitle}</StyledText>
             </PackageItemTab>
           )
         )}

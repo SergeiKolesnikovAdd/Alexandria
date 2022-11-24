@@ -46,6 +46,8 @@ export const StyledCaption = styled(Caption)`
     display: block;
     ${getCurrentMarginStyle("top", "xxxsm")};
   }
+
+  ${applyMargins}
 `;
 
 export const DescWrapper = styled.div`
@@ -54,6 +56,9 @@ export const DescWrapper = styled.div`
   justify-content: center;
   align-items: center;
   display: ${({ isShowing }) => (isShowing ? "flex" : "none")};
+  :first-child {
+    ${getCurrentMarginStyle("top", "mdsm")};
+  }
 
   ${applyMargins};
 `;
