@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { breakpointsWidth, sizes } from "styles";
 
 import Link from "next/link";
-import { noScroll } from "../styles/reset.style";
+import { autoScroll, noScroll } from "../styles/reset.style";
 import styled from "@emotion/styled";
 
 export function debounce(func, wait) {
@@ -62,6 +62,17 @@ export function useNoScroll(isOpen) {
     }
   }, [isOpen]);
 }
+
+export function useAutoScroll(isOpen) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add(autoScroll);
+    } else if (document.body.classList.contains(autoScroll)) {
+      document.b  .classList.remove(autoScroll);
+    }
+  }, [isOpen]);
+}
+
 
 export const useEscHandler = (callback) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks

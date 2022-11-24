@@ -107,7 +107,10 @@ export const resetStyles = css`
   section {
     display: block;
   }
-  
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
 
   body {
     line-height: 1;
@@ -341,4 +344,7 @@ export const resetStyles = css`
 
 export const noScroll = css`
   overflow: hidden;
+`;
+export const autoScroll = css`
+  overflow:auto;
 `
