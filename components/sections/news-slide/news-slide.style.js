@@ -109,6 +109,8 @@ export const SendButton = styled(ButtonSliderRight)`
   background-color: ${colors.red};
   border: 1px solid ${colors.red};
   svg {
+    width: 100%;
+    height: 100%;
     path {
       fill: ${colors.white};
     }
@@ -118,6 +120,8 @@ export const SendButton = styled(ButtonSliderRight)`
     background-color: ${colors.lightOrange};
 
     svg {
+      width: 100%;
+      height: 100%;
       path {
         fill: ${colors.red};
       }
