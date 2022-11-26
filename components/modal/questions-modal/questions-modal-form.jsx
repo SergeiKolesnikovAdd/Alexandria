@@ -7,8 +7,8 @@ import {
   FormFields,
   ButtonWrapper,
 } from "./questions-modal.style";
-import { withFormProvider, } from "utils";
-import { postQuestion } from "utils/api"
+import { withFormProvider } from "utils";
+import { postQuestion } from "utils/api";
 
 export const Form = withFormProvider(
   ({ setIsGratitude, setOpen }) => {
@@ -19,6 +19,9 @@ export const Form = withFormProvider(
       reset,
     } = useFormContext();
     const onSubmit = (data) => {
+      setOpen(false);
+      reset();
+      setIsGratitude(true);
       postQuestion({
         ...data,
         email: data.email,
@@ -26,9 +29,6 @@ export const Form = withFormProvider(
         message: data.message,
       })
         .then(() => {
-          setOpen(false);
-          setIsGratitude(true);
-          reset();
         })
         .catch((error) => {
           console.log(error);
@@ -38,10 +38,7 @@ export const Form = withFormProvider(
     const handleCheck = () => {
       setIsChecked((prev) => !prev);
     };
-    const disabledButton = () => {
-      if (isValid && isChecked) return false;
-      else return true;
-    };
+
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
@@ -72,7 +69,7 @@ export const Form = withFormProvider(
             name="checkbox"
             mb="lg"
           />
-          <ButtonMD disabled={disabledButton()}>Оставить заявку</ButtonMD>
+          <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
         </ButtonWrapper>
       </FormWrapper>
     );
@@ -82,4 +79,3 @@ export const Form = withFormProvider(
     reValidateMode: "onBlur",
   }
 );
-

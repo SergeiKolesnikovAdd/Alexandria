@@ -12,19 +12,20 @@ import { InputFieldNews } from "components";
 import { ButtonMD } from "components";
 import { Right } from "components";
 import { ButtonNews } from "components";
+import { useState } from "react";
 
 export const NewsForm = withFormProvider(
   ({ setIsGratitude, formName,}) => {
 
-    const { handleSubmit, reset } = useFormContext();
+    const { handleSubmit, reset, watch } = useFormContext();
     const onSubmit = (data) => {
+      setIsGratitude(true);
       postSubscribe({
         email: data.email,
         formName: formName,
       })
         .then(() => {
-          setIsGratitude(true);
-          reset();
+          reset({});
         })
         .catch((error) => {
           console.log(error);
@@ -43,8 +44,9 @@ export const NewsForm = withFormProvider(
             }}
           />
         </FormFields>
-        <ButtonWrapper><ButtonNews/></ButtonWrapper>
-
+        <ButtonWrapper>
+          <ButtonNews />
+        </ButtonWrapper>
       </FormWrapper>
     );
   },

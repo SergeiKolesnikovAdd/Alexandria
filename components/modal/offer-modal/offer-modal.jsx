@@ -40,27 +40,24 @@ export const OfferModal = ({
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
 
-
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner
         onClick={() => {
           setOpen(false);
-          setOpenInter(false)
+          setOpenInter(false);
         }}
-        isOpenForm={isOpenForm}
-      >
+        isOpenForm={isOpenForm}>
         <ContentSection
           onClick={(e) => {
             e.stopPropagation();
-          }}
-        >
+          }}>
           <ProductImage src={img} />
           <ClsButton
             mt="mdlg"
             mr="mdlg"
             onClick={() => {
-              setOpen(false)
+              setOpen(false);
               setOpenInter(false);
             }}
           />
@@ -83,8 +80,7 @@ export const OfferModal = ({
                 setOpenForm(true);
                 setOpen(false);
                 setOpenInter(false);
-              }}
-            >
+              }}>
               Начать работу
             </StyledButtonLG>
           </ContentWrapper>
