@@ -35,8 +35,12 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    ${getCurrentMarginStyle("top", "lg")};
+  }
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    ${getCurrentMarginStyle("top", "xxxlg")};
+    ${getCurrentMarginStyle("top", "lg")};
   }
 
   ${applyMargins}
@@ -107,6 +111,10 @@ export const FormWrapper = styled.form`
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    justify-content: flex-start;
+  }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     justify-content: flex-start;

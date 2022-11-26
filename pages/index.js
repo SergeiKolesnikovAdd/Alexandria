@@ -22,7 +22,7 @@ const Home = () => {
             <Header setColored={setColored} isColored={isColored}/>
             <MainFirstSlide setColored={setColored} pt="xxxlg"/>
             <AboutSlide pt="xxxlg"/>
-            <FocusSlide/>
+            <FocusSlide mx="xxxsm"/>
             <PlatformSlide setColored={setColored} mt="xxxlg"/>
             <OfferSlide setColored={setColored} pt="xxxlg"/>
             <AdvantageSlide/>

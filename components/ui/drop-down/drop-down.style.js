@@ -57,6 +57,11 @@ export const DropDownList = styled.ul`
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     border-radius: 2vw;
   }
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    top: auto;
+    bottom: calc(100% - 2px);
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -138,6 +143,10 @@ export const DropDownItem = styled.li`
   letter-spacing: 0.01em;
   font-size: ${fontSizes.h3};
   line-height: 150%;
+
+  @media screen and (max-width: ${breakpointsWidth.phone}) {
+    padding: 8px 16px 8px 16px;
+  }
   &:hover {
     color: ${colors.red};
     background-color: ${colors.orange};
@@ -150,8 +159,9 @@ export const DropDownItem = styled.li`
     `};
 
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
-    padding: 0.75vw 1vw 0.75vw 1vw;
+    padding: 0.375vw 1vw 0.375vw 1vw;
   }
+  /* TODO: НАТСРОИТЬ ОТСТУПЫ В ДРОПДАУНЕ + НАСТРОИТЬ ВЫЛЕТ В ЗАВИСИМОСТИ ОТ ДЛИНЫ ЭКРАНА */
 `;
 
 export const CurrentLabel = styled.span`

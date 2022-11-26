@@ -49,6 +49,10 @@ export const ContentSection = styled.div`
     border-radius: 32px;
   }
 
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    height: min-content;
+  }
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     border-radius: 24px;
     height: min-content;
@@ -104,9 +108,9 @@ export const FormWrapper = styled.form`
   justify-content: space-between;
   ${getCurrentPaddingStyle("horizontal", "mdlg")};
 
-  /* @media screen and (max-width: 1084px) {
-    min-height: 60%;
-  } */
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    justify-content: flex-start;
+  }
 
   @media screen and (max-width: ${breakpointsWidth.phone}) {
     justify-content: flex-start;
@@ -147,8 +151,12 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
+  @media screen and (max-width: ${breakpointsWidth.tabletSM}) {
+    ${getCurrentMarginStyle("top", "lg")}
+  }
+
   @media screen and (max-width: ${breakpointsWidth.phone}) {
-    ${getCurrentMarginStyle("top", "xxxlg")}
+    ${getCurrentMarginStyle("top", "lg")}
   }
 
   ${applyMargins}

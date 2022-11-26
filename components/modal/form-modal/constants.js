@@ -1,7 +1,7 @@
 export const selectServicesOptions = [
   { label: "Создать новый журнал", value: 1 },
   {
-    label: "Перенести на платформу Alexandrina уже существующий журнал",
+    label: "Перенести на платформу существующий журнал",
     value: 2,
   },
   {

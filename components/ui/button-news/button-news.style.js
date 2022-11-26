@@ -15,16 +15,26 @@ export const ButtonWrapper = styled.button`
   justify-content: center;
   align-items: center;
 
+  svg {
+    width: 100%;
+    height: 100%;
+    path {
+      fill: ${colors.white};
+      min-height: inherit;
+    }
+  }
+
   span {
     color: rgba(255, 255, 255, 0.04);
     transition: color 0.3s;
   }
 
   &:hover {
-    background-color: ${colors.red};
+    background-color: #b16249;
 
     svg {
-      min-height: inherit;
+      width: 100%;
+      height: 100%;
       path {
         fill: ${colors.white};
         min-height: inherit;

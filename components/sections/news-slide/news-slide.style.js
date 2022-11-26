@@ -6,18 +6,14 @@ import {
   getCurrentMarginStyle,
   getCurrentFontSizeStyle,
   getCurrentPaddingStyle,
-  fontSizes,
 } from "styles";
 
 import { Text, H3,} from "components";
 import styled from "@emotion/styled";
-import { Right, Subscription } from "../../common";
-import sub from "../../../public/subscription.png";
-import { InputField } from "../../ui/fields";
+import { Subscription } from "../../common";
 import { fontFamilies } from "styles";
 import { getVW } from "styles";
 import { ButtonSliderRight } from "../../ui/button-slider-right"
-import { ButtonSM } from "../../ui/button-sm/";
 
 const activeErrorField = ({ isError }) => {
   isError ? `display: inline-block, color: red` : `display: none`;
