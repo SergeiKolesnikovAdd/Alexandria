@@ -45,9 +45,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
         setVisible(false);
       }, 700);
 
-            const timerclose = setTimeout(() => {
-              setVisible(true);
-            }, 700);
+      const timerclose = setTimeout(() => {
+        setVisible(true);
+      }, 800);
       return () => clearTimeout(timer, timerclose);
     }
   }, [isOpenInter]);
@@ -138,8 +138,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setChooseItem(arrOfferInfo[0]);
                 setColored(true);
                 setModalTitle("Пакет Стандарт");
-                setVisible(true)
-                setOpenInter(true)
+                setVisible(true);
+                setOpenInter(true);
               }}
               mt="xxsm">
               Подробнее

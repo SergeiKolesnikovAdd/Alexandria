@@ -35,7 +35,7 @@ export const InputFieldNews = ({ name, rules = null, normalizer, isWhite, ...pro
           {...other}
           onChange={(event) => {
             const { value } = event.target;
-            if (errors.name) {
+            if (errors?.name) {
               trigger("name");
             }
             if (normalizer) {

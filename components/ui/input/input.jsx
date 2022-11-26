@@ -22,21 +22,24 @@ export const Input = forwardRef(
       ...props
     },
     ref
-  ) => (
-    <InputWrapper isFullWidth={isFullWidth} {...props}>
-      <InputStyled
-        onChange={onChange}
-        isError={error}
-        type="text"
-        ref={ref}
-        {...propsInput}
-      />
-      <Underline {...propsInput}>
-        <UnderlineInner {...propsInput} isActive={value} isError={error} />
-      </Underline>
-      {error && <Error {...propsInput}>{error}</Error>}
-    </InputWrapper>
-  )
+  ) => {
+    return (
+      <InputWrapper isFullWidth={isFullWidth} {...props}>
+        <InputStyled
+          value={value}
+          onChange={onChange}
+          isError={error}
+          type="text"
+          ref={ref}
+          {...propsInput}
+        />
+        <Underline {...propsInput}>
+          <UnderlineInner {...propsInput} isActive={value} isError={error} />
+        </Underline>
+        {error && <Error {...propsInput}>{error}</Error>}
+      </InputWrapper>
+    );
+  }
 );
 
 Input.propTypes = {

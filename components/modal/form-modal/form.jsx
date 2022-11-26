@@ -25,12 +25,14 @@ export const Form = withFormProvider(
 
     const {
       handleSubmit,
-      formState: { isValid },
+      formState: { isValid, isSubmitSuccessful },
       reset,
     } = useFormContext();
 
     const onSubmit = (data) => {
-      console.log(data);
+      setOpen(false);
+      reset();
+      setIsGratitude(true);
       postMain({
         ...data,
         email: data.email,
@@ -41,11 +43,7 @@ export const Form = withFormProvider(
         message: data.message,
         formName: formName,
       })
-        .then(() => {
-          setOpen(false);
-          setIsGratitude(true);
-          reset();
-        })
+        .then(() => {})
         .catch((error) => {
           console.log(error);
         });
@@ -55,74 +53,71 @@ export const Form = withFormProvider(
       setIsChecked((prev) => !prev);
     };
 
-    const disabledButton = () => {
-      if (isValid && isChecked) return false;
-      else return true;
-    };
-
     return (
       <FormWrapper onSubmit={handleSubmit(onSubmit)}>
         <FormFields>
-        <FormLabel>Как Вас зовут?*</FormLabel>
-        <InputField
-          name="name"
-          mb="md"
-          propsInput={{ placeholder: "Ваше имя" }}
-          title="Name"
-        />
-        <FormLabel>Электронная почта*</FormLabel>
-        <InputField
-          name="email"
-          mb="md"
-          propsInput={{ placeholder: "E-mail" }}
-        />
-        <FormLabel>
-          Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
-        </FormLabel>
-        <InputField
-          rules={{}}
-          mb="md"
-          name="journalName"
-          propsInput={{ placeholder: "Ваш журнал" }}
-        />
-        <FormLabel>Что Вас интересует*</FormLabel>
-        <DropDownField
-          mb="md"
-          title="Выберите из списка"
-          name="action"
-          options={selectServicesOptions}
-          propsInput={{ placeholder: "Выберите из списка" }}
-          onClick={(e) => {
-              const wrapperScroll = e.currentTarget.parentElement.parentElement.parentElement;
+          <FormLabel>Как Вас зовут?*</FormLabel>
+          <InputField
+            name="name"
+            mb="md"
+            propsInput={{ placeholder: "Ваше имя" }}
+            title="Name"
+          />
+          <FormLabel>Электронная почта*</FormLabel>
+          <InputField
+            name="email"
+            mb="md"
+            propsInput={{ placeholder: "E-mail" }}
+          />
+          <FormLabel>
+            Название журнала <FormLabelGray>(При наличии)</FormLabelGray>
+          </FormLabel>
+          <InputField
+            rules={{}}
+            mb="md"
+            name="journalName"
+            propsInput={{ placeholder: "Ваш журнал" }}
+          />
+          <FormLabel>Что Вас интересует*</FormLabel>
+          <DropDownField
+            value
+            mb="md"
+            title="Выберите из списка"
+            name="action"
+            options={selectServicesOptions}
+            propsInput={{ placeholder: "Выберите из списка" }}
+            onClick={(e) => {
+              const wrapperScroll =
+                e.currentTarget.parentElement.parentElement.parentElement;
               wrapperScroll.scrollTo({
-                  top: wrapperScroll.scrollHeight,
-                  left: 0,
-                  behavior: 'smooth'
-              })
-          }}
-        />
-        <FormLabel>
-          Дополнительная информация
-          <FormLabelGray>(Не обязательно)</FormLabelGray>
-        </FormLabel>
-        <TextAreaField
-          name="message"
-          rules={{}}
-          propsInput={{ placeholder: "Текст информации" }}
-        />
-      </FormFields>
-      <ButtonWrapper mb="mdlg">
-        <Checkbox
-          isActive={isChecked}
-          setActive={handleCheck}
-          name="checkbox"
-          mb="mdsm"
-        />
-        <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
-      </ButtonWrapper>
-    </FormWrapper>
-  );
-    },
+                top: wrapperScroll.scrollHeight,
+                left: 0,
+                behavior: "smooth",
+              });
+            }}
+          />
+          <FormLabel>
+            Дополнительная информация
+            <FormLabelGray>(Не обязательно)</FormLabelGray>
+          </FormLabel>
+          <TextAreaField
+            name="message"
+            rules={{}}
+            propsInput={{ placeholder: "Текст информации" }}
+          />
+        </FormFields>
+        <ButtonWrapper mb="mdlg">
+          <Checkbox
+            isActive={isChecked}
+            setActive={handleCheck}
+            name="checkbox"
+            mb="mdsm"
+          />
+          <ButtonMD disabled={!isChecked}>Оставить заявку</ButtonMD>
+        </ButtonWrapper>
+      </FormWrapper>
+    );
+  },
   {
     mode: "onBlur",
     reValidateMode: "onBlur",
