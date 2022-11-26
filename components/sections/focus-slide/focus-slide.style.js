@@ -29,7 +29,6 @@ export const ContentWrapper = styled.div`
   border: 1px solid ${colors.black};
   border-radius: 80px;
   width: 100%;
-  ${getCurrentMarginStyle("horizontal", "xxxsm")};
   ${getCurrentPaddingStyle("horizontal", "lg")};
   ${getCurrentPaddingStyle("vertical", "lg")};
 

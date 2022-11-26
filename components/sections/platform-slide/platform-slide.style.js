@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { H2 } from "components";
 import { H3 } from "components";
 import {
   applyMargins,
@@ -34,6 +33,9 @@ export const TextWrapper = styled.div`
       letter-spacing: -0.04em;
       @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
         font-size: 48px;
+      }
+      @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
+        ${getCurrentFontSizeStyle("h2")};
       }
     }
     @media screen and (max-width: ${breakpointsWidth.tabletLG}) {

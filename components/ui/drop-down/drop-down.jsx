@@ -34,14 +34,6 @@ export const DropDown = ({
   const isActive = Boolean(selected.length);
   useEscHandler(isOpen ? () => setOpen(false) : null);
 
-  useEffect(() => {
-    const scrollHeight = listRef.current.scrollHeight;
-    listRef.current.setAttribute(
-      "style",
-      `--height-drop-down: ${scrollHeight}px`
-    );
-  }, [options.length]);
-
   function handleOpen() {
     setOpen((prevState) => !prevState);
   }
