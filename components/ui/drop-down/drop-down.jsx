@@ -31,7 +31,7 @@ export const DropDown = ({
   const [isOpen, setOpen] = useState(false);
   const [selected, setSelected] = useState([]);
   const listRef = useRef();
-  const isActive = Boolean(selected.length);
+  const isActive = Boolean(value ? selected.length : value);
   useEscHandler(isOpen ? () => setOpen(false) : null);
 
   function handleOpen() {
@@ -109,7 +109,7 @@ export const DropDown = ({
       <Underline>
         <UnderlineInner isActive={isActive} isError={error} />
       </Underline>
-      <DropDownList isOpen={isOpen} ref={listRef}>
+      <DropDownList value={value} isOpen={isOpen} ref={listRef}>
         {options.map((option) => (
           <DropDownItem
             key={option.value}

@@ -28,7 +28,7 @@ export const DropDownField = ({
               {...props}
               multiple={multiple}
               {...other}
-              value={currentOption}
+              value={value? currentOption : value}
               error={
                   errors?.[name]?.message && (
                       <ErrorWrapper>

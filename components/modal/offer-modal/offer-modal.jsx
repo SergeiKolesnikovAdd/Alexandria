@@ -39,7 +39,7 @@ export const OfferModal = ({
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
-
+// Создать таймер, который при isOpenForm=false делал setOpenInter(false)
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner
@@ -79,7 +79,6 @@ export const OfferModal = ({
               onClick={() => {
                 setOpenForm(true);
                 setOpen(false);
-                setOpenInter(false);
               }}>
               Начать работу
             </StyledButtonLG>
