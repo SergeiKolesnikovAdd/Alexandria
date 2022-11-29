@@ -385,6 +385,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
           setColored={setColored}
           setVisible={setVisible}
           setOpenInter={setOpenInter}
+          isOpenInter={isOpenInter}
           {...chooseItem}
         ></OfferModal>
       ) : (

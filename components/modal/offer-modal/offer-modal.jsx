@@ -36,10 +36,26 @@ export const OfferModal = ({
   modalTitle,
   setVisible,
   setOpenInter,
+  isOpenInter,
   ...props
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
 // Создать таймер, который при isOpenForm=false делал setOpenInter(false)
+
+
+useEffect(() => {
+  if (isOpenForm === false) {
+    const timer = setTimeout(() => {
+      setOpenInter(false);
+    }, 700);
+
+    const timerclose = setTimeout(() => {
+      setOpenInter(true);
+    }, 800);
+    return () => clearTimeout(timer, timerclose);
+  }
+}, [setOpenInter ,isOpenForm]);
+
   return (
     <Modal setOpen={setOpen} isOpen={isOpen}>
       <OfferModalInner
@@ -85,13 +101,15 @@ export const OfferModal = ({
           </ContentWrapper>
         </ContentSection>
       </OfferModalInner>
+{      isOpenInter ?
       <FormModal
         formName={formName}
         tariff={id}
         modalTitle={modalTitle}
         setOpen={setOpenForm}
         isOpen={isOpenForm}
-      />
+        setOpenInter={setOpenInter}
+      /> : <></>}
     </Modal>
   );
 };
