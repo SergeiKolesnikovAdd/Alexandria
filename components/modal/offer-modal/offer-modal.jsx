@@ -41,16 +41,22 @@ export const OfferModal = ({
 }) => {
   const [isOpenForm, setOpenForm] = useState(false);
 // Создать таймер, который при isOpenForm=false делал setOpenInter(false)
-
+useEffect(()=>{
+console.log(isOpenForm);
+}, [isOpenForm])
 
 useEffect(() => {
   if (isOpenForm === false) {
     const timer = setTimeout(() => {
       setOpenInter(false);
+      console.log(isOpenInter);
+
     }, 700);
 
     const timerclose = setTimeout(() => {
       setOpenInter(true);
+      console.log(isOpenInter);
+
     }, 800);
     return () => clearTimeout(timer, timerclose);
   }
