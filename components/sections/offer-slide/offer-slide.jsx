@@ -39,6 +39,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
   const [formName, setFormName] = useState("");
   const [isVisible, setVisible] = useState(true);
   const [isOpenInter, setOpenInter] = useState(true);
+  const [tariff, setTariff] = useState("");
+
   useEffect(() => {
     if (isOpenInter === false) {
       const timer = setTimeout(() => {
@@ -54,9 +56,7 @@ export const OfferSlide = ({ setColored, ...props }) => {
 
   return (
     <ContentWrapper {...props} id="offer">
-      <H3Styled mx="lg">
-        Удобное ценообразование
-      </H3Styled>
+      <H3Styled mx="lg">Удобное ценообразование</H3Styled>
       <H2 mt="mdsm" mx="lg">
         Пакеты услуг
       </H2>
@@ -85,7 +85,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
             setOpenForm(true);
             setChooseItem(arrOfferInfo[0]);
             setColored(true);
-          }}>
+          }}
+        >
           Получить индивидуальное предложение
         </ButtonXLG>
       </ButtonRow>
@@ -140,8 +141,10 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Стандарт");
                 setVisible(true);
                 setOpenInter(true);
+                setTariff("1");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -173,7 +176,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setFormName("Пакет Стандарт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("1");
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -182,7 +187,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Стандарт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("1");
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -200,8 +207,10 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setVisible(true);
                 setOpenInter(true);
+                setTariff("2");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -233,7 +242,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("2");
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -242,7 +253,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Комфорт");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("2");
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -260,8 +273,10 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setVisible(true);
                 setOpenInter(true);
+                setTariff("3");
               }}
-              mt="xxsm">
+              mt="xxsm"
+            >
               Подробнее
             </StyledCaption>
           </PackageItemName>
@@ -293,7 +308,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("3");
+              }}
+            >
               Начать работу
             </NewButton>
             <TabletButton
@@ -302,7 +319,9 @@ export const OfferSlide = ({ setColored, ...props }) => {
                 setModalTitle("Пакет Премиум");
                 setOpenForm(true);
                 setColored(true);
-              }}>
+                setTariff("3");
+              }}
+            >
               Начать
             </TabletButton>
           </PackageItem>
@@ -320,7 +339,8 @@ export const OfferSlide = ({ setColored, ...props }) => {
               modalTitle={modalTitle}
               onClick={() => {
                 setChooseItemTab(arrOfferInfoTab[index]);
-              }}>
+              }}
+            >
               <Icon src={icon} />
               <StyledTextH3 mt="sm">{title}</StyledTextH3>
             </PackageItemTab>
@@ -350,12 +370,14 @@ export const OfferSlide = ({ setColored, ...props }) => {
             setChooseItemTab(arrOfferInfoTab[index]);
             setModalTitle(`Пакет ${title}`);
             setFormName(`Пакет ${title}`);
+            setTariff(id);
           }}
         />
       ))}
 
       {isVisible ? (
         <OfferModal
+          tariff={tariff}
           modalTitle={modalTitle}
           formName={formName}
           isOpen={isOpen}
@@ -363,17 +385,23 @@ export const OfferSlide = ({ setColored, ...props }) => {
           setColored={setColored}
           setVisible={setVisible}
           setOpenInter={setOpenInter}
-          {...chooseItem}></OfferModal>
+          isOpenInter={isOpenInter}
+          {...chooseItem}
+        ></OfferModal>
       ) : (
         <></>
       )}
-      <FormModal
-        formName={formName}
-        isOpen={isOpenForm}
-        setOpen={setOpenForm}
-        modalTitle={modalTitle}
-        setColored={setColored}
-        {...chooseItem}></FormModal>
+    
+        <FormModal
+          tariff={tariff}
+          formName={formName}
+          isOpen={isOpenForm}
+          setOpen={setOpenForm}
+          modalTitle={modalTitle}
+          setColored={setColored}
+          {...chooseItem}
+        ></FormModal>
+  
     </ContentWrapper>
   );
 };

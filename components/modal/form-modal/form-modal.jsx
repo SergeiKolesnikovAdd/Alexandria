@@ -18,6 +18,7 @@ export const FormModal = ({
   formName,
   isOpen,
   setOpen,
+  setOpenInter,
   ...props
 }) => {
   const [isGratitude, setIsGratitude] = useState(false);

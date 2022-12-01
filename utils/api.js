@@ -35,7 +35,7 @@ export async function postMain(body) {
       method: 'POST',
       body: JSON.stringify(body),
     })
-    return true
+    return console.log(body);
   } catch (e) {
     return new Error(e)
   }
