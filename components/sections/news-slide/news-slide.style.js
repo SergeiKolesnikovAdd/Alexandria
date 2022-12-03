@@ -20,11 +20,12 @@ const activeErrorField = ({ isError }) => {
 };
 
 export const ContentWrapper = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   width: min-content;
   margin-left: 2.5vw;
   margin-right: 2.5vw;
+  ${getCurrentMarginStyle("top", "xxxlg")};
 
   ${applyMargins}
   ${applyPaddings}

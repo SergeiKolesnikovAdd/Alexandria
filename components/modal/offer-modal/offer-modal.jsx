@@ -102,7 +102,7 @@ useEffect(() => {
                 setOpenForm(true);
                 setOpen(false);
               }}>
-              Начать работу
+              Начать&nbsp;работу
             </StyledButtonLG>
           </ContentWrapper>
         </ContentSection>
