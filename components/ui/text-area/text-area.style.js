@@ -32,7 +32,7 @@ export const TextAreaInput = styled("textarea")`
   font-family: ${fontFamilies.Font};
   color: ${colors.black};
   line-height: ${`${lineHeight}px`};
-  -image: ${`linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${hexToRGBA(
+  background-image: ${`linear-gradient(transparent, transparent calc(${lineHeight}px - 2px), ${hexToRGBA(
     colors.black,
     0.2
   )} 0px)`};
