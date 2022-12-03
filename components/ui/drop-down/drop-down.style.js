@@ -158,10 +158,13 @@ export const DropDownItem = styled.li`
     background-color: ${colors.darkOrange};
     `};
 
+  @media screen and (max-width: ${breakpointsWidth.desktopMD}) {
+    line-height: 110%;
+  }
+
   @media screen and (min-width: ${breakpointsWidth.desktopLG}) {
     padding: 0.375vw 1vw 0.375vw 1vw;
   }
-  /* TODO: НАТСРОИТЬ ОТСТУПЫ В ДРОПДАУНЕ + НАСТРОИТЬ ВЫЛЕТ В ЗАВИСИМОСТИ ОТ ДЛИНЫ ЭКРАНА */
 `;
 
 export const CurrentLabel = styled.span`
