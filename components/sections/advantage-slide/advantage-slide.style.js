@@ -83,7 +83,6 @@ export const AdvantageItem = styled.div`
 
   @media screen and (max-width: 1084px) {
     width: 100%;
-    height: 46vw;
     border-radius: 32px;
   }
 
@@ -141,7 +140,7 @@ export const ImgWrapper = styled.div`
   }
 
   @media screen and (max-width: 1084px) {
-    margin-top: 0;
+    margin-top: 32px;
   }
 
   @media screen and (max-width: ${breakpointsWidth.tabletLG}) {
