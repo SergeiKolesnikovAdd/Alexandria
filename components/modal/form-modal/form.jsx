@@ -86,15 +86,15 @@ export const Form = withFormProvider(
             name="action"
             options={selectServicesOptions}
             propsInput={{ placeholder: "Выберите из списка" }}
-            onClick={(e) => {
-              const wrapperScroll =
-                e.currentTarget.parentElement.parentElement.parentElement;
-              wrapperScroll.scrollTo({
-                top: wrapperScroll.scrollHeight,
-                left: 0,
-                behavior: "smooth",
-              });
-            }}
+            // onClick={(e) => {
+            //   const wrapperScroll =
+            //     e.currentTarget.parentElement.parentElement.parentElement;
+            //   wrapperScroll.scrollTo({
+            //     top: wrapperScroll.scrollHeight,
+            //     left: 0,
+            //     behavior: "smooth",
+            //   });
+            // }}
           />
           <FormLabel>
             Дополнительная информация

@@ -38,7 +38,7 @@ export const QuestionsFormModal = ({
           />
           <ContentWrapper>
             <Title mb="xsm">
-              <H2 style={{ color: colors.black }} mb="mdlg" mt="xlg" mr="mdsm">
+              <H2 style={{ color: colors.black }} mb="mdlg" mt="lg" mr="mdsm">
                 {title}
               </H2>
             </Title>

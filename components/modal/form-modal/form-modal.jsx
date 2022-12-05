@@ -44,7 +44,7 @@ export const FormModal = ({
           />
           <ContentWrapper>
             <Title mb="xsm">
-              <H2 style={{ color: colors.black }} mb="mdlg" mt="xlg" mr="mdsm">
+              <H2 style={{ color: colors.black }} mb="mdlg" mt="" mr="mdsm">
                 {modalTitle}
               </H2>
             </Title>
